@@ -6,10 +6,13 @@
   //"background_color": " ",
   //"theme_color": " ",
   "orientation": "portrait-primary",
-  "icons":[
-    {
-      "src": " ",
-      "type": "image
-    }
-    ]
+//  "icons":[
+//    {
+//      "src": " ",
+//      "type": "image/png",
+//      "size": "72x72",
+//    }
+//    ]
+  
+  
 }
