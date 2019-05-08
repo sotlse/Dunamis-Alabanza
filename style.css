@@ -14,3 +14,9 @@ h1 {
 h2 {
   color:lightblue;
 }
+
+.encabezado{
+  background-color:Black;
+  color:white;
+  margin:0;
+}
