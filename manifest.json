@@ -3,4 +3,13 @@
   "short_name": "Adoracion",
   "start_url": "/index.html",
   "display": "standalone",
+  //"background_color": " ",
+  //"theme_color": " ",
+  "orientation": "portrait-primary",
+  "icons":[
+    {
+      "src": " ",
+      "type": "image
+    }
+    ]
 }
