@@ -3,16 +3,43 @@
   "short_name": "Adoracion",
   "start_url": "/index.html",
   "display": "standalone",
-  //"background_color": " ",
-  //"theme_color": " ",
+  "background_color": "#FFE9D2",
+  "theme_color": "#FFE1C4",
   "orientation": "portrait-primary",
-//  "icons":[
-//    {
-//      "src": " ",
-//      "type": "image/png",
-//      "size": "72x72",
-//    }
-//    ]
+  "icons":[
+    {
+      "src": " ",
+      "type": "image/png",
+      "size": "72x72",
+    },
+    
+    {
+      "src": " ",
+      "type": "image/png",
+      "size": "96x96",
+    },
+    
+    {
+      "src": " ",
+      "type": "image/png",
+      "size": "128x128",
+    },
+    
+    {
+      "src": " ",
+      "type": "image/png",
+      "size": "144x144",
+    },
+    
+    {
+      "src": " ",
+      "type": "image/png",
+      "size": "1x152",
+    },
+    
+    
+    
+    ]
   
   
 }
