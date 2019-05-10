@@ -25,7 +25,10 @@ const canciones = [
 
 function nombrex (pagina, titulo, autor, tono)
 {
-   
+  for (var i=0;i<canciones.lenght;i++)
+  {
+    
+  }
   
 }
 
