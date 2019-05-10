@@ -27,7 +27,7 @@ function nombrex (pagina, titulo, autor, tono)
 {
   for (var i=0;i<canciones.lenght;i++)
   {
-    
+    <li> <a href='canciones.pagina' ></a></li>
   }
   
 }
