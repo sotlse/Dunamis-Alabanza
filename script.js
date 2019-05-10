@@ -23,6 +23,10 @@ const canciones = [
   
 ]
 
-
+function nombrex (pagina, titulo, autor, tono)
+{
+   
+  
+}
 
 
