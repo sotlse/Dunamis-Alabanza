@@ -4,6 +4,7 @@ const canciones = [
     titulo: "A Cada Instante",
     autor: "B",
     tono: "B"
+//    categoria = {"Adoracion"}
   },
   
   {
@@ -23,13 +24,5 @@ const canciones = [
   
 ]
 
-function nombrex (pagina, titulo, autor, tono)
-{
-  for (var i=0;i<canciones.lenght;i++)
-  {
-    <li> <a href='canciones.pagina' ></a></li>
-  }
-  
-}
 
 
