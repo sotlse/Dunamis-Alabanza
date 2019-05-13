@@ -19,9 +19,15 @@ h2 {
   background-color:Black;
   color:white;
   margin:0;
-  padding:5px;
+  padding:2px;
   font-weight:bold;
-  width:30%;
+  width:50%;
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial
+}
+
+#t_body{
+  font-size:8px;
+  margin:0;
 }
 
 a {
