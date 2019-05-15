@@ -31,7 +31,7 @@ body {
 .encabezado
 {
   display:inline-block;
-  width:550px;
+  width:100%;
   position: relative;
   
 }
@@ -51,6 +51,11 @@ body {
   /*background-color:black;*/
 }
 
+.cuerpo {
+  background-color:#fcfcfc;
+  padding:5px 20px;
+}
+
 .t_body{
   font-size:8px;
   margin:0;
@@ -58,5 +63,5 @@ body {
 
 a {
   color:blue;
-  
+  text-decoration:none;
 }
