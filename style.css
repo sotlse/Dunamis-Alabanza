@@ -5,11 +5,7 @@ body {
   margin: 2em;
 }
 
-h1 {
-  font-style: italic;
-  font-size:50px;
-  color: #373fff;
-}
+
 
 h2 {
   color:lightblue;
@@ -33,12 +29,24 @@ h2 {
 
 .logo
 {
-  width:160px;  
+  width:160px;
+  position: absolute;
+  margin:0;
 }
 
 .encabezado
 {
-  
+  display:inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+.encabezado h1 {
+  font-style: italic;
+  font-size:50px;
+  /*background-color:black;*/
+  color: #373fff;
+  margin: 0px;
 }
 
 .t_body{
