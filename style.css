@@ -23,9 +23,9 @@ body {
 
 .logo
 {
-  width:140px;
+  width:160px;
   position: absolute;
-  margin:80px 0px;;
+  margin:70px 0px;;
 }
 
 .encabezado
@@ -58,4 +58,5 @@ body {
 
 a {
   color:blue;
+  
 }
