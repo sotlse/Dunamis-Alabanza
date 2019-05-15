@@ -5,12 +5,6 @@ body {
   margin: 2em;
 }
 
-
-
-h2 {
-  color:lightblue;
-}
-
 .tituloCanto{
   background-color:Black;
   color:white;
@@ -29,16 +23,17 @@ h2 {
 
 .logo
 {
-  width:160px;
+  width:140px;
   position: absolute;
-  margin:0;
+  margin:80px 0px;;
 }
 
 .encabezado
 {
   display:inline-block;
-  width:500px;
+  width:550px;
   position: relative;
+  
 }
 
 .encabezado h1 {
@@ -47,11 +42,13 @@ h2 {
   /*background-color:black;*/
   color: #373fff;
   margin: 0px;
+  text-align:center;
 }
 
 .encabezado h2 {
   text-align:center;
-  background-color:black;
+  color:lightblue;
+  /*background-color:black;*/
 }
 
 .t_body{
