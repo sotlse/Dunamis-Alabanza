@@ -23,9 +23,12 @@ body {
 
 .logo
 {
-  width:10%;
-  position: absolute;
-  
+  width:50%;
+}
+
+.imagen-logo{
+  text-align:center;
+  margin:0px;
 }
 
 .encabezado
@@ -36,18 +39,12 @@ body {
   
 }
 
-.encabezado h1 {
-  font-style: italic;
-  font-size:50px;
-  /*background-color:black;*/
-  color: #373fff;
-  margin: 0px;
-  text-align:center;
-}
+
 
 .encabezado h2 {
   text-align:center;
   color:lightblue;
+  margin: 5px;
   /*background-color:black;*/
 }
 
