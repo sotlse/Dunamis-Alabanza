@@ -23,7 +23,7 @@ body {
 
 .logo
 {
-  width:50%;
+  width:70%;
 }
 
 .imagen-logo{
@@ -39,8 +39,6 @@ body {
   
 }
 
-
-
 .encabezado h2 {
   text-align:center;
   color:lightblue;
@@ -49,7 +47,7 @@ body {
 }
 
 .cuerpo {
-  background-color:#fcfcfc;
+  background-color:#f7f4f4;
   padding:5px 20px;
 }
 
