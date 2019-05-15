@@ -37,7 +37,7 @@ h2 {
 .encabezado
 {
   display:inline-block;
-  margin: 0px;
+  width:500px;
   position: relative;
 }
 
@@ -47,6 +47,11 @@ h2 {
   /*background-color:black;*/
   color: #373fff;
   margin: 0px;
+}
+
+.encabezado h2 {
+  text-align:center;
+  background-color:black;
 }
 
 .t_body{
