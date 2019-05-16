@@ -44,6 +44,15 @@ body {
   padding:5px 20px;
 }
 
+.pie{
+  background-color:rgba(254, 226, 115,.3);
+  padding: 10px
+}
+
+.pie a{
+  margin:10px;
+}
+
 .t_body{
   font-size:12px;
 }
@@ -54,15 +63,17 @@ a {
 }
 
 .encabezado-lista{
-  background-color:rgba(158, 216, 254,.5);
+  background-color:rgba(158, 216, 254,.3);
   text-align:center;
+}
+.encabezado-lista h2{
+  color:blue;
 }
 
 .encabezado-lista h3{
   color: rgba(128, 129, 132, .9);
-  
 }
 
 .cuerpo-lista{
-  background-color:rgb(230, 230, 230);
+  background-color:rgba(230, 230, 230,.5);
 }
