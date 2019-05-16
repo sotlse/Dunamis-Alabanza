@@ -1,21 +1,17 @@
 /* CSS files add styling rules to your content */
 
+/*General*/
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
 }
 
-.tituloCanto{
-  background-color:Black;
-  color:white;
-  margin:0px;
-  padding:2px;
-  font-weight:bold;
-  width:100%;
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial
+a {
+  color:blue;
+  text-decoration:none;
 }
 
-
+/*Primera pagina*/
 .logo{
   width:70%;
 }
@@ -53,15 +49,7 @@ body {
   margin:10px;
 }
 
-.t_body{
-  font-size:12px;
-}
-
-a {
-  color:blue;
-  text-decoration:none;
-}
-
+/*Opciones de canto*/
 .encabezado-lista{
   background-color:rgba(158, 216, 254,.3);
   text-align:center;
@@ -74,6 +62,27 @@ a {
   color: rgba(128, 129, 132, .9);
 }
 
+.encabezado-lista button{
+  position:absolute;
+  left 30px;
+}
+
 .cuerpo-lista{
   background-color:rgba(230, 230, 230,.5);
 }
+
+/*Canto*/
+.t_body{
+  font-size:12px;
+}
+
+.tituloCanto{
+  background-color:Black;
+  color:white;
+  margin:0px;
+  padding:2px;
+  font-weight:bold;
+  width:100%;
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial
+}
+
