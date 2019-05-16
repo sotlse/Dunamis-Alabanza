@@ -11,14 +11,10 @@ body {
   margin:0px;
   padding:2px;
   font-weight:bold;
-  width:50%;
+  width:100%;
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial
 }
 
-.encabezadoCanto{
-  margin:0px;
-  padding:0px;
-}
 
 .logo{
   width:70%;
@@ -49,8 +45,7 @@ body {
 }
 
 .t_body{
-  font-size:8px;
-  margin:0;
+  font-size:12px;
 }
 
 a {
@@ -59,13 +54,13 @@ a {
 }
 
 .encabezado-lista{
-  background-color:rgb(158, 216, 254);
+  background-color:rgba(158, 216, 254,.7);
   text-align:center;
 }
 
 .encabezado-lista h3{
   color: rgba(128, 129, 132, .9);
-  height:20px;
+  
 }
 
 .cuerpo-lista{
