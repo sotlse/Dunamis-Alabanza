@@ -1,6 +1,6 @@
 const canciones = [
   {
-    pagina:"A_Cada_Instante.html",
+    pagina: <a href="A_Cada_Instante.html">A cada instante</a>,
     titulo: "A Cada Instante",
     autor: "B",
     tono: "B"
@@ -22,7 +22,7 @@ const canciones = [
   }
   
   
-]
+];
 
 
 
