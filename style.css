@@ -53,6 +53,7 @@ a {
 .encabezado-lista{
   background-color:rgba(158, 216, 254,.3);
   text-align:center;
+  position:relative;
 }
 .encabezado-lista h2{
   color:blue;
@@ -64,7 +65,8 @@ a {
 
 .encabezado-lista button{
   position:absolute;
-  left 30px;
+  left: 95%;
+  top: 70%;
 }
 
 .cuerpo-lista{
