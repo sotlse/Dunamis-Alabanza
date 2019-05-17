@@ -83,6 +83,10 @@ a {
 }
 
 /*Canto*/
+.infoCanto{
+  display:inline-block;
+}
+
 .t_body{
   font-size:12px;
 }
@@ -94,6 +98,6 @@ a {
   padding:2px;
   font-weight:bold;
   width:100%;
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial
+  font-family:Arial, "Benton Sans", "Helvetica Neue", helvetica;
 }
 
