@@ -53,10 +53,15 @@ a {
 }
 
 #busqueda{
-  
+  margin: 10px 0px;
+  width:100%;
 }
 
 /*Opciones de canto*/
+.header {
+  
+}
+
 .encabezado-lista{
   background-color:rgba(158, 216, 254,.3);
   text-align:center;
