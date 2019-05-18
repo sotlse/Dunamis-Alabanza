@@ -58,9 +58,10 @@ a {
 }
 
 /*Opciones de canto*/
-.header {
-  width:100%;
-}
+/*.header {
+  margin:0px;
+  padding:0px;
+}*/
 
 .encabezado-lista{
   text-align:center;
@@ -108,8 +109,9 @@ a {
 }
 
 /*Canto*/
-.infoCanto{
+.infoCanto div{
   display:inline-block;
+  position:relative;
 }
 
 .t_body{
@@ -126,3 +128,15 @@ a {
   font-family:Arial, "Benton Sans", "Helvetica Neue", helvetica;
 }
 
+.tempo{
+  position:absolute;
+  text-align:left;
+}
+
+.nombre{
+  position:absolute;
+  text-align:center;
+}
+.tono{
+  text-align:right;
+}
