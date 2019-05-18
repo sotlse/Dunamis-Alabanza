@@ -109,8 +109,8 @@ a {
 }
 
 /*Canto*/
-.infoCanto div{
-  display:inline-block;
+.infoCanto div{/*
+  display:inline-block;*/
   position:relative;
 }
 
