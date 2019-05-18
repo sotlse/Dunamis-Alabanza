@@ -90,6 +90,16 @@ a {
   margin:10px 0;
 }
 
+.boton-add{
+  position: absolute;
+  right: 9%;
+  /*background-color:lightgreen;*/
+}
+
+.lista{
+  border:10px;
+}
+
 /*Canto*/
 .infoCanto{
   display:inline-block;
