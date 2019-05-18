@@ -58,13 +58,15 @@ a {
 }
 
 /*Opciones de canto*/
-/*.header {
+.header {
+  width:100%;
 }
-*/
+
 .encabezado-lista{
   text-align:center;
   position:relative;
   background-color:rgba(158, 216, 254,.3);
+  padding: .1em 0;
 }
 .encabezado-lista h2{
   color:blue;
@@ -75,30 +77,34 @@ a {
   color: rgb(208, 182, 52);
 }
 
-.encabezado-lista button{
+/*.encabezado-lista button{
   position:absolute;
   left: 92%;
   top: 70%;
-}
+}*/
 
 .cuerpo-lista{
   background-color:rgba(230, 230, 230,.5);
-  padding: 5px 0;
+  padding: 0px 0;
 }
 
-.cuerpo-lista li{
-  margin:10px 0;
+.cuerpo-lista ul{
+  padding: 0px;
 }
 
 .boton-add{
   position: absolute;
-  right: 9%;
+  right: 10%;
+  font-weight:bold;
   /*background-color:lightgreen;*/
+  
 }
 
 .lista{
   list-style-position: inside;
-  border: 10px solid orange;
+  list-style-type: none;
+  border: 1px solid gray;
+  padding:10px
 }
 
 /*Canto*/
