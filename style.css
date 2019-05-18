@@ -97,7 +97,8 @@ a {
 }
 
 .lista{
-  border:10px;
+  list-style-position: inside;
+  border: 10px solid orange;
 }
 
 /*Canto*/
