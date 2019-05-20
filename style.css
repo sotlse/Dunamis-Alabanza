@@ -71,11 +71,16 @@ a {
 }
 .encabezado-lista h2{
   color:blue;
+  padding:0px;
+  margin:5px;
 }
 
 .encabezado-lista h3{
   /*color: rgba(128, 129, 132, .9);*/
   color: rgb(208, 182, 52);
+  padding:0px;
+  margin:5px;
+  font-size:15px;
 }
 
 /*.encabezado-lista button{
