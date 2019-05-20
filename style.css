@@ -130,23 +130,22 @@ a {
 }
 
 .tempo{
-  position:absolute;
   text-align:left;
-  background-color:lightblue;
-  display:inline-block;
+  /*background-color:lightblue;*/
+  float:left;
+  font-weight:bold;
 }
 
 .nombre{
   text-decoration: underline;
-
   left:40px;
-  text-align:center;
-  background-color:lightblue;
+  /*background-color:lightblue;*/
   display:inline-block;
+  font-weight:bold;
 }
 .tono{
-  left:100px;
+  float:right;
+  /*background-color:lightblue;*/
   text-align:right;
-  background-color:lightblue;
-  display:inline-block;
+  font-weight:bold;
 }
