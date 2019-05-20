@@ -132,14 +132,21 @@ a {
 .tempo{
   position:absolute;
   text-align:left;
-  background-color:black;
+  background-color:lightblue;
+  display:inline-block;
 }
 
 .nombre{
   text-decoration: underline;
-  position:absolute;
+
+  left:40px;
   text-align:center;
+  background-color:lightblue;
+  display:inline-block;
 }
 .tono{
+  left:100px;
   text-align:right;
+  background-color:lightblue;
+  display:inline-block;
 }
