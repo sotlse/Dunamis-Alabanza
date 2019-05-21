@@ -122,7 +122,16 @@ a {
 
 .t_body{
   font-size:12px;
+  column-count:2;
+  column-gap:40px;
 }
+
+/*.columna1{
+  
+}
+
+.columna2{
+}*/
 
 .tituloCanto{
   background-color:Black;
@@ -153,3 +162,5 @@ a {
   text-align:right;
   font-weight:bold;
 }
+
+
