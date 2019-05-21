@@ -126,10 +126,12 @@ a {
   column-count:2;
   column-gap:20px;
   column-rule-style: solid;
+  word-spacing: -2px;
 }
 
 .t_body a{
   font-weight:bold;
+  
 }
 
 /*.columna1{
