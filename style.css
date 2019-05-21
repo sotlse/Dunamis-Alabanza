@@ -118,12 +118,18 @@ a {
 .infoCanto div{/*
   display:inline-block;*/
   position:relative;
+  font-size:12px;
 }
 
 .t_body{
   font-size:12px;
   column-count:2;
-  column-gap:40px;
+  column-gap:20px;
+  column-rule-style: solid;
+}
+
+.t_body a{
+  font-weight:bold;
 }
 
 /*.columna1{
