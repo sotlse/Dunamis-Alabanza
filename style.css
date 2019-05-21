@@ -130,7 +130,6 @@ a {
   margin:0px 0px 5px 0px;
   padding:2px;
   font-weight:bold;
-  width:100%;
   font-family:Arial, "Benton Sans", "Helvetica Neue", helvetica;
 }
 
@@ -143,7 +142,7 @@ a {
 
 .nombre{
   text-decoration: underline;
-  left:40px;
+  left:15%;
   /*background-color:lightblue;*/
   display:inline-block;
   font-weight:bold;
