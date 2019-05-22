@@ -1,5 +1,5 @@
-var busqueda = document.getElementById('busqueda');
-var listaItems = document.getElementById('lista');
+var busqueda = document.querySelector('busqueda');
+var listaItems = document.querySelector('lista');
 
 //Filter event
 busqueda.addEventListener('keyup',filterItems);
