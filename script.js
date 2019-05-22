@@ -1,3 +1,5 @@
+const busqueda = document.getElement
+
 const canciones = [
   {
     pagina: <a href="A_Cada_Instante.html">A cada instante</a>,
