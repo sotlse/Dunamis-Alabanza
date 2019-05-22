@@ -1,4 +1,14 @@
-const busqueda = document.getElement
+const busqueda = document.getElementById('busqueda');
+const lista = document.getElementByClass('lista');
+
+//Filter event
+busqueda.addEventListener('keyup', filterItems);
+
+//Filter function
+function filterItems(e){
+  const text = e.target.value.toLowerCase();
+  
+}
 
 const canciones = [
   {
