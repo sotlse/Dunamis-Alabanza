@@ -134,7 +134,9 @@ a {
 }
 
 .img-tempo{
-  height:15px;
+  margin:0px;
+  padding:0px;
+  height:18px;
 }
 
 .tempo{
@@ -151,6 +153,7 @@ a {
   /*display:inline-block;*/
   text-align: center;
   font-weight:bold;
+  padding:4px 0;
 }
 .tono{
   /*display:inline-block;*/
@@ -158,6 +161,7 @@ a {
   /*background-color:lightblue;*/
   text-align:right;
   font-weight:bold;
+  padding:4px 0;
 }
 
 .letra_body{
