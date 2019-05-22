@@ -63,12 +63,16 @@ a {
   padding:0px;
 }*/
 
+.contenido hr{
+  margin:0 -25px;
+}
+
 .encabezado-lista{
   text-align:center;
   position:relative;
   background-color:rgba(158, 216, 254,.3);
   padding: .1em 0;
-  margin:-10px -25px 0px -25px;
+  margin:-20px -25px 0px -25px;
 }
 .encabezado-lista h2{
   color:blue;
@@ -128,7 +132,7 @@ a {
 
 .canto_body{
   margin:1px -23px;
-  font-size:11px;
+  font-size:11.5px;
   column-count:2;
   column-gap:20px;
   column-rule-style: solid;
