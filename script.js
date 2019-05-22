@@ -1,4 +1,4 @@
-var busqueda = document.querySelector('busqueda');
+var busqueda = document.getElementById('busqueda');
 var listaItems = document.querySelector('lista');
 
 //Filter event
