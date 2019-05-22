@@ -68,6 +68,7 @@ a {
   position:relative;
   background-color:rgba(158, 216, 254,.3);
   padding: .1em 0;
+  margin:-10px -25px 0px -25px;
 }
 .encabezado-lista h2{
   color:blue;
@@ -121,15 +122,20 @@ a {
   font-size:12px;
 }
 
-.t_body{
+.letra_body{
   font-size:12px;
+}
+
+.canto_body{
+  margin:1px -23px;
+  font-size:11px;
   column-count:2;
   column-gap:20px;
   column-rule-style: solid;
   word-spacing: -2px;
 }
 
-.t_body a{
+.canto_body a{
   font-weight:bold;
   
 }
