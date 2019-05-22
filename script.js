@@ -1,5 +1,5 @@
-const busqueda = document.getElementById('busqueda');
-const listaItems = document.getElementByClass('lista');
+var busqueda = document.getElementById('busqueda');
+var listaItems = document.getElementById('lista');
 
 //Filter event
 busqueda.addEventListener('keyup', filterItems);
@@ -11,7 +11,7 @@ function filterItems(e){
   Array.from(lista).forEach(function(lista){
     var itemName = lista.firstChild.textContent;
     if (itemName.toLowerCase().indexOf(text) != -1){
-      lista.style.display = 'none';
+      lista.style.display = 'block';
     } else {
       lista.style.display = 'none';
     }
@@ -19,6 +19,7 @@ function filterItems(e){
   
 }
 
+/*
 const canciones = [
   {
     pagina: <a href="A_Cada_Instante.html">A cada instante</a>,
@@ -46,4 +47,4 @@ const canciones = [
 ];
 
 
-
+*/
