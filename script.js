@@ -2,7 +2,7 @@ var busqueda = document.getElementById('busqueda');
 var listaItems = document.getElementById('lista');
 
 //Filter event
-busqueda.addEventListener('keyup', filterItems);
+busqueda.addEventListener('keyup',filterItems);
 
 //Filter function
 function filterItems(e){
