@@ -1,12 +1,21 @@
 const busqueda = document.getElementById('busqueda');
-const lista = document.getElementByClass('lista');
+const listaItems = document.getElementByClass('lista');
 
 //Filter event
 busqueda.addEventListener('keyup', filterItems);
 
 //Filter function
 function filterItems(e){
-  const text = e.target.value.toLowerCase();
+  var text = e.target.value.toLowerCase();
+  var lista = listaItems.getElementByTagName('li');
+  Array.from(lista).forEach(function(lista){
+    var itemName = lista.firstChild.textContent;
+    if (itemName.toLowerCase().indexOf(text) != -1){
+      lista.style.display = 'none';
+    } else {
+      lista.style.display = 'none';
+    }
+  });
   
 }
 
