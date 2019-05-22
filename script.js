@@ -1,8 +1,9 @@
-var busqueda = document.getElementById('busqueda');
+window.onload=function(){
+var busqueda = document.getElementById("busqueda");
 var listaItems = document.querySelector('lista');
 
 //Filter event
-busqueda.addEventListener('keyup',filterItems);
+busqueda.addEventListener("keyup",filterItems);
 
 //Filter function
 function filterItems(e){
@@ -18,7 +19,7 @@ function filterItems(e){
   });
   
 }
-
+}
 /*
 const canciones = [
   {
