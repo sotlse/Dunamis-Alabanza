@@ -1,26 +1,27 @@
 
 var busquedaItem = document.getElementById("busqueda");
-var listaItems = document.querySelector('lista');
+var listaItems = document.getElementById("lista");
 
 //Filter event
 if (busquedaItem){
 busquedaItem.addEventListener("keyup",filterItems);
-
+}
 
 //Filter function
 function filterItems(e){
   var text = e.target.value.toLowerCase();
-  var lista = listaItems.getElementByTagName('li');
+  var lista = listaItems.getElementsByTagName("li");
+  console.log(lista);
   Array.from(lista).forEach(function(lista){
     var itemName = lista.firstChild.textContent;
     if (itemName.toLowerCase().indexOf(text) != -1){
-      lista.style.display = 'block';
+      lista.style.display = "block";
     } else {
-      lista.style.display = 'none';
+      lista.style.display = "none";
     }
   }); 
 }
-}
+
 
 /*
 const canciones = [
