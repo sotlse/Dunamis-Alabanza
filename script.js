@@ -1,9 +1,11 @@
-window.onload=function(){
-var busqueda = document.getElementById("busqueda");
+
+var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.querySelector('lista');
 
 //Filter event
-busqueda.addEventListener("keyup",filterItems);
+if (busquedaItem){
+busquedaItem.addEventListener("keyup",filterItems);
+
 
 //Filter function
 function filterItems(e){
@@ -16,10 +18,10 @@ function filterItems(e){
     } else {
       lista.style.display = 'none';
     }
-  });
-  
+  }); 
 }
 }
+
 /*
 const canciones = [
   {
