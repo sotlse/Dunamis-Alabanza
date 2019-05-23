@@ -10,15 +10,15 @@ busquedaItem.addEventListener("keyup",filterItems);
 //Filter function
 function filterItems(e){
   var text = e.target.value.toLowerCase();
-  var lista = listaItems.getElementsByTagName("a");
-  console.log(lista);
-  Array.from(lista).forEach(function(listas){
-    var itemName = listas.firstChild.textContent;
-      console.log(listas);
+  var enlace = listaItems.getElementsByTagName("a");
+  var lista = listaItems.getElementsByTagName("li");
+  Array.from(enlace).forEach(function(enlaces){
+    var itemName = enlaces.firstChild.textContent;
+      console.log(enlaces);
     if (itemName.toLowerCase().indexOf(text) != -1){
-      listas.style.display = "block";
+      enlaces.style.display = "block";
     } else {
-      listas.style.display = "none";
+      enlaces.style.display = "none";
     }
   }); 
 }
