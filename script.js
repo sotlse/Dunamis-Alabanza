@@ -11,7 +11,6 @@ busquedaItem.addEventListener("keyup",filterItems);
 function filterItems(e){
   var text = e.target.value.toLowerCase();
   var enlace = listaItems.getElementsByTagName("a");
-  var lista = listaItems.getElementsByTagName("li");
   Array.from(enlace).forEach(function(enlaces){
     var itemName = enlaces.firstChild.textContent;
       console.log(enlaces);
