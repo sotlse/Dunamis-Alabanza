@@ -29,8 +29,8 @@ const canciones = [
     pagina: <a href="A_Cada_Instante.html">A cada instante</a>,
     titulo: "A Cada Instante",
     autor: "B",
-    tono: "B"
-//    categoria = {"Adoracion"}
+    tono: "B",
+//    categoria: ["Adoracion"]
   },
   
   {
