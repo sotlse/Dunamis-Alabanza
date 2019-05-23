@@ -10,7 +10,8 @@ busquedaItem.addEventListener("keyup",filterItems);
 //Filter function
 function filterItems(e){
   var text = e.target.value.toLowerCase();
-  var lista = listaItems.getElementsByTagName("li");
+  var lista = listaItems.getElementsByTagName("a");
+  console.log(lista);
   Array.from(lista).forEach(function(listas){
     var itemName = listas.firstChild.textContent;
       console.log(listas);
