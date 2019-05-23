@@ -13,7 +13,7 @@ function filterItems(e){
   var lista = listaItems.getElementsByTagName("li");
   Array.from(lista).forEach(function(listas){
     var itemName = listas.firstChild.textContent;
-      console.log(itemName);
+      console.log(listas);
     if (itemName.toLowerCase().indexOf(text) != -1){
       listas.style.display = "block";
     } else {
