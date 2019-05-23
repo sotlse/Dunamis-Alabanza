@@ -11,13 +11,13 @@ busquedaItem.addEventListener("keyup",filterItems);
 function filterItems(e){
   var text = e.target.value.toLowerCase();
   var lista = listaItems.getElementsByTagName("li");
-  Array.from(lista).forEach(function(item){
-    var itemName = item.firstChild.textContent;
+  Array.from(lista).forEach(function(listas){
+    var itemName = listas.firstChild.textContent;
       console.log(itemName);
     if (itemName.toLowerCase().indexOf(text) != -1){
-      item.style.display = "block";
+      listas.style.display = "block";
     } else {
-      item.style.display = "none";
+      listas.style.display = "none";
     }
   }); 
 }
