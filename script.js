@@ -17,7 +17,9 @@ busquedaItem.addEventListener("keyup",filterItems);
 //botonAgregar function
 function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
-  if (confirm("Agragar a Playlist",{labels: {cancel: "Miercoles",ok: "Domingo"}})){
+    alert ("Hi");
+    prompt("Hola");
+    if (confirm("Agragar a Playlist",{labels: {cancel: "Miercoles",o: "Domingo"}})){
     
   }                          
   }
