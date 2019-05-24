@@ -1,11 +1,12 @@
 
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
+var opcionesItems = document.getElementById("opcionesDeCanto")
 //var add = document.getElementsByClassName("boton-add");
 
 //Boton Add event
-if(listaItems){
-listaItems.addEventListener("click", agregarCanto);
+if(opcionesItems){
+opcionesItems.addEventListener("click", agregarCanto);
 }
   
 //Filter event
@@ -16,6 +17,7 @@ busquedaItem.addEventListener("keyup",filterItems);
 //botonAgregar function
 function agregarCanto(e){
   console.log(1);
+  
 }
 
 
