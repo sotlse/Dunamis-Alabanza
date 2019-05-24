@@ -16,6 +16,7 @@ busquedaItem.addEventListener("keyup",filterItems);
 
 //botonAgregar function
 function agregarCanto(e){
+  if(e.target.classList.contains("boton-add"))
   console.log(1);
   
 }
