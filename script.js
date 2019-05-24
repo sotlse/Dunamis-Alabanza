@@ -1,11 +1,11 @@
 
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
-var add = document.getElementByClassName("boton-add");
+//var add = document.getElementsByClassName("boton-add");
 
 //Boton Add event
-if(add){
-add.addEventListener("click", botonAgregar);
+if(listaItems){
+listaItems.addEventListener("click", botonAgregar);
 }
   
 //Filter event
