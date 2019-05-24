@@ -1,11 +1,23 @@
 
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
+var add = document.getElementByClassName("boton-add");
 
+//Boton Add event
+if(add){
+add.addEventListener("click", botonAgregar);
+}
+  
 //Filter event
 if (busquedaItem){
 busquedaItem.addEventListener("keyup",filterItems);
 }
+
+//botonAgregar function
+function botonAgregar(e){
+  var hola
+}
+
 
 //Filter function
 function filterItems(e){
