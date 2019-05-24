@@ -5,7 +5,7 @@ var listaItems = document.getElementById("lista");
 
 //Boton Add event
 if(listaItems){
-listaItems.addEventListener("click", botonAgregar);
+listaItems.addEventListener("click", agregarCanto);
 }
   
 //Filter event
@@ -14,8 +14,8 @@ busquedaItem.addEventListener("keyup",filterItems);
 }
 
 //botonAgregar function
-function botonAgregar(e){
-  var hola
+function agregarCanto(e){
+  console.log(1);
 }
 
 
