@@ -16,9 +16,11 @@ busquedaItem.addEventListener("keyup",filterItems);
 
 //botonAgregar function
 function agregarCanto(e){
-  if(e.target.classList.contains("boton-add"))
-  console.log(1);
-  
+  if(e.target.classList.contains("boton-add")){
+  var myWindow = window.open("", "", "width=200, height=100");   // Opens a new window
+myWindow.document.write("<p>A new window!</p>");      // Some text in the new window
+myWindow.blur();                          // Assures that the new window does NOT get focus
+  }
 }
 
 
