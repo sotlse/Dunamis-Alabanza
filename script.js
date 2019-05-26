@@ -5,9 +5,9 @@ var opcionesItems = document.getElementById("opcionesDeCanto");
 //var add = document.getElementsByClassName("boton-add");
 
 //Boton Add event
-if(opcionesItems){
+/*if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
-}
+}*/
   
 //Filter event
 if (busquedaItem){
@@ -15,7 +15,7 @@ busquedaItem.addEventListener("keyup",filterItems);
 }
 
 //botonAgregar function
-function agregarCanto(e){
+/*function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
     alert ("Hi");
     prompt("Hola");
@@ -23,7 +23,7 @@ function agregarCanto(e){
     
   }                          
   }
-}
+}*/
 
 //Filter function
 function filterItems(e){
@@ -85,7 +85,14 @@ function CustomConfirm(){
     
     document.getElementById("dialogboxhead").innerHTML = "Agregar a playlist";
     document.getElementById("dialogboxbody").innerHTML = dialog;
-    document.getElementById("dialogboxfoot").innerHTML = '<button onclick="Confirm.Domingo(\''+op+'\,\''+id+'\')">Domigo<'
+    document.getElementById("dialogboxfoot").innerHTML = '<button onclick="Confirm.Domingo(\''+op+'\,\''+id+'\')">Domigo</button> <button onclick="Confirm.Miercoles()">Miercoles</button>';
+  }
+  this.Miercoles = function (){
+    
+  }
+  
+  this.Domingo = function (op,id){
+    
   }
 }
 
