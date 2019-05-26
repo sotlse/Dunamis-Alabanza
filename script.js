@@ -77,7 +77,15 @@ function CustomConfirm(){
     var winH = window.innerHeight;
     var dialogverlay = document.getElementById("dialogverlay");
     var dialogbox = document.getElementById("dialogbox");
+    dialogverlay.style.display = "block";
+    dialogverlay.style.height = winH + "px";
+    dialogbox.style.left = (winH/2) - (500*0.5) + "px";
+    dialogbox.style.top = "100px";
+    dialogbox.style.display = "block";
     
+    document.getElementById("dialogboxhead").innerHTML = "Agregar a playlist";
+    document.getElementById("dialogboxbody").innerHTML = dialog;
+    document.getElementById("dialogboxfoot").innerHTML = '<button onclick="Confirm.Domingo(\''+op+'\,\''+id+'\')">Domigo<'
   }
 }
 
