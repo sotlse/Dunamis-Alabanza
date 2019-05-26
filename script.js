@@ -1,7 +1,7 @@
 
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
-var opcionesItems = document.getElementById("opcionesDeCanto")
+var opcionesItems = document.getElementById("opcionesDeCanto");
 //var add = document.getElementsByClassName("boton-add");
 
 //Boton Add event
@@ -24,7 +24,6 @@ function agregarCanto(e){
   }                          
   }
 }
-
 
 //Filter function
 function filterItems(e){
@@ -71,3 +70,15 @@ const canciones = [
 
 
 */
+
+function CustomConfirm(){
+  this.render = function (dialog,op,id){
+    var winW = window.innerWidht;
+    var winH = window.innerHeight;
+    var dialogverlay = document.getElementById("dialogverlay");
+    var dialogbox = document.getElementById("dialogbox");
+    
+  }
+}
+
+const confirm = new CustomConfirm();
