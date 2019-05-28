@@ -19,17 +19,17 @@ function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
     var winW = window.innerWidht;
     var winH = window.innerHeight;
-    var dialogverlay = document.getElementById("dialogverlay");
-    var dialogbox = document.getElementById("dialogbox");
+    var dialogverlay = document.getElementById('dialogverlay');
+    var dialogbox = document.getElementById('dialogbox');
     dialogverlay.style.display = "block";
-    dialogverlay.style.height = winH + "px";
+    dialogverlay.style.height = winH/3 + "px";
     dialogbox.style.left = (winH/2) - (500*0.5) + "px";
     dialogbox.style.top = "100px";
     dialogbox.style.display = "block";
     
-    document.getElementById("dialogboxhead").innerHTML = "Agregar a playlist";
-    document.getElementById("dialogboxbody").innerHTML = "Agrega";
-    document.getElementById("dialogboxfoot").innerHTML = '<button onclick="Confirm.Domingo()">Domigo</button> <button onclick="Confirm.Miercoles()">Miercoles</button>';
+    document.getElementById('dialogboxhead').innerHTML = "Agregar a playlist";
+    document.getElementById('dialogboxbody').innerHTML = "Elige";
+    document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Confirm.Domingo()">Domigo</button> <button onclick="Confirm.Miercoles()">Miercoles</button>';
   
                            
   }
