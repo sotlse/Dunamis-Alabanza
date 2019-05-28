@@ -5,9 +5,9 @@ var opcionesItems = document.getElementById("opcionesDeCanto");
 //var add = document.getElementsByClassName("boton-add");
 
 //Boton Add event
-/*if(opcionesItems){
+if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
-}*/
+}
   
 //Filter event
 if (busquedaItem){
@@ -15,15 +15,25 @@ busquedaItem.addEventListener("keyup",filterItems);
 }
 
 //botonAgregar function
-/*function agregarCanto(e){
+function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
-    alert ("Hi");
-    prompt("Hola");
-    if (confirm("Agragar a Playlist",{labels: {cancel: "Miercoles",o: "Domingo"}})){
+    var winW = window.innerWidht;
+    var winH = window.innerHeight;
+    var dialogverlay = document.getElementById("dialogverlay");
+    var dialogbox = document.getElementById("dialogbox");
+    dialogverlay.style.display = "block";
+    dialogverlay.style.height = winH + "px";
+    dialogbox.style.left = (winH/2) - (500*0.5) + "px";
+    dialogbox.style.top = "100px";
+    dialogbox.style.display = "block";
     
-  }                          
+    document.getElementById("dialogboxhead").innerHTML = "Agregar a playlist";
+    document.getElementById("dialogboxbody").innerHTML = dialog;
+    document.getElementById("dialogboxfoot").innerHTML = '<button onclick="Confirm.Domingo()">Domigo</button> <button onclick="Confirm.Miercoles()">Miercoles</button>';
+  
+                           
   }
-}*/
+}
 
 //Filter function
 function filterItems(e){
