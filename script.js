@@ -80,8 +80,17 @@ function filterItems(e){
     }
   }); */
   let filterValue = document.getElementById('busqueda').value.toUpperCase();
-  let ol = document.getElementById("lista")
-  console.log(filterValue);
+  let ol = document.getElementById("lista");
+  console.log(ol);
+  let li = ol.querySelectorAll("li");
+  for (let i=0;i<li.length;i++){
+    let a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
   
 }
 
