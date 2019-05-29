@@ -30,10 +30,24 @@ function agregarCanto(e){
     document.getElementById('dialogboxhead').innerHTML = "Agregar a playlist";
     //document.getElementById('dialogboxbody').innerHTML = "Elige";
     document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Confirm.Domingo()">Domingo</button>  <button onclick="Confirm.Miercoles()">Miercoles</button>  <button onclick="Confirm.Cancelar()">Cancelar</button>';
-  
-                           
   }
 }
+  
+  this.Domingo = function(){
+    
+  }
+  
+  this.Miercoles = function(){
+    
+  }
+  
+  this.Cancelar = function(){
+    document.getElementById('dialogbox').style.display = "none";
+    document.getElementById('dialogverlay').styel.display = "none;"
+    console.log(1)  
+  }
+  
+
 
 //Filter function
 function filterItems(e){
