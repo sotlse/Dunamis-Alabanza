@@ -29,7 +29,7 @@ function agregarCanto(e){
     
     document.getElementById('dialogboxhead').innerHTML = "Agregar a playlist";
     //document.getElementById('dialogboxbody').innerHTML = "Elige";
-    document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Confirm.Domingo()">Domingo</button>  <button onclick="Confirm.Miercoles()">Miercoles</button>  <button onclick="Confirm.Cancelar()">Cancelar</button>';
+    document.getElementById('dialogboxfoot').innerHTML = '<button id=Domingo>Domingo</button>  <button id=Miercoles>Miercoles</button>  <button id=Cancelar>Cancelar</button>';
   }
 }
   
@@ -41,11 +41,16 @@ function agregarCanto(e){
     
   }
   
-  this.Cancelar = function(){
+    var CancelarBoton = document.getElemetById ('Cancelar');
+    CancelarBoton.addEventListener ("click",Domingo);
+    
+    function Domingo (e){
+      console.log(1); 
+    }
     document.getElementById('dialogbox').style.display = "none";
     document.getElementById('dialogverlay').styel.display = "none;"
-    console.log(1)  
-  }
+    console.log(domingoBoton);  
+  
   
 
 
