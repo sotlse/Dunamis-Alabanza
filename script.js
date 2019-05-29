@@ -68,7 +68,7 @@ function agregarCanto(e){
 
 //Filter function
 function filterItems(e){
-  var text = e.target.value.toLowerCase();
+/*  var text = e.target.value.toLowerCase();
   var enlace = listaItems.getElementsByTagName("a");
   Array.from(enlace).forEach(function(enlaces){
     var itemName = enlaces.firstChild.textContent;
@@ -78,7 +78,11 @@ function filterItems(e){
     } else {
       enlaces.style.display = "none";
     }
-  }); 
+  }); */
+  let filterValue = document.getElementById('busqueda').value.toUpperCase();
+  let ol = document.getElementById("lista")
+  console.log(filterValue);
+  
 }
 
 
@@ -112,29 +116,3 @@ const canciones = [
 
 */
 
-function CustomConfirm(){
-  this.render = function (dialog,op,id){
-    var winW = window.innerWidht;
-    var winH = window.innerHeight;
-    var dialogverlay = document.getElementById("dialogverlay");
-    var dialogbox = document.getElementById("dialogbox");
-    dialogverlay.style.display = "block";
-    dialogverlay.style.height = winH + "px";
-    dialogbox.style.left = (winH/2) - (500*0.5) + "px";
-    dialogbox.style.top = "100px";
-    dialogbox.style.display = "block";
-    
-    document.getElementById("dialogboxhead").innerHTML = "Agregar a playlist";
-    document.getElementById("dialogboxbody").innerHTML = dialog;
-    document.getElementById("dialogboxfoot").innerHTML = '<button onclick="Confirm.Domingo(\''+op+'\,\''+id+'\')">Domigo</button> <button onclick="Confirm.Miercoles()">Miercoles</button>';
-  }
-  this.Miercoles = function (){
-    
-  }
-  
-  this.Domingo = function (op,id){
-    
-  }
-}
-
-const confirm = new CustomConfirm();
