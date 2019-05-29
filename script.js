@@ -28,7 +28,7 @@ function agregarCanto(e){
     dialogbox.style.display = "block";
     
     document.getElementById('dialogboxhead').innerHTML = "Agregar a playlist";
-    document.getElementById('dialogboxbody').innerHTML = "Elige";
+    //document.getElementById('dialogboxbody').innerHTML = "Elige";
     document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Confirm.Domingo()">Domigo</button> <button onclick="Confirm.Miercoles()">Miercoles</button>';
   
                            

@@ -203,9 +203,9 @@ a {
   display:none;
   opacity:.8;
   position:fixed;
-  top:0px;
+  top: 0px;
   left: 0px;
-  background: #FFF;
+  background: #333;
   width:100%;
   z-index:10;
 }
@@ -213,13 +213,14 @@ a {
 #dialogbox{
   display:none;
   position:fixed;
-  background: #000;
+  left:0;
+  background: #333;
   border-radius: 7px;
   width: 80%;
   z-index: 10;
 }
 
-#dialogbox > div {background:#FFF; margin: 8px;}
-#dialogbox > div > #dialogboxhead {background:#666; font-size:19px; padding:10px; color:#CCC;}
-#dialogbox > div > #dialogboxbody {background:#333; padding:20px; color:#FFF;}
+#dialogbox > div {background:#FFF; margin: 2.5px;}
+#dialogbox > div > #dialogboxhead {background:rgba(158, 216, 254,.3); font-size:19px; padding:10px;}
+/*#dialogbox > div > #dialogboxbody {background:#333; padding:20px; color:#FFF;}*/
 #dialogbox > div > #dialogboxfoot {background:#666; padding:10px; text-align:right;}
