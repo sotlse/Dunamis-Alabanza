@@ -33,14 +33,24 @@ function agregarCanto(e){
   
   
     var CancelarBoton = document.getElementById ('Cancelar');
+    var DomingoBoton = document.getElementById ('Domingo');
+    var MiercolesBoton = document.getElementById ('Miercoles');
     CancelarBoton.addEventListener ("click",Cancelar);
-    
+    DomingoBoton.addEventListener ("click",Domingo);
+    MiercolesBoton.addEventListener ("click",Miercoles);
+                                   
     function Cancelar(e){
       console.log(CancelarBoton); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";  
     } 
+    function Domingo(e){
+      
     }
+    function Miercoles(e){
+      
+    }
+  }
 }
   
   this.Domingo = function(){
