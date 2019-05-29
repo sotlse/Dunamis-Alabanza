@@ -54,13 +54,6 @@ function agregarCanto(e){
   }
 }
   
-  this.Domingo = function(){
-    
-  }
-  
-  this.Miercoles = function(){
-    
-  }
   
 
   
@@ -68,17 +61,6 @@ function agregarCanto(e){
 
 //Filter function
 function filterItems(e){
-/*  var text = e.target.value.toLowerCase();
-  var enlace = listaItems.getElementsByTagName("a");
-  Array.from(enlace).forEach(function(enlaces){
-    var itemName = enlaces.firstChild.textContent;
-      console.log(enlaces);
-    if (itemName.toLowerCase().indexOf(text) != -1){
-      enlaces.style.display = "block";
-    } else {
-      enlaces.style.display = "none";
-    }
-  }); */
   let filterValue = document.getElementById('busqueda').value.toUpperCase();
   let ol = document.getElementById("lista");
   console.log(ol);
@@ -91,7 +73,6 @@ function filterItems(e){
       li[i].style.display = "none";
     }
   }
-  
 }
 
 
