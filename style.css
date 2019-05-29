@@ -220,7 +220,7 @@ a {
   z-index: 10;
 }
 
-#dialogbox > div {background:#FFF; margin: 2.5px;}
+#dialogbox > div {background:#FFF; margin: 4px;}
 #dialogbox > div > #dialogboxhead {background:rgba(158, 216, 254,.3); font-size:19px; padding:10px;}
 /*#dialogbox > div > #dialogboxbody {background:#333; padding:20px; color:#FFF;}*/
-#dialogbox > div > #dialogboxfoot {background:#666; padding:10px; text-align:right;}
+#dialogbox > div > #dialogboxfoot {background:rgba(230, 230, 230,.5); padding:10px; text-align:right;}
