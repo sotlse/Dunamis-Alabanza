@@ -40,11 +40,12 @@ function agregarCanto(e){
     MiercolesBoton.addEventListener ("click",Miercoles);
                                    
     function Cancelar(e){
-      console.log(CancelarBoton); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
+      var cancion = document.querySelector('li');
+      console.log(cancion); 
       
     }
     function Miercoles(e){
