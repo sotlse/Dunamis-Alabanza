@@ -213,14 +213,15 @@ a {
 #dialogbox{
   display:none;
   position:fixed;
-  left:0;
+  left:0px;
   background: #333;
   border-radius: 7px;
-  width: 80%;
+  margin:10%;
+  width: 70%;
   z-index: 10;
 }
 
 #dialogbox > div {background:#FFF; margin: 4px;}
 #dialogbox > div > #dialogboxhead {background:rgba(158, 216, 254,.3); font-size:19px; padding:10px;}
 /*#dialogbox > div > #dialogboxbody {background:#333; padding:20px; color:#FFF;}*/
-#dialogbox > div > #dialogboxfoot {background:rgba(230, 230, 230,.5); padding:10px; text-align:right;}
+#dialogbox > div > #dialogboxfoot {background:rgba(230, 230, 230,.5); padding:10px 5px; text-align:right;}
