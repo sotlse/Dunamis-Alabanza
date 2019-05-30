@@ -16,6 +16,7 @@ busquedaItem.addEventListener("keyup",filterItems);
 //botonAgregar function
 function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
+    var cancion = e.target.parentElement;
     var winW = window.innerWidht;
     var winH = window.innerHeight;
     var dialogverlay = document.getElementById('dialogverlay');
@@ -43,13 +44,15 @@ function agregarCanto(e){
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
-      var cancion = e.target.parentElement
       /*var cancion = document.querySelector('li');*/
       console.log(cancion); 
-      
+      document.getElementById('dialogbox').style.display = "none";
+      document.getElementById('dialogverlay').style.display = "none";
     }
     function Miercoles(e){
-      
+      console.log(cancion); 
+      document.getElementById('dialogbox').style.display = "none";
+      document.getElementById('dialogverlay').style.display = "none";
     }
   }
 }
