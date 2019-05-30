@@ -2,7 +2,6 @@
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
-//var add = document.getElementsByClassName("boton-add");
 
 //Boton Add event
 if(opcionesItems){
@@ -44,7 +43,8 @@ function agregarCanto(e){
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
-      var cancion = document.querySelector('li');
+      var cancion = e.target.parentElement
+      /*var cancion = document.querySelector('li');*/
       console.log(cancion); 
       
     }
