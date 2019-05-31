@@ -18,6 +18,7 @@ busquedaItem.addEventListener("keyup",filterItems);
 function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
     var cancion = e.target.parentElement;
+    cancion.removeChild(cancion.childNodes[0]);
     var winW = window.innerWidht;
     var winH = window.innerHeight;
     var dialogverlay = document.getElementById('dialogverlay');
