@@ -47,9 +47,8 @@ function agregarCanto(e){
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
-      
+      localStorage.setItem(cancion);
       console.log(cancion); 
-      playListDomingo.appendChild(cancion);
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
     }
