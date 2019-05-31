@@ -47,7 +47,7 @@ function agregarCanto(e){
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
-      localStorage.setItem(cancion);
+      localStorage.setItem("cancion",JSON.stringify(cancion));
       console.log(cancion); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
