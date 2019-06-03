@@ -32,8 +32,9 @@
     <script src="/script.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", ready);
-      function ready{
-        
+      function ready(){
+        var canto = localStorage.getItem("cancion");
+        console.log(canto);
       }
     </script>
   </body>
