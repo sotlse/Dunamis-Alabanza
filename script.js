@@ -47,8 +47,10 @@ function agregarCanto(e){
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
-      var link = cancion.querySelector('a');
-      localStorage.setItem("cancion",link);
+      var link = cancion.querySelector('a').href;
+      let canciones = [];
+      canciones.push(link);
+      localStorage.setItem("canciones",JSON.stringify(canciones));
       console.log(link); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
