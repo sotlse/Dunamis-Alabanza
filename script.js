@@ -51,7 +51,7 @@ function agregarCanto(e){
       let canciones = [];
       canciones.push(link);
       localStorage.setItem("canciones",JSON.stringify(canciones));
-      console.log(link); 
+      console.log(canciones); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
     }
