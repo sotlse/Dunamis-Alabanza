@@ -48,7 +48,7 @@ function agregarCanto(e){
     } 
     function Domingo(e){
       var link = cancion.querySelector('a');
-      localStorage.setItem("cancion",link);
+      localStorage.setItem("cancion",JSON.stringify(link));
       console.log(link); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
