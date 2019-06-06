@@ -122,7 +122,15 @@ a {
 .anuncio{
   text-align:center;
   margin: 20px;
-  background-color:lightgreen;
+  background-color:rgb(153, 247, 166);
+  padding: 5px;
+}
+
+.anuncioM{
+  text-align:center;
+  margin: 20px;
+  background-color:rgb(247, 225, 153);
+  padding: 5px;
 }
 
 /*Canto*/
