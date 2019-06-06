@@ -3,6 +3,7 @@ var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var playListDomingo = document.getElementById("playlistDomingo");
+let cancionesDomingo = [];
 
 //Boton Add event
 if(opcionesItems){
@@ -48,10 +49,9 @@ function agregarCanto(e){
     } 
     function Domingo(e){
       var link = cancion.querySelector('a').href;
-      let canciones = [];
-      canciones.push(link);
-      localStorage.setItem("canciones",JSON.stringify(canciones));
-      console.log(canciones); 
+      cancionesDomingo.push(link);
+      localStorage.setItem("canciones",JSON.stringify(cancionesDomingo));
+      console.log(cancionesDomingo); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
       
