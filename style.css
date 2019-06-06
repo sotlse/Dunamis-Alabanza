@@ -119,6 +119,12 @@ a {
   padding:10px
 }
 
+.anuncio{
+  text-align:center;
+  margin: 20px;
+  background-color:lightgreen;
+}
+
 /*Canto*/
 .infoCanto {/*
   display:inline-block;*/

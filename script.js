@@ -57,11 +57,12 @@ function agregarCanto(e){
       
       //Mostrar mensaje de canto agregado
       const div = document.createElement ('div');
-      div.className = 'alerta';
-      div.appendChild(document.createTextNode("Canto agregado a playlist DOMINGO"));
+      div.className = 'anuncio';
+      div.appendChild(document.createTextNode("Canto agregado a DOMINGO"));
       const container = document.querySelector(".cuerpo-lista");
       const ul = document.querySelector("#opcionesDeCanto");
       container.insertBefore(div,ul);
+      setTimeout(()=> document.querySelector(".anuncio").remove(),3000)
     }
     function Miercoles(e){
       console.log(cancion); 
