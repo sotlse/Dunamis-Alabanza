@@ -54,6 +54,10 @@ function agregarCanto(e){
       console.log(canciones); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
+      //Mostrar mensaje de canto agregado
+      const div = document.createElement ('div');
+      div.appendChild(document.createTextNode("Canto agregado a playlist DOMINGO"));
+      const container = document.querySelector();
     }
     function Miercoles(e){
       console.log(cancion); 
@@ -83,6 +87,10 @@ function filterItems(e){
     }
   }
 }
+
+
+
+
 
 
 /*
