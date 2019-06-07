@@ -3,7 +3,7 @@ var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var playListDomingo = document.getElementById("playlistDomingo");
-var botonRegresar = document.getElementsByClassName("botonRegresar");
+var botonRegresar = document.getElementsByClassName("Regresar");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 var link;
@@ -19,15 +19,15 @@ busquedaItem.addEventListener("keyup",filterItems);
 }
 
 //Boton regresar event
-/*if(botonRegresar){
-  botonRegresar.addEventListener("click", RegresarInicio);
+if(botonRegresar){
+  botonRegresar.addEventListener("click", Regresar);
 }
 
 //Regresar pagina principal function
-function RegresarInicio(e){
-
+function Regresar(){
+  window.history.back();
 }
-*/
+
 
  
 //botonAgregar function
@@ -60,6 +60,8 @@ function agregarCanto(e){
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";  
     } 
+    
+    
     function Domingo(e){
       link = cancion.querySelector('a').href;
       
@@ -70,8 +72,7 @@ function agregarCanto(e){
       }else{
         cancionesDomingo = JSON.parse(localStorage.getItem("cancionesDomingo"));
         cancionesDomingo.push(link);
-        localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
-        console.log(cancionesDomingo); 
+        localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
       }
        
       document.getElementById('dialogbox').style.display = "none";
@@ -92,6 +93,8 @@ function agregarCanto(e){
       link = cancion.querySelector('a').href;
       if(localStorage.getItem("cancionesMiercoles") === null){
         cancionesMiercoles = [];
+        cancionesMiercoles.push(link);
+        localStorage.setItem("cancionesMiercoles",JSON.stringify(cancionesMiercoles));
       }else{
         cancionesMiercoles = JSON.parse(localStorage.getItem("cancionesMiercoles"));
         cancionesMiercoles.push(link);
