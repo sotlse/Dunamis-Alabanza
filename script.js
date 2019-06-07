@@ -19,14 +19,14 @@ busquedaItem.addEventListener("keyup",filterItems);
 }
 
 //Boton regresar event
-/*if(botonRegresar){
+if(botonRegresar){
   botonRegresar.addEventListener("click", RegresarInicio);
 }
 
 //Regresar pagina principal function
 function RegresarInicio(e){
-  
-}*/
+ localStorage.clear("cancionesDomingo"); 
+}
 
 
  
