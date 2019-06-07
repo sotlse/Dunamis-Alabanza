@@ -3,11 +3,11 @@ var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var playListDomingo = document.getElementById("playlistDomingo");
-var botonRegresar = document.getElementsByClassName("Regresar");
+var botonRegresar = document.querySelector(".RegresarPagina");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 var link;
- 
+  
 //Boton Add event
 if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
