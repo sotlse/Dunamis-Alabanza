@@ -4,6 +4,7 @@ var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var playListDomingo = document.getElementById("playlistDomingo");
 var botonRegresar = document.querySelector(".RegresarPagina");
+var botonBorrarListaDomingo = document.querySelector("borrarListaDomingo");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 var link;
@@ -23,11 +24,23 @@ if(botonRegresar){
   botonRegresar.addEventListener("click", Regresar);
 }
 
-//Regresar pagina principal function
+//Boton borrar lista domingo event
+if(botonBorrarListaDomingo){
+  botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+}
+
+
+//Regresar pagina function
 function Regresar(){
   window.history.back();
 }
 
+//Borrar lista domingo function
+function BorrarListaDomingo(){
+  if(confirm("Estas seguro de borar la lista?")){
+    
+  }
+}
 
  
 //botonAgregar function

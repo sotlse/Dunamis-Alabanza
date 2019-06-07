@@ -141,6 +141,10 @@ a {
   background-color:rgba(254, 126, 126,.4);
 }
 
+.nav{
+  display: inline-block;
+}
+
 /*Canto*/
 .infoCanto {/*
   display:inline-block;*/
