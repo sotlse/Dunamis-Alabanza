@@ -138,11 +138,18 @@ a {
 }
 
 .RegresarPagina{
+  background-color:rgba(254, 242, 126, .7);
+  
+}
+
+.borrarListaDomingo
+{
   background-color:rgba(254, 126, 126,.4);
+  float:right;
 }
 
 .nav{
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 /*Canto*/
