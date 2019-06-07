@@ -3,8 +3,10 @@ var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var playListDomingo = document.getElementById("playlistDomingo");
+var botonRegresar = document.getElementsByClassName("botonRegresar");
 let cancionesDomingo = [];
-
+var link;
+ 
 //Boton Add event
 if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
@@ -13,6 +15,16 @@ opcionesItems.addEventListener("click", agregarCanto);
 //Filter event
 if (busquedaItem){
 busquedaItem.addEventListener("keyup",filterItems);
+}
+
+//Boton regresar event
+if(botonRegresar){
+  botonRegresar.addEventListener("click", RegresarInicio);
+}
+
+//Regresar pagina principal function
+function RegresarInicio(e){
+  
 }
 
 
@@ -48,7 +60,7 @@ function agregarCanto(e){
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
-      var link = cancion.querySelector('a').href;
+      link = cancion.querySelector('a').href;
       cancionesDomingo.push(link);
       localStorage.setItem("canciones",JSON.stringify(cancionesDomingo));
       console.log(cancionesDomingo); 
