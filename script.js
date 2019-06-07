@@ -18,14 +18,14 @@ busquedaItem.addEventListener("keyup",filterItems);
 }
 
 //Boton regresar event
-if(botonRegresar){
+/*if(botonRegresar){
   botonRegresar.addEventListener("click", RegresarInicio);
 }
 
 //Regresar pagina principal function
 function RegresarInicio(e){
   
-}
+}*/
 
 
  
@@ -64,13 +64,14 @@ function agregarCanto(e){
       if(localStorage.getItem("cancionesDomingo") === null){
         cancionesDomingo = [];
       }else{
-        cancionesDomingo = localStorage.getItem("cancionesDomingo");
+        cancionesDomingo = JSON.parse(localStorage.getItem("cancionesDomingo"));
         cancionesDomingo.push(link);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
         console.log(cancionesDomingo); 
       }
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
+      
       
       //Mostrar mensaje de canto agregado
       const div = document.createElement ('div');
