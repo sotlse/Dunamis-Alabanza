@@ -114,7 +114,17 @@ function filterItems(e){
   }
 }
 
-
+class Store{
+  static agarrarCancion(){
+    let cancionesDomingo;
+    if(localStorage.getItem() === null){
+      cancionesDomingo = [];
+    }else{
+      cancionesDomingo = localStorage.getItem("canciones");
+    }
+    
+  }
+}
 
 
 
