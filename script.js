@@ -60,15 +60,15 @@ function agregarCanto(e){
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
-      if(localStorage.getItem() === null){
-      cancionesDomingo = [];
-    }else{
-      cancionesDomingo = localStorage.getItem("canciones");
-    }
       link = cancion.querySelector('a').href;
-      cancionesDomingo.push(link);
-      localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
-      console.log(cancionesDomingo); 
+      if(localStorage.getItem("cancionesDomingo") === null){
+        cancionesDomingo = [];
+      }else{
+        cancionesDomingo = localStorage.getItem("cancionesDomingo");
+        cancionesDomingo.push(link);
+        localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
+        console.log(cancionesDomingo); 
+      }
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
       
