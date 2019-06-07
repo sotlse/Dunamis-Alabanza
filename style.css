@@ -137,6 +137,10 @@ a {
   margin: 50px 0px;
 }
 
+.RegresarPagina{
+  background-color:rgba(254, 126, 126,.4);
+}
+
 /*Canto*/
 .infoCanto {/*
   display:inline-block;*/
