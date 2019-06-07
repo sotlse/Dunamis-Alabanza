@@ -5,6 +5,7 @@ var opcionesItems = document.getElementById("opcionesDeCanto");
 var playListDomingo = document.getElementById("playlistDomingo");
 var botonRegresar = document.getElementsByClassName("botonRegresar");
 let cancionesDomingo = [];
+let cancionesMiercoles = [];
 var link;
  
 //Boton Add event
@@ -71,8 +72,7 @@ function agregarCanto(e){
       }
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
-      
-      
+    
       //Mostrar mensaje de canto agregado
       const div = document.createElement ('div');
       div.className = 'anuncio';
@@ -82,8 +82,18 @@ function agregarCanto(e){
       container.insertBefore(div,ul);
       setTimeout(()=> document.querySelector(".anuncio").remove(),2500);
     }
+    
+    
     function Miercoles(e){
-      console.log(cancion); 
+      link = cancion.querySelector('a').href;
+      if(localStorage.getItem("cancionesMiercoles") === null){
+        cancionesMiercoles = [];
+      }else{
+        cancionesMiercoles = JSON.parse(localStorage.getItem("cancionesMiercoles"));
+        cancionesMiercoles.push(link);
+        localStorage.setItem("cancionesMiercoles",JSON.stringify(cancionesMiercoles));
+        console.log(cancionesMiercoles); 
+      } 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
       
