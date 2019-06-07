@@ -60,9 +60,14 @@ function agregarCanto(e){
       document.getElementById('dialogverlay').style.display = "none";  
     } 
     function Domingo(e){
+      if(localStorage.getItem() === null){
+      cancionesDomingo = [];
+    }else{
+      cancionesDomingo = localStorage.getItem("canciones");
+    }
       link = cancion.querySelector('a').href;
       cancionesDomingo.push(link);
-      localStorage.setItem("canciones",JSON.stringify(cancionesDomingo));
+      localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
       console.log(cancionesDomingo); 
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
@@ -114,7 +119,7 @@ function filterItems(e){
   }
 }
 
-class Store{
+/*class Store{
   static agarrarCancion(){
     let cancionesDomingo;
     if(localStorage.getItem() === null){
@@ -124,7 +129,7 @@ class Store{
     }
     
   }
-}
+}*/
 
 
 
