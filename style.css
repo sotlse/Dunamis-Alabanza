@@ -139,7 +139,7 @@ a {
 
 .RegresarPagina{
   background-color:rgba(254, 242, 126, .7);
-  
+  float:left;
 }
 
 .borrarListaDomingo

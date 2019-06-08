@@ -38,9 +38,8 @@ function Regresar(){
 //Borrar lista domingo function
 function BorrarListaDomingo(e){
   console.log("1");
-  if(confirm("Estas seguro de borar la lista?")){
-    localStorage.clear("cancionesDomingo");
-    
+  if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
+    localStorage.removeItem("cancionesDomingo");
   }
 }
 
