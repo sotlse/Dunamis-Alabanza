@@ -8,7 +8,55 @@ var botonBorrarListaDomingo = document.querySelector(".borrarListaDomingo");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 var link;
+ 
+//Base de datos de canciones
+class UI {
+  static desplegarCantos(){
+    const baseCanciones = [
+    {
+      pagina: "A_Cada_Instante.html",
+      titulo: "A Cada Instante",
+      autor: "B",
+      tono: "Tono:B",
+      categoria: ["Adoracion"],
+      playlistTipo: "",
+      playlistPagina:""
+    },
   
+    {
+      pagina: "A_El_Alto_Y_Sublime.html",
+      titulo: "A el Alto y Sublime",
+      autor: "Jesus Adrian Romero",
+      tono: "Tono:Bb",
+      categoria: ["Adoracion"],
+      playlistTipo: "",
+      playlistPagina:""
+    },
+  
+    {
+      pagina:"Abre_los_Cielos.html",
+      titulo: "Abre los Cielos",
+      autor: "Jesus Adrian Romero",
+      tono: "Tono:A#",
+      categoria: ["Adoracion"],
+      playlistTipo: "",
+      playlistPagina:""
+    }
+    ];
+    
+    const cantos = baseCanciones;
+    cantos.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+  }
+  
+  static agregarCantosAListaCategoria(canto){
+    const lista = document.querySelector("#lista");
+    const crearli = document.creatElement('li');
+    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo}</a>`;
+  }
+}
+
+
+
 //Boton Add event
 if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
