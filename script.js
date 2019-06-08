@@ -62,7 +62,6 @@ function agregarCanto(e){
     //document.getElementById('dialogboxbody').innerHTML = "Elige";
     document.getElementById('dialogboxfoot').innerHTML = '<button id=Domingo>Domingo</button>  <button id=Miercoles>Miercoles</button>  <button id="Cancelar">Cancelar</button>';
   
-  
     var CancelarBoton = document.getElementById ('Cancelar');
     var DomingoBoton = document.getElementById ('Domingo');
     var MiercolesBoton = document.getElementById ('Miercoles');
