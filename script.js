@@ -153,35 +153,7 @@ function filterItems(e){
 
 
 
-class UI {
-  static desplegarCantos(){
-    const baseCanciones = [
-    {
-      pagina: <a href="A_Cada_Instante.html">A cada instante</a>,
-      titulo: "A Cada Instante",
-      autor: "B",
-      tono: "Tono:B",
-      categoria: ["Adoracion"],
-      playlistTipo: "",
-      playlistPagina:""
-    },
-  
-    {
-      pagina: "A_El_Alto_Y_Sublime.html",
-      titulo: "A el Alto y Sublime",
-      autor: "Jesus Adrian Romero",
-      tono: "Tono:Bb"
-    },
-  
-    {
-      pagina:"Abre_los_Cielos.html",
-      titulo: "Abre los Cielos",
-      autor: "Jesus Adrian Romero",
-      tono: "Tono:A#"
-    }
-    ];
-  }
-}
+
   
 
 
