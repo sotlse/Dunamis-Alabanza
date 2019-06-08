@@ -43,11 +43,12 @@
     <script>
       document.addEventListener("DOMContentLoaded", ready);
       function ready(){
-        let 
-        const lista = querySelector("#playlistDomingo");
-        const li = document.creatElement("li");
-        
-        
+        let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+        console.log(canciones);
+        const lista = document.querySelector("#playlistDomingo");
+        const li = document.createElement("li");
+        li.innerHTML = '<a href="${canciones}">';
+        console.log(li);
       }
     </script>
   </body>
