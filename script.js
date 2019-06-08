@@ -49,13 +49,14 @@ class UI {
   }
   
   static agregarCantosAListaCategoria(canto){
-    const lista = document.querySelector("#lista");
-    const crearli = document.creatElement('li');
-    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo}</a>`;
+    const olLista = document.querySelector("#lista");
+    const crearli = document.createElement('li');
+    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - ${canto.autor} - ${canto.tono}</a>`;
+    olLista.appendChild(crearli);
   }
 }
 
-
+document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 
 //Boton Add event
 if(opcionesItems){
