@@ -16,8 +16,8 @@ class UI {
     {
       pagina: "A_Cada_Instante.html",
       titulo: "A Cada Instante",
-      autor: "B",
-      tono: "Tono:B",
+      autor: "Marco Barrientos",
+      tono: "Tono:F",
       categoria: ["Adoracion"],
       playlistTipo: "",
       playlistPagina:""
@@ -34,7 +34,7 @@ class UI {
     },
   
     {
-      pagina:"Abre_los_Cielos.html",
+      pagina:"Abre_Los_Cielos.html",
       titulo: "Abre los Cielos",
       autor: "Jesus Adrian Romero",
       tono: "Tono:A#",
@@ -52,10 +52,12 @@ class UI {
     const olLista = document.querySelector("#lista");
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - ${canto.autor} - ${canto.tono}</a>`;
+    console.log(crearli);
     olLista.appendChild(crearli);
   }
 }
 
+//Cuando se cargue la pagina, agregar base de datos
 document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 
 //Boton Add event
