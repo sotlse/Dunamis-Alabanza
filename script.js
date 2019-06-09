@@ -39,7 +39,7 @@ class UI {
       titulo: "Abre los Cielos",
       autor: "Jesus Adrian Romero",
       tono: "Tono:A#",
-      categoria: ["Adoracion"],
+      categoria: ["Alabanza"],
       playlistTipo: "",
       playlistPagina:""
     }
