@@ -43,7 +43,6 @@ class UI {
       playlistPagina:""
     }
     ];
-    
     const cantos = baseCanciones;
     cantos.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
   }
@@ -55,10 +54,13 @@ class UI {
     console.log(crearli);
     olLista.appendChild(crearli);
   }
+  
+  
 }
 
 //Cuando se cargue la pagina, agregar base de datos
 document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
+console.log(document);
 
 //Boton Add event
 if(opcionesItems){
