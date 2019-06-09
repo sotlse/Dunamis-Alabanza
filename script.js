@@ -19,7 +19,7 @@ class UI {
       titulo: "A Cada Instante",
       autor: "Marco Barrientos",
       tono: "Tono:F",
-      categoria: ["Adoracion"],
+      categoria: ["Adoracion","Servicio"],
       playlistTipo: "",
       playlistPagina:""
     },
@@ -44,9 +44,12 @@ class UI {
       playlistPagina:""
     } 
     ];
-    const cantos = baseCanciones;
+    //const cantos = baseCanciones;
     console.log(baseCanciones);
-    cantos.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    const cantosAdoracion = baseCanciones.filter(function(adoracion){
+      return adoracion.categoria === "Adoracion"
+    })
   }
   
   static agregarCantosAListaCategoria(canto){
