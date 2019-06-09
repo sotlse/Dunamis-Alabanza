@@ -51,7 +51,7 @@ class UI {
   static agregarCantosAListaCategoria(canto){
     const olLista = document.querySelector("#lista");
     const crearli = document.createElement('li');
-    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - ${canto.autor} - ${canto.tono}</a>`;
+    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - ${canto.autor} </a>- ${canto.tono}`;
     console.log(crearli);
     olLista.appendChild(crearli);
   }
