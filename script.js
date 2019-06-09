@@ -45,11 +45,12 @@ class UI {
     } 
     ];
     //const cantos = baseCanciones;
-    console.log(baseCanciones);
     baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     const cantosAdoracion = baseCanciones.filter(function(adoracion){
-      return adoracion.categoria === "Adoracion"
+      adoracion.categoria === "Adoracion";
+      return 
     })
+    console.log(cantosAdoracion);
   }
   
   static agregarCantosAListaCategoria(canto){
