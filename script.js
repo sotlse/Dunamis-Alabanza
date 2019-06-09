@@ -8,7 +8,8 @@ var botonBorrarListaDomingo = document.querySelector(".borrarListaDomingo");
 let titulo = document.querySelector('title').textContent;
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
-var link;
+let link;
+let nombre;
  
 //Base de datos de canciones
 class UI {
@@ -161,7 +162,7 @@ function agregarCanto(e){
     
     function Domingo(e){
       link = cancion.querySelector('a').href;
-      
+      nombre=cancion.querySelector('a').textContent;
       if(localStorage.getItem("cancionesDomingo") === null){
         cancionesDomingo = [];
         cancionesDomingo.push(link); 
