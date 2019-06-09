@@ -42,7 +42,7 @@ class UI {
       categoria: ["Alabanza"],
       playlistTipo: "",
       playlistPagina:""
-    }
+    } 
     ];
     const cantos = baseCanciones;
     cantos.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
