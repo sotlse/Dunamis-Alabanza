@@ -45,12 +45,17 @@ class UI {
     } 
     ];
     //const cantos = baseCanciones;
-    baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
-    const cantosAdoracion = baseCanciones.filter(function(adoracion){
+    if(titulo === "Dunamis Adoracion | General"){
+      baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    else if(titulo === "Playlist Domingo"){
+      baseCanciones.forEach((canto) => UI.agregarCantosAPlayListDomingo(canto));
+    }
+/*    const cantosAdoracion = baseCanciones.filter(function(adoracion){
       const filtro = adoracion.categoria;
       return filtro 
     })
-    console.log(cantosAdoracion); 
+    console.log(cantosAdoracion); */
   }
   
   static agregarCantosAListaCategoria(canto){
@@ -59,6 +64,15 @@ class UI {
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - ${canto.autor} </a>- ${canto.tono}`;
     console.log(crearli);
     olLista.appendChild(crearli);
+  }
+  
+  static agregarCantosAPlayListDomingo(canto){
+    let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    const lista = document.querySelector("#playlistDomingo");
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${canto.pagina}">X</a>`;
+    console.log(li);
+    lista.appendChild(li);
   }
   
   
@@ -73,7 +87,12 @@ if(titulo === "Dunamis Adoracion | General"){
 if(titulo === "Dunamis Adoracion | Adoracion"){
   
 }
-       
+
+//Cuando se cargue la pagina Playlist, agregar cantos
+if(titulo === "Playlist Domingo"){
+  
+}
+
 //Boton Add event
 if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
