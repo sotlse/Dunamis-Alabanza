@@ -45,7 +45,7 @@ class UI {
     } 
     ];
     const cantos = baseCanciones;
-    console.log(cantos);
+    console.log(baseCanciones);
     cantos.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
   }
   
