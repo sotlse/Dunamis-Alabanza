@@ -5,6 +5,7 @@ var opcionesItems = document.getElementById("opcionesDeCanto");
 var playListDomingo = document.getElementById("playlistDomingo");
 var botonRegresar = document.querySelector(".RegresarPagina");
 var botonBorrarListaDomingo = document.querySelector(".borrarListaDomingo");
+let titulo = document.querySelector('title').textContent;
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 var link;
@@ -57,12 +58,17 @@ class UI {
   
   
 }
-console.log(document);
-//Cuando se cargue la pagina, agregar base de datos
-if(document.querySelector("title") === "Dunamis Adoracion | General"){}
-document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 
+
+//Cuando se cargue la pagina, agregar base de datos
+if(titulo === "Dunamis Adoracion | General"){
+  document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
+} 
+
+if(titulo === "Dunamis Adoracion | Adoracion"){
   
+}
+       
 //Boton Add event
 if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
