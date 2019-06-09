@@ -47,10 +47,11 @@ class UI {
     //const cantos = baseCanciones;
     baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     const cantosAdoracion = baseCanciones.filter(function(adoracion){
-      adoracion.categoria === "Adoracion";
-      return 
+      const filtro = adoracion.categoria;
+      if (filtro === "Tono:F")
+      return filtro 
     })
-    console.log(cantosAdoracion);
+    console.log(cantosAdoracion); 
   }
   
   static agregarCantosAListaCategoria(canto){
