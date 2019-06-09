@@ -57,11 +57,12 @@ class UI {
   
   
 }
-
-//Cuando se cargue la pagina, agregar base de datos
-document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 console.log(document);
+//Cuando se cargue la pagina, agregar base de datos
+if(document.querySelector("title") === "Dunamis Adoracion | General"){}
+document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 
+  
 //Boton Add event
 if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
