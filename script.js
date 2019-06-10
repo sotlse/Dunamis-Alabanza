@@ -163,13 +163,14 @@ function agregarCanto(e){
     function Domingo(e){
       link = cancion.querySelector('a').href;
       nombre=cancion.querySelector('a').textContent;
+      let array = [link,nombre,titulo];
       if(localStorage.getItem("cancionesDomingo") === null){
         cancionesDomingo = [];
-        cancionesDomingo.push(link); 
+        cancionesDomingo.push(array);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
       }else{
         cancionesDomingo = JSON.parse(localStorage.getItem("cancionesDomingo"));
-        cancionesDomingo.push(link);
+        cancionesDomingo.push(array);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
       }
        
