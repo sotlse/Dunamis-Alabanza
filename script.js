@@ -58,16 +58,8 @@ class UI {
     if(titulo === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     }
-//    else if(titulo === "Playlist Domingo"){
-//      baseCanciones.forEach((canto) => UI.agregarCantosAPlayListDomingo(canto));
-    }
-/*    const cantosAdoracion = baseCanciones.filter(function(adoracion){
-      const filtro = adoracion.categoria;
-      return filtro 
-    })
-    console.log(cantosAdoracion); 
-  }*/
-  
+  }
+
   static agregarCantosAListaCategoria(canto){
     const olLista = document.querySelector("#lista");
     const crearli = document.createElement('li');
@@ -75,19 +67,6 @@ class UI {
     console.log(crearli);
     olLista.appendChild(crearli);
   }
-  
-/*  static agregarCantosAPlayListDomingo(canto){
-    let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-    console.log(canciones);
-    if(canciones[2] === canto.titulo)
-    {
-    const lista = document.querySelector("#playlistDomingo");
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${canto.pagina}">X</a>`;
-    console.log(li);
-    lista.appendChild(li);
-    }
-  }*/
 }
 
 
@@ -108,8 +87,8 @@ if(titulo === "Playlist Domingo"){
     console.log(canciones);
     const lista = document.querySelector("#playlistDomingo");
     const li = document.createElement("li");
-    for (let i=0; i<1; i++) {
-      li.innerHTML = `<a href="${canciones[i][0]}">${canciones[i][2]} - ${canciones[i][1]}</a>`; 
+    for (let i=0; i<2; i++) {
+      li.innerHTML = `<a href="${canciones[i].link}">${canciones[i][2]} - ${canciones[i][1]}</a>`; 
       lista.appendChild(li);
       console.log(li);
     }
@@ -187,7 +166,6 @@ function agregarCanto(e){
       link = cancion.querySelector('a').href;
       tipo=cancion.querySelector('a').textContent;
       const CantoGuardado = new cantoGuardado(link,tipo,titulo);
-      console.log(CantoGuardado);
       if(localStorage.getItem("cancionesDomingo") === null){
         cancionesDomingo = [];
         cancionesDomingo.push(CantoGuardado);
