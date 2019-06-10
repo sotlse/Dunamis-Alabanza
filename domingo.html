@@ -40,17 +40,5 @@
     </nav>
     
     <script src="/script.js" defer></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", ready);
-      function ready(){
-        let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-        console.log(canciones);
-        const lista = document.querySelector("#playlistDomingo");
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${canciones[0]}">X</a>`;
-        console.log(li);
-        lista.appendChild(li);
-      }
-    </script>
   </body>
 </html>

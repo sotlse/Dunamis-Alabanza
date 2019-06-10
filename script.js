@@ -69,11 +69,15 @@ class UI {
   
   static agregarCantosAPlayListDomingo(canto){
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    if(canciones[2] === canto.titulo)
+    {
+    console.log(canciones);
     const lista = document.querySelector("#playlistDomingo");
     const li = document.createElement("li");
     li.innerHTML = `<a href="${canto.pagina}">X</a>`;
     console.log(li);
     lista.appendChild(li);
+    }
   }
   
   
@@ -91,6 +95,7 @@ if(titulo === "Dunamis Adoracion | Adoracion"){
 
 //Cuando se cargue la pagina Playlist, agregar cantos
 if(titulo === "Playlist Domingo"){
+  document.addEventListener("DOMContentLoaded", UI.desplegarCantos)
   
 }
 
