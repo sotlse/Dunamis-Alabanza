@@ -85,14 +85,13 @@ if(titulo === "Playlist Domingo"){
   function PlaylistDomingo(){
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
     console.log(canciones);
-    canciones.forEach((canto) => agregarPlaylistDoming(canto));
-    const lista = document.querySelector("#playlistDomingo");
-    const li = document.createElement("li");
-    for (let i=0; i<2; i++) {
-      li.innerHTML = `<a href="${canciones[i].link}">${canciones[i][2]} - ${canciones[i][1]}</a>`; 
+    canciones.forEach(function (canto){
+      const lista = document.querySelector("#playlistDomingo");
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - ${canto.tipo}</a>`; 
       lista.appendChild(li);
       console.log(li);
-    }
+    });
   }
   
 }
