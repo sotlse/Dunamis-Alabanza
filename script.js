@@ -98,11 +98,13 @@ if(titulo === "Playlist Domingo"){
   document.addEventListener("DOMContentLoaded", PlaylistDomingo)
   function PlaylistDomingo(){
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-    console.log(canciones);
+    console.log(canciones.indexOf);
     const lista = document.querySelector("#playlistDomingo");
     const li = document.createElement("li");
-    li.innerHTML = `<a href="${canciones[0]}">${canciones[2]} - ${canciones[1]}</a>`;
-    lista.appendChild(li);
+    for (let canto of canciones) {
+      li.innerHTML = `<a href="${canciones[0][0]}">${canciones[0][2]} - ${canciones[0][1]}</a>`; 
+      lista.appendChild(li);
+    }
   }
   
 }
