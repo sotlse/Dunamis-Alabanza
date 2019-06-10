@@ -9,8 +9,17 @@ let titulo = document.querySelector('title').textContent;
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
-let nombre;
+let tipo;
  
+//Constructor de canto guardado
+class cantoGuardado {
+  constructor(link,tipo,titulo){
+    this.pagina = link;
+    this.tipo = tipo;
+    this.titulo = titulo;
+  }
+}
+
 //Base de datos de canciones
 class UI {
   static desplegarCantos(){
@@ -79,14 +88,6 @@ class UI {
     lista.appendChild(li);
     }
   }*/
-}
-
-class CantoGuardadov{
-  constructor(pagina,tipo,titulo){
-    this.pagina = pagina;
-    this.tipo = tipo;
-    this.titulo = titulo;
-  }
 }
 
 
@@ -184,15 +185,16 @@ function agregarCanto(e){
     
     function Domingo(e){
       link = cancion.querySelector('a').href;
-      nombre=cancion.querySelector('a').textContent;
-      let array = [link,nombre,titulo];
+      tipo=cancion.querySelector('a').textContent;
+      const CantoGuardado = new cantoGuardado(link,tipo,titulo);
+      console.log(CantoGuardado);
       if(localStorage.getItem("cancionesDomingo") === null){
         cancionesDomingo = [];
-        cancionesDomingo.push(array);
+        cancionesDomingo.push(CantoGuardado);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
       }else{
         cancionesDomingo = JSON.parse(localStorage.getItem("cancionesDomingo"));
-        cancionesDomingo.push(array);
+        cancionesDomingo.push(CantoGuardado);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
       }
        
