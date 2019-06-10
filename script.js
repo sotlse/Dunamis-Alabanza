@@ -85,6 +85,7 @@ if(titulo === "Playlist Domingo"){
   function PlaylistDomingo(){
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
     console.log(canciones);
+    canciones.forEach((canto) => agregarPlaylistDoming(canto));
     const lista = document.querySelector("#playlistDomingo");
     const li = document.createElement("li");
     for (let i=0; i<2; i++) {
