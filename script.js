@@ -79,8 +79,14 @@ class UI {
     lista.appendChild(li);
     }
   }*/
-  
-  
+}
+
+class CantoGuardadov{
+  constructor(pagina,tipo,titulo){
+    this.pagina = pagina;
+    this.tipo = tipo;
+    this.titulo = titulo;
+  }
 }
 
 
@@ -101,8 +107,8 @@ if(titulo === "Playlist Domingo"){
     console.log(canciones);
     const lista = document.querySelector("#playlistDomingo");
     const li = document.createElement("li");
-    for (let i=0; i<2; i++) {
-      li.innerHTML = `<a href="${canciones[0][0]}">${canciones[i][2]} - ${canciones[i][1]}</a>`; 
+    for (let i=0; i<1; i++) {
+      li.innerHTML = `<a href="${canciones[i][0]}">${canciones[i][2]} - ${canciones[i][1]}</a>`; 
       lista.appendChild(li);
       console.log(li);
     }
