@@ -126,14 +126,15 @@ a {
 }
 
 #playlistDomingo{
-  margin:0px;
+  padding-left:0em;
+  border-top:1px solid;
 }
 
 #playlistDomingo li{
-  list-style-position: outside;
+  list-style-position: inside;
   border-right-style:none;
   border-bottom:1px solid;
-  padding:10px 0;
+  padding:10px 0px 10px 10px;
 }
 
 .anuncio{
