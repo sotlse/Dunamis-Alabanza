@@ -91,10 +91,15 @@ if(titulo === "Playlist Domingo"){
       li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
             X</button>`; 
       lista.appendChild(li);
-      console.log(li);
     });
-  }
+    
+  //Borrar canto seleccionado
+  document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
+    console.log(e.target)
+  });
+    
   
+  }
 }
 
 //Boton Add event
@@ -125,7 +130,6 @@ function Regresar(){
 
 //Borrar lista domingo function
 function BorrarListaDomingo(e){
-  console.log("1");
   if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
     localStorage.removeItem("cancionesDomingo");
   }
