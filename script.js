@@ -2,7 +2,6 @@
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
-var playListDomingo = document.getElementById("playlistDomingo");
 var botonRegresar = document.querySelector(".RegresarPagina");
 var botonBorrarListaDomingo = document.querySelector(".borrarListaDomingo");
 let titulo = document.querySelector('title').textContent;
@@ -30,8 +29,6 @@ class UI {
       autor: "Marco Barrientos",
       tono: "Tono:F",
       categoria: ["Adoracion","Servicio"],
-      playlistTipo: "",
-      playlistPagina:""
     },
   
     {
@@ -40,8 +37,6 @@ class UI {
       autor: "Jesus Adrian Romero",
       tono: "Tono:Bb",
       categoria: ["Adoracion"],
-      playlistTipo: "",
-      playlistPagina:""
     },
   
     {
@@ -50,10 +45,9 @@ class UI {
       autor: "Jesus Adrian Romero",
       tono: "Tono:A#",
       categoria: ["Alabanza"],
-      playlistTipo: "",
-      playlistPagina:""
     } 
     ];
+    
     //const cantos = baseCanciones;
     if(titulo === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
@@ -86,7 +80,7 @@ if(titulo === "Playlist Domingo"){
     if (canciones === null){
       const div = document.createElement ('div');
       div.className = "NoHayCantos";
-      div.appendChild(document.createTextNode("Agrega cantos a la Playlist Domingo"));
+      div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
       const container = document.querySelector(".cuerpo-lista");
       const ol = document.querySelector("#playlistDomingo");
       container.insertBefore(div,ol);
@@ -101,9 +95,13 @@ if(titulo === "Playlist Domingo"){
     });
     }
   //Borrar canto seleccionado
-  document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
-    console.log(e.target)
-  });
+    document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
+      let el = e.target;
+      if (el.classList.contains("boton-delete")){
+        el.parentElement.remove();
+      }
+      
+    });
     
   
   }
@@ -147,6 +145,11 @@ function BorrarListaDomingo(e){
       ol.removeChild(ultimo);
       ultimo = ol.lastElementChild;
     }
+    const div = document.createElement ('div');
+    div.className = "NoHayCantos";
+    div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
+    const container = document.querySelector(".cuerpo-lista");
+    container.insertBefore(div,ol);
   }
 }
 
