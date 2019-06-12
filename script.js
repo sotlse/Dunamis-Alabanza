@@ -132,6 +132,14 @@ function Regresar(){
 function BorrarListaDomingo(e){
   if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
     localStorage.removeItem("cancionesDomingo");
+    let e=document.querySelector("#playlistDomingo");
+    let ultimo = e.lastElementChild;
+    console.log(e);
+    while(ultimo){
+      console.log(ultimo);
+      e.removeChild(ultimo);
+      ultimo = e.lastElementChild;
+    }
   }
 }
 
