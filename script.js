@@ -4,6 +4,7 @@ var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var botonRegresar = document.querySelector(".RegresarPagina");
 var botonBorrarListaDomingo = document.querySelector(".borrarListaDomingo");
+var botonBorrarListaMiercoles = document.querySelector(".borrarListaMiercoles");
 let titulo = document.querySelector('title').textContent;
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
