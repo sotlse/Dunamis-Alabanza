@@ -64,7 +64,6 @@ class UI {
     const olLista = document.querySelector("#lista");
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- ${canto.tono}`;
-    console.log(crearli);
     olLista.appendChild(crearli);
   }
 }
@@ -81,13 +80,12 @@ if(titulo === "Dunamis Adoracion | Adoracion"){
 
 //Cuando se cargue la pagina Playlist, agregar cantos
 if(titulo === "Playlist Domingo"){
-  document.addEventListener("DOMContentLoaded", PlaylistDomingo) 
-  if (document.querySelector("#playlistDomingo").lastElementChild){
-    
-  }
+  document.addEventListener("DOMContentLoaded", PlaylistDomingo)   
   function PlaylistDomingo(){
+    if (document.querySelector("#playlistDomingo").lastElementChild === null){
+      console.log("hola");
+    }
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-    console.log(canciones);
     canciones.forEach(function (canto){
       const lista = document.querySelector("#playlistDomingo");
       const li = document.createElement("li");
@@ -103,6 +101,7 @@ if(titulo === "Playlist Domingo"){
     
   
   }
+  
 }
 
 //Boton Add event
