@@ -99,6 +99,10 @@ if(titulo === "Playlist Domingo"){
       let el = e.target;
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
+        if (document.querySelector("#playlistDomingo") === null)
+          {
+            console.log(document.querySelector("#playlistDomingo"));
+          }
       }
       
     });
