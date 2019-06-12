@@ -99,9 +99,14 @@ if(titulo === "Playlist Domingo"){
       let el = e.target;
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
-        if (document.querySelector("#playlistDomingo") === null)
+        if (document.querySelector("#playlistDomingo").lastElementChild === null)
           {
-            console.log(document.querySelector("#playlistDomingo"));
+            const div = document.createElement ('div');
+            div.className = "NoHayCantos";
+            div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
+            const container = document.querySelector(".cuerpo-lista");
+            const ol = document.querySelector("#playlistDomingo");
+            container.insertBefore(div,ol);
           }
       }
       
@@ -219,9 +224,11 @@ function agregarCanto(e){
     
     function Miercoles(e){
       link = cancion.querySelector('a').href;
+      tipo=cancion.querySelector('a').textContent;
+      const CantoGuardado = new cantoGuardado(link,tipo,titulo);
       if(localStorage.getItem("cancionesMiercoles") === null){
         cancionesMiercoles = [];
-        cancionesMiercoles.push(link);
+        cancionesMiercoles.push(CantoGuardado);
         localStorage.setItem("cancionesMiercoles",JSON.stringify(cancionesMiercoles));
       }else{
         cancionesMiercoles = JSON.parse(localStorage.getItem("cancionesMiercoles"));
