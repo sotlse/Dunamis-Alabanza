@@ -138,6 +138,18 @@ a {
   padding:10px 0px 10px 10px;
 }
 
+#playlistMiercoles{
+  padding-left:0em;
+  border-top:1px solid;
+}
+
+#playlistMiercoles li{
+  list-style-position: inside;
+  border-right-style:none;
+  border-bottom:1px solid;
+  padding:10px 0px 10px 10px;
+}
+
 .NoHayCantos{
   text-align:center;
   padding:20px 0 10px 0;
@@ -168,6 +180,12 @@ a {
 }
 
 .borrarListaDomingo
+{
+  background-color:rgba(254, 126, 126,.4);
+  float:right;
+}
+
+.borrarListaMiercoles
 {
   background-color:rgba(254, 126, 126,.4);
   float:right;
