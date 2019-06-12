@@ -82,10 +82,16 @@ if(titulo === "Dunamis Adoracion | Adoracion"){
 if(titulo === "Playlist Domingo"){
   document.addEventListener("DOMContentLoaded", PlaylistDomingo)   
   function PlaylistDomingo(){
-    if (document.querySelector("#playlistDomingo").lastElementChild === null){
-      console.log("hola");
-    }
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    if (canciones === null){
+      const div = document.createElement ('div');
+      div.className = "NoHayCantos";
+      div.appendChild(document.createTextNode("Agrega cantos a la Playlist Domingo"));
+      const container = document.querySelector(".cuerpo-lista");
+      const ol = document.querySelector("#playlistDomingo");
+      container.insertBefore(div,ol);
+    }
+    else{
     canciones.forEach(function (canto){
       const lista = document.querySelector("#playlistDomingo");
       const li = document.createElement("li");
@@ -93,7 +99,7 @@ if(titulo === "Playlist Domingo"){
             X</button>`; 
       lista.appendChild(li);
     });
-    
+    }
   //Borrar canto seleccionado
   document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
     console.log(e.target)
