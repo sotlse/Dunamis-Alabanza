@@ -73,7 +73,7 @@ if(titulo === "Dunamis Adoracion | Adoracion"){
   
 }
 
-//Cuando se cargue la pagina Playlist, agregar cantos
+//Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
   document.addEventListener("DOMContentLoaded", PlaylistDomingo)   
   function PlaylistDomingo(){
@@ -111,7 +111,6 @@ if(titulo === "Playlist Domingo"){
             container.insertBefore(div,ol);
           }
       }
-      
     });
     
   
