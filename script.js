@@ -101,9 +101,11 @@ if(titulo === "Playlist Domingo"){
       let el = e.target;
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
+        console.log(el.previousElementSibling.href)
         let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+        console.log(cantoGuardado.pagina);
         canciones.forEach((cantoGuardado, index)=>{
-          if(cantoGuardado === 1){
+          if(cantoGuardado.pagina === el.previousElementSibling){
             cantoGuardado.splice(index,1);
           }
         });
