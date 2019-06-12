@@ -101,15 +101,21 @@ if(titulo === "Playlist Domingo"){
       let el = e.target;
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
-        if (document.querySelector("#playlistDomingo").lastElementChild === null)
-          {
-            const div = document.createElement ('div');
-            div.className = "NoHayCantos";
-            div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
-            const container = document.querySelector(".cuerpo-lista");
-            const ol = document.querySelector("#playlistDomingo");
-            container.insertBefore(div,ol);
+        let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+        canciones.forEach((cantoGuardado, index)=>{
+          if(cantoGuardado === 1){
+            cantoGuardado.splice(index,1);
           }
+        });
+        localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
+        if (document.querySelector("#playlistDomingo").lastElementChild === null){
+          const div = document.createElement ('div');
+          div.className = "NoHayCantos";
+          div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
+          const container = document.querySelector(".cuerpo-lista");
+          const ol = document.querySelector("#playlistDomingo");
+          container.insertBefore(div,ol);
+        }
       }
     });
     
