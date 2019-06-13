@@ -103,10 +103,11 @@ if(titulo === "Playlist Domingo"){
         el.parentElement.remove();
         console.log(el.previousElementSibling.href)
         let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-        console.log(cantoGuardado.pagina);
-        canciones.forEach((cantoGuardado, index)=>{
-          if(cantoGuardado.pagina === el.previousElementSibling){
-            cantoGuardado.splice(index,1);
+        canciones.forEach((canto, index)=>{
+        console.log(canto.pagina);
+          if(canto.pagina === el.previousElementSibling){
+            canto.splice(index,1);
+            console.log(canto.pagina);
           }
         });
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
