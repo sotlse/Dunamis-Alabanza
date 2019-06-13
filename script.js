@@ -79,12 +79,12 @@ if(titulo === "Playlist Domingo"){
   function PlaylistDomingo(){
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
     if (canciones === null){
-      const div = document.createElement ('div');
+      /*const div = document.createElement ('div');
       div.className = "NoHayCantos";
       div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
       const container = document.querySelector(".cuerpo-lista");
       const ol = document.querySelector("#playlistDomingo");
-      container.insertBefore(div,ol);
+      container.insertBefore(div,ol);*/
     }
     else{
     canciones.forEach(function (canto){
@@ -148,7 +148,9 @@ if(botonRegresar){
 
 //Boton borrar lista domingo event
 if(botonBorrarListaDomingo){
+  if(document.querySelector("#playlistDomingo").lastElementChild != null){
   botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+  }
 }
 
 //Regresar pagina function
@@ -167,11 +169,11 @@ function BorrarListaDomingo(e){
       ol.removeChild(ultimo);
       ultimo = ol.lastElementChild;
     }
-    /*const div = document.createElement ('div');
+    const div = document.createElement ('div');
     div.className = "NoHayCantos";
     div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
     const container = document.querySelector(".cuerpo-lista");
-    container.insertBefore(div,ol);*/
+    container.insertBefore(div,ol);
   }
 }
 
