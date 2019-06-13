@@ -108,7 +108,7 @@ if(titulo === "Playlist Domingo"){
           }
         });
         localStorage.setItem("cancionesDomingo",JSON.stringify(canciones));
-        if (document.querySelector("#playlistDomingo").lastElementChild === null || cancionesDomingo === []){
+        if (document.querySelector("#playlistDomingo").lastElementChild === null){
           const div = document.createElement ('div');
           div.className = "NoHayCantos";
           div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
@@ -118,7 +118,14 @@ if(titulo === "Playlist Domingo"){
         }
       }
     });
-    
+    if (document.querySelector("#playlistDomingo").lastElementChild === null){
+          const div = document.createElement ('div');
+          div.className = "NoHayCantos";
+          div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
+          const container = document.querySelector(".cuerpo-lista");
+          const ol = document.querySelector("#playlistDomingo");
+          container.insertBefore(div,ol);
+    }
   
   }
   
@@ -160,11 +167,11 @@ function BorrarListaDomingo(e){
       ol.removeChild(ultimo);
       ultimo = ol.lastElementChild;
     }
-    const div = document.createElement ('div');
+    /*const div = document.createElement ('div');
     div.className = "NoHayCantos";
     div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
     const container = document.querySelector(".cuerpo-lista");
-    container.insertBefore(div,ol);
+    container.insertBefore(div,ol);*/
   }
 }
 
