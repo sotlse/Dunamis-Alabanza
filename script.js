@@ -104,14 +104,13 @@ if(titulo === "Playlist Domingo"){
         console.log(el.previousElementSibling.href)
         let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
         canciones.forEach((canto, index)=>{
-        console.log(canto.pagina);
-          if(canto.pagina === el.previousElementSibling){
-            canto.splice(index,1);
-            console.log(canto.pagina);
+          if(canto.pagina === el.previousElementSibling.href){
+            canciones.splice(index,1);
+            console.log(canciones);
           }
         });
-        localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
-        if (document.querySelector("#playlistDomingo").lastElementChild === null){
+        localStorage.setItem("cancionesDomingo",JSON.stringify(canciones));
+        if (document.querySelector("#playlistDomingo").lastElementChild === null || cancionesDomingo==={
           const div = document.createElement ('div');
           div.className = "NoHayCantos";
           div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
@@ -127,6 +126,7 @@ if(titulo === "Playlist Domingo"){
   
 }
 
+console.log (cancionesDomingo);
 //Boton Add event
 if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
