@@ -126,6 +126,10 @@ if(titulo === "Playlist Domingo"){
           const ol = document.querySelector("#playlistDomingo");
           container.insertBefore(div,ol);
     }
+    else
+      {
+        botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+      }
   
   }
   
@@ -144,13 +148,6 @@ busquedaItem.addEventListener("keyup",filterItems);
 //Boton regresar event
 if(botonRegresar){
   botonRegresar.addEventListener("click", Regresar);
-}
-
-//Boton borrar lista domingo event
-if(botonBorrarListaDomingo){
-  if(document.querySelector("#playlistDomingo").lastElementChild != null){
-  botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
-  }
 }
 
 //Regresar pagina function
