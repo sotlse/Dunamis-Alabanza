@@ -53,6 +53,10 @@ class UI {
     if(titulo === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     }
+    
+    else if(titulo === "Dunamis Adoracion | Adoracion"){
+      baseCanciones.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
+    }
   }
 
   static agregarCantosAListaCategoria(canto){
@@ -60,6 +64,12 @@ class UI {
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- ${canto.tono}`;
     olLista.appendChild(crearli);
+  }
+  
+  static agregarCantosAListaAdoracion(canto){
+    let filtroAdoracion = canto.filter(function(adoracion){
+      return canto.tono === "Tono:A#"
+    });
   }
 }
 
@@ -70,7 +80,7 @@ if(titulo === "Dunamis Adoracion | General"){
 } 
 
 if(titulo === "Dunamis Adoracion | Adoracion"){
-  
+  document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 }
 
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
