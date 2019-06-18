@@ -91,8 +91,9 @@ if(titulo === "Playlist Domingo"){
       const lista = document.querySelector("#playlistDomingo");
       const li = document.createElement("li");
       li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
-            X</button>`; 
+            X</button> draggable="true"`; 
       lista.appendChild(li);
+      console.log(li);
     });
     }
     
