@@ -60,6 +60,7 @@ class UI {
         /*let filtroAdoracion = filtroCategorias.categoria.filter(function(cantos){
           
         });*/
+        console.log(cantosAdoracion.categoria);
         return cantosAdoracion.categoria === "Alabanza";
       });
       console.log(filtroCategorias);
