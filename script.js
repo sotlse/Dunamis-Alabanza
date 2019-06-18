@@ -57,13 +57,14 @@ class UI {
     else if(titulo === "Dunamis Adoracion | Adoracion"){
       let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
         console.log(cantosAdoracion.categoria);
-        let Adoracion = cantosAdoracion.categoria.filter(function(cantos){
-          console.log (Adoracion);
-          if (cantos == "Adoracion"){
+       /* let Adoracion = cantosAdoracion.categoria.filter(function(cantos){
+          if (cantos === "Adoracion"){
             return true;
           }
         });
-        /*if (cantosAdoracion.categoria == "Adoracion"){
+        console.log (Adoracion);
+  */
+        if (cantosAdoracion.categoria == "Adoracion"){
            return true;
         }  
         /*return cantosAdoracion.categoria[0] === "Alabanza";*/
@@ -84,7 +85,8 @@ class UI {
     const olLista = document.querySelector("#lista");
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- ${canto.tono}`;
-    olLista.appendChild(crearli);o  }
+    olLista.appendChild(crearli);
+  }
 }
 
 
