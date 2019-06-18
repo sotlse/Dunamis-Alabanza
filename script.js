@@ -46,7 +46,16 @@ class UI {
       autor: "Jesus Adrian Romero",
       tono: "Tono:A#",
       categoria: ["Alabanza"],
-    } 
+    },
+    
+    {
+      pagina:"",
+      titulo:"",
+      autor:"",
+      tono:"",
+      categoria:["Adoracion"],
+    }
+      
     ];
     
     //const cantos = baseCanciones;
@@ -57,19 +66,11 @@ class UI {
     else if(titulo === "Dunamis Adoracion | Adoracion"){
       let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
         console.log(cantosAdoracion.categoria);
-       /* let Adoracion = cantosAdoracion.categoria.filter(function(cantos){
-          if (cantos === "Adoracion"){
-            return true;
-          }
-        });
-        console.log (Adoracion);
-  */
-        if (cantosAdoracion.categoria == "Adoracion"){
+        for (let i=0; i<3;i++){
+        if (cantosAdoracion.categoria [i]== "Adoracion"){
            return true;
-        }  
-        /*return cantosAdoracion.categoria[0] === "Alabanza";*/
+        }}
       });
-      console.log(filtroCategorias);
       filtroCategorias.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
     }
   }
