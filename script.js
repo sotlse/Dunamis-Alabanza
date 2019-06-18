@@ -55,9 +55,16 @@ class UI {
     }
     
     else if(titulo === "Dunamis Adoracion | Adoracion"){
-        let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
-        if (cantosAdoracion.categoria == "Adoracion"){
-          return true;
+      let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
+        console.log(cantosAdoracion.categoria);
+        let Adoracion = cantosAdoracion.categoria.filter(function(cantos){
+          console.log (Adoracion);
+          if (cantos == "Adoracion"){
+            return true;
+          }
+        });
+        /*if (cantosAdoracion.categoria == "Adoracion"){
+           return true;
         }  
         /*return cantosAdoracion.categoria[0] === "Alabanza";*/
       });
