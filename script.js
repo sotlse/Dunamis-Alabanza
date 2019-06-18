@@ -65,11 +65,11 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Adoracion"){
       let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
-        console.log(cantosAdoracion.categoria);
         for (let i=0; i<3;i++){
-        if (cantosAdoracion.categoria [i]== "Adoracion"){
-           return true;
-        }}
+          if (cantosAdoracion.categoria [i]== "Adoracion"){
+            return true;
+          }
+        }
       });
       filtroCategorias.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
     }
