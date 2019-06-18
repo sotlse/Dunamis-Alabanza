@@ -60,8 +60,12 @@ class UI {
         /*let filtroAdoracion = filtroCategorias.categoria.filter(function(cantos){
           
         });*/
-        console.log(cantosAdoracion.categoria);
-        return cantosAdoracion.categoria === "Alabanza";
+        if (cantosAdoracion.categoria == "Adoracion"){
+          console.log()
+        }
+          
+        console.log(cantosAdoracion.categoria[0]);
+        return cantosAdoracion.categoria[0] === "Alabanza";
       });
       console.log(filtroCategorias);
     }
