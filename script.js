@@ -55,7 +55,11 @@ class UI {
     }
     
     else if(titulo === "Dunamis Adoracion | Adoracion"){
-      baseCanciones.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
+      /*baseCanciones.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
+      */let filtroAdoracion = baseCanciones.filter(function(cantosAdoracion){
+        return cantosAdoracion.autor === "Jesus Adrian Romero";
+      });
+      console.log(filtroAdoracion);
     }
   }
 
@@ -67,10 +71,10 @@ class UI {
   }
   
   static agregarCantosAListaAdoracion(canto){
-    let filtroAdoracion = canto.filter(function(adoracion){
-      return canto.tono === "Tono:A#"
+    let filtroAdoracion = canto.filter(function(cantosAdoracion){
+      return cantosAdoracion.tono === "Tono:A#"
     });
-  }
+    console.log(canto);o  }
 }
 
 
