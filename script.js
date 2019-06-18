@@ -56,10 +56,13 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Adoracion"){
       /*baseCanciones.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
-      */let filtroAdoracion = baseCanciones.filter(function(cantosAdoracion){
-        return cantosAdoracion.autor === "Jesus Adrian Romero";
+      */let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
+        /*let filtroAdoracion = filtroCategorias.categoria.filter(function(cantos){
+          
+        });*/
+        return cantosAdoracion.categoria === "Alabanza";
       });
-      console.log(filtroAdoracion);
+      console.log(filtroCategorias);
     }
   }
 
