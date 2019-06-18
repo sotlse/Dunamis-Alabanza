@@ -170,8 +170,19 @@ a {
   padding: 5px;
 }
 
-.divRegresar{
-  margin: 50px 0px;
+.nav{
+  column-count:3;
+  column-gap:0px;
+  margin:20px 0px;
+}
+
+
+.divEditar{
+  text-align:center;
+}
+
+.divBorarLista{
+  text-align:right;
 }
 
 /*.RegresarPagina{
@@ -255,15 +266,7 @@ a {
 
 .canto_body a{
   font-weight:bold;
-  
 }
-
-/*.columna1{
-  
-}
-
-.columna2{
-}*/
 
 .tituloCanto{
   background-color:Black;
