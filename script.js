@@ -92,13 +92,7 @@ class UI {
 
 
 //Cuando se cargue la pagina, agregar base de datos
-if(titulo === "Dunamis Adoracion | General"){
-  document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
-} 
-
-if(titulo === "Dunamis Adoracion | Adoracion"){
-  document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
-}
+document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
