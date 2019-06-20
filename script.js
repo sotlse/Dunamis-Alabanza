@@ -118,10 +118,98 @@ class UI {
       filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     }
     
-    else if(titulo === "Dunamis Adoracion | Servicio"){
+    else if(titulo === "Dunamis Adoracion | Unidad"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
         for (let i=0; i<3;i++){
-          if (cantos.categoria [i]== "Servicio"){
+          if (cantos.categoria [i]== "Unidad"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Oracion"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Oracion"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Fortaleza"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Fortaleza"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Perdon"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Perdon"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Accion de Gracias"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Accion de Gracias"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Semana Santa"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Semana Santa"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Navidad"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Navidad"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Himnos"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Himnos"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Servicios Especiales"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Servicios Especiales"){
             return true;
           }
         }
