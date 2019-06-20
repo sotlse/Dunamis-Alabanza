@@ -64,37 +64,30 @@ class UI {
     }
     
     else if(titulo === "Dunamis Adoracion | Adoracion"){
-      let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
         for (let i=0; i<3;i++){
-          if (cantosAdoracion.categoria [i]== "Adoracion"){
+          if (cantos.categoria [i]== "Adoracion"){
             return true;
           }
         }
       });
-      filtroCategorias.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     }
     
     else if(titulo === "Dunamis Adoracion | Alabanza"){
-      let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
         for (let i=0; i<3;i++){
-          if (cantosAdoracion.categoria [i]== "Adoracion"){
+          if (cantos.categoria [i]== "Alabanza"){
             return true;
           }
         }
       });
-      filtroCategorias.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     }
     
   }
 
   static agregarCantosAListaCategoria(canto){
-    const olLista = document.querySelector("#lista");
-    const crearli = document.createElement('li');
-    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- ${canto.tono}`;
-    olLista.appendChild(crearli);
-  }
-  
-  static agregarCantosAListaAdoracion(canto){
     const olLista = document.querySelector("#lista");
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- ${canto.tono}`;
