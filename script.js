@@ -85,6 +85,50 @@ class UI {
       filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     }
     
+    else if(titulo === "Dunamis Adoracion | Confesion"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Confesion"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Evangelismo"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Evangelismo"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Servicio"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Servicio"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Servicio"){
+      let filtroCategorias = baseCanciones.filter(function(cantos){
+        for (let i=0; i<3;i++){
+          if (cantos.categoria [i]== "Servicio"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+    }
+    
   }
 
   static agregarCantosAListaCategoria(canto){
