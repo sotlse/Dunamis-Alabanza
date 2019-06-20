@@ -73,6 +73,18 @@ class UI {
       });
       filtroCategorias.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
     }
+    
+    else if(titulo === "Dunamis Adoracion | Alabanza"){
+      let filtroCategorias = baseCanciones.filter(function(cantosAdoracion){
+        for (let i=0; i<3;i++){
+          if (cantosAdoracion.categoria [i]== "Adoracion"){
+            return true;
+          }
+        }
+      });
+      filtroCategorias.forEach((canto) => UI.agregarCantosAListaAdoracion(canto));
+    }
+    
   }
 
   static agregarCantosAListaCategoria(canto){
