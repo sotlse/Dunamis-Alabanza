@@ -323,12 +323,16 @@ function Regresar(){
 //Editar pagina function
 function Editar(e){
   botonEditar.style.display = "none";
+  let nav = document.querySelector(".nav");
+  let botonBorrar = document.querySelector(".divBorarLista");
+  let divOk = document.createElement("div");
   let botonOK = document.createElement("button");
-  botonOK.appen 
+  botonOK.className = "botonOK";
+  botonOK.appendChild(document.createTextNode("OK"));
+  nav.insertBefore (botonOK,botonBorrar);
   const div = document.createElement ("div");
   div.className = "claseEditar";
   let body = document.querySelector(".bodyPlaylist");
-  let nav = document.querySelector(".nav");
   body.insertBefore (div,nav);
   let botonUp = document.createElement("button");
   botonUp.className = "botonUp";
