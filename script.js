@@ -320,6 +320,13 @@ function Regresar(){
   window.history.back();
 }
 
+//Editar pagina function
+function Editar(e){
+  const div = document.createElement ("div");
+  div.className = "claseEditar";
+  let 
+}
+
 //Borrar lista domingo function
 function BorrarListaDomingo(e){
   if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
