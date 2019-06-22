@@ -333,7 +333,7 @@ function Editar(e){
   let botonDown = document.createElement("button");
   botonDown.className = "botonDown";
   div.appendChild(botonUp);
-  botonUp.appendChild(document.createTextNode("Mover Arriba"));
+  botonUp.appendChild(document.createTextNode("&ShortUpArrow;"));
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
   console.log(div);
