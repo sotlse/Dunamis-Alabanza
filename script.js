@@ -11,6 +11,7 @@ let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
 let tipo;
+let totalCantos=3;
  
 //Constructor de canto guardado
 class cantoGuardado {
@@ -58,7 +59,7 @@ class UI {
     }
       
     ];
-    
+    console.log
     //const cantos = baseCanciones;
     if(titulo === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
@@ -333,10 +334,11 @@ function Editar(e){
   let botonDown = document.createElement("button");
   botonDown.className = "botonDown";
   div.appendChild(botonUp);
-  botonUp.appendChild(document.createTextNode("&ShortUpArrow;"));
+  botonUp.appendChild(document.createTextNode("Mover arriba"));
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
-  console.log(div);
+  
+  console.log(e);
 }
 
 //Borrar lista domingo function
