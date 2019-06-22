@@ -322,10 +322,14 @@ function Regresar(){
 
 //Editar pagina function
 function Editar(e){
+  
   const div = document.createElement ("div");
   div.className = "claseEditar";
   let body = document.querySelector(".bodyPlaylist");
   let nav = document.querySelector(".nav");
+  body.insertBefore (div,nav);
+  
+  console.log(div);
 }
 
 //Borrar lista domingo function
