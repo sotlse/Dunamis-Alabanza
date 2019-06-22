@@ -3,6 +3,7 @@ var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var botonRegresar = document.querySelector(".RegresarPagina");
+var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarListaDomingo = document.querySelector(".borrarListaDomingo");
 var botonBorrarListaMiercoles = document.querySelector(".borrarListaMiercoles");
 let titulo = document.querySelector('title').textContent;
@@ -308,6 +309,10 @@ busquedaItem.addEventListener("keyup",filterItems);
 //Boton regresar event
 if(botonRegresar){
   botonRegresar.addEventListener("click", Regresar);
+}
+
+if(botonEditar){
+   botonEditar.addEventListener("click",Editar);
 }
 
 //Regresar pagina function
