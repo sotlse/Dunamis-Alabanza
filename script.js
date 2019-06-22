@@ -11,7 +11,7 @@ let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
 let tipo;
-let totalCantos=5;
+let totalCantos=300;
  
 //Constructor de canto guardado
 class cantoGuardado {
@@ -322,7 +322,9 @@ function Regresar(){
 
 //Editar pagina function
 function Editar(e){
-  
+  botonEditar.style.display = "none";
+  let botonOK = document.createElement("button");
+  botonOK.appen 
   const div = document.createElement ("div");
   div.className = "claseEditar";
   let body = document.querySelector(".bodyPlaylist");
@@ -336,6 +338,8 @@ function Editar(e){
   botonUp.appendChild(document.createTextNode("Mover arriba"));
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
+  
+  
   
   console.log(e);
 }
