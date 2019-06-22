@@ -348,6 +348,10 @@ function Editar(e){
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
   
+  //Seleccionar elemento de lista domingo
+  let lista = document.querySelector("#playlistDomingo");
+  console.log(lista);
+  //for (var i;i<lista.lenght)
   
   console.log(divOk);
   console.log(div);
