@@ -196,8 +196,16 @@ a {
   text-align:center;
 }
 
+.EditarLista{
+  background-color:lightyellow;
+}
+
 .divOk{
   text-align:center;
+}
+
+.botonOK{
+  background-color:lightgreen;
 }
 
 .divBorarLista{

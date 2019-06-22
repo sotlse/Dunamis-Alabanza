@@ -322,7 +322,8 @@ function Regresar(){
 
 //Editar pagina function
 function Editar(e){
-  botonEditar.style.display = "none";
+  let divEditar = document.querySelector(".divEditar");
+  divEditar.style.display = "none";
   let nav = document.querySelector(".nav");
   let botonBorrar = document.querySelector(".divBorarLista");
   let divOk = document.createElement("div");
@@ -330,7 +331,7 @@ function Editar(e){
   let botonOK = document.createElement("button");
   botonOK.className = "botonOK";
   botonOK.appendChild(document.createTextNode("OK"));
-  botoOK.
+  botonOK.addEventListener("click",Ok);
   divOk.appendChild(botonOK);
   nav.insertBefore (divOk,botonBorrar);
   
@@ -350,7 +351,15 @@ function Editar(e){
   
   console.log(divOk);
   console.log(div);
+  //Ok editar function
+  function Ok(e){
+    div.style.display = "none";
+    divOk.style.display = "none";
+    divEditar.style.display= "block";
+  }
 }
+
+
 
 //Borrar lista domingo function
 function BorrarListaDomingo(e){
