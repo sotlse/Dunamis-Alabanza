@@ -330,12 +330,12 @@ function Editar(e){
   body.insertBefore (div,nav);
   let botonUp = document.createElement("button");
   botonUp.className = "botonUp";
-  let text1 = document.createTextNode("Mover Arriba");
-  botonUp.appendChild("Mover arriba");
   let botonDown = document.createElement("button");
   botonDown.className = "botonDown";
   div.appendChild(botonUp);
+  botonUp.appendChild(document.createTextNode("Mover Arriba"));
   div.appendChild(botonDown);
+  botonDown.appendChild(document.createTextNode("Mover abajo"));
   console.log(div);
 }
 

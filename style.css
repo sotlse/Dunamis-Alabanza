@@ -121,7 +121,13 @@ a {
 
 .claseEditar{
   padding:20px;
-  background-color:red;
+  background-color:lightyellow;
+}
+
+.botonDown{
+  text-align:center;
+  display:block;
+  margin:20px 0 5px 0;
 }
 
 .lista{
