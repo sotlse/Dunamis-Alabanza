@@ -326,10 +326,14 @@ function Editar(e){
   let nav = document.querySelector(".nav");
   let botonBorrar = document.querySelector(".divBorarLista");
   let divOk = document.createElement("div");
+  divOk.className = "divOk";
   let botonOK = document.createElement("button");
   botonOK.className = "botonOK";
   botonOK.appendChild(document.createTextNode("OK"));
-  nav.insertBefore (botonOK,botonBorrar);
+  botoOK.
+  divOk.appendChild(botonOK);
+  nav.insertBefore (divOk,botonBorrar);
+  
   const div = document.createElement ("div");
   div.className = "claseEditar";
   let body = document.querySelector(".bodyPlaylist");
@@ -344,8 +348,8 @@ function Editar(e){
   botonDown.appendChild(document.createTextNode("Mover abajo"));
   
   
-  
-  console.log(e);
+  console.log(divOk);
+  console.log(div);
 }
 
 //Borrar lista domingo function
