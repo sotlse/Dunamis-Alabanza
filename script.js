@@ -328,7 +328,14 @@ function Editar(e){
   let body = document.querySelector(".bodyPlaylist");
   let nav = document.querySelector(".nav");
   body.insertBefore (div,nav);
-  
+  let botonUp = document.createElement("button");
+  botonUp.className = "botonUp";
+  let text1 = document.createTextNode("Mover Arriba");
+  botonUp.appendChild("Mover arriba");
+  let botonDown = document.createElement("button");
+  botonDown.className = "botonDown";
+  div.appendChild(botonUp);
+  div.appendChild(botonDown);
   console.log(div);
 }
 
