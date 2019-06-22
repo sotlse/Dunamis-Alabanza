@@ -324,7 +324,8 @@ function Regresar(){
 function Editar(e){
   const div = document.createElement ("div");
   div.className = "claseEditar";
-  let 
+  let body = document.querySelector(".bodyPlaylist");
+  let nav = document.querySelector(".nav");
 }
 
 //Borrar lista domingo function
