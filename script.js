@@ -11,7 +11,7 @@ let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
 let tipo;
-let totalCantos=3;
+let totalCantos=5;
  
 //Constructor de canto guardado
 class cantoGuardado {
@@ -59,7 +59,6 @@ class UI {
     }
       
     ];
-    console.log
     //const cantos = baseCanciones;
     if(titulo === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
@@ -67,7 +66,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Adoracion"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Adoracion"){
             return true;
           }
@@ -78,7 +77,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Alabanza"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Alabanza"){
             return true;
           }
@@ -89,7 +88,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Confesion"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Confesion"){
             return true;
           }
@@ -100,7 +99,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Evangelismo"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Evangelismo"){
             return true;
           }
@@ -111,7 +110,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Servicio"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Servicio"){
             return true;
           }
@@ -122,7 +121,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Unidad"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Unidad"){
             return true;
           }
@@ -133,7 +132,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Oracion"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Oracion"){
             return true;
           }
@@ -144,7 +143,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Fortaleza"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Fortaleza"){
             return true;
           }
@@ -155,7 +154,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Perdon"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Perdon"){
             return true;
           }
@@ -166,7 +165,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Accion de Gracias"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Accion de Gracias"){
             return true;
           }
@@ -177,7 +176,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Semana Santa"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Semana Santa"){
             return true;
           }
@@ -188,7 +187,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Navidad"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Navidad"){
             return true;
           }
@@ -199,7 +198,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Himnos"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Himnos"){
             return true;
           }
@@ -210,7 +209,7 @@ class UI {
     
     else if(titulo === "Dunamis Adoracion | Servicios Especiales"){
       let filtroCategorias = baseCanciones.filter(function(cantos){
-        for (let i=0; i<3;i++){
+        for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== "Servicios Especiales"){
             return true;
           }
