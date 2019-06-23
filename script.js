@@ -334,6 +334,7 @@ function Editar(e){
   listaEditar.addEventListener("click",(e) =>  {
     //Seleccionar elemnto de lista
     seleccionado = e.target;
+    console.log(seleccionado.previousElementSibling);
     if (noseleccionado){
       noseleccionado.className = "noselected";
     }
@@ -344,11 +345,18 @@ function Editar(e){
     let botonDown = document.querySelector(".botonDown");
     botonUp.addEventListener("click",moverArriba);
     botonDown.addEventListener("click",moverAbajo);
+    
     function moverArriba(){
-     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+     
+      let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
         canciones.forEach((canto, index)=>{
-          if(canto.pagina === el.previousElementSibling.href){
+          console.log(index);
+          if(canto.pagina === seleccionado.previousElementSibling.href){
             canciones.splice(index,1); 
+          }
+        
+                          
+    });
     }
   
     function moverAbajo(){
