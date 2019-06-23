@@ -214,10 +214,11 @@ a {
 
 .selected{
   background-color: lightgreen;
-  color:#fff;
+  color:black;
   font-weight:bold;
-  border-width:2px;
-  border-color:black;
+  border-width: 2px;
+  border-style: solid;
+  border-color: green;
 }
 
 .noselected{

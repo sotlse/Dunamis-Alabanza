@@ -320,6 +320,7 @@ function Regresar(){
 
 //Editar pagina function
 function Editar(e){
+  let noseleccionado;
   let seleccionado;
   let lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
@@ -327,25 +328,20 @@ function Editar(e){
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
   
-
-  
-  
   //Borrar lista
   
-  //Seleccionar elemento de lista domingo
+  //Seleccionar elemento de lista domingo y moverlo
   listaEditar.addEventListener("click",(e) =>  {
-    let el = e.target;
-    console.log(el);
-    
-    console.log(seleccionado);
-    if (seleccionado){
-      seleccionado.className = "noselected";
+    //Seleccionar elemnto de lista
+    seleccionado = e.target;
+    if (noseleccionado){
+      noseleccionado.className = "noselected";
     }
-    //if (seleccionado !== el.target){
-      el.className = "selected";
-    //}
+    seleccionado.className = "selected";
+    noseleccionado = seleccionado;
+    console.log(seleccionado);
     
-    seleccionado = el;
+
   }); 
   
 
@@ -380,6 +376,10 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   botonUp.appendChild(document.createTextNode("Mover arriba"));
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
+      //Mover elemento seleccionado
+  botonUp.addEventListener("click",moverArriba);
+  botonDown.addEventListener("click",moverAbajo);
+  
   function Ok(e){
     div.style.display = "none";
     divOk.style.display = "none";
@@ -389,6 +389,11 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     while (listaEditar.hasChildNodes()){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
+    
+  function moverArriba(){
+    
+  }
+    
   }
   
   //Ocultar lista de Playlist y poner listaEditar
