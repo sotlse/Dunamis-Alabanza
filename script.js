@@ -408,7 +408,6 @@ function Editar(e){
 function botonesEditar(lista,listaEditar,cancionesEditar){
   let divEditar = document.querySelector(".divEditar");
   divEditar.style.display = "none";
-  let nav = document.querySelector(".nav");
   /*let botonBorrar = document.querySelector(".divBorarLista");
   let divOk = document.createElement("div");
   divOk.className = "divOk";
@@ -419,8 +418,13 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   divOk.appendChild(botonOK);
   nav.insertBefore (divOk,botonBorrar);*/
   
-  let botonOK = document.querySelector("")
+  
+  let botonOK = document.querySelector(".botonOK");
+  let divOk = document.querySelector(".divOk");
+  divOk.style.display = "block";
   botonOK.addEventListener("click",Ok);
+  
+  let nav = document.querySelector(".nav");
   const div = document.createElement ("div");
   div.className = "claseEditar";
   let body = document.querySelector(".bodyPlaylist");
@@ -444,15 +448,15 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     lista.style.display = "block";
      
     
-    /*let ol = listaEditar;
+    let ol = listaEditar;
     let ultimo = ol.lastElementChild;
     while(ultimo){
       console.log(ultimo);
       ol.removeChild(ultimo);
       ultimo = ol.lastElementChild;
-    }*/
+    }
     console.log(listaEditar);
-    //listaEditar.style.display = "none";
+    listaEditar.style.display = "none";
     while (listaEditar.hasChildNodes()){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
