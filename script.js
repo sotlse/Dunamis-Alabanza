@@ -335,10 +335,9 @@ function Editar(e){
   listaEditar.addEventListener("click",(e) =>  {
       let el = e.target;
     console.log(el);
+    el.className = "selected";
   });
   
-  console.log(listaEditar);
-  //Ok editar function
 
 }
 
@@ -387,7 +386,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   listaEditar.style.display = "block";
   cancionesEditar.forEach(function (canto){
     const li = document.createElement("li");
-    li.innerHTML = `${canto.titulo} - ${canto.tipo} <button class="boton-delete">
+    li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo}<button class="boton-delete">
             X</button>`; 
     listaEditar.appendChild(li);
   });
