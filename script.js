@@ -322,12 +322,13 @@ function Regresar(){
 function Editar(e){
   let noseleccionado;
   let seleccionado;
+  let array=[];
   let lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
-  let array = document.querySelectorAll("#playlistDomingoEditar li");
+  let items = document.querySelectorAll("#playlistDomingoEditar li a");
   console.log(array);
   
   
@@ -340,8 +341,7 @@ function Editar(e){
     } 
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
-    let index = array.indexOf();
-    console.log(index);
+    console.log(seleccionado);
     
     
   
