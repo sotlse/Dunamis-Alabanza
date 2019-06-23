@@ -260,7 +260,7 @@ if(titulo === "Playlist Domingo"){
   //Borrar canto seleccionado
     document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
       let el = e.target;
-      console.log(el);
+      //console.log(el);
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
         let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
@@ -348,16 +348,31 @@ function Editar(e){
   
   //Seleccionar elemento de lista domingo
   let lista = document.querySelector("#playlistDomingo");
+  let listaEditar = document.querySelector("#playlistDomingoEditar");
   console.log(lista);
+  lista.style.display = "none";
+  let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+  canciones.forEach(function (canto){
+      
+      const li = document.createElement("li");
+      li.innerHTML = `${canto.titulo} - <span style="color:black">${canto.tipo}</span> <button class="boton-delete">
+            X</button>`; 
+      listaEditar.appendChild(li);
+  });
   //for (var i;i<lista.lenght)
+  lista.addEventListener("click",(e) =>  {
+      let el = e.target;
+    console.log(el);
+  });
   
-  console.log(divOk);
-  console.log(div);
+
   //Ok editar function
   function Ok(e){
     div.style.display = "none";
     divOk.style.display = "none";
     divEditar.style.display= "block";
+    lista.style.display = "block";
+    listaEditar.style.display = "none";
   }
 }
 
