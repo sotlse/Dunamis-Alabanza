@@ -320,7 +320,7 @@ function Regresar(){
 
 //Editar pagina function
 function Editar(e){
-  
+  let seleccionado;
   let lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
@@ -337,12 +337,15 @@ function Editar(e){
     let el = e.target;
     console.log(el);
     
-    if (seleccionado !== el.target){
-      el.className = "selected";
-    }
-    let seleccionado = el;
-    seleccionado.className = "noselected";
     console.log(seleccionado);
+    if (seleccionado){
+      seleccionado.className = "noselected";
+    }
+    //if (seleccionado !== el.target){
+      el.className = "selected";
+    //}
+    
+    seleccionado = el;
   }); 
   
 
