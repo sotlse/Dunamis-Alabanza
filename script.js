@@ -290,6 +290,7 @@ if(titulo === "Playlist Domingo"){
     else
       {
         botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+        botonEditar.addEventListener("click",Editar);
       }
   
   }
@@ -309,10 +310,6 @@ busquedaItem.addEventListener("keyup",filterItems);
 //Boton regresar event
 if(botonRegresar){
   botonRegresar.addEventListener("click", Regresar);
-}
-
-if(botonEditar){
-   botonEditar.addEventListener("click",Editar);
 }
 
 //Regresar pagina function
