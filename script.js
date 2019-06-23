@@ -355,9 +355,8 @@ function Editar(e){
   console.log(lista);
   lista.style.display = "none";
   listaEditar.style.display = "block";
-  console.log()
-  let cancionesEditar = [];
-  cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
+
+  let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
   cancionesEditar.forEach(function (canto){
       
       const li = document.createElement("li");
@@ -372,7 +371,7 @@ function Editar(e){
     console.log(el);
   });
   
-
+  console.log(listaEditar);
   //Ok editar function
   function Ok(e){
     div.style.display = "none";
@@ -380,7 +379,10 @@ function Editar(e){
     divEditar.style.display= "block";
     lista.style.display = "block";
     listaEditar.style.display = "none";
-    listaEditar
+    while (listaEditar.hasChildNodes()){
+      listaEditar.removeChild(listaEditar.firstChild);
+    }
+    
   }
 }
 
