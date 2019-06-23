@@ -320,6 +320,7 @@ function Regresar(){
 
 //Editar pagina function
 function Editar(e){
+  
   let lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
@@ -335,11 +336,13 @@ function Editar(e){
   listaEditar.addEventListener("click",(e) =>  {
     let el = e.target;
     console.log(el);
-    let seleccionado = 0;
+    
     if (seleccionado !== el.target){
       el.className = "selected";
     }
-    seleccionado == el;
+    let seleccionado = el;
+    seleccionado.className = "noselected";
+    console.log(seleccionado);
   }); 
   
 

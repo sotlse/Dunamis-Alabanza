@@ -218,6 +218,12 @@ a {
   font-weight:bold;
 }
 
+.noselected{
+  background-color: red;
+  color:#fff;
+  font-weight:bold;
+}
+
 .divOk{
   text-align:center;
 }
