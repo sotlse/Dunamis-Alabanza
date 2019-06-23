@@ -295,6 +295,18 @@ if(titulo === "Playlist Domingo"){
         botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
         botonEditar.addEventListener("click",Editar);
       }
+    
+  let nav = document.querySelector(".nav");  
+  let botonBorrar = document.querySelector(".divBorarLista");
+  let divOk = document.createElement("div");
+  divOk.className = "divOk";
+  let botonOK = document.createElement("button");
+  botonOK.className = "botonOK";
+  botonOK.appendChild(document.createTextNode("OK"));
+  
+  divOk.appendChild(botonOK);
+  nav.insertBefore (divOk,botonBorrar);
+  divOk.style.display = "none";
   }
 }
 
@@ -397,7 +409,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   let divEditar = document.querySelector(".divEditar");
   divEditar.style.display = "none";
   let nav = document.querySelector(".nav");
-  let botonBorrar = document.querySelector(".divBorarLista");
+  /*let botonBorrar = document.querySelector(".divBorarLista");
   let divOk = document.createElement("div");
   divOk.className = "divOk";
   let botonOK = document.createElement("button");
@@ -405,8 +417,10 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   botonOK.appendChild(document.createTextNode("OK"));
   botonOK.addEventListener("click",Ok);
   divOk.appendChild(botonOK);
-  nav.insertBefore (divOk,botonBorrar);
+  nav.insertBefore (divOk,botonBorrar);*/
   
+  let botonOK = document.querySelector("")
+  botonOK.addEventListener("click",Ok);
   const div = document.createElement ("div");
   div.className = "claseEditar";
   let body = document.querySelector(".bodyPlaylist");
@@ -429,8 +443,8 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     divEditar.style.display= "block";
     lista.style.display = "block";
      
-    /*
-    let ol = listaEditar;
+    
+    /*let ol = listaEditar;
     let ultimo = ol.lastElementChild;
     while(ultimo){
       console.log(ultimo);
@@ -438,7 +452,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
       ultimo = ol.lastElementChild;
     }*/
     console.log(listaEditar);
-    listaEditar.style.display = "none";
+    //listaEditar.style.display = "none";
     while (listaEditar.hasChildNodes()){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
