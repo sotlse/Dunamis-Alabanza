@@ -307,6 +307,10 @@ if(titulo === "Playlist Domingo"){
   divOk.appendChild(botonOK);
   nav.insertBefore (divOk,botonBorrar);
   divOk.style.display = "none";
+    
+    let listaEditar = document.querySelector("#playlistDomingoEditar");
+  let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    
   }
 }
 
@@ -441,6 +445,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   //botonUp.addEventListener("click",moverArriba); 
   //botonDown.addEventListener("click",moverAbajo);
   
+  
   function Ok(e){ 
     div.style.display = "none";
     divOk.style.display = "none";
@@ -472,6 +477,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo}<button class="boton-delete">
             X</button>`; 
     listaEditar.appendChild(li);
+      listaEditar.style.display = "none";
   });
 }
 
