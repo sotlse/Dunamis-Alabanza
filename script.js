@@ -341,7 +341,11 @@ function Editar(e){
     noseleccionado = seleccionado;
     
     
-  listaEditar.
+  /*let cancionesLista = listaEditar.addEventListener("click",moverLista);
+  function moverLista(){
+    
+  }*/
+  //console.log(cancionesLista);
     let botonUp = document.querySelector(".botonUp");
     let botonDown = document.querySelector(".botonDown");
     botonUp.addEventListener("click",moverArriba);
