@@ -329,13 +329,6 @@ function Editar(e){
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
   
-  let items = document.querySelectorAll("#playlistDomingoEditar li");
-  let array=[];
-  items.forEach(function (item){
-    array.push(item.innerHTML);
-  });
-  console.log(array);
-  
   
   //Seleccionar elemento de lista domingo y moverlo
   listaEditar.addEventListener("click",(e) =>  {
@@ -347,6 +340,13 @@ function Editar(e){
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
     
+    let items = document.querySelectorAll("#playlistDomingoEditar li");
+    
+    let array=[];
+    items.forEach(function (item){
+      array.push(item.innerHTML);
+    });
+    console.log(array);
     console.log(seleccionado.innerHTML);
     console.log(array.indexOf(seleccionado.innerHTML));
     
@@ -423,7 +423,16 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     divOk.style.display = "none";
     divEditar.style.display= "block";
     lista.style.display = "block";
-    listaEditar.style.display = "none";
+    listaEditar.style.display = "none"; 
+    
+    let ol = document.querySelector("#playlistDomingo");
+    let ultimo = ol.lastElementChild;
+    while(ultimo){
+      console.log(ultimo);
+      ol.removeChild(ultimo);
+      ultimo = ol.lastElementChild;
+    }
+    
     while (listaEditar.hasChildNodes()){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
