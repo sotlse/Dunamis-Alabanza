@@ -344,8 +344,8 @@ function Editar(e){
     let botonDown = document.querySelector(".botonDown");
     botonUp.addEventListener("click",moverArriba);
     botonDown.addEventListener("click",moverAbajo);
-    
-    function moverArriba(){
+    console.log(seleccionado.previousElementSibling);
+    function moverArriba(e){
       let insertarAntes = seleccionado.previousElementSibling;
       listaEditar.insertBefore(seleccionado,insertarAntes);
       
