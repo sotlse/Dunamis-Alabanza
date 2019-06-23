@@ -253,13 +253,14 @@ if(titulo === "Playlist Domingo"){
       li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
             X</button>`; 
       lista.appendChild(li);
-      console.log(li);
+      //console.log(li);
     });
     }
     
   //Borrar canto seleccionado
     document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
       let el = e.target;
+      console.log(el);
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
         let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
@@ -287,7 +288,7 @@ if(titulo === "Playlist Domingo"){
           const ol = document.querySelector("#playlistDomingo");
           container.insertBefore(div,ol);
     }
-    else
+    else //Si no hay canto, no funcionan los botones de Editar y Borrar lista
       {
         botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
         botonEditar.addEventListener("click",Editar);
