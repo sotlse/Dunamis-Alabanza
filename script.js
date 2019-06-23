@@ -339,20 +339,24 @@ function Editar(e){
     }
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
-
+    
+    let botonUp = document.querySelector(".botonUp");
+    let botonDown = document.querySelector(".botonDown");
+    botonUp.addEventListener("click",moverArriba);
+    botonDown.addEventListener("click",moverAbajo);
+    function moverArriba(){
+     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+        canciones.forEach((canto, index)=>{
+          if(canto.pagina === el.previousElementSibling.href){
+            canciones.splice(index,1); 
+    }
+  
+    function moverAbajo(){
+      console.log("abajo");
+    }
   }); 
   
-  let botonUp = document.querySelector(".butonUp");
-  let botonDown = document.querySelector(".botonDown");
-  botonUp.addEventListener("click",moverArriba);
-  botonDown.addEventListener("click",moverAbajo);
-  function moverArriba(){
-    console.log("arriba");
-  }
-  
-  function moverAbajo(){
-    console.log("abajo");
-  }
+
 }
 
 
