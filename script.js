@@ -340,6 +340,8 @@ function Editar(e){
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
     
+    
+  listaEditar.
     let botonUp = document.querySelector(".botonUp");
     let botonDown = document.querySelector(".botonDown");
     botonUp.addEventListener("click",moverArriba);
@@ -348,9 +350,7 @@ function Editar(e){
       let Editar = document.querySelector("#playlistDomingoEditar");
       let insertarAntes = seleccionado.previousElementSibling;
       //console.log(Editar);
-      Editar.removeChild(insertarAntes);
-      Editar.insertBefore(insertarAntes,seleccionado.nextElementSibling);
-      //Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
+      Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
 
       //console.log(insertarAntes);
       /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
