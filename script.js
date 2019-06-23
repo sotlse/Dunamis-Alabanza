@@ -339,19 +339,20 @@ function Editar(e){
     } 
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
-    
+    let Editar = document.querySelector("#playlistDomingoEditar");
+    let insertarAntes = seleccionado.previousElementSibling;
+          console.log(seleccionado);
+      console.log(seleccionado.previousElementSibling);
     let botonUp = document.querySelector(".botonUp");
     let botonDown = document.querySelector(".botonDown");
     botonUp.addEventListener("click",moverArriba);
     botonDown.addEventListener("click",moverAbajo);
     function moverArriba(e){
-      let insertarAntes = seleccionado.previousElementSibling;
-      let Editar = document.querySelector("#playlistDomingoEditar");
-      //console.log(Editar);
-      console.log(seleccionado);
-      console.log(seleccionado.previousElementSibling);
-      Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
       
+      //console.log(Editar);
+
+      Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
+
       //console.log(insertarAntes);
       /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
       canciones.forEach((canto, index)=>{
