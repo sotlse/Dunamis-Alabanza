@@ -325,6 +325,8 @@ function Editar(e){
   let lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
+  let items = document.querySelectorAll("#playlistDomingoEditar li");
+  console.log(items);
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
   
@@ -341,10 +343,8 @@ function Editar(e){
     noseleccionado = seleccionado;
     
     
-  /*let cancionesLista = listaEditar.addEventListener("click",moverLista);
-  function moverLista(){
+  
     
-  }*/
   //console.log(cancionesLista);
     let botonUp = document.querySelector(".botonUp");
     let botonDown = document.querySelector(".botonDown");
