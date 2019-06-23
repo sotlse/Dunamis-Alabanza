@@ -415,7 +415,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
       //Mover elemento seleccionado
-  //botonUp.addEventListener("click",moverArriba);
+  //botonUp.addEventListener("click",moverArriba); 
   //botonDown.addEventListener("click",moverAbajo);
   
   function Ok(e){
@@ -425,7 +425,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     lista.style.display = "block";
     listaEditar.style.display = "none"; 
     
-    let ol = document.querySelector("#playlistDomingo");
+    let ol = listaEditar;
     let ultimo = ol.lastElementChild;
     while(ultimo){
       console.log(ultimo);
