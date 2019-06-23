@@ -347,16 +347,18 @@ function Editar(e){
     botonDown.addEventListener("click",moverAbajo);
     
     function moverArriba(){
-     
-      let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-        canciones.forEach((canto, index)=>{
+      let insertarAntes = seleccionado.previousElementSibling;
+      listaEditar.insertBefore(seleccionado,insertarAntes);
+      /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+      canciones.forEach((canto, index)=>{
           console.log(index);
+          canciones.splice(index,1);
           if(canto.pagina === seleccionado.previousElementSibling.href){
             canciones.splice(index,1); 
           }
         
                           
-    });
+    });*/
     }
   
     function moverAbajo(){
