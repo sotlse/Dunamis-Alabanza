@@ -295,9 +295,7 @@ if(titulo === "Playlist Domingo"){
         botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
         botonEditar.addEventListener("click",Editar);
       }
-  
   }
-  
 }
 
 //Boton Add event
@@ -324,23 +322,11 @@ function Regresar(){
 function Editar(e){
   let lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
-  
-  //Agregar botones de editar
-  botonesEditar(lista,listaEditar);
-  
-  //Ocultar lista de Playlist y poner listaEditar
-  console.log(lista);
-  lista.style.display = "none";
-  listaEditar.style.display = "block";
-
   let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  cancionesEditar.forEach(function (canto){
-      
-      const li = document.createElement("li");
-      li.innerHTML = `${canto.titulo} - ${canto.tipo} <button class="boton-delete">
-            X</button>`; 
-      listaEditar.appendChild(li);
-  });
+  //Agregar botones de editar
+  botonesEditar(lista,listaEditar,cancionesEditar);
+  
+
   
   
   //Borrar lista
@@ -356,8 +342,10 @@ function Editar(e){
 
 }
 
-//En Playlist, Agregar botones de edicion y "ok" mientras oculta el boton "Editar"
-function botonesEditar(lista,listaEditar){
+
+
+//En Playlist, Agregar botones de edicion y "ok" mientras oculta el boton "Editar" y oculta lista de Playlist por la de editar
+function botonesEditar(lista,listaEditar,cancionesEditar){
   let divEditar = document.querySelector(".divEditar");
   divEditar.style.display = "none";
   let nav = document.querySelector(".nav");
@@ -393,6 +381,16 @@ function botonesEditar(lista,listaEditar){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
   }
+  
+  //Ocultar lista de Playlist y poner listaEditar
+  lista.style.display = "none";
+  listaEditar.style.display = "block";
+  cancionesEditar.forEach(function (canto){
+    const li = document.createElement("li");
+    li.innerHTML = `${canto.titulo} - ${canto.tipo} <button class="boton-delete">
+            X</button>`; 
+    listaEditar.appendChild(li);
+  });
 }
 
 
