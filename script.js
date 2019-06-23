@@ -228,7 +228,6 @@ class UI {
   }
 }
 
-
 //Cuando se cargue la pagina, agregar base de datos
 document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 
@@ -323,6 +322,42 @@ function Regresar(){
 
 //Editar pagina function
 function Editar(e){
+  let lista = document.querySelector("#playlistDomingo");
+  let listaEditar = document.querySelector("#playlistDomingoEditar");
+  
+  //Agregar botones de editar
+  botonesEditar(lista,listaEditar);
+  
+  //Ocultar lista de Playlist y poner listaEditar
+  console.log(lista);
+  lista.style.display = "none";
+  listaEditar.style.display = "block";
+
+  let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
+  cancionesEditar.forEach(function (canto){
+      
+      const li = document.createElement("li");
+      li.innerHTML = `${canto.titulo} - ${canto.tipo} <button class="boton-delete">
+            X</button>`; 
+      listaEditar.appendChild(li);
+  });
+  
+  
+  //Borrar lista
+  
+  //Seleccionar elemento de lista domingo
+  listaEditar.addEventListener("click",(e) =>  {
+      let el = e.target;
+    console.log(el);
+  });
+  
+  console.log(listaEditar);
+  //Ok editar function
+
+}
+
+//En Playlist, Agregar botones de edicion y "ok" mientras oculta el boton "Editar"
+function botonesEditar(lista,listaEditar){
   let divEditar = document.querySelector(".divEditar");
   divEditar.style.display = "none";
   let nav = document.querySelector(".nav");
@@ -348,31 +383,6 @@ function Editar(e){
   botonUp.appendChild(document.createTextNode("Mover arriba"));
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
-  
-  //Ocultar lista y poner listaEditar
-  let lista = document.querySelector("#playlistDomingo");
-  let listaEditar = document.querySelector("#playlistDomingoEditar");
-  console.log(lista);
-  lista.style.display = "none";
-  listaEditar.style.display = "block";
-
-  let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  cancionesEditar.forEach(function (canto){
-      
-      const li = document.createElement("li");
-      li.innerHTML = `${canto.titulo} - ${canto.tipo} <button class="boton-delete">
-            X</button>`; 
-      listaEditar.appendChild(li);
-  });
-  
-  //Seleccionar elemento de lista domingo
-  listaEditar.addEventListener("click",(e) =>  {
-      let el = e.target;
-    console.log(el);
-  });
-  
-  console.log(listaEditar);
-  //Ok editar function
   function Ok(e){
     div.style.display = "none";
     divOk.style.display = "none";
@@ -381,8 +391,7 @@ function Editar(e){
     listaEditar.style.display = "none";
     while (listaEditar.hasChildNodes()){
       listaEditar.removeChild(listaEditar.firstChild);
-    }
-    
+    } 
   }
 }
 
