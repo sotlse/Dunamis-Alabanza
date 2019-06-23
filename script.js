@@ -346,7 +346,7 @@ function Editar(e){
     items.forEach(function (item){
       array.push(item.innerHTML);
     });
-    console.log(array);
+    console.log(e);
     console.log(seleccionado.innerHTML);
     console.log(array.indexOf(seleccionado.innerHTML));
     
@@ -358,6 +358,8 @@ function Editar(e){
     let botonDown = document.querySelector(".botonDown");
     botonUp.addEventListener("click",moverArriba);
     botonDown.addEventListener("click",moverAbajo);
+   
+    
     function moverArriba(e){
       let Editar = document.querySelector("#playlistDomingoEditar");
       let insertarAntes = seleccionado.previousElementSibling;
@@ -423,16 +425,17 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     divOk.style.display = "none";
     divEditar.style.display= "block";
     lista.style.display = "block";
-    listaEditar.style.display = "none"; 
-    
+     
+    /*
     let ol = listaEditar;
     let ultimo = ol.lastElementChild;
     while(ultimo){
       console.log(ultimo);
       ol.removeChild(ultimo);
       ultimo = ol.lastElementChild;
-    }
-    
+    }*/
+    console.log(listaEditar);
+    listaEditar.style.display = "none";
     while (listaEditar.hasChildNodes()){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
