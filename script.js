@@ -340,8 +340,11 @@ function Editar(e){
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
     
-    let items = document.querySelectorAll("#playlistDomingoEditar li");
+    console.log(e);
+    console.log(e.target.previousElementSibling);
     
+    /*
+    let items = document.querySelectorAll("#playlistDomingoEditar li");
     let array=[];
     items.forEach(function (item){
       array.push(item.innerHTML);
@@ -349,7 +352,7 @@ function Editar(e){
     console.log(e);
     console.log(seleccionado.innerHTML);
     console.log(array.indexOf(seleccionado.innerHTML));
-    
+    */
     
   
     
@@ -420,7 +423,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   //botonUp.addEventListener("click",moverArriba); 
   //botonDown.addEventListener("click",moverAbajo);
   
-  function Ok(e){
+  function Ok(e){ 
     div.style.display = "none";
     divOk.style.display = "none";
     divEditar.style.display= "block";
