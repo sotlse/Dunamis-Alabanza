@@ -334,7 +334,6 @@ function Editar(e){
   listaEditar.addEventListener("click",(e) =>  {
     //Seleccionar elemnto de lista
     seleccionado = e.target;
-    console.log(seleccionado.previousElementSibling);
     if (noseleccionado){
       noseleccionado.className = "noselected";
     }
@@ -349,6 +348,8 @@ function Editar(e){
     function moverArriba(){
       let insertarAntes = seleccionado.previousElementSibling;
       listaEditar.insertBefore(seleccionado,insertarAntes);
+      
+      console.log(insertarAntes);
       /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
       canciones.forEach((canto, index)=>{
           console.log(index);
