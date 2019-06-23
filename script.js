@@ -339,12 +339,20 @@ function Editar(e){
     }
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
-    console.log(seleccionado);
-    
 
   }); 
   
-
+  let botonUp = document.querySelector(".butonUp");
+  let botonDown = document.querySelector(".botonDown");
+  botonUp.addEventListener("click",moverArriba);
+  botonDown.addEventListener("click",moverAbajo);
+  function moverArriba(){
+    console.log("arriba");
+  }
+  
+  function moverAbajo(){
+    console.log("abajo");
+  }
 }
 
 
@@ -377,8 +385,8 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
       //Mover elemento seleccionado
-  botonUp.addEventListener("click",moverArriba);
-  botonDown.addEventListener("click",moverAbajo);
+  //botonUp.addEventListener("click",moverArriba);
+  //botonDown.addEventListener("click",moverAbajo);
   
   function Ok(e){
     div.style.display = "none";
@@ -389,12 +397,9 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     while (listaEditar.hasChildNodes()){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
-    
-  function moverArriba(){
-    
   }
-    
-  }
+  
+
   
   //Ocultar lista de Playlist y poner listaEditar
   lista.style.display = "none";
