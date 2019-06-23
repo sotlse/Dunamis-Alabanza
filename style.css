@@ -213,7 +213,7 @@ a {
 }
 
 .selected{
-  backround-color: red;
+  background-color: lightgreen;
   color:#fff;
   font-weight:bold;
 }

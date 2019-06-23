@@ -333,10 +333,14 @@ function Editar(e){
   
   //Seleccionar elemento de lista domingo
   listaEditar.addEventListener("click",(e) =>  {
-      let el = e.target;
+    let el = e.target;
     console.log(el);
-    el.className = "selected";
-  });
+    let seleccionado = 0;
+    if (seleccionado !== el.target){
+      el.className = "selected";
+    }
+    seleccionado == el;
+  }); 
   
 
 }
