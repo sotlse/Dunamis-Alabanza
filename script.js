@@ -325,12 +325,11 @@ function Editar(e){
   let lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  let items = document.querySelectorAll("#playlistDomingoEditar li");
-  console.log(items);
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
+  let array = document.querySelectorAll("#playlistDomingoEditar li");
+  console.log(array);
   
-  //Borrar lista
   
   //Seleccionar elemento de lista domingo y moverlo
   listaEditar.addEventListener("click",(e) =>  {
@@ -341,6 +340,8 @@ function Editar(e){
     } 
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
+    let index = array.indexOf();
+    console.log(index);
     
     
   
