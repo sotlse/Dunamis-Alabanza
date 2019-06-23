@@ -341,7 +341,7 @@ function Editar(e){
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
   
-  
+  console.log(listaEditar);
   //Seleccionar elemento de lista domingo y moverlo
   listaEditar.addEventListener("click",(e) =>  {
     //Seleccionar elemnto de lista
@@ -352,8 +352,9 @@ function Editar(e){
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
     
+    console.log("1");
     console.log(e);
-    console.log(e.target.previousElementSibling);
+    //console.log(e.target.previousElementSibling);
     
     /*
     let items = document.querySelectorAll("#playlistDomingoEditar li");
@@ -366,7 +367,7 @@ function Editar(e){
     console.log(array.indexOf(seleccionado.innerHTML));
     */
     
-  
+/*  
     
   //console.log(cancionesLista);
     let botonUp = document.querySelector(".botonUp");
@@ -440,27 +441,8 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
       //Mover elemento seleccionado
   //botonUp.addEventListener("click",moverArriba); 
   //botonDown.addEventListener("click",moverAbajo);
-
   
-  //Ocultar lista de Playlist y poner listaEditar
-  lista.style.display = "none";
-  listaEditar.style.display = "block";
-  cancionesEditar.forEach(function (canto){
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo}<button class="boton-delete">
-            X</button>`; 
-    listaEditar.appendChild(li);
-      //listaEditar.style.display = "none";
-  });
-}
-
   function Ok(e){ 
-    let div = document.querySelector(".claseEditar");
-    let divOk = document.querySelector(".divOk");
-    let divEditar =document.querySelector (".divEditar");
-    let lista = document.querySelector("#playlistDomingo");
-    let listaEditar = document.querySelector("#playlistDomingoEditar");
-    let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
     div.style.display = "none";
     divOk.style.display = "none";
     divEditar.style.display= "block";
@@ -478,6 +460,20 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
   }
+  
+  //Ocultar lista de Playlist y poner listaEditar
+  lista.style.display = "none";
+  listaEditar.style.display = "block";
+  cancionesEditar.forEach(function (canto){
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo}<button class="boton-delete">
+            X</button>`; 
+    listaEditar.appendChild(li);
+      //listaEditar.style.display = "none";
+  });
+}
+
+
   
 
 
