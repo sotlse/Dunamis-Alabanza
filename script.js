@@ -344,10 +344,13 @@ function Editar(e){
     let botonDown = document.querySelector(".botonDown");
     botonUp.addEventListener("click",moverArriba);
     botonDown.addEventListener("click",moverAbajo);
+    console.log(`"Seleccionado: " ${seleccionado}`);
     console.log(seleccionado.previousElementSibling);
     function moverArriba(e){
       let insertarAntes = seleccionado.previousElementSibling;
-      listaEditar.insertBefore(seleccionado,insertarAntes);
+      let Editar = document.querySelector("#playlistDomingoEditar");
+      console.log(Editar);
+      Editar.insertBefore(seleccionado,insertarAntes);
       
       console.log(insertarAntes);
       /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
