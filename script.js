@@ -336,7 +336,7 @@ function Editar(e){
     seleccionado = e.target;
     if (noseleccionado){
       noseleccionado.className = "noselected";
-    }
+    } 
     seleccionado.className = "selected";
     noseleccionado = seleccionado;
     
@@ -344,15 +344,15 @@ function Editar(e){
     let botonDown = document.querySelector(".botonDown");
     botonUp.addEventListener("click",moverArriba);
     botonDown.addEventListener("click",moverAbajo);
-    console.log(`"Seleccionado: " ${seleccionado}`);
-    console.log(seleccionado.previousElementSibling);
     function moverArriba(e){
       let insertarAntes = seleccionado.previousElementSibling;
       let Editar = document.querySelector("#playlistDomingoEditar");
-      console.log(Editar);
-      Editar.insertBefore(seleccionado,insertarAntes);
+      //console.log(Editar);
+      console.log(seleccionado);
+      console.log(seleccionado.previousElementSibling);
+      Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
       
-      console.log(insertarAntes);
+      //console.log(insertarAntes);
       /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
       canciones.forEach((canto, index)=>{
           console.log(index);
