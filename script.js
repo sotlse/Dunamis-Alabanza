@@ -236,6 +236,7 @@ document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 if(titulo === "Playlist Domingo"){
   document.addEventListener("DOMContentLoaded", PlaylistDomingo)   
   function PlaylistDomingo(){
+    
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
     if (canciones === null){
       /*const div = document.createElement ('div');
@@ -248,6 +249,8 @@ if(titulo === "Playlist Domingo"){
     else{
     canciones.forEach(function (canto){
       const lista = document.querySelector("#playlistDomingo");
+      let listaEditar = document.querySelector("#playlistDomingoEditar");
+      listaEditar.style.display = "none";
       const li = document.createElement("li");
       /*li.draggable = "true";*/
       li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
@@ -346,21 +349,25 @@ function Editar(e){
   div.appendChild(botonDown);
   botonDown.appendChild(document.createTextNode("Mover abajo"));
   
-  //Seleccionar elemento de lista domingo
+  //Ocultar lista y poner listaEditar
   let lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   console.log(lista);
   lista.style.display = "none";
-  let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  canciones.forEach(function (canto){
+  listaEditar.style.display = "block";
+  console.log()
+  let cancionesEditar = [];
+  cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
+  cancionesEditar.forEach(function (canto){
       
       const li = document.createElement("li");
-      li.innerHTML = `${canto.titulo} - <span style="color:black">${canto.tipo}</span> <button class="boton-delete">
+      li.innerHTML = `${canto.titulo} - ${canto.tipo} <button class="boton-delete">
             X</button>`; 
       listaEditar.appendChild(li);
   });
-  //for (var i;i<lista.lenght)
-  lista.addEventListener("click",(e) =>  {
+  
+  //Seleccionar elemento de lista domingo
+  listaEditar.addEventListener("click",(e) =>  {
       let el = e.target;
     console.log(el);
   });
@@ -373,6 +380,7 @@ function Editar(e){
     divEditar.style.display= "block";
     lista.style.display = "block";
     listaEditar.style.display = "none";
+    listaEditar
   }
 }
 
