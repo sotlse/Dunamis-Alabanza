@@ -343,7 +343,7 @@ function Editar(e){
   
   console.log(listaEditar);
   //Seleccionar elemento de lista domingo y moverlo
-  listaEditar.addEventListener("click",(e) =>  {
+/*  listaEditar.addEventListener("click",(e) =>  {
     //Seleccionar elemnto de lista
     seleccionado = e.target;
     if (noseleccionado){
@@ -354,6 +354,14 @@ function Editar(e){
     
     console.log("1");
     console.log(e);
+    }); 
+  
+*/  
+  
+  
+  
+  
+  
     //console.log(e.target.previousElementSibling);
     
     /*
@@ -392,14 +400,15 @@ function Editar(e){
           }
         
                           
-    });*/
+    });*
     }
   
     function moverAbajo(){
       console.log("abajo");
     }
-  }); 
-  
+
+}); 
+  */
 
 }
 
