@@ -345,8 +345,8 @@ function Editar(e){
   //Seleccionar elemento de lista domingo y moverlo    
   let items = document.querySelectorAll("#playlistDomingoEditar li");
   let array=[],index,parent;
-  botonUp.addEventListener("click",moverArriba);
-  botonDown.addEventListener("click",moverAbajo);  
+  //botonUp.addEventListener("click",moverArriba);
+  //botonDown.addEventListener("click",moverAbajo);  
   
     items.forEach(function (item){
       array.push(item.innerHTML);
@@ -359,7 +359,7 @@ function Editar(e){
         } 
         this.className = "selected";
         noseleccionado = this;
-        console.log(this.innerHTML + index);
+        //console.log(this.innerHTML + index);
 
       } 
     });
@@ -373,12 +373,12 @@ function Editar(e){
     
     function moverArriba(seleccionado){
       
-      parent = items[index].parentNode;
+      //parent = items[index].parentNode;
       console.log(items[index]);
       console.log(items[index-1]);
-      parent.insertBefore(items[index],items[index-1]);
+      listaEditar.insertBefore(items[index],items[index-1]);
       index--;
-      
+      console.log(index);
       /*let Editar = document.querySelector("#playlistDomingoEditar");
       let insertarAntes = seleccionado.previousElementSibling;
       //console.log(Editar);
@@ -437,6 +437,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   body.insertBefore (div,nav);
   let botonUp = document.createElement("button");
   botonUp.className = "botonUp";
+  botonUp.onclick = "upNdown";
   let botonDown = document.createElement("button");
   botonDown.className = "botonDown";
   div.appendChild(botonUp);
@@ -446,7 +447,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
       //Mover elemento seleccionado
   //botonUp.addEventListener("click",moverArriba); 
   //botonDown.addEventListener("click",moverAbajo);
-  
+  console.log(botonUp);
   function Ok(e){ 
     div.style.display = "none";
     divOk.style.display = "none";
