@@ -340,7 +340,8 @@ function Editar(e){
   let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
-
+  let botonUp = document.querySelector(".botonUp");
+ let botonDown = document.querySelector(".botonDown");
   //Seleccionar elemento de lista domingo y moverlo    
     let items = document.querySelectorAll("#playlistDomingoEditar li");
     let array=[];
@@ -357,32 +358,26 @@ function Editar(e){
         this.className = "selected";
         noseleccionado = this;
         console.log(this.innerHTML + index);
+        //botonUp.addEventListener("click",moverArriba(this));
+        //botonDown.addEventListener("click",moverAbajo(this));
       } 
-      function moverArriba(){
-        let Editar = document.querySelector("#playlistDomingoEditar");
-        let insertarAntes = this.previousElementSibling;
-        //console.log(Editar);
-        Editar.insertBefore(this,this.previousElementSibling);
-      }
+      
     });
     
     
  
     
   //console.log(cancionesLista);
-    let botonUp = document.querySelector(".botonUp");
-    let botonDown = document.querySelector(".botonDown");
-    botonUp.addEventListener("click",moverArriba);
-    botonDown.addEventListener("click",moverAbajo);
+    
+    
    
     
-    function moverArriba(e){
-      items.forEach(function (item){
-      item.onclick = function(){
+    function moverArriba(seleccionado){
+
       let Editar = document.querySelector("#playlistDomingoEditar");
-      let insertarAntes = this.previousElementSibling;
+      let insertarAntes = seleccionado.previousElementSibling;
       //console.log(Editar);
-      Editar.insertBefore(this,this.previousElementSibling);
+      Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
 
       //console.log(insertarAntes);
       /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
@@ -395,8 +390,9 @@ function Editar(e){
         
                           
     });*/
+    
+
     }
-    });
   
     function moverAbajo(){
       console.log("abajo");
