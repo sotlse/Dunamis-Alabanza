@@ -341,29 +341,7 @@ function Editar(e){
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
 
-  //Seleccionar elemento de lista domingo y moverlo
-/*  listaEditar.addEventListener("click",(e) =>  {
-    //Seleccionar elemnto de lista
-    seleccionado = e.target;
-    if (noseleccionado){
-      noseleccionado.className = "noselected";
-    } 
-    seleccionado.className = "selected";
-    noseleccionado = seleccionado;
-    
-    console.log("1");
-    console.log(e);
-    }); 
-  
-*/  
-  
-  
-  
-  
-  
-    //console.log(e.target.previousElementSibling);
-    
-    
+  //Seleccionar elemento de lista domingo y moverlo    
     let items = document.querySelectorAll("#playlistDomingoEditar li");
     let array=[];
     
@@ -379,14 +357,11 @@ function Editar(e){
         this.className = "selected";
         noseleccionado = this;
         console.log(this.innerHTML + index);
-      }
-    })
-
-//    console.log(seleccionado.innerHTML);
-//    console.log(array.indexOf(seleccionado.innerHTML));
+      } 
+    });
     
     
-/*  
+ 
     
   //console.log(cancionesLista);
     let botonUp = document.querySelector(".botonUp");
