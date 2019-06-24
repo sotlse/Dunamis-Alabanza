@@ -358,6 +358,12 @@ function Editar(e){
         noseleccionado = this;
         console.log(this.innerHTML + index);
       } 
+      function moverArriba(){
+        let Editar = document.querySelector("#playlistDomingoEditar");
+        let insertarAntes = this.previousElementSibling;
+        //console.log(Editar);
+        Editar.insertBefore(this,this.previousElementSibling);
+      }
     });
     
     
@@ -371,10 +377,12 @@ function Editar(e){
    
     
     function moverArriba(e){
+      items.forEach(function (item){
+      item.onclick = function(){
       let Editar = document.querySelector("#playlistDomingoEditar");
-      let insertarAntes = seleccionado.previousElementSibling;
+      let insertarAntes = this.previousElementSibling;
       //console.log(Editar);
-      Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
+      Editar.insertBefore(this,this.previousElementSibling);
 
       //console.log(insertarAntes);
       /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
@@ -386,15 +394,16 @@ function Editar(e){
           }
         
                           
-    });*
+    });*/
     }
+    });
   
     function moverAbajo(){
       console.log("abajo");
     }
 
-}); 
-  */
+//}); 
+  
 
 }
 
