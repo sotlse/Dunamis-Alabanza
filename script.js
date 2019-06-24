@@ -367,12 +367,19 @@ function Editar(e){
     
     let items = document.querySelectorAll("#playlistDomingoEditar li");
     let array=[];
+    
     items.forEach(function (item){
       array.push(item.innerHTML);
     });
-//    console.log(e);
-    console.log(seleccionado.innerHTML);
-    console.log(array.indexOf(seleccionado.innerHTML));
+    items.forEach(function (item){
+      item.onclick = function(){
+        let index = array.indexOf(this.innerHTML);
+        console.log(this.innerHTML + index);
+      }
+    })
+    console.log(array);
+//    console.log(seleccionado.innerHTML);
+//    console.log(array.indexOf(seleccionado.innerHTML));
     
     
 /*  
