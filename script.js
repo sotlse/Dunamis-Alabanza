@@ -364,16 +364,16 @@ function Editar(e){
   
     //console.log(e.target.previousElementSibling);
     
-    /*
+    
     let items = document.querySelectorAll("#playlistDomingoEditar li");
     let array=[];
     items.forEach(function (item){
       array.push(item.innerHTML);
     });
-    console.log(e);
+//    console.log(e);
     console.log(seleccionado.innerHTML);
     console.log(array.indexOf(seleccionado.innerHTML));
-    */
+    
     
 /*  
     
