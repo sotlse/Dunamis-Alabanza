@@ -344,7 +344,7 @@ function Editar(e){
   let botonDown = document.querySelector(".botonDown");
   //Seleccionar elemento de lista domingo y moverlo    
   let items = document.querySelectorAll("#playlistDomingoEditar li");
-  let array=[],index;
+  let array=[],index,parent;
   botonUp.addEventListener("click",moverArriba);
   botonDown.addEventListener("click",moverAbajo);  
   
@@ -362,9 +362,8 @@ function Editar(e){
         console.log(this.innerHTML + index);
 
       } 
-      console.log(index);
     });
-    
+     
     
     
     
@@ -373,8 +372,14 @@ function Editar(e){
    
     
     function moverArriba(seleccionado){
-
-      let Editar = document.querySelector("#playlistDomingoEditar");
+      
+      parent = items[index].parentNode;
+      console.log(items[index]);
+      console.log(items[index-1]);
+      parent.insertBefore(items[index],items[index-1]);
+      index--;
+      
+      /*let Editar = document.querySelector("#playlistDomingoEditar");
       let insertarAntes = seleccionado.previousElementSibling;
       //console.log(Editar);
       Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
