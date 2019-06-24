@@ -374,6 +374,8 @@ function Editar(e){
     items.forEach(function (item){
       item.onclick = function(){
         let index = array.indexOf(this.innerHTML);
+        console.log(this);
+        
         console.log(this.innerHTML + index);
       }
     })
