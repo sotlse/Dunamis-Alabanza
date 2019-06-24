@@ -374,8 +374,12 @@ function Editar(e){
     items.forEach(function (item){
       item.onclick = function(){
         let index = array.indexOf(this.innerHTML);
-        console.log(this);
-        
+        this.className = "selected";
+        if (noseleccionado){
+          noseleccionado.className = "noselected";
+        } 
+        seleccionado.className = "selected";
+        noseleccionado = seleccionado;
         console.log(this.innerHTML + index);
       }
     })
