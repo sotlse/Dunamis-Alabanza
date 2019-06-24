@@ -340,8 +340,7 @@ function Editar(e){
   let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
-  
-  console.log(listaEditar);
+
   //Seleccionar elemento de lista domingo y moverlo
 /*  listaEditar.addEventListener("click",(e) =>  {
     //Seleccionar elemnto de lista
@@ -374,16 +373,15 @@ function Editar(e){
     items.forEach(function (item){
       item.onclick = function(){
         let index = array.indexOf(this.innerHTML);
-        this.className = "selected";
         if (noseleccionado){
           noseleccionado.className = "noselected";
         } 
-        seleccionado.className = "selected";
-        noseleccionado = seleccionado;
+        this.className = "selected";
+        noseleccionado = this;
         console.log(this.innerHTML + index);
       }
     })
-    console.log(array);
+
 //    console.log(seleccionado.innerHTML);
 //    console.log(array.indexOf(seleccionado.innerHTML));
     
