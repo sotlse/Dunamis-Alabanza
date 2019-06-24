@@ -341,34 +341,34 @@ function Editar(e){
   //Agregar botones de editar
   botonesEditar(lista,listaEditar,cancionesEditar);
   let botonUp = document.querySelector(".botonUp");
- let botonDown = document.querySelector(".botonDown");
+  let botonDown = document.querySelector(".botonDown");
   //Seleccionar elemento de lista domingo y moverlo    
-    let items = document.querySelectorAll("#playlistDomingoEditar li");
-    let array=[];
-    
+  let items = document.querySelectorAll("#playlistDomingoEditar li");
+  let array=[],index;
+  botonUp.addEventListener("click",moverArriba);
+  botonDown.addEventListener("click",moverAbajo);  
+  
     items.forEach(function (item){
       array.push(item.innerHTML);
     });
     items.forEach(function (item){
       item.onclick = function(){
-        let index = array.indexOf(this.innerHTML);
+        index = array.indexOf(this.innerHTML);
         if (noseleccionado){
           noseleccionado.className = "noselected";
         } 
         this.className = "selected";
         noseleccionado = this;
         console.log(this.innerHTML + index);
-        //botonUp.addEventListener("click",moverArriba(this));
-        //botonDown.addEventListener("click",moverAbajo(this));
+
       } 
-      
+      console.log(index);
     });
     
     
+    
+    
  
-    
-  //console.log(cancionesLista);
-    
     
    
     
