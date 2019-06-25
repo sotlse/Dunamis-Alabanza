@@ -365,12 +365,13 @@ function Editar(e){
     });
      
     botonUp.onclick = function (){
-      console.log(items[index]);
-      console.log(items[index-1]);
-      console.log(index);
-      listaEditar.insertBefore(items[index],items[index-1]);
+      items = document.querySelectorAll("#playlistDomingoEditar li");
+      parent = items[index].parentElement;
+      parent.insertBefore(items[index],items[index-1]);
       index--;
+      items = document.querySelectorAll("#playlistDomingoEditar li");
       console.log(index);
+      console.log(items);
     }
     
     
