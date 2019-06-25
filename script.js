@@ -343,11 +343,13 @@ function Editar(e){
   let botonUp = document.querySelector(".botonUp");
   let botonDown = document.querySelector(".botonDown");
   //Seleccionar elemento de lista domingo y moverlo    
-  let items = document.querySelectorAll("#playlistDomingoEditar li");
+  
   let array=[],index,parent;
   //botonUp.addEventListener("click",moverArriba);
   //botonDown.addEventListener("click",moverAbajo);  
   
+
+    let items = document.querySelectorAll("#playlistDomingoEditar li");
     items.forEach(function (item){
       array.push(item.innerHTML);
     });
@@ -360,17 +362,23 @@ function Editar(e){
         this.className = "selected";
         noseleccionado = this;
         console.log(this.innerHTML + index);
-
-      } 
-    });
-     
-    botonUp.onclick = function (){
       items = document.querySelectorAll("#playlistDomingoEditar li");
+      } 
+      
+    });   
+    
+  
+    botonUp.onclick = function (){
+      let items = document.querySelectorAll("#playlistDomingoEditar li");
       parent = items[index].parentElement;
       parent.insertBefore(items[index],items[index-1]);
       index--;
       items = document.querySelectorAll("#playlistDomingoEditar li");
-      console.log(index);
+      array = [];
+      items.forEach(function (item){
+        array.push(item.innerHTML);
+      });
+      console.log(array);
       console.log(items);
     }
     
