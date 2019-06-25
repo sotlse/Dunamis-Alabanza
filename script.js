@@ -444,7 +444,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   let botonOK = document.querySelector(".botonOK");
   let divOk = document.querySelector(".divOk");
   divOk.style.display = "block";
-  botonOK.addEventListener("click",Ok);
+  //botonOK.addEventListener("click",Ok);
   
   let nav = document.querySelector(".nav");
   const div = document.createElement ("div");
@@ -463,7 +463,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   //botonUp.addEventListener("click",moverArriba); 
   //botonDown.addEventListener("click",moverAbajo);
 
-  function Ok(e){ 
+  botonOK.onclick = function (){ 
     div.style.display = "none";
     divOk.style.display = "none";
     divEditar.style.display= "block";
@@ -480,6 +480,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
     while (listaEditar.hasChildNodes()){
       listaEditar.removeChild(listaEditar.firstChild);
     } 
+    lista=listaEditar;
   }
   
   //Ocultar lista de Playlist y poner listaEditar
