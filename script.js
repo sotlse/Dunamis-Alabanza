@@ -143,6 +143,26 @@ class UI {
 //Cuando se cargue la pagina, agregar base de datos
 document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 
+//Boton Add event
+if(opcionesItems){
+opcionesItems.addEventListener("click", agregarCanto);
+}
+  
+//Filter event
+if (busquedaItem){
+busquedaItem.addEventListener("keyup",filterItems);
+}
+
+//Boton regresar event
+if(botonRegresar){
+  botonRegresar.addEventListener("click", Regresar);
+}
+
+//Regresar pagina function
+function Regresar(){
+  window.history.back();
+}
+
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
   document.addEventListener("DOMContentLoaded", PlaylistDomingo)   
@@ -214,25 +234,6 @@ if(titulo === "Playlist Domingo"){
   }
 }
 
-//Boton Add event
-if(opcionesItems){
-opcionesItems.addEventListener("click", agregarCanto);
-}
-  
-//Filter event
-if (busquedaItem){
-busquedaItem.addEventListener("keyup",filterItems);
-}
-
-//Boton regresar event
-if(botonRegresar){
-  botonRegresar.addEventListener("click", Regresar);
-}
-
-//Regresar pagina function
-function Regresar(){
-  window.history.back();
-}
 
 //Editar pagina function
 function Editar(e){
@@ -509,11 +510,6 @@ function agregarCanto(e){
     }
   }
 }
-  
-  
-
-  
-
 
 //Filter function
 function filterItems(e){
