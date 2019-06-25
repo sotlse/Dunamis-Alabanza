@@ -101,23 +101,23 @@ class UI {
     }
     
     else if(titulo === "Dunamis Adoracion | Accion de Gracias"){
-      
+      CategoriaCantos("Accion de Gracias");
     }
     
     else if(titulo === "Dunamis Adoracion | Semana Santa"){
-      
+      CategoriaCantos("Semana Santa");
     }
     
     else if(titulo === "Dunamis Adoracion | Navidad"){
-      
+      CategoriaCantos("Navidad");
     }
     
     else if(titulo === "Dunamis Adoracion | Himnos"){
-      
+      CategoriaCantos("Himnos");
     }
     
     else if(titulo === "Dunamis Adoracion | Servicios Especiales"){
-      
+      CategoriaCantos("Servicios Especiales");
     }
     
     function CategoriaCantos(categoria){
@@ -149,16 +149,8 @@ if(titulo === "Playlist Domingo"){
   function PlaylistDomingo(){
     
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-    if (canciones === null){
-      /*const div = document.createElement ('div');
-      div.className = "NoHayCantos";
-      div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
-      const container = document.querySelector(".cuerpo-lista");
-      const ol = document.querySelector("#playlistDomingo");
-      container.insertBefore(div,ol);*/
-    }
-    else{
-    canciones.forEach(function (canto){
+    if (canciones != null){
+      canciones.forEach(function (canto){
       const lista = document.querySelector("#playlistDomingo");
       let listaEditar = document.querySelector("#playlistDomingoEditar");
       listaEditar.style.display = "none";
