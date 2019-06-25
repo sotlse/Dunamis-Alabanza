@@ -359,12 +359,19 @@ function Editar(e){
         } 
         this.className = "selected";
         noseleccionado = this;
-        //console.log(this.innerHTML + index);
+        console.log(this.innerHTML + index);
 
       } 
     });
      
-    
+    botonUp.onclick = function (){
+      console.log(items[index]);
+      console.log(items[index-1]);
+      console.log(index);
+      listaEditar.insertBefore(items[index],items[index-1]);
+      index--;
+      console.log(index);
+    }
     
     
  
@@ -437,7 +444,6 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   body.insertBefore (div,nav);
   let botonUp = document.createElement("button");
   botonUp.className = "botonUp";
-  botonUp.onclick = "upNdown";
   let botonDown = document.createElement("button");
   botonDown.className = "botonDown";
   div.appendChild(botonUp);
@@ -447,7 +453,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
       //Mover elemento seleccionado
   //botonUp.addEventListener("click",moverArriba); 
   //botonDown.addEventListener("click",moverAbajo);
-  console.log(botonUp);
+
   function Ok(e){ 
     div.style.display = "none";
     divOk.style.display = "none";
