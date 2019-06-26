@@ -179,7 +179,7 @@ class Playlist{
   }
   
   static agregarBotones(canciones,lista,listaEditar){
-    //Agregar boton OK
+    //Agregar boton OK para inicializar
     let nav = document.querySelector(".nav");  
     let botonBorrar = document.querySelector(".divBorarLista");
     let divOk = document.createElement("div");
@@ -191,15 +191,7 @@ class Playlist{
     nav.insertBefore (divOk,botonBorrar);
     divOk.style.display = "none";
     
-    //Agregar botones mover arriba y abajo
-    let divEditar = document.querySelector(".divEditar");
-    divEditar.style.display = "none";
-    listaEditar.style.display = "block";
-    botonOK = document.querySelector(".botonOK");
-    divOk = document.querySelector(".divOk");
-    divOk.style.display = "block";
-
-    nav = document.querySelector(".nav");
+    //Agregar botones mover arriba y abajo para inicializar
     const div = document.createElement ("div");
     div.className = "claseEditar";
     let body = document.querySelector(".bodyPlaylist");
@@ -212,9 +204,22 @@ class Playlist{
     botonUp.appendChild(document.createTextNode("Mover arriba"));
     div.appendChild(botonDown);
     botonDown.appendChild(document.createTextNode("Mover abajo"));
+    div.style.display = "none";
   }
   
   static agregarMensajeNoCantos(){
+    
+  }
+  
+  static funcionBotonEditar(){
+    
+  }
+  
+  static funcionBotonOk(){
+    
+  }
+  
+  static borrarCanto(){
     
   }
 }
