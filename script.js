@@ -168,6 +168,7 @@ if(titulo === "Playlist Domingo"){
   document.addEventListener("DOMContentLoaded", PlaylistDomingo)   
   function PlaylistDomingo(){
     
+    //
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
     if (canciones != null){
       canciones.forEach(function (canto){
