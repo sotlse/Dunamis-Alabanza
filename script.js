@@ -167,11 +167,14 @@ function Regresar(){
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
   document.addEventListener("DOMContentLoaded", PlaylistDomingo);
-  Playlist.agregarCantos("cancionesDomingo","#playlistDomingo","#playlistDomingoEditar");
+  let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+  const lista = document.querySelector("#playlistDomingo");
+  let listaEditar = document.querySelector("#playlistDomingoEditar");
+  Playlist.agregarCantos(canciones,lista,listaEditar);
 }
 
 class Playlist{
-  static agregarCantos(memoria,list,listEditar){
+  static agregarCantos(canciones,list,listEditar){
     let canciones = JSON.parse(localStorage.getItem(memoria));
     const lista = document.querySelector(list);
     let listaEditar = document.querySelector(listEditar);
@@ -183,13 +186,55 @@ class Playlist{
       li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
             X</button>`; 
       lista.appendChild(li);
-      //console.log(li);
     });
     }
   }
   
-  static agregarBotones(){
+  static agregarBotones(memoria,list,listEditar){
+    //Agregar boton OK
+    let nav = document.querySelector(".nav");  
+    let botonBorrar = document.querySelector(".divBorarLista");
+    let divOk = document.createElement("div");
+    divOk.className = "divOk";
+    let botonOK = document.createElement("button");
+    botonOK.className = "botonOK";
+    botonOK.appendChild(document.createTextNode("OK"));
+    divOk.appendChild(botonOK);
+    nav.insertBefore (divOk,botonBorrar);
+    divOk.style.display = "none";
     
+    //Agregar botones mover arriba y abajo
+    let divEditar = document.querySelector(".divEditar");
+    divEditar.style.display = "none";
+    /*let botonBorrar = document.querySelector(".divBorarLista");
+    let divOk = document.createElement("div");
+    divOk.className = "divOk";
+    let botonOK = document.createElement("button");
+    botonOK.className = "botonOK";
+    botonOK.appendChild(document.createTextNode("OK"));
+    botonOK.addEventListener("click",Ok);
+    divOk.appendChild(botonOK);
+    nav.insertBefore (divOk,botonBorrar);*/
+
+    listaEditar.style.display = "block";
+    botonOK = document.querySelector(".botonOK");
+    divOk = document.querySelector(".divOk");
+    divOk.style.display = "block";
+    //botonOK.addEventListener("click",Ok);
+
+    nav = document.querySelector(".nav");
+    const div = document.createElement ("div");
+    div.className = "claseEditar";
+    let body = document.querySelector(".bodyPlaylist");
+    body.insertBefore (div,nav);
+    let botonUp = document.createElement("button");
+    botonUp.className = "botonUp";
+    let botonDown = document.createElement("button");
+    botonDown.className = "botonDown";
+    div.appendChild(botonUp);
+    botonUp.appendChild(document.createTextNode("Mover arriba"));
+    div.appendChild(botonDown);
+    botonDown.appendChild(document.createTextNode("Mover abajo"));
   }
   
   static agregarMensajeNoCantos(){
