@@ -163,21 +163,9 @@ function Regresar(){
   window.history.back();
 }
 
-
-//Cuando se cargue la pagina Playlist Domingo, agregar cantos
-if(titulo === "Playlist Domingo"){
-  document.addEventListener("DOMContentLoaded", PlaylistDomingo);
-  let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  const lista = document.querySelector("#playlistDomingo");
-  let listaEditar = document.querySelector("#playlistDomingoEditar");
-  Playlist.agregarCantos(canciones,lista,listaEditar);
-}
-
+//Playlist
 class Playlist{
-  static agregarCantos(canciones,list,listEditar){
-    let canciones = JSON.parse(localStorage.getItem(memoria));
-    const lista = document.querySelector(list);
-    let listaEditar = document.querySelector(listEditar);
+  static agregarCantos(canciones,lista,listaEditar){
     if (canciones != null){
       canciones.forEach(function (canto){
       listaEditar.style.display = "none";
@@ -190,7 +178,7 @@ class Playlist{
     }
   }
   
-  static agregarBotones(memoria,list,listEditar){
+  static agregarBotones(canciones,lista,listaEditar){
     //Agregar boton OK
     let nav = document.querySelector(".nav");  
     let botonBorrar = document.querySelector(".divBorarLista");
@@ -206,21 +194,10 @@ class Playlist{
     //Agregar botones mover arriba y abajo
     let divEditar = document.querySelector(".divEditar");
     divEditar.style.display = "none";
-    /*let botonBorrar = document.querySelector(".divBorarLista");
-    let divOk = document.createElement("div");
-    divOk.className = "divOk";
-    let botonOK = document.createElement("button");
-    botonOK.className = "botonOK";
-    botonOK.appendChild(document.createTextNode("OK"));
-    botonOK.addEventListener("click",Ok);
-    divOk.appendChild(botonOK);
-    nav.insertBefore (divOk,botonBorrar);*/
-
     listaEditar.style.display = "block";
     botonOK = document.querySelector(".botonOK");
     divOk = document.querySelector(".divOk");
     divOk.style.display = "block";
-    //botonOK.addEventListener("click",Ok);
 
     nav = document.querySelector(".nav");
     const div = document.createElement ("div");
@@ -241,6 +218,18 @@ class Playlist{
     
   }
 }
+
+//Cuando se cargue la pagina Playlist Domingo, agregar cantos
+if(titulo === "Playlist Domingo"){
+  document.addEventListener("DOMContentLoaded", PlaylistDomingo);
+  let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+  const lista = document.querySelector("#playlistDomingo");
+  let listaEditar = document.querySelector("#playlistDomingoEditar");
+  Playlist.agregarCantos(canciones,lista,listaEditar);
+  Playlist.agregarBotones(canciones,lista,listaEditar);
+}
+
+
   //Agregar cantos a playlist
   function PlaylistDomingo(){
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
