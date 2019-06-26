@@ -169,7 +169,11 @@ if(titulo === "Playlist Domingo"){
   document.addEventListener("DOMContentLoaded", PlaylistDomingo); 
 }
   
-class 
+class Playlist{
+  static agregarCantos(memoria,lista,listaEditar){
+    
+  }
+}
   //Agregar cantos a playlist
   function PlaylistDomingo(){
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
