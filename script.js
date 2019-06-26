@@ -163,12 +163,15 @@ function Regresar(){
   window.history.back();
 }
 
+
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
-  document.addEventListener("DOMContentLoaded", PlaylistDomingo)   
+  document.addEventListener("DOMContentLoaded", PlaylistDomingo); 
+}
+  
+class 
+  //Agregar cantos a playlist
   function PlaylistDomingo(){
-    
-    //
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
     if (canciones != null){
       canciones.forEach(function (canto){
@@ -184,7 +187,7 @@ if(titulo === "Playlist Domingo"){
     });
     }
     
-  //Borrar canto seleccionado
+    //Borrar canto seleccionado
     document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
       let el = e.target;
       //console.log(el);
@@ -233,7 +236,7 @@ if(titulo === "Playlist Domingo"){
   nav.insertBefore (divOk,botonBorrar);
   divOk.style.display = "none";
   }
-}
+
 
 
 //Editar pagina function
