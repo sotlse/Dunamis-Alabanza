@@ -171,12 +171,12 @@ if(titulo === "Playlist Domingo"){
 }
 
 class Playlist{
-  static agregarCantos(memoria,lista,listaEditar){
+  static agregarCantos(memoria,list,listEditar){
     let canciones = JSON.parse(localStorage.getItem(memoria));
+    const lista = document.querySelector(list);
+    let listaEditar = document.querySelector(listEditar);
     if (canciones != null){
       canciones.forEach(function (canto){
-      const lista = document.querySelector("#playlistDomingo");
-      let listaEditar = document.querySelector("#playlistDomingoEditar");
       listaEditar.style.display = "none";
       const li = document.createElement("li");
       /*li.draggable = "true";*/
@@ -186,6 +186,14 @@ class Playlist{
       //console.log(li);
     });
     }
+  }
+  
+  static agregarBotones(){
+    
+  }
+  
+  static agregarMensajeNoCantos(){
+    
   }
 }
   //Agregar cantos a playlist
@@ -228,6 +236,7 @@ class Playlist{
         }
       }
     });
+    
     if (document.querySelector("#playlistDomingo").lastElementChild === null){
           const div = document.createElement ('div');
           div.className = "NoHayCantos";
