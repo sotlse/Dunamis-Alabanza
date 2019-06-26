@@ -166,12 +166,26 @@ function Regresar(){
 
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
-  document.addEventListener("DOMContentLoaded", PlaylistDomingo); 
+  document.addEventListener("DOMContentLoaded", PlaylistDomingo);
+  Playlist.agregarCantos("cancionesDomingo","#playlistDomingo","#playlistDomingoEditar");
 }
-  
+
 class Playlist{
   static agregarCantos(memoria,lista,listaEditar){
-    let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    let canciones = JSON.parse(localStorage.getItem(memoria));
+    if (canciones != null){
+      canciones.forEach(function (canto){
+      const lista = document.querySelector("#playlistDomingo");
+      let listaEditar = document.querySelector("#playlistDomingoEditar");
+      listaEditar.style.display = "none";
+      const li = document.createElement("li");
+      /*li.draggable = "true";*/
+      li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
+            X</button>`; 
+      lista.appendChild(li);
+      //console.log(li);
+    });
+    }
   }
 }
   //Agregar cantos a playlist
