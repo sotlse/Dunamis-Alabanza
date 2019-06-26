@@ -171,7 +171,7 @@ if(titulo === "Playlist Domingo"){
   
 class Playlist{
   static agregarCantos(memoria,lista,listaEditar){
-    
+    let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
   }
 }
   //Agregar cantos a playlist
