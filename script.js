@@ -207,8 +207,20 @@ class Playlist{
     div.style.display = "none";
   }
   
-  static agregarMensajeNoCantos(){
-    
+  static agregarMensajeNoCantos(lista){
+    if (lista.lastElementChild === null){
+          const div = document.createElement ('div');
+          div.className = "NoHayCantos";
+          div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
+          const container = document.querySelector(".cuerpo-lista");
+          const ol = document.querySelector("#playlistDomingo");
+          container.insertBefore(div,ol);
+    }
+    else //Si no hay canto, no funcionan los botones de Editar y Borrar lista
+      {
+        botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+        botonEditar.addEventListener("click",Editar);
+      }
   }
   
   static funcionBotonEditar(){
@@ -226,12 +238,13 @@ class Playlist{
 
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
-  document.addEventListener("DOMContentLoaded", PlaylistDomingo);
+  //document.addEventListener("DOMContentLoaded", PlaylistDomingo);
   let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
   const lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   Playlist.agregarCantos(canciones,lista,listaEditar);
   Playlist.agregarBotones(canciones,lista,listaEditar);
+  Playlist.agregarMensajeNoCantos(lista);
 }
 
 
