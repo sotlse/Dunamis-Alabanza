@@ -265,7 +265,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
   botonEditar.addEventListener("click",Playlist.funcionBotonEditar(lista));
-}
+}  
 
 
   //Agregar cantos a playlist
