@@ -312,7 +312,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
   Playlist.funcionBotonEditar(lista,listaEditar);
   Playlist.funcionBotonOk(lista,listaEditar,canciones,cancionesEditar);
-  Playlist.funcionBotonUpDown();
+  //Playlist.funcionBotonUpDown();
   Playlist.borrarCanto();
 }  
 
