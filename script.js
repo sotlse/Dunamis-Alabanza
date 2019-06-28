@@ -223,8 +223,25 @@ class Playlist{
   }
   
   static funcionBotonEditar(lista){
+    console.log("1");
+    let noseleccionado, seleccionado, array=[], index, parent;
     if (lista.lastElementChild != null){
-      
+      let items = document.querySelectorAll("#playlistDomingoEditar li");
+      items.forEach(function (item){
+        array.push(item.innerHTML);
+      });
+      items.forEach(function (item){
+        item.onclick = function(){
+          index = array.indexOf(this.innerHTML);
+          if (noseleccionado){
+            noseleccionado.className = "noselected";
+          } 
+          this.className = "selected";
+          noseleccionado = this;
+          console.log(this.innerHTML + index);
+          items = document.querySelectorAll("#playlistDomingoEditar li");
+        } 
+      });   
     }
   }
   
@@ -247,7 +264,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarCantos(canciones,lista,listaEditar);
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
-  Playlist.funcionBotonEditar(lista);
+  botonEditar.addEventListener("click",Playlist.funcionBotonEditar(lista));
 }
 
 
