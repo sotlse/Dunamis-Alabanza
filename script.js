@@ -165,16 +165,15 @@ function Regresar(){
 
 //Playlist
 class Playlist{
-  static agregarCantos(canciones,lista,listaEditar){
+  static agregarCantos(canciones,lista,cancionesEditar,listaEditar){
     if (canciones != null){
       canciones.forEach(function (canto){
-      listaEditar.style.display = "none";
-      const li = document.createElement("li");
-      /*li.draggable = "true";*/
-      li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
+        const li = document.createElement("li");
+        /*li.draggable = "true";*/
+        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
             X</button>`; 
-      lista.appendChild(li);
-    });
+        lista.appendChild(li);
+      });
     }
   }
   
@@ -226,9 +225,9 @@ class Playlist{
     let noseleccionado, seleccionado, array=[], index, parent;
     if (lista.lastElementChild != null){
       botonEditar.addEventListener("click",botoneditar);
-    }
+    
     function botoneditar(){
-      lista.style.display = "none";
+      //lista.style.display = "none";
       listaEditar.style.display = "block";
       let items = document.querySelectorAll("#playlistDomingoEditar li");
       items.forEach(function (item){
@@ -247,7 +246,7 @@ class Playlist{
         } 
       });   
     }
-    
+    }
   }
   
   static funcionBotonOk(){
@@ -263,6 +262,7 @@ class Playlist{
 if(titulo === "Playlist Domingo"){
   //document.addEventListener("DOMContentLoaded", PlaylistDomingo);
   let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
+  let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
   const lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
@@ -287,7 +287,8 @@ if(titulo === "Playlist Domingo"){
       li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
             X</button>`; 
       lista.appendChild(li);
-      //console.log(li);
+      
+        
     });
     }
     
