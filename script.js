@@ -251,7 +251,6 @@ class Playlist{
       items.forEach(function (item){
          array.push(item.innerHTML);
       });
-      console.log(array.length);
       items.forEach(function (item){
         item.onclick = function(){
         index = array.indexOf(this.innerHTML);
@@ -282,9 +281,9 @@ class Playlist{
           items.forEach(function (item){
             array.push(item.innerHTML);
           });
-          console.log(array);
-          console.log(items);
-          console.log(index);
+          //console.log(array);
+          //console.log(items);
+          //console.log(index);
         }  
       }
       
@@ -293,8 +292,8 @@ class Playlist{
           let items = document.querySelectorAll("#playlistDomingoEditar li");
           parent = items[index].parentElement;
             //console.log(items);
-            console.log(array.length);
-          if (index < array.length){
+            //console.log(array.length);
+          if (index < (array.length-1)){
             parent.insertBefore(items[index],items[index+2]);
             index++;
           }
@@ -305,7 +304,7 @@ class Playlist{
           });
           //console.log(array);
           //console.log(items);
-          console.log(index);
+          //console.log(index);
         } 
       }
     }
