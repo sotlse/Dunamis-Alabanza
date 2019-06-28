@@ -228,7 +228,8 @@ class Playlist{
   }
   
   static funcionBotonEditar(lista,listaEditar){
-    let noseleccionado, seleccionado, array=[], index, parent;
+    let noseleccionado, seleccionado, array=[], parent;
+    let index = null;
     if (lista.lastElementChild != null){
       botonEditar.addEventListener("click",botoneditar);
     }
@@ -246,6 +247,7 @@ class Playlist{
       
       //Seleccionar canto a editar
       let items = document.querySelectorAll("#playlistDomingoEditar li");
+      
       items.forEach(function (item){
          array.push(item.innerHTML);
       });
@@ -267,22 +269,42 @@ class Playlist{
       let botonDown = document.querySelector(".botonDown");
       
       botonUp.onclick = function (){
-        if (index === "undefined" || index === null){console.log("1");}
-        let items = document.querySelectorAll("#playlistDomingoEditar li");
-        parent = items[index].parentElement;
-        parent.insertBefore(items[index],items[index-1]);
-        index--;
-        items = document.querySelectorAll("#playlistDomingoEditar li");
-        array = [];
-        items.forEach(function (item){
-          array.push(item.innerHTML);
-        });
-        console.log(array);
-        console.log(items);
-        console.log(index);
+        if (index != "undefined" || index != null){
+          let items = document.querySelectorAll("#playlistDomingoEditar li");
+          parent = items[index].parentElement;
+          if (index > 0){
+            parent.insertBefore(items[index],items[index-1]);
+            index--;
+          }
+          items = document.querySelectorAll("#playlistDomingoEditar li");
+          array = [];
+          items.forEach(function (item){
+            array.push(item.innerHTML);
+          });
+          console.log(array);
+          console.log(items);
+          console.log(index);
+        }  
       }
       
-      
+      botonDown.onclick = function (){
+          if (index != "undefined" || index != null){
+          let items = document.querySelectorAll("#playlistDomingoEditar li");
+          parent = items[index].parentElement;
+          if (index < 10){
+            parent.insertBefore(items[index],items[index+2]);
+            index++;
+          }
+          items = document.querySelectorAll("#playlistDomingoEditar li");
+          array = [];
+          items.forEach(function (item){
+            array.push(item.innerHTML);
+          });
+          console.log(array);
+          console.log(items);
+          console.log(index);
+        } 
+      }
     }
   }
   
