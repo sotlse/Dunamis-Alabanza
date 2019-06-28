@@ -261,15 +261,19 @@ class Playlist{
     }
   }
   
-  static funcionBotonOk(lista){
-    
-    let divOk = document.querySelector(".divOk");
-    let divEditar = document.querySelector(".divEditar");
-    let div = document.querySelector(".claseEditar");
-    div.style.display = "none";
-    divOk.style.display = "none";
-    divEditar.style.display= "block";
-    lista.style.display = "block";
+  static funcionBotonOk(lista,listaEditar){
+    let botonOK = document.querySelector(".botonOK");
+    botonOK.addEventListener("click",botonok);
+    function botonok(){
+      let divOk = document.querySelector(".divOk");
+      let divEditar = document.querySelector(".divEditar");
+      let div = document.querySelector(".claseEditar");
+      div.style.display = "none";
+      divOk.style.display = "none";
+      listaEditar.style.display = "none";
+      divEditar.style.display= "block";
+      lista.style.display = "block"; 
+    }
   }
   
   static borrarCanto(){
@@ -289,7 +293,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
   Playlist.funcionBotonEditar(lista,listaEditar);
-  Playlist.funcionBotonOk(lista);
+  Playlist.funcionBotonOk(lista,listaEditar);
 }  
 
 
