@@ -216,15 +216,17 @@ class Playlist{
       container.insertBefore(div,lista);
       listaEditar.style.display = "none";
     }
-/*    else { //Si no hay canto, no funcionan los botones de Editar y Borrar lista
+    else { //Si no hay canto, no funcionan los botones de Editar y Borrar lista
       botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
-      botonEditar.addEventListener("click",Editar);
-    }*/
+      //botonEditar.addEventListener("click",Editar);
+    }
   }
   
   static funcionBotonEditar(lista){
-    console.log("1");
     let noseleccionado, seleccionado, array=[], index, parent;
+    botonEditar.addEventListener("click",botoneditar());
+    function botoneditar(){
+      console.log("1");
     if (lista.lastElementChild != null){
       let items = document.querySelectorAll("#playlistDomingoEditar li");
       items.forEach(function (item){
@@ -242,6 +244,7 @@ class Playlist{
           items = document.querySelectorAll("#playlistDomingoEditar li");
         } 
       });   
+    }
     }
   }
   
@@ -264,7 +267,9 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarCantos(canciones,lista,listaEditar);
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
-  botonEditar.addEventListener("click",Playlist.funcionBotonEditar(lista));
+  Playlist.funcionBotonEditar(lista);
+  //botonEditar.addEventListener("click",Playlist.funcionBotonEditar(lista));
+  Playlist.funcionBotonOk();
 }  
 
 
