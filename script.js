@@ -222,30 +222,32 @@ class Playlist{
     }
   }
   
-  static funcionBotonEditar(lista){
+  static funcionBotonEditar(lista,listaEditar){
     let noseleccionado, seleccionado, array=[], index, parent;
-    botonEditar.addEventListener("click",botoneditar());
-    function botoneditar(){
-      console.log("1");
     if (lista.lastElementChild != null){
+      botonEditar.addEventListener("click",botoneditar);
+    }
+    function botoneditar(){
+      lista.style.display = "none";
+      listaEditar.style.display = "block";
       let items = document.querySelectorAll("#playlistDomingoEditar li");
       items.forEach(function (item){
-        array.push(item.innerHTML);
+         array.push(item.innerHTML);
       });
       items.forEach(function (item){
         item.onclick = function(){
-          index = array.indexOf(this.innerHTML);
-          if (noseleccionado){
-            noseleccionado.className = "noselected";
-          } 
-          this.className = "selected";
-          noseleccionado = this;
-          console.log(this.innerHTML + index);
-          items = document.querySelectorAll("#playlistDomingoEditar li");
+        index = array.indexOf(this.innerHTML);
+        if (noseleccionado){
+          noseleccionado.className = "noselected";
+        } 
+        this.className = "selected";
+        noseleccionado = this;
+        console.log(this.innerHTML + index);
+        items = document.querySelectorAll("#playlistDomingoEditar li");
         } 
       });   
     }
-    }
+    
   }
   
   static funcionBotonOk(){
@@ -267,8 +269,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarCantos(canciones,lista,listaEditar);
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
-  Playlist.funcionBotonEditar(lista);
-  //botonEditar.addEventListener("click",Playlist.funcionBotonEditar(lista));
+  Playlist.funcionBotonEditar(lista,listaEditar);
   Playlist.funcionBotonOk();
 }  
 
