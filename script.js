@@ -236,11 +236,15 @@ class Playlist{
       let divOk = document.querySelector(".divOk");
       let divEditar = document.querySelector(".divEditar");
       let div = document.querySelector(".claseEditar");
+      
+      //Ocultar y mostrar bloques
       div.style.display = "block";
       lista.style.display = "none";
       listaEditar.style.display = "block";
       divEditar.style.display = "none";
       divOk.style.display = "block";
+      
+      //Seleccionar canto a editar
       let items = document.querySelectorAll("#playlistDomingoEditar li");
       items.forEach(function (item){
          array.push(item.innerHTML);
@@ -253,10 +257,12 @@ class Playlist{
         } 
         this.className = "selected";
         noseleccionado = this;
-        console.log(this.innerHTML + index);
+        //console.log(this.innerHTML + index);
         items = document.querySelectorAll("#playlistDomingoEditar li");
+        console.log(index);
         } 
-      });   
+      });
+      
     }
   }
   
