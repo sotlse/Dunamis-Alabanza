@@ -262,22 +262,25 @@ class Playlist{
         } 
       });
       
-      //
+      //Mover canto seleccionado hacia arriba o abajo
       let botonUp = document.querySelector(".botonUp");
       let botonDown = document.querySelector(".botonDown");
+      
       botonUp.onclick = function (){
-      let items = document.querySelectorAll("#playlistDomingoEditar li");
-      parent = items[index].parentElement;
-      parent.insertBefore(items[index],items[index-1]);
-      index--;
-      items = document.querySelectorAll("#playlistDomingoEditar li");
-      array = [];
-      items.forEach(function (item){
-        array.push(item.innerHTML);
-      });
-      console.log(array);
-      console.log(items);
-    }
+        if (index === "undefined" || index === null){console.log("1");}
+        let items = document.querySelectorAll("#playlistDomingoEditar li");
+        parent = items[index].parentElement;
+        parent.insertBefore(items[index],items[index-1]);
+        index--;
+        items = document.querySelectorAll("#playlistDomingoEditar li");
+        array = [];
+        items.forEach(function (item){
+          array.push(item.innerHTML);
+        });
+        console.log(array);
+        console.log(items);
+        console.log(index);
+      }
       
       
     }
@@ -296,27 +299,7 @@ class Playlist{
       divEditar.style.display= "block";
       lista.style.display = "block"; 
       canciones = cancionesEditar;
-    }
-    
-    
-  }
-  
-  static funcionBotonUpDown(){
-    let botonUp = document.querySelector(".botonUp");
-    let botonDown = document.querySelector(".botonDown");
-    botonUp.onclick = function (){
-      let items = document.querySelectorAll("#playlistDomingoEditar li");
-      parent = items[index].parentElement;
-      parent.insertBefore(items[index],items[index-1]);
-      index--;
-      items = document.querySelectorAll("#playlistDomingoEditar li");
-      array = [];
-      items.forEach(function (item){
-        array.push(item.innerHTML);
-      });
-      console.log(array);
-      console.log(items);
-    }
+    } 
   }
   
   static borrarCanto(){
