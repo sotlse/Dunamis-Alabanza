@@ -207,24 +207,25 @@ class Playlist{
     div.style.display = "none";
   }
   
-  static agregarMensajeNoCantos(lista){
+  static agregarMensajeNoCantos(lista,mensaje,listaEditar){
     if (lista.lastElementChild === null){
-          const div = document.createElement ('div');
-          div.className = "NoHayCantos";
-          div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
-          const container = document.querySelector(".cuerpo-lista");
-          const ol = document.querySelector("#playlistDomingo");
-          container.insertBefore(div,ol);
+      const div = document.createElement ('div');
+      div.className = "NoHayCantos";
+      div.appendChild(document.createTextNode(mensaje));
+      const container = document.querySelector(".cuerpo-lista");
+      container.insertBefore(div,lista);
+      listaEditar.style.display = "none";
     }
-    else //Si no hay canto, no funcionan los botones de Editar y Borrar lista
-      {
-        botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
-        botonEditar.addEventListener("click",Editar);
-      }
+/*    else { //Si no hay canto, no funcionan los botones de Editar y Borrar lista
+      botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+      botonEditar.addEventListener("click",Editar);
+    }*/
   }
   
-  static funcionBotonEditar(){
-    
+  static funcionBotonEditar(lista){
+    if (lista.lastElementChild != null){
+      
+    }
   }
   
   static funcionBotonOk(){
@@ -242,9 +243,11 @@ if(titulo === "Playlist Domingo"){
   let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
   const lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
+  let mensaje = "Agrega cantos a la Playlist DOMINGO";
   Playlist.agregarCantos(canciones,lista,listaEditar);
   Playlist.agregarBotones(canciones,lista,listaEditar);
-  Playlist.agregarMensajeNoCantos(lista);
+  Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
+  Playlist.funcionBotonEditar(lista);
 }
 
 
