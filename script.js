@@ -224,7 +224,6 @@ class Playlist{
     }
     else { //Si no hay canto, no funcionan los botones de Editar y Borrar lista
       botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
-      //botonEditar.addEventListener("click",Editar);
     }
   }
   
@@ -261,7 +260,7 @@ class Playlist{
     }
   }
   
-  static funcionBotonOk(lista,listaEditar){
+  static funcionBotonOk(lista,listaEditar,canciones,cancionesEditar){
     let botonOK = document.querySelector(".botonOK");
     botonOK.addEventListener("click",botonok);
     function botonok(){
@@ -273,6 +272,25 @@ class Playlist{
       listaEditar.style.display = "none";
       divEditar.style.display= "block";
       lista.style.display = "block"; 
+      canciones = cancionesEditar;
+    }
+  }
+  
+  static funcionBotonUpDown(){
+    let botonUp = document.querySelector(".botonUp");
+    let botonDown = document.querySelector(".botonDown");
+    botonUp.onclick = function (){
+      let items = document.querySelectorAll("#playlistDomingoEditar li");
+      parent = items[index].parentElement;
+      parent.insertBefore(items[index],items[index-1]);
+      index--;
+      items = document.querySelectorAll("#playlistDomingoEditar li");
+      array = [];
+      items.forEach(function (item){
+        array.push(item.innerHTML);
+      });
+      console.log(array);
+      console.log(items);
     }
   }
   
@@ -293,7 +311,9 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
   Playlist.funcionBotonEditar(lista,listaEditar);
-  Playlist.funcionBotonOk(lista,listaEditar);
+  Playlist.funcionBotonOk(lista,listaEditar,canciones,cancionesEditar);
+  Playlist.funcionBotonUpDown();
+  Playlist.borrarCanto();
 }  
 
 
