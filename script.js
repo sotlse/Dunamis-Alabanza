@@ -260,8 +260,10 @@ class Playlist{
         this.className = "selected";
         noseleccionado = this;
         items = document.querySelectorAll("#playlistDomingoEditar li");
+        console.log(this);
         } 
       });
+      
       
       //Mover canto seleccionado hacia arriba o abajo
       let botonUp = document.querySelector(".botonUp");
