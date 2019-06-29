@@ -11,7 +11,8 @@ let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
 let tipo;
-let totalCantos=300;
+let totalCantos=300
+let seleccionado;
  
 //Constructor de canto guardado
 class cantoGuardado {
@@ -228,7 +229,7 @@ class Playlist{
   }
   
   static funcionBotonEditar(lista,listaEditar){
-    let noseleccionado, seleccionado, array=[], parent;
+    let noseleccionado, array=[], parent;
     let index = null;
     if (lista.lastElementChild != null){
       botonEditar.addEventListener("click",botoneditar);
@@ -247,7 +248,6 @@ class Playlist{
       
       //Seleccionar canto a editar
       let items = document.querySelectorAll("#playlistDomingoEditar li");
-      
       items.forEach(function (item){
          array.push(item.innerHTML);
       });
@@ -260,7 +260,7 @@ class Playlist{
         this.className = "selected";
         noseleccionado = this;
         items = document.querySelectorAll("#playlistDomingoEditar li");
-        console.log(this);
+        seleccionado = item;
         } 
       });
       
@@ -317,6 +317,7 @@ class Playlist{
       lista.style.display = "block"; 
       
       
+      seleccionado.className = "noselected";
       console.log(lista);
       console.log(listaEditar);
       lista = listaEditar;
