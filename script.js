@@ -177,7 +177,7 @@ class Playlist{
       });
       cancionesEditar.forEach(function (canto){
         const li = document.createElement("li");
-        li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo}<button class="boton-delete">
+        li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo} <button class="boton-delete">
             X</button>`; 
         listaEditar.appendChild(li);
       });
@@ -335,14 +335,6 @@ class Playlist{
         });
         localStorage.setItem(playlist,JSON.stringify(canciones));
         Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
-        /*if (document.querySelector("#playlistDomingo").lastElementChild === null){
-          const div = document.createElement ('div');
-          div.className = "NoHayCantos";
-          div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
-          const container = document.querySelector(".cuerpo-lista");
-          const ol = document.querySelector("#playlistDomingo");
-          container.insertBefore(div,ol);
-        }*/
       }
     });
   }
