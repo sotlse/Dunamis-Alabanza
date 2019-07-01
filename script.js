@@ -324,7 +324,7 @@ class Playlist{
     } 
   }
   
-  static borrarCanto(lista,mensaje,listaEditar,canciones){
+  static borrarCanto(lista,mensaje,listaEditar,canciones,playlist){
     lista.addEventListener("click",(e) =>  {
       let el = e.target;
       //console.log(el);
@@ -336,7 +336,7 @@ class Playlist{
             canciones.splice(index,1);
           }
         });
-        localStorage.setItem("cancionesDomingo",JSON.stringify(canciones));
+        localStorage.setItem(playlist,JSON.stringify(canciones));
         Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
         /*if (document.querySelector("#playlistDomingo").lastElementChild === null){
           const div = document.createElement ('div');
@@ -351,7 +351,24 @@ class Playlist{
   }
   
   static borrarLista(lista){
-    
+    botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo)
+    if (){  
+      if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
+      localStorage.removeItem("cancionesDomingo");
+      let ol = document.querySelector("#playlistDomingo");
+      let ultimo = ol.lastElementChild;
+      while(ultimo){
+        console.log(ultimo);
+        ol.removeChild(ultimo);
+        ultimo = ol.lastElementChild;
+      }
+      const div = document.createElement ('div');
+      div.className = "NoHayCantos";
+      div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
+      const container = document.querySelector(".cuerpo-lista");
+      container.insertBefore(div,ol);
+      }
+    }
   }
 }
 
@@ -363,13 +380,14 @@ if(titulo === "Playlist Domingo"){
   const lista = document.querySelector("#playlistDomingo");
   let listaEditar = document.querySelector("#playlistDomingoEditar");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
+  let playlist = "cancionesDomingo";
   Playlist.agregarCantos(canciones,lista,cancionesEditar,listaEditar);
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
   Playlist.funcionBotonEditar(lista,listaEditar);
   Playlist.funcionBotonOk(lista,listaEditar,canciones,cancionesEditar);
   //Playlist.funcionBotonUpDown();
-  Playlist.borrarCanto(lista,mensaje,listaEditar,canciones);
+  Playlist.borrarCanto(lista,mensaje,listaEditar,canciones,playlist);
   Playlist.borrarLista(lista);
 }  
 
