@@ -171,8 +171,7 @@ class Playlist{
       canciones.forEach(function (canto){
         const li = document.createElement("li");
         /*li.draggable = "true";*/
-        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
-            X</button>`; 
+        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> `; 
         lista.appendChild(li);
       });
       cancionesEditar.forEach(function (canto){
@@ -322,7 +321,7 @@ class Playlist{
   }
   
   static borrarCanto(lista,mensaje,listaEditar,canciones,playlist){
-    lista.addEventListener("click",(e) =>  {
+    listaEditar.addEventListener("click",(e) =>  {
       let el = e.target;
       //console.log(el);
       if (el.classList.contains("boton-delete")){
