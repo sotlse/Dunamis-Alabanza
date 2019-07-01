@@ -223,9 +223,6 @@ class Playlist{
       container.insertBefore(div,lista);
       listaEditar.style.display = "none";
     }
-    else { //Si no hay canto, no funcionan los botones de Editar y Borrar lista
-      botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
-    }
   }
   
   static funcionBotonEditar(lista,listaEditar){
@@ -351,22 +348,24 @@ class Playlist{
   }
   
   static borrarLista(lista){
-    botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo)
-    if (){  
+    if (lista.lastElementChild != null){
+      botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+    }
+    function BorrarListaDomingo(e){    
       if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
-      localStorage.removeItem("cancionesDomingo");
-      let ol = document.querySelector("#playlistDomingo");
-      let ultimo = ol.lastElementChild;
-      while(ultimo){
-        console.log(ultimo);
-        ol.removeChild(ultimo);
-        ultimo = ol.lastElementChild;
-      }
-      const div = document.createElement ('div');
+        localStorage.removeItem("cancionesDomingo");
+        let ol = document.querySelector("#playlistDomingo");
+        let ultimo = ol.lastElementChild;
+        while(ultimo){
+          console.log(ultimo);
+          ol.removeChild(ultimo);
+          ultimo = ol.lastElementChild;
+        }
+      /*const div = document.createElement ('div');
       div.className = "NoHayCantos";
       div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
       const container = document.querySelector(".cuerpo-lista");
-      container.insertBefore(div,ol);
+      container.insertBefore(div,ol);*/
       }
     }
   }
@@ -444,8 +443,8 @@ if(titulo === "Playlist Domingo"){
     }
     else //Si no hay canto, no funcionan los botones de Editar y Borrar lista
       {
-        botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
-        botonEditar.addEventListener("click",Editar);
+        //botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+        //botonEditar.addEventListener("click",Editar);
       }
     
   let nav = document.querySelector(".nav");  
@@ -631,7 +630,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
 
   
 
-
+/*
 //Borrar lista domingo function
 function BorrarListaDomingo(e){
   if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
@@ -650,7 +649,7 @@ function BorrarListaDomingo(e){
     container.insertBefore(div,ol);
   }
 }
-
+*/
  
 //botonAgregar function
 function agregarCanto(e){
