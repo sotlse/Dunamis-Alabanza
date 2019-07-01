@@ -315,12 +315,11 @@ class Playlist{
       listaEditar.style.display = "none";
       divEditar.style.display= "block";
       lista.style.display = "block"; 
-      
-      
       seleccionado.className = "noselected";
+      
+      
       console.log(lista);
       console.log(listaEditar);
-      lista = listaEditar;
       console.log(lista);
     } 
   }
