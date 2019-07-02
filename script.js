@@ -259,7 +259,7 @@ class Playlist{
         seleccionado = item;
         } 
       });
-      
+      console.log(array);
       
       //Mover canto seleccionado hacia arriba o abajo
       let botonUp = document.querySelector(".botonUp");
@@ -326,10 +326,10 @@ class Playlist{
       //console.log(el);
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
-        //let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
         canciones.forEach((canto, index)=>{
           if(canto.pagina === el.previousElementSibling.href){
             canciones.splice(index,1);
+            console.log(index);
           }
         });
         localStorage.setItem(playlist,JSON.stringify(canciones));
