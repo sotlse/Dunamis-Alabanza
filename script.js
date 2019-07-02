@@ -259,7 +259,6 @@ class Playlist{
         seleccionado = item;
         } 
       });
-      console.log(array);
       
       //Mover canto seleccionado hacia arriba o abajo
       let botonUp = document.querySelector(".botonUp");
