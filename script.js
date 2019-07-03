@@ -225,7 +225,7 @@ class Playlist{
     }
   }
   
-  static funcionBotonEditar(lista,listaEditar,canciones){
+  static funcionBotonEditar(lista,listaEditar,canciones,playlist){
     let noseleccionado, array=[], parent;
     let index = null;
     if (lista.lastElementChild != null){
@@ -309,7 +309,7 @@ class Playlist{
               console.log(canciones);
             }
           });
-          
+          localStorage.setItem(playlist,JSON.stringify(canciones));
           
         }
       }
@@ -348,10 +348,16 @@ class Playlist{
       //lista.style.display = "block"; 
       seleccionado.className = "noselected";
       
-      
-      console.log(lista);
-      console.log(listaEditar);
-      console.log(lista);
+      while (lista.hasChildNodes()) {   
+        lista.removeChild(lista.firstChild);
+      }
+      canciones.forEach(function (canto){
+        const li = document.createElement("li");
+        /*li.draggable = "true";*/
+        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
+            X</button>`; 
+        lista.appendChild(li);
+      });
     } 
   }
   
@@ -405,7 +411,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarCantos(canciones,lista,cancionesEditar,listaEditar);
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
-  Playlist.funcionBotonEditar(lista,listaEditar,canciones);
+  Playlist.funcionBotonEditar(lista,listaEditar,canciones,playlist);
   Playlist.funcionBotonOk(lista,listaEditar,canciones,cancionesEditar);
   //Playlist.funcionBotonUpDown();
   Playlist.borrarCanto(lista,mensaje,listaEditar,canciones,playlist);
