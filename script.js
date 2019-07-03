@@ -225,7 +225,7 @@ class Playlist{
     }
   }
   
-  static funcionBotonEditar(lista,listaEditar){
+  static funcionBotonEditar(lista,listaEditar,canciones){
     let noseleccionado, array=[], parent;
     let index = null;
     if (lista.lastElementChild != null){
@@ -236,28 +236,42 @@ class Playlist{
       let divEditar = document.querySelector(".divEditar");
       let div = document.querySelector(".claseEditar");
       
+      while (lista.hasChildNodes()) {   
+        lista.removeChild(lista.firstChild);
+      }
+      
+      canciones.forEach(function (canto){
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo} <button class="boton-delete">
+            X</button>`; 
+        lista.appendChild(li);
+      });
+      
+      
       //Ocultar y mostrar bloques
       div.style.display = "block";
-      lista.style.display = "none";
-      listaEditar.style.display = "block";
+      //lista.style.display = "none";
+      //listaEditar.style.display = "block";
       divEditar.style.display = "none";
       divOk.style.display = "block";
       
       //Seleccionar canto a editar
-      let items = document.querySelectorAll("#playlistDomingoEditar li");
+      //let items = document.querySelectorAll("#playlistDomingoEditar li");
+      let items = document.querySelectorAll("#playlistDomingo li");
       items.forEach(function (item){
          array.push(item.innerHTML);
       });
       items.forEach(function (item){
         item.onclick = function(){
-        index = array.indexOf(this.innerHTML);
-        if (noseleccionado){
-          noseleccionado.className = "noselected";
-        } 
-        this.className = "selected";
-        noseleccionado = this;
-        items = document.querySelectorAll("#playlistDomingoEditar li");
-        seleccionado = item;
+          index = array.indexOf(this.innerHTML);
+          if (noseleccionado){
+            noseleccionado.className = "noselected";
+          } 
+          this.className = "selected";
+          noseleccionado = this;
+          //items = document.querySelectorAll("#playlistDomingoEditar li");
+          items = document.querySelectorAll("#playlistDomingo li");
+          seleccionado = item;
         } 
       });
       
@@ -267,29 +281,34 @@ class Playlist{
       
       botonUp.onclick = function (){
         if (index != "undefined" || index != null){
-          let items = document.querySelectorAll("#playlistDomingoEditar li");
+          //let items = document.querySelectorAll("#playlistDomingoEditar li");
+          let items = document.querySelectorAll("#playlistDomingo li");
           parent = items[index].parentElement;
           if (index > 0){
             parent.insertBefore(items[index],items[index-1]);
             index--;
           }
-          items = document.querySelectorAll("#playlistDomingoEditar li");
+          //items = document.querySelectorAll("#playlistDomingoEditar li");
+          items = document.querySelectorAll("#playlistDomingo li");
           array = [];
           items.forEach(function (item){
             array.push(item.innerHTML);
           });
-        }  
+        }
+        
       }
       
       botonDown.onclick = function (){
           if (index != "undefined" || index != null){
-          let items = document.querySelectorAll("#playlistDomingoEditar li");
+          //let items = document.querySelectorAll("#playlistDomingoEditar li");
+          let items = document.querySelectorAll("#playlistDomingo li");
           parent = items[index].parentElement;
           if (index < (array.length-1)){
             parent.insertBefore(items[index],items[index+2]);
             index++;
           }
-          items = document.querySelectorAll("#playlistDomingoEditar li");
+          //items = document.querySelectorAll("#playlistDomingoEditar li");
+          items = document.querySelectorAll("#playlistDomingo li");
           array = [];
           items.forEach(function (item){
             array.push(item.innerHTML);
@@ -308,9 +327,9 @@ class Playlist{
       let div = document.querySelector(".claseEditar");
       div.style.display = "none";
       divOk.style.display = "none";
-      listaEditar.style.display = "none";
+      //listaEditar.style.display = "none";
       divEditar.style.display= "block";
-      lista.style.display = "block"; 
+      //lista.style.display = "block"; 
       seleccionado.className = "noselected";
       
       
@@ -369,7 +388,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.agregarCantos(canciones,lista,cancionesEditar,listaEditar);
   Playlist.agregarBotones(canciones,lista,listaEditar);
   Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
-  Playlist.funcionBotonEditar(lista,listaEditar);
+  Playlist.funcionBotonEditar(lista,listaEditar,canciones);
   Playlist.funcionBotonOk(lista,listaEditar,canciones,cancionesEditar);
   //Playlist.funcionBotonUpDown();
   Playlist.borrarCanto(lista,mensaje,listaEditar,canciones,playlist);
