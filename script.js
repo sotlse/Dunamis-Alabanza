@@ -276,9 +276,11 @@ class Playlist{
           
           canciones.forEach((canto, index)=>{
             if(canto.pagina === seleccionado.firstChild.href){
-              //canciones.splice(index,1);
+              canciones.splice(index-1,0,canto);
+              canciones.splice(index)
+              console.log(canto);
               console.log(index);
-              console.log(canciones)<
+              console.log(canciones);
             }
           });
           
