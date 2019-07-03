@@ -331,12 +331,12 @@ class Playlist{
           items.forEach(function (item){
             array.push(item.innerHTML);
           });
-            console.log()
+            console.log(canciones.length);
             canciones.forEach((canto, index)=>{
             if(canto.pagina === seleccionado.firstChild.href){
               if (index<(canciones.length - 1)){
-                canciones.splice(index-1,0,canto);
-                canciones.splice(index+1,1);
+                canciones.splice(index,1);
+                canciones.splice(index,0,canto);
                 console.log(canto);
                 console.log(index);
                 console.log(canciones);
