@@ -272,6 +272,7 @@ class Playlist{
           //items = document.querySelectorAll("#playlistDomingoEditar li");
           items = document.querySelectorAll("#playlistDomingo li");
           seleccionado = item;
+          console.log(seleccionado);
         } 
       });
       
@@ -294,8 +295,11 @@ class Playlist{
           items.forEach(function (item){
             array.push(item.innerHTML);
           });
+          
+          
+          
+          
         }
-        
       }
       
       botonDown.onclick = function (){
@@ -345,6 +349,7 @@ class Playlist{
       console.log(el);
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
+        console.log(el.previousElementSibling.href);
         canciones.forEach((canto, index)=>{
           if(canto.pagina === el.previousElementSibling.href){
             canciones.splice(index,1);
