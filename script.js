@@ -302,11 +302,13 @@ class Playlist{
           
           canciones.forEach((canto, index)=>{
             if(canto.pagina === seleccionado.firstChild.href){
-              canciones.splice(index-1,0,canto);
-              canciones.splice(index+1,1);
-              console.log(canto);
-              console.log(index);
-              console.log(canciones);
+              if (index>0){
+                canciones.splice(index-1,0,canto);
+                canciones.splice(index+1,1);
+                console.log(canto);
+                console.log(index);
+                console.log(canciones);
+              }
             }
           });
           localStorage.setItem(playlist,JSON.stringify(canciones));
@@ -329,6 +331,19 @@ class Playlist{
           items.forEach(function (item){
             array.push(item.innerHTML);
           });
+            console.log()
+            canciones.forEach((canto, index)=>{
+            if(canto.pagina === seleccionado.firstChild.href){
+              if (index<(canciones.length - 1)){
+                canciones.splice(index-1,0,canto);
+                canciones.splice(index+1,1);
+                console.log(canto);
+                console.log(index);
+                console.log(canciones);
+              }
+            }
+          });
+          localStorage.setItem(playlist,JSON.stringify(canciones));
         } 
       }
     }
