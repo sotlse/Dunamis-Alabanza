@@ -171,7 +171,8 @@ class Playlist{
       canciones.forEach(function (canto){
         const li = document.createElement("li");
         /*li.draggable = "true";*/
-        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> `; 
+        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
+            X</button>`; 
         lista.appendChild(li);
       });
       cancionesEditar.forEach(function (canto){
@@ -320,9 +321,9 @@ class Playlist{
   }
   
   static borrarCanto(lista,mensaje,listaEditar,canciones,playlist){
-    listaEditar.addEventListener("click",(e) =>  {
+    lista.addEventListener("click",(e) =>  {
       let el = e.target;
-      //console.log(el);
+      console.log(el);
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
         canciones.forEach((canto, index)=>{
@@ -375,7 +376,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.borrarLista(lista,mensaje,listaEditar,playlist);
 }  
 
-
+/*
   //Agregar cantos a playlist
   function PlaylistDomingo(){
     let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
@@ -385,7 +386,7 @@ if(titulo === "Playlist Domingo"){
       let listaEditar = document.querySelector("#playlistDomingoEditar");
       listaEditar.style.display = "none";
       const li = document.createElement("li");
-      /*li.draggable = "true";*/
+      /*li.draggable = "true";
       li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
             X</button>`; 
       lista.appendChild(li);
@@ -397,7 +398,7 @@ if(titulo === "Playlist Domingo"){
     //Borrar canto seleccionado
     document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
       let el = e.target;
-      //console.log(el);
+      //connsole.log(el);
       if (el.classList.contains("boton-delete")){
         el.parentElement.remove();
         let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
@@ -529,7 +530,7 @@ function Editar(e){
                           
     });*/
     
-
+/*
     }
   
     function moverAbajo(){
@@ -557,7 +558,7 @@ function botonesEditar(lista,listaEditar,cancionesEditar){
   divOk.appendChild(botonOK);
   nav.insertBefore (divOk,botonBorrar);*/
   
-  listaEditar.style.display = "block";
+/*  listaEditar.style.display = "block";
   let botonOK = document.querySelector(".botonOK");
   let divOk = document.querySelector(".divOk");
   divOk.style.display = "block";
