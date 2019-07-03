@@ -272,7 +272,17 @@ class Playlist{
           //items = document.querySelectorAll("#playlistDomingoEditar li");
           items = document.querySelectorAll("#playlistDomingo li");
           seleccionado = item;
-          console.log(seleccionado.firstChild.href);
+          //console.log(seleccionado.firstChild.href);
+          
+          canciones.forEach((canto, index)=>{
+            if(canto.pagina === seleccionado.firstChild.href){
+              //canciones.splice(index,1);
+              console.log(index);
+              console.log(canciones)<
+            }
+          });
+          
+          
         } 
       });
       
@@ -297,11 +307,11 @@ class Playlist{
           });
           
           canciones.forEach((canto, index)=>{
-          if(canto.pagina === seleccionado.firstChild.href){
-            canciones.splice(index,1);
-            console.log(index);
-          }
-            });
+            if(canto.pagina === seleccionado.firstChild.href){
+              canciones.splice(index,1);
+              console.log(index);
+            }
+          });
           
           
         }
