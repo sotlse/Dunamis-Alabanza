@@ -175,13 +175,13 @@ class Playlist{
             X</button>`; 
         lista.appendChild(li);
       });
-      cancionesEditar.forEach(function (canto){
+      /*cancionesEditar.forEach(function (canto){
         const li = document.createElement("li");
         li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo} <button class="boton-delete">
             X</button>`; 
         listaEditar.appendChild(li);
       });
-      listaEditar.style.display = "none";
+      listaEditar.style.display = "none";*/
     }
   }
   
@@ -221,7 +221,7 @@ class Playlist{
       div.appendChild(document.createTextNode(mensaje));
       const container = document.querySelector(".cuerpo-lista");
       container.insertBefore(div,lista);
-      listaEditar.style.display = "none";
+      //listaEditar.style.display = "none";
     }
   }
   
@@ -305,9 +305,6 @@ class Playlist{
               if (index>0){
                 canciones.splice(index-1,0,canto);
                 canciones.splice(index+1,1);
-                console.log(canto);
-                console.log(index);
-                console.log(canciones);
               }
             }
           });
@@ -338,9 +335,6 @@ class Playlist{
               if (index < (canciones.length - 1)){
                 canciones.splice(index,1);
                 canciones.splice(index+1,0,canto);
-                console.log(canto);
-                console.log(index);
-                console.log(canciones);
                 i++;
                 
               }
