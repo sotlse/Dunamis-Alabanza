@@ -394,7 +394,7 @@ class Playlist{
           }
         });
         localStorage.setItem(playlist,JSON.stringify(canciones));
-        Playlist.agregarMensajeNoCantos(lista,mensaje,/*listaEditar*/);
+        //Playlist.agregarMensajeNoCantos(lista,mensaje,/*listaEditar*/);
       }
     });
   }

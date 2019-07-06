@@ -136,7 +136,7 @@ a {
   padding:8px;
   margin:20px 0 0 0;
   font-weight:bold;
-  background-color:rgba(196, 250, 254,.5);
+  background-color:rgba(254, 1, 1, .1);
 }
 
 .lista{
@@ -204,6 +204,7 @@ a {
 
 .EditarLista{
   background-color:lightyellow;
+  padding:5px;
 }
 
 .selected{
@@ -225,6 +226,7 @@ a {
 
 .botonOK{
   background-color:lightgreen;
+  padding:5px;
 }
 
 .divBorarLista{
@@ -233,28 +235,15 @@ a {
 
 .borrarListaDomingo{
   background-color:rgba(254, 126, 126,.4);
+  padding:5px;
 }
 
-/*.RegresarPagina{
-  background-color:rgba(254, 242, 126, .7);
-  float:left;
+.RegresarPagina{
+  padding:5px;
 }
 
-.borrarListaDomingo
-{
-  background-color:rgba(254, 126, 126,.4);
-  float:right;
-}
 
-.borrarListaMiercoles
-{
-  background-color:rgba(254, 126, 126,.4);
-  float:right;
-}
 
-.nav{
-  /*display: inline-block;*/
-}*/
 
 /*Canto*/
 .infoCanto {/*
