@@ -122,15 +122,16 @@ a {
 .claseEditar{
   padding:20px;
   background-color:lightyellow;
-  column-count:1;
+  /*column-count:1;*/
+  text-align:center;
 }
 
 .botonUp{
-  display:block;
+  /*display:block;*/
 }
 
 .botonDown{
-  display:block;
+  /*display:block;*/
   margin:20px 0 5px 0;
 }
 

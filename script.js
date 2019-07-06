@@ -196,6 +196,7 @@ class Playlist{
     divOk.appendChild(botonOK);
     nav.insertBefore (divOk,botonBorrar);
     divOk.style.display = "none";
+    botonBorrar.style.display = "none";
     
     //Agregar botones mover arriba y abajo para inicializar
     const div = document.createElement ("div");
@@ -234,6 +235,8 @@ class Playlist{
       let divOk = document.querySelector(".divOk");
       let divEditar = document.querySelector(".divEditar");
       let div = document.querySelector(".claseEditar");
+      let botonBorrar = document.querySelector(".divBorarLista");
+      botonBorrar.style.display = "block";
       
       while (lista.hasChildNodes()) {   
         lista.removeChild(lista.firstChild);
@@ -352,13 +355,16 @@ class Playlist{
       let divOk = document.querySelector(".divOk");
       let divEditar = document.querySelector(".divEditar");
       let div = document.querySelector(".claseEditar");
+      let botonBorrar = document.querySelector(".divBorarLista");
+      botonBorrar.style.display = "none";
       div.style.display = "none";
       divOk.style.display = "none";
       //listaEditar.style.display = "none";
       divEditar.style.display= "block";
       //lista.style.display = "block"; 
-      seleccionado.className = "noselected";
-      
+      if (seleccionado){
+        seleccionado.className = "noselected";
+      }
       while (lista.hasChildNodes()) {   
         lista.removeChild(lista.firstChild);
       }
