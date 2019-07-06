@@ -205,13 +205,16 @@ class Playlist{
     body.insertBefore (div,nav);
     let botonUp = document.createElement("button");
     botonUp.className = "botonUp";
+    let br = document.createElement ("br");
     let botonDown = document.createElement("button");
     botonDown.className = "botonDown";
     div.appendChild(botonUp);
     botonUp.appendChild(document.createTextNode("Mover arriba"));
+    div.appendChild(br);
     div.appendChild(botonDown);
     botonDown.appendChild(document.createTextNode("Mover abajo"));
     div.style.display = "none";
+    console.log(div);
   }
   
   static agregarMensajeNoCantos(lista,mensaje,listaEditar){

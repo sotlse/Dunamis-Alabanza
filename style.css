@@ -127,12 +127,16 @@ a {
 }
 
 .botonUp{
-  /*display:block;*/
+  padding:8px;
+  font-weight:bold;
+  background-color:rgba(196, 250, 254,.5);
 }
 
 .botonDown{
-  /*display:block;*/
-  margin:20px 0 5px 0;
+  padding:8px;
+  margin:20px 0 0 0;
+  font-weight:bold;
+  background-color:rgba(196, 250, 254,.5);
 }
 
 .lista{
@@ -154,17 +158,6 @@ a {
   padding:10px 0px 10px 10px;
 }
 
-#playlistDomingoEditar{
-  padding-left:0em;
-  border-top:1px solid;
-}
-
-#playlistDomingoEditar li{
-  list-style-position: inside;
-  border-right-style:none;
-  border-bottom:1px solid;
-  padding:10px 0px 10px 10px;
-}
 
 #playlistMiercoles{
   padding-left:0em;
