@@ -166,13 +166,12 @@ function Regresar(){
 
 //Playlist
 class Playlist{
-  static agregarCantos(canciones,lista,cancionesEditar,listaEditar){
+  static agregarCantos(canciones,lista/*,cancionesEditar,listaEditar*/){
     if (canciones != null){
       canciones.forEach(function (canto){
         const li = document.createElement("li");
         /*li.draggable = "true";*/
-        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
-            X</button>`; 
+        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
         lista.appendChild(li);
       });
       /*cancionesEditar.forEach(function (canto){
@@ -185,7 +184,7 @@ class Playlist{
     }
   }
   
-  static agregarBotones(canciones,lista,listaEditar){
+  static agregarBotones(canciones,lista/*,listaEditar*/){
     //Agregar boton OK para inicializar
     let nav = document.querySelector(".nav");  
     let botonBorrar = document.querySelector(".divBorarLista");
@@ -225,7 +224,7 @@ class Playlist{
     }
   }
   
-  static funcionBotonEditar(lista,listaEditar,canciones,playlist){
+  static funcionBotonEditar(lista,/*listaEditar,*/canciones,playlist){
     let noseleccionado, array=[], parent;
     let index = null;
     if (lista.lastElementChild != null){
@@ -346,7 +345,7 @@ class Playlist{
     }
   }
   
-  static funcionBotonOk(lista,listaEditar,canciones,cancionesEditar){
+  static funcionBotonOk(lista/*listaEditar,*/,canciones/*,cancionesEditar*/){
     let botonOK = document.querySelector(".botonOK");
     botonOK.addEventListener("click",botonok);
     function botonok(){
@@ -366,14 +365,13 @@ class Playlist{
       canciones.forEach(function (canto){
         const li = document.createElement("li");
         /*li.draggable = "true";*/
-        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
-            X</button>`; 
+        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
         lista.appendChild(li);
       });
     } 
   }
   
-  static borrarCanto(lista,mensaje,listaEditar,canciones,playlist){
+  static borrarCanto(lista,mensaje,/*listaEditar,*/canciones,playlist){
     lista.addEventListener("click",(e) =>  {
       let el = e.target;
       //console.log(el);
@@ -387,12 +385,12 @@ class Playlist{
           }
         });
         localStorage.setItem(playlist,JSON.stringify(canciones));
-        Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
+        Playlist.agregarMensajeNoCantos(lista,mensaje,/*listaEditar*/);
       }
     });
   }
   
-  static borrarLista(lista,mensaje,listaEditar,playlist){
+  static borrarLista(lista,mensaje,/*listaEditar,*/playlist){
     if (lista.lastElementChild != null){
       botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
     }
@@ -406,7 +404,7 @@ class Playlist{
           ultimo = lista.lastElementChild;
         }
       }
-      Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
+      Playlist.agregarMensajeNoCantos(lista,mensaje,/*listaEditar*/);
     }
   }
 }
@@ -415,19 +413,19 @@ class Playlist{
 if(titulo === "Playlist Domingo"){
   //document.addEventListener("DOMContentLoaded", PlaylistDomingo);
   let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
+  //let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
   const lista = document.querySelector("#playlistDomingo");
-  let listaEditar = document.querySelector("#playlistDomingoEditar");
+  //let listaEditar = document.querySelector("#playlistDomingoEditar");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
   let playlist = "cancionesDomingo";
-  Playlist.agregarCantos(canciones,lista,cancionesEditar,listaEditar);
-  Playlist.agregarBotones(canciones,lista,listaEditar);
-  Playlist.agregarMensajeNoCantos(lista,mensaje,listaEditar);
-  Playlist.funcionBotonEditar(lista,listaEditar,canciones,playlist);
-  Playlist.funcionBotonOk(lista,listaEditar,canciones,cancionesEditar);
+  Playlist.agregarCantos(canciones,lista/*,cancionesEditar,listaEditar*/);
+  Playlist.agregarBotones(canciones,lista/*,listaEditar*/);
+  Playlist.agregarMensajeNoCantos(lista,mensaje/*,listaEditar*/);
+  Playlist.funcionBotonEditar(lista,/*listaEditar,*/canciones,playlist);
+  Playlist.funcionBotonOk(lista,/*listaEditar,*/canciones/*,cancionesEditar*/);
   //Playlist.funcionBotonUpDown();
-  Playlist.borrarCanto(lista,mensaje,listaEditar,canciones,playlist);
-  Playlist.borrarLista(lista,mensaje,listaEditar,playlist);
+  Playlist.borrarCanto(lista,mensaje,/*listaEditar,*/canciones,playlist);
+  Playlist.borrarLista(lista,mensaje,/*listaEditar,*/playlist);
 }  
 
 /*
