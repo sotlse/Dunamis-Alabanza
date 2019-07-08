@@ -394,26 +394,14 @@ class Playlist{
           }
         });
         localStorage.setItem(playlist,JSON.stringify(canciones));
-        //Playlist.funcionBotonOk(lista/*listaEditar,*/,canciones/*,cancionesEditar*/);
         Playlist.agregarMensajeNoCantos(lista,mensaje,/*listaEditar*/);
-        /*console.log("ok");
-        while (lista.hasChildNodes()) {   
-          lista.removeChild(lista.firstChild);
-        }
-        let divOk = document.querySelector(".divOk");
-        let divEditar = document.querySelector(".divEditar");
-        let div = document.querySelector(".claseEditar");
-        let botonBorrar = document.querySelector(".divBorarLista");
-        botonBorrar.style.display = "none";
-        div.style.display = "none";
-        divOk.style.display = "none";
-        divEditar.style.display= "block";*/
+        
         
       }
     });
   }
   
-  static borrarLista(lista,mensaje,/*listaEditar,*/playlist){
+  static borrarLista(lista,mensaje,/*listaEditar,*/playlist,canciones){
     if (lista.lastElementChild != null){
       botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
     }
@@ -428,6 +416,15 @@ class Playlist{
         }
       }
       Playlist.agregarMensajeNoCantos(lista,mensaje,/*listaEditar*/);
+      lista = [];
+        let divOk = document.querySelector(".divOk");
+        let divEditar = document.querySelector(".divEditar");
+        let div = document.querySelector(".claseEditar");
+        let botonBorrar = document.querySelector(".divBorarLista");
+        botonBorrar.style.display = "none";
+        div.style.display = "none";
+        divOk.style.display = "none";
+        divEditar.style.display= "block";
     }
   }
 }
@@ -448,7 +445,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.funcionBotonOk(lista,/*listaEditar,*/canciones/*,cancionesEditar*/);
   //Playlist.funcionBotonUpDown();
   Playlist.borrarCanto(lista,mensaje,/*listaEditar,*/canciones,playlist);
-  Playlist.borrarLista(lista,mensaje,/*listaEditar,*/playlist);
+  Playlist.borrarLista(lista,mensaje,/*listaEditar,*/playlist,canciones);
 }  
 
 /*
