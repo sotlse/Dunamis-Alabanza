@@ -224,6 +224,8 @@ class Playlist{
       div.appendChild(document.createTextNode(mensaje));
       const container = document.querySelector(".cuerpo-lista");
       container.insertBefore(div,lista);
+      let divEditar = document.querySelector(".divEditar");
+      divEditar.style.display = "none";
       //listaEditar.style.display = "none";
     }
   }
@@ -231,6 +233,7 @@ class Playlist{
   static funcionBotonEditar(lista,/*listaEditar,*/canciones,playlist){
     let noseleccionado, array=[], parent;
     let index = null;
+    console.log(lista.lastElementChild);
     if (lista.lastElementChild != null){
       botonEditar.addEventListener("click",botoneditar);
     }
@@ -416,7 +419,8 @@ class Playlist{
         }
       }
       Playlist.agregarMensajeNoCantos(lista,mensaje,/*listaEditar*/);
-      lista = [];
+      
+      console.log(lista.lastElementChild);
         let divOk = document.querySelector(".divOk");
         let divEditar = document.querySelector(".divEditar");
         let div = document.querySelector(".claseEditar");
@@ -424,7 +428,7 @@ class Playlist{
         botonBorrar.style.display = "none";
         div.style.display = "none";
         divOk.style.display = "none";
-        divEditar.style.display= "block";
+        
     }
   }
 }
@@ -435,7 +439,6 @@ if(titulo === "Playlist Domingo"){
   let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
   //let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
   const lista = document.querySelector("#playlistDomingo");
-  //let listaEditar = document.querySelector("#playlistDomingoEditar");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
   let playlist = "cancionesDomingo";
   Playlist.agregarCantos(canciones,lista/*,cancionesEditar,listaEditar*/);
@@ -447,271 +450,6 @@ if(titulo === "Playlist Domingo"){
   Playlist.borrarCanto(lista,mensaje,/*listaEditar,*/canciones,playlist);
   Playlist.borrarLista(lista,mensaje,/*listaEditar,*/playlist,canciones);
 }  
-
-/*
-  //Agregar cantos a playlist
-  function PlaylistDomingo(){
-    let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-    if (canciones != null){
-      canciones.forEach(function (canto){
-      const lista = document.querySelector("#playlistDomingo");
-      let listaEditar = document.querySelector("#playlistDomingoEditar");
-      listaEditar.style.display = "none";
-      const li = document.createElement("li");
-      /*li.draggable = "true";
-      li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a> <button class="boton-delete">
-            X</button>`; 
-      lista.appendChild(li);
-      
-        
-    });
-    }
-    
-    //Borrar canto seleccionado
-    document.querySelector("#playlistDomingo").addEventListener("click",(e) =>  {
-      let el = e.target;
-      //connsole.log(el);
-      if (el.classList.contains("boton-delete")){
-        el.parentElement.remove();
-        let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-        canciones.forEach((canto, index)=>{
-          if(canto.pagina === el.previousElementSibling.href){
-            canciones.splice(index,1);
-          }
-        });
-        localStorage.setItem("cancionesDomingo",JSON.stringify(canciones));
-        if (document.querySelector("#playlistDomingo").lastElementChild === null){
-          const div = document.createElement ('div');
-          div.className = "NoHayCantos";
-          div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
-          const container = document.querySelector(".cuerpo-lista");
-          const ol = document.querySelector("#playlistDomingo");
-          container.insertBefore(div,ol);
-        }
-      }
-    });
-    
-    if (document.querySelector("#playlistDomingo").lastElementChild === null){
-          const div = document.createElement ('div');
-          div.className = "NoHayCantos";
-          div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
-          const container = document.querySelector(".cuerpo-lista");
-          const ol = document.querySelector("#playlistDomingo");
-          container.insertBefore(div,ol);
-    }
-    else //Si no hay canto, no funcionan los botones de Editar y Borrar lista
-      {
-        //botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
-        //botonEditar.addEventListener("click",Editar);
-      }
-    
-  let nav = document.querySelector(".nav");  
-  let botonBorrar = document.querySelector(".divBorarLista");
-  let divOk = document.createElement("div");
-  divOk.className = "divOk";
-  let botonOK = document.createElement("button");
-  botonOK.className = "botonOK";
-  botonOK.appendChild(document.createTextNode("OK"));
-  
-  divOk.appendChild(botonOK);
-  nav.insertBefore (divOk,botonBorrar);
-  divOk.style.display = "none";
-  }
-
-
-
-//Editar pagina function
-function Editar(e){
-  let noseleccionado;
-  let seleccionado;
-  
-  let lista = document.querySelector("#playlistDomingo");
-  let listaEditar = document.querySelector("#playlistDomingoEditar");
-  let cancionesEditar = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  //Agregar botones de editar
-  botonesEditar(lista,listaEditar,cancionesEditar);
-  let botonUp = document.querySelector(".botonUp");
-  let botonDown = document.querySelector(".botonDown");
-  //Seleccionar elemento de lista domingo y moverlo    
-  
-  let array=[],index,parent;
-  //botonUp.addEventListener("click",moverArriba);
-  //botonDown.addEventListener("click",moverAbajo);  
-  
-
-    let items = document.querySelectorAll("#playlistDomingoEditar li");
-    items.forEach(function (item){
-      array.push(item.innerHTML);
-    });
-    items.forEach(function (item){
-      item.onclick = function(){
-        index = array.indexOf(this.innerHTML);
-        if (noseleccionado){
-          noseleccionado.className = "noselected";
-        } 
-        this.className = "selected";
-        noseleccionado = this;
-        console.log(this.innerHTML + index);
-      items = document.querySelectorAll("#playlistDomingoEditar li");
-      } 
-      
-    });   
-    
-  
-    botonUp.onclick = function (){
-      let items = document.querySelectorAll("#playlistDomingoEditar li");
-      parent = items[index].parentElement;
-      parent.insertBefore(items[index],items[index-1]);
-      index--;
-      items = document.querySelectorAll("#playlistDomingoEditar li");
-      array = [];
-      items.forEach(function (item){
-        array.push(item.innerHTML);
-      });
-      console.log(array);
-      console.log(items);
-    }
-    
-    
- 
-    
-   
-    
-    function moverArriba(seleccionado){
-      
-      //parent = items[index].parentNode;
-      console.log(items[index]);
-      console.log(items[index-1]);
-      listaEditar.insertBefore(items[index],items[index-1]);
-      index--;
-      console.log(index);
-      /*let Editar = document.querySelector("#playlistDomingoEditar");
-      let insertarAntes = seleccionado.previousElementSibling;
-      //console.log(Editar);
-      Editar.insertBefore(seleccionado,seleccionado.previousElementSibling);
-
-      //console.log(insertarAntes);
-      /*let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-      canciones.forEach((canto, index)=>{
-          console.log(index);
-          canciones.splice(index,1);
-          if(canto.pagina === seleccionado.previousElementSibling.href){
-            canciones.splice(index,1); 
-          }
-        
-                          
-    });*/
-    
-/*
-    }
-  
-    function moverAbajo(){
-      console.log("abajo");
-    }
-
-//}); 
-  
-
-}
-
-
-
-//En Playlist, Agregar botones de edicion y "ok" mientras oculta el boton "Editar" y oculta lista de Playlist por la de editar
-function botonesEditar(lista,listaEditar,cancionesEditar){
-  let divEditar = document.querySelector(".divEditar");
-  divEditar.style.display = "none";
-  /*let botonBorrar = document.querySelector(".divBorarLista");
-  let divOk = document.createElement("div");
-  divOk.className = "divOk";
-  let botonOK = document.createElement("button");
-  botonOK.className = "botonOK";
-  botonOK.appendChild(document.createTextNode("OK"));
-  botonOK.addEventListener("click",Ok);
-  divOk.appendChild(botonOK);
-  nav.insertBefore (divOk,botonBorrar);*/
-  
-/*  listaEditar.style.display = "block";
-  let botonOK = document.querySelector(".botonOK");
-  let divOk = document.querySelector(".divOk");
-  divOk.style.display = "block";
-  //botonOK.addEventListener("click",Ok);
-  
-  let nav = document.querySelector(".nav");
-  const div = document.createElement ("div");
-  div.className = "claseEditar";
-  let body = document.querySelector(".bodyPlaylist");
-  body.insertBefore (div,nav);
-  let botonUp = document.createElement("button");
-  botonUp.className = "botonUp";
-  let botonDown = document.createElement("button");
-  botonDown.className = "botonDown";
-  div.appendChild(botonUp);
-  botonUp.appendChild(document.createTextNode("Mover arriba"));
-  div.appendChild(botonDown);
-  botonDown.appendChild(document.createTextNode("Mover abajo"));
-      //Mover elemento seleccionado
-  //botonUp.addEventListener("click",moverArriba); 
-  //botonDown.addEventListener("click",moverAbajo);
-
-  botonOK.onclick = function (){ 
-    div.style.display = "none";
-    divOk.style.display = "none";
-    divEditar.style.display= "block";
-    lista.style.display = "block";
-     
-    
-    let ol = listaEditar;
-    let ultimo = ol.lastElementChild;
-    while(ultimo){
-      ol.removeChild(ultimo);
-      ultimo = ol.lastElementChild;
-    }
-    listaEditar.style.display = "none";
-    while (listaEditar.hasChildNodes()){
-      listaEditar.removeChild(listaEditar.firstChild);
-    } 
-    lista=listaEditar;
-  }
-  
-  //Ocultar lista de Playlist y poner listaEditar
-  lista.style.display = "none";
-  listaEditar.style.display = "block";
-  cancionesEditar.forEach(function (canto){
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo}<button class="boton-delete">
-            X</button>`; 
-    listaEditar.appendChild(li);
-      //listaEditar.style.display = "none";
-  });
-}
-
-
-  
-
-/*
-//Borrar lista domingo function
-function BorrarListaDomingo(e){
-  if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
-    localStorage.removeItem("cancionesDomingo");
-    let ol = document.querySelector("#playlistDomingo");
-    let ultimo = ol.lastElementChild;
-    while(ultimo){
-      console.log(ultimo);
-      ol.removeChild(ultimo);
-      ultimo = ol.lastElementChild;
-    }
-    const div = document.createElement ('div');
-    div.className = "NoHayCantos";
-    div.appendChild(document.createTextNode("Agrega cantos a la Playlist DOMINGO"));
-    const container = document.querySelector(".cuerpo-lista");
-    container.insertBefore(div,ol);
-  }
-}
-*/
- 
-
-
-
 
 
 
