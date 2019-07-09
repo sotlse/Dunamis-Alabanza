@@ -435,7 +435,7 @@ if(titulo === "Playlist Miercoles"){
 function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
     let botonAdd = document.querySelector(".cuerpo-lista");
-    botonAdd.style.zIndex = "-1";
+    botonAdd.style.opacity = "0.4";
     var cancion = e.target.parentElement;
     var winW = window.innerWidth;
     var winH = window.innerHeight;
@@ -450,7 +450,7 @@ function agregarCanto(e){
     
     document.getElementById('dialogboxhead').innerHTML = "Agregar a playlist";
     //document.getElementById('dialogboxbody').innerHTML = "Elige";
-    document.getElementById('dialogboxfoot').innerHTML = '<button id=Domingo>Domingo</button>  <button id=Miercoles>Miercoles</button>  <button id="Cancelar">Cancelar</button>';
+    document.getElementById('dialogboxfoot').innerHTML = '<button id=Domingo>Domingo</button>  <button id=Miercoles>Miercoles</button>  <button id="Cancelar"> X </button>';
   
     var CancelarBoton = document.getElementById ('Cancelar');
     var DomingoBoton = document.getElementById ('Domingo');
@@ -462,7 +462,8 @@ function agregarCanto(e){
     
     function Cancelar(e){
       document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogverlay').style.display = "none";  
+      document.getElementById('dialogverlay').style.display = "none";
+      botonAdd.style.opacity = "1";
     } 
     
     
