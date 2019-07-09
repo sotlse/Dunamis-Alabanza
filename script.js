@@ -5,6 +5,7 @@ var opcionesItems = document.getElementById("opcionesDeCanto");
 var botonRegresar = document.querySelector(".RegresarPagina");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
+const lista = document.querySelector(".playlistCantos");
 let titulo = document.querySelector('title').textContent;
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
@@ -390,7 +391,6 @@ class Playlist{
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
   let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  const lista = document.querySelector(".playlistCantos");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
   let playlist = "cancionesDomingo";
   Playlist.agregarCantos(canciones,lista);
@@ -402,10 +402,9 @@ if(titulo === "Playlist Domingo"){
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
 }  
 
-//Cuando se cargue la pagina Playlist Domingo, agregar cantos
+//Cuando se cargue la pagina Playlist Miercoles, agregar cantos
 if(titulo === "Playlist Miercoles"){
   let canciones = JSON.parse(localStorage.getItem("cancionesMiercoles"));
-  const lista = document.querySelector(".playlistCantos");
   let mensaje = "Agrega cantos a la Playlist MIERCOLES"; 
   let playlist = "cancionesMiercoles";
   Playlist.agregarCantos(canciones,lista);
