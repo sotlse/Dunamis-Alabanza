@@ -4,8 +4,7 @@ var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var botonRegresar = document.querySelector(".RegresarPagina");
 var botonEditar = document.querySelector(".EditarLista");
-var botonBorrarListaDomingo = document.querySelector(".borrarListaDomingo");
-var botonBorrarListaMiercoles = document.querySelector(".borrarListaMiercoles");
+var botonBorrarLista = document.querySelector(".borrarLista");
 let titulo = document.querySelector('title').textContent;
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
@@ -394,14 +393,13 @@ if(titulo === "Playlist Domingo"){
   const lista = document.querySelector("#playlistDomingo");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
   let playlist = "cancionesDomingo";
-  let borrarLista = botonBorrarListaDomingo;
   Playlist.agregarCantos(canciones,lista);
   Playlist.agregarBotones(canciones,lista);
   Playlist.agregarMensajeNoCantos(lista,mensaje);
   Playlist.funcionBotonEditar(lista,canciones,playlist);
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
-  Playlist.borrarLista(lista,mensaje,playlist,canciones,borrarLista);
+  Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
 }  
 
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
@@ -410,14 +408,13 @@ if(titulo === "Playlist Miercoles"){
   const lista = document.querySelector("#playlistMiercoles");
   let mensaje = "Agrega cantos a la Playlist MIERCOLES"; 
   let playlist = "cancionesMiercoles";
-  let borrarLista = botonBorrarListaMiercoles;
   Playlist.agregarCantos(canciones,lista);
   Playlist.agregarBotones(canciones,lista);
   Playlist.agregarMensajeNoCantos(lista,mensaje);
   Playlist.funcionBotonEditar(lista,canciones,playlist);
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
-  Playlist.borrarLista(lista,mensaje,playlist,canciones,borrarLista);
+  Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
 }  
 
 
