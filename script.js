@@ -218,7 +218,7 @@ class Playlist{
     }
   }
   
-  static funcionBotonEditar(lista,canciones,playlist,items){
+  static funcionBotonEditar(lista,canciones,playlist){
     let noseleccionado, array=[], parent;
     let index = null;
     console.log(lista.lastElementChild);
@@ -392,14 +392,13 @@ if(titulo === "Playlist Domingo"){
   //document.addEventListener("DOMContentLoaded", PlaylistDomingo);
   let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
   const lista = document.querySelector("#playlistDomingo");
-  let items = document.querySelectorAll("#playlistDomingo li");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
   let playlist = "cancionesDomingo";
   let borrarLista = botonBorrarListaDomingo;
   Playlist.agregarCantos(canciones,lista);
   Playlist.agregarBotones(canciones,lista);
   Playlist.agregarMensajeNoCantos(lista,mensaje);
-  Playlist.funcionBotonEditar(lista,canciones,playlist,items);
+  Playlist.funcionBotonEditar(lista,canciones,playlist);
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
   Playlist.borrarLista(lista,mensaje,playlist,canciones,borrarLista);
