@@ -434,6 +434,8 @@ if(titulo === "Playlist Miercoles"){
 //botonAgregar function
 function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
+    let botonAdd = document.querySelector(".cuerpo-lista");
+    botonAdd.style.zIndex = "-1";
     var cancion = e.target.parentElement;
     var winW = window.innerWidth;
     var winH = window.innerHeight;
@@ -442,7 +444,7 @@ function agregarCanto(e){
     var dialogbox = document.getElementById('dialogbox');
     dialogverlay.style.display = "block";
     dialogverlay.style.height = (winH) + "px";
-    dialogbox.style.left = /*(winW/2) - (500*0.5)*/ + *"10px";
+    dialogbox.style.right = /*(winW/2) - (500*0.5) + */"12%";
     dialogbox.style.top = "100px";
     dialogbox.style.display = "block";
     
