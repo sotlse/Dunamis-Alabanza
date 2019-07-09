@@ -542,7 +542,7 @@ function agregarCanto(e){
     var MiercolesBoton = document.getElementById ('Miercoles');
     CancelarBoton.addEventListener ("click",Cancelar);
     DomingoBoton.addEventListener ("click",Playlist("cancionesDomingo","Canto agregado a DOMINGO"));
-    MiercolesBoton.addEventListener ("click",Playlist("cancionesMiercoles","Canto agregado a DOMINGO"));
+    MiercolesBoton.addEventListener ("click",Playlist("cancionesMiercoles","Canto agregado a MIERCOLES"));
 
     function Cancelar(e){
       document.getElementById('dialogbox').style.display = "none";
@@ -554,17 +554,18 @@ function agregarCanto(e){
       tipo = cancion.querySelector('a').textContent;
       const CantoGuardado = new cantoGuardado(link,tipo,titulo);
       if(localStorage.getItem(cancionesStorage) === null){
-        cancionesArray = [];
+        let cancionesArray = [];
         cancionesArray.push(CantoGuardado);
         localStorage.setItem(cancionesStorage,JSON.stringify(cancionesArray));
       }else{
-        cancionesArray = JSON.parse(localStorage.getItem(cancionesStorage));
+        let cancionesArray = JSON.parse(localStorage.getItem(cancionesStorage));
         cancionesArray.push(CantoGuardado);
         localStorage.setItem(cancionesStorage,JSON.stringify(cancionesArray));
       }
       Cancelar();
 
       //Mostrar mensaje de canto agregado
+      console.log("ok");
       const div = document.createElement ('div');
       div.className = 'anuncio';
       div.appendChild(document.createTextNode(mensaje));
@@ -573,15 +574,7 @@ function agregarCanto(e){
       container.insertBefore(div,ul);
     }
   }
-
-
-
-
-
-
-
-  
-
+}
 
 
 
