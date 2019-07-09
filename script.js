@@ -390,7 +390,6 @@ class Playlist{
 
 //Cuando se cargue la pagina Playlist Domingo, agregar cantos
 if(titulo === "Playlist Domingo"){
-  //document.addEventListener("DOMContentLoaded", PlaylistDomingo);
   let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
   const lista = document.querySelector("#playlistDomingo");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
@@ -405,6 +404,21 @@ if(titulo === "Playlist Domingo"){
   Playlist.borrarLista(lista,mensaje,playlist,canciones,borrarLista);
 }  
 
+//Cuando se cargue la pagina Playlist Domingo, agregar cantos
+if(titulo === "Playlist Miercoles"){
+  let canciones = JSON.parse(localStorage.getItem("cancionesMiercoles"));
+  const lista = document.querySelector("#playlistMiercoles");
+  let mensaje = "Agrega cantos a la Playlist MIERCOLES"; 
+  let playlist = "cancionesMiercoles";
+  let borrarLista = botonBorrarListaMiercoles;
+  Playlist.agregarCantos(canciones,lista);
+  Playlist.agregarBotones(canciones,lista);
+  Playlist.agregarMensajeNoCantos(lista,mensaje);
+  Playlist.funcionBotonEditar(lista,canciones,playlist);
+  Playlist.funcionBotonOk(lista,canciones);
+  Playlist.borrarCanto(lista,mensaje,canciones,playlist);
+  Playlist.borrarLista(lista,mensaje,playlist,canciones,borrarLista);
+}  
 
 
 //botonAgregar function
