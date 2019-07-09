@@ -247,6 +247,7 @@ class Playlist{
       divOk.style.display = "block";
       
       //Seleccionar canto a editar
+      
       let items = document.querySelectorAll("#playlistDomingo li");
       items.forEach(function (item){
          array.push(item.innerHTML);
@@ -259,7 +260,7 @@ class Playlist{
           } 
           this.className = "selected";
           noseleccionado = this;
-          //items = document.querySelectorAll("#playlistDomingo li");
+          items = document.querySelectorAll("#playlistDomingo li");
           seleccionado = item;         
         } 
       });
@@ -270,13 +271,13 @@ class Playlist{
       
       botonUp.onclick = function (){
         if (index != "undefined" || index != null){
-          //let items = document.querySelectorAll("#playlistDomingo li");
+          let items = document.querySelectorAll("#playlistDomingo li");
           parent = items[index].parentElement;
           if (index > 0){
             parent.insertBefore(items[index],items[index-1]);
             index--;
           }
-          //items = document.querySelectorAll("#playlistDomingo li");
+          items = document.querySelectorAll("#playlistDomingo li");
           array = [];
           items.forEach(function (item){
             array.push(item.innerHTML);
