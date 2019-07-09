@@ -441,8 +441,8 @@ function agregarCanto(e){
     var dialogverlay = document.getElementById('dialogverlay');
     var dialogbox = document.getElementById('dialogbox');
     dialogverlay.style.display = "block";
-    dialogverlay.style.height = (winH-500)/3 + "px";
-    dialogbox.style.left = (winH/2) - (500*0.5) + "px";
+    dialogverlay.style.height = (winH) + "px";
+    dialogbox.style.left = /*(winW/2) - (500*0.5)*/ + *"10px";
     dialogbox.style.top = "100px";
     dialogbox.style.display = "block";
     
