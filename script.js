@@ -153,6 +153,20 @@ opcionesItems.addEventListener("click", agregarCanto);
 if (busquedaItem){
 busquedaItem.addEventListener("keyup",filterItems);
 }
+function filterItems(e){
+  let filterValue = document.getElementById('busqueda').value.toUpperCase();
+  let ol = document.getElementById("lista");
+  console.log(ol);
+  let li = ol.querySelectorAll("li");
+  for (let i=0;i<li.length;i++){
+    let a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
 
 //Boton regresar event
 if(botonRegresar){
@@ -416,7 +430,7 @@ if(titulo === "Playlist Miercoles"){
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
 }  
 
-
+/*
 //botonAgregar function
 function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
@@ -503,22 +517,64 @@ function agregarCanto(e){
     }
   }
 }
+*/
 
-//Filter function
-function filterItems(e){
-  let filterValue = document.getElementById('busqueda').value.toUpperCase();
-  let ol = document.getElementById("lista");
-  console.log(ol);
-  let li = ol.querySelectorAll("li");
-  for (let i=0;i<li.length;i++){
-    let a = li[i].getElementsByTagName("a")[0];
-    if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
+//botonAgregar function
+function agregarCanto(e){
+  if(e.target.classList.contains("boton-add")){
+    var cancion = e.target.parentElement;
+    var winW = window.innerWidht;
+    var winH = window.innerHeight;
+    var dialogverlay = document.getElementById('dialogverlay');
+    var dialogbox = document.getElementById('dialogbox');
+    dialogverlay.style.display = "block";
+    dialogverlay.style.height = winH/3 + "px";
+    dialogbox.style.left = (winH/2) - (500*0.5) + "px";
+    dialogbox.style.top = "100px";
+    dialogbox.style.display = "block";
+
+    document.getElementById('dialogboxhead').innerHTML = "Agregar a playlist";
+    //document.getElementById('dialogboxbody').innerHTML = "Elige";
+    document.getElementById('dialogboxfoot').innerHTML = '<button id=Domingo>Domingo</button>  <button id=Miercoles>Miercoles</button>  <button id="Cancelar">Cancelar</button>';
+
+    var CancelarBoton = document.getElementById ('Cancelar');
+    var DomingoBoton = document.getElementById ('Domingo');
+    var MiercolesBoton = document.getElementById ('Miercoles');
+    CancelarBoton.addEventListener ("click",Cancelar);
+    DomingoBoton.addEventListener ("click",Playlist("cancionesDomingo","Canto agregado a DOMINGO"));
+    MiercolesBoton.addEventListener ("click",Playlist("cancionesMiercoles","Canto agregado a DOMINGO"));
+
+    function Cancelar(e){
+      document.getElementById('dialogbox').style.display = "none";
+      document.getElementById('dialogverlay').style.display = "none"; 
+    }
+
+    function Playlist(cancionesStorage,mensaje){
+      link = cancion.querySelector('a').href;
+      tipo = cancion.querySelector('a').textContent;
+      const CantoGuardado = new cantoGuardado(link,tipo,titulo);
+      if(localStorage.getItem(cancionesStorage) === null){
+        cancionesArray = [];
+        cancionesArray.push(CantoGuardado);
+        localStorage.setItem(cancionesStorage,JSON.stringify(cancionesArray));
+      }else{
+        cancionesArray = JSON.parse(localStorage.getItem(cancionesStorage));
+        cancionesArray.push(CantoGuardado);
+        localStorage.setItem(cancionesStorage,JSON.stringify(cancionesArray));
+      }
+      Cancelar();
+
+      //Mostrar mensaje de canto agregado
+      const div = document.createElement ('div');
+      div.className = 'anuncio';
+      div.appendChild(document.createTextNode(mensaje));
+      const container = document.querySelector(".contenido");
+      const ul = document.querySelector(".cuerpo-lista");
+      container.insertBefore(div,ul);
     }
   }
-}
+
+
 
 
 
