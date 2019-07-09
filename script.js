@@ -364,9 +364,9 @@ class Playlist{
   
   static borrarLista(lista,mensaje,playlist,canciones){
     if (lista.lastElementChild != null){
-      botonBorrarListaDomingo.addEventListener("click",BorrarListaDomingo);
+      botonBorrarListaDomingo.addEventListener("click",BorrarLista);
     }
-    function BorrarListaDomingo(e){    
+    function BorrarLista(e){    
       if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
         localStorage.removeItem(playlist);
         let ultimo = lista.lastElementChild;
@@ -394,6 +394,7 @@ if(titulo === "Playlist Domingo"){
   const lista = document.querySelector("#playlistDomingo");
   let mensaje = "Agrega cantos a la Playlist DOMINGO";
   let playlist = "cancionesDomingo";
+  let borrarLista = 
   Playlist.agregarCantos(canciones,lista);
   Playlist.agregarBotones(canciones,lista);
   Playlist.agregarMensajeNoCantos(lista,mensaje);
