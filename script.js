@@ -6,6 +6,7 @@ var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
 const lista = document.querySelector(".playlistCantos");
 let cantoBody = document.querySelector(".canto_body");
+let letraBody = document.querySelector(".letra_body")
 let titulo = document.querySelector('title').textContent;
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
@@ -13,17 +14,24 @@ let link;
 let tipo;
 let totalCantos=300
 let seleccionado;
+let titulo2;
 
 //desplegar letra de acordes en tamano mas grande si es tablet
 var winW = window.innerWidth;
 var winH = window.innerHeight;
 console.log(winW,winH);
 if (cantoBody){
+  console.log(titulo2);
   if (winW > 450){
-    cantoBody.style.fontSize = "larger";
+    cantoBody.style.fontSize = "larger"; 
   }
 }
-
+if (letraBody){
+  if(winW>450){
+    letraBody.style.fontSize = "larger";
+  }
+}
+titulo2=titulo;
 //Constructor de canto guardado
 class cantoGuardado {
   constructor(link,tipo,titulo){
@@ -183,7 +191,6 @@ if(botonRegresar){
   botonRegresar.addEventListener("click", Regresar);
 }
 function Regresar(){
-  console.log(window.history);
   window.history.back();
 }
 
