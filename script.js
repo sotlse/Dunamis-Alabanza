@@ -1,6 +1,10 @@
 var winW = window.innerWidth;
 var winH = window.innerHeight;
 console.log(winW,winH);
+if (winW < 450){
+  
+    
+  }
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
