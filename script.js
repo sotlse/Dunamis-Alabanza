@@ -1,10 +1,3 @@
-var winW = window.innerWidth;
-var winH = window.innerHeight;
-console.log(winW,winH);
-if (winW < 450){
-  
-    
-  }
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
@@ -12,6 +5,7 @@ var botonRegresar = document.querySelector(".RegresarPagina");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
 const lista = document.querySelector(".playlistCantos");
+let cantoBody = document.querySelector(".canto_body");
 let titulo = document.querySelector('title').textContent;
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
@@ -20,6 +14,16 @@ let tipo;
 let totalCantos=300
 let seleccionado;
  
+var winW = window.innerWidth;
+var winH = window.innerHeight;
+console.log(winW,winH);
+if (cantoBody){
+if (winW > 450){
+  console.log(cantoBody);
+  cantoBody.style.fontSize = "larger";
+}
+}
+
 //Constructor de canto guardado
 class cantoGuardado {
   constructor(link,tipo,titulo){
