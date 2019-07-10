@@ -13,15 +13,15 @@ let link;
 let tipo;
 let totalCantos=300
 let seleccionado;
- 
+
+//desplegar letra de acordes en tamano mas grande si es tablet
 var winW = window.innerWidth;
 var winH = window.innerHeight;
 console.log(winW,winH);
 if (cantoBody){
-if (winW > 450){
-  console.log(cantoBody);
-  cantoBody.style.fontSize = "larger";
-}
+  if (winW > 450){
+    cantoBody.style.fontSize = "larger";
+  }
 }
 
 //Constructor de canto guardado
@@ -183,6 +183,7 @@ if(botonRegresar){
   botonRegresar.addEventListener("click", Regresar);
 }
 function Regresar(){
+  console.log(window.history);
   window.history.back();
 }
 
