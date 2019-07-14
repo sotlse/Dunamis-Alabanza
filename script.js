@@ -49,7 +49,7 @@ class UI {
       pagina: "A_Cada_Instante.html",
       titulo: "A Cada Instante",
       autor: "Marco Barrientos",
-      tono: "Tono:F",
+      tono: "F",
       categoria: ["Adoracion","Servicio"],
     },
   
@@ -57,7 +57,7 @@ class UI {
       pagina: "A_El_Alto_Y_Sublime.html",
       titulo: "A el Alto y Sublime",
       autor: "Jesus Adrian Romero",
-      tono: "Tono:Bb",
+      tono: "Bb",
       categoria: ["Adoracion"],
     },
   
@@ -65,7 +65,7 @@ class UI {
       pagina:"Abre_Los_Cielos.html",
       titulo: "Abre los Cielos",
       autor: "Jesus Adrian Romero",
-      tono: "Tono:A#",
+      tono: "A#",
       categoria: ["Alabanza"],
     },
     
@@ -73,7 +73,7 @@ class UI {
       pagina:"Santo.html",
       titulo:"Santo",
       autor:"Coalo Zamorano",
-      tono:"",
+      tono:"D",
       categoria:["Alabanza"],
     }
       
@@ -154,7 +154,7 @@ class UI {
   static agregarCantosAListaCategoria(canto){
     const olLista = document.querySelector("#lista");
     const crearli = document.createElement('li');
-    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- ${canto.tono}`;
+    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- Tono:${canto.tono}`;
     olLista.appendChild(crearli);
   }
 }
