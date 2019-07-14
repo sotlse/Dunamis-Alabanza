@@ -70,11 +70,11 @@ class UI {
     },
     
     {
-      pagina:"",
-      titulo:"",
-      autor:"",
+      pagina:"Santo.html",
+      titulo:"Santo",
+      autor:"Coalo Zamorano",
       tono:"",
-      categoria:["Adoracion"],
+      categoria:["Alabanza"],
     }
       
     ];
