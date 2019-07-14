@@ -509,6 +509,7 @@ function agregarCanto(e){
       const ul = document.querySelector(".cuerpo-lista");
       container.insertBefore(div,ul);
       setTimeout(()=> document.querySelector(".anuncio").remove(),2500);
+      botonAdd.style.opacity = "1";
     }
     
     
@@ -536,6 +537,7 @@ function agregarCanto(e){
       const ul = document.querySelector(".cuerpo-lista");
       container.insertBefore(div,ul);
       setTimeout(()=> document.querySelector(".anuncioM").remove(),2500);
+      botonAdd.style.opacity = "1";
     }
   }
 }
