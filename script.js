@@ -22,12 +22,12 @@ var winH = window.innerHeight;
 console.log(winW,winH);
 if (cantoBody){
   console.log(titulo2);
-  if (winW > 550){
+  if (winW > 750){
     cantoBody.style.fontSize = "larger"; 
   }
 }
 if (letraBody){
-  if(winW>550){
+  if(winW>750){
     letraBody.style.fontSize = "larger";
   }
 }
