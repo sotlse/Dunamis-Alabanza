@@ -8,7 +8,7 @@ const lista = document.querySelector(".playlistCantos");
 let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
 let titulo = document.querySelector('title').textContent;
-let audio = document.querySelector("")
+let botonAudio = document.querySelector(".botonAudio");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
@@ -193,6 +193,18 @@ if(botonRegresar){
 }
 function Regresar(){
   window.history.back();
+}
+
+//Boton Audio event
+if(botonAudio){
+  botonAudio.addEventListener("click", Audio);
+}
+function Audio(){
+  const divAudio = document.querySelector(".divAudio")
+  console.log("hola");
+  const audio = document.createElement("audio");
+  audio.setAttribute("controls", "controls");
+  audio.setAttribute("src","https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FSANTO-COALO%20ZAMORANO%20(LETRA).mp3?v=1563233873479");
 }
 
 //Playlist
