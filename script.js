@@ -8,6 +8,7 @@ const lista = document.querySelector(".playlistCantos");
 let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
 let titulo = document.querySelector('title').textContent;
+let audio = document.querySelector("")
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
