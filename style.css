@@ -328,6 +328,12 @@ a {
   text-align:center;
 }
 
+.botonBorrarAudio{
+  font-weight:bold;
+  font-size:20px;
+  background-color:tomato;
+}
+
 
 #dialogvarley{
   display:none;

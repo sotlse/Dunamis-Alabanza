@@ -206,7 +206,13 @@ function Audio(){
   audio.setAttribute("controls", "controls");
   audio.setAttribute("src","https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FSANTO-COALO%20ZAMORANO%20(LETRA).mp3?v=1563233873479");
   divAudio.appendChild(audio);
+  const x=document.createElement("button");
+  x.className = "botonBorrarAudio";
+  x.appendChild(document.createTextNode("X"));
+  divAudio.appendChild(x);
   botonAudio.style.display="none";
+  boton
+  
 }
 
 //Playlist
