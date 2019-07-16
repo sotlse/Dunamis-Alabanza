@@ -52,6 +52,7 @@ class UI {
       autor: "Marco Barrientos",
       tono: "F",
       categoria: ["Adoracion","Servicio"],
+      audio:"",
     },
   
     {
