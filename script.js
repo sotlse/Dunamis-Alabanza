@@ -211,7 +211,12 @@ function Audio(){
   x.appendChild(document.createTextNode("X"));
   divAudio.appendChild(x);
   botonAudio.style.display="none";
-  boton
+  x.onclick = function (){
+    botonAudio.style.display="block";
+    while (divAudio.hasChildNodes()) {   
+        divAudio.removeChild(divAudio.firstChild);
+      }
+  }
   
 }
 
