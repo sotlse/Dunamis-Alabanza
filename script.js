@@ -24,12 +24,12 @@ console.log(winW,winH);
 if (cantoBody){
   console.log(titulo2);
   if (winW > 750){
-    cantoBody.style.fontSize = "larger"; 
+    cantoBody.style.fontSize = "150%"; 
   }
 }
 if (letraBody){
   if(winW>750){
-    letraBody.style.fontSize = "larger";
+    letraBody.style.fontSize = "150%";
   }
 }
 titulo2=titulo;
