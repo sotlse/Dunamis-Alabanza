@@ -9,6 +9,7 @@ let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
 let titulo = document.querySelector('title').textContent;
 let botonAudio = document.querySelector(".botonAudio");
+let slur = document.querySelector(".slur");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
@@ -25,6 +26,8 @@ if (cantoBody){
   console.log(titulo2);
   if (winW > 750){
     cantoBody.style.fontSize = "150%"; 
+    slur.height = "14";
+    slur.width = "65";
   }
 }
 if (letraBody){
