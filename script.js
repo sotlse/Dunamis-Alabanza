@@ -10,6 +10,7 @@ let letraBody = document.querySelector(".letra_body")
 let titulo = document.querySelector('title').textContent;
 let botonAudio = document.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
+let contenidoCanto = document.querySelector(".contenido");
 let slur = document.querySelector(".slur");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
@@ -158,6 +159,11 @@ class UI {
       });
       filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
     }
+    
+    if (contenidoCanto){
+        
+    }
+    
   }
 
   static agregarCantosAListaCategoria(canto){
@@ -168,7 +174,7 @@ class UI {
   }
   
   static agregarAudio(canto){
-    
+    console.log(canto.audio);
   }
 }
 
