@@ -11,6 +11,7 @@ let titulo = document.querySelector('title').textContent;
 let botonAudio = document.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
 let contenidoCanto = document.querySelector(".contenido");
+let tituloCanto = document.querySelector(".tituloCanto");
 let slur = document.querySelector(".slur");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
@@ -161,9 +162,10 @@ class UI {
     }
     
     if (contenidoCanto){
-      let filtroCanto = baseCanciones.filter(function(audio){
-        
-      });  
+      let audioCanto = baseCanciones.filter(function(audio){
+        return  audio.titulo === tituloCanto; 
+      });
+      
     }
     
   }
