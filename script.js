@@ -9,6 +9,7 @@ let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
 let titulo = document.querySelector('title').textContent;
 let botonAudio = document.querySelector(".botonAudio");
+let botonTransportar = document.querySelector(".botonTransportar");
 let slur = document.querySelector(".slur");
 let cancionesDomingo = [];
 let cancionesMiercoles = [];
@@ -64,6 +65,7 @@ class UI {
       autor: "Jesus Adrian Romero",
       tono: "Bb",
       categoria: ["Adoracion"],
+      audio:"",
     },
   
     {
@@ -72,6 +74,7 @@ class UI {
       autor: "Jesus Adrian Romero",
       tono: "A#",
       categoria: ["Alabanza"],
+      audio:"",
     },
     
     {
@@ -80,6 +83,7 @@ class UI {
       autor:"Coalo Zamorano",
       tono:"D",
       categoria:["Alabanza"],
+      audio:"https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FSANTO-COALO%20ZAMORANO%20(LETRA).mp3?v=1563233873479",
     }
       
     ];
@@ -161,6 +165,10 @@ class UI {
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- Tono:${canto.tono}`;
     olLista.appendChild(crearli);
+  }
+  
+  static agregarAudio(canto){
+    
   }
 }
 
