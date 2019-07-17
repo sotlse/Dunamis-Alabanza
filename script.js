@@ -26,7 +26,6 @@ var winW = window.innerWidth;
 var winH = window.innerHeight;
 console.log(winW,winH);
 if (cantoBody){
-  console.log(titulo2);
   if (winW > 750){
     cantoBody.style.fontSize = "150%"; 
     slur.height = "14";
@@ -178,8 +177,26 @@ class UI {
   }
   
   static agregarAudio(audiocanto){
-    console.log(audiocanto);
-    console.log(audiocanto[0]);
+    botonAudio.onclick = function (){
+      console.log(audiocanto[0].audio);
+      const divAudio = document.querySelector(".divAudio");
+      const audio = document.createElement("audio");
+      audio.setAttribute("controls", "controls");
+      audio.setAttribute("src",audiocanto[0].audio);
+      divAudio.appendChild(audio);
+      const x=document.createElement("button");
+      x.className = "botonBorrarAudio";
+      x.appendChild(document.createTextNode("X"));
+      divAudio.appendChild(x);
+      botonAudio.style.display="none";
+      x.onclick = function (){
+        botonAudio.style.display="block";
+        while (divAudio.hasChildNodes()) {   
+            divAudio.removeChild(divAudio.firstChild);
+        }
+      }
+    }
+    
   }
 }
 
@@ -220,28 +237,9 @@ function Regresar(){
 
 //Boton Audio event
 if(botonAudio){
-  botonAudio.addEventListener("click", UI.desplegarCantos);
+  document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 }
-function Audio(){
-  const divAudio = document.querySelector(".divAudio");
-  console.log("hola");
-  const audio = document.createElement("audio");
-  audio.setAttribute("controls", "controls");
-  audio.setAttribute("src","https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FSANTO-COALO%20ZAMORANO%20(LETRA).mp3?v=1563233873479");
-  divAudio.appendChild(audio);
-  const x=document.createElement("button");
-  x.className = "botonBorrarAudio";
-  x.appendChild(document.createTextNode("X"));
-  divAudio.appendChild(x);
-  botonAudio.style.display="none";
-  x.onclick = function (){
-    botonAudio.style.display="block";
-    while (divAudio.hasChildNodes()) {   
-        divAudio.removeChild(divAudio.firstChild);
-      }
-  }
-  
-}
+
 
 //Playlist
 class Playlist{
@@ -302,7 +300,6 @@ class Playlist{
   static funcionBotonEditar(lista,canciones,playlist){
     let noseleccionado, array=[], parent;
     let index = null;
-    console.log(lista.lastElementChild);
     if (lista.lastElementChild != null){
       botonEditar.addEventListener("click",botoneditar);
     }
