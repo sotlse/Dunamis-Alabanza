@@ -161,10 +161,10 @@ class UI {
     }
     
     if (contenidoCanto){
-      let audioCanto = baseCanciones.filter(function(canto){
+      let Canto = baseCanciones.filter(function(canto){
         return  canto.titulo === tituloCanto.innerHTML; 
       });
-    UI.agregarAudio(audioCanto);
+    UI.agregarAudio(Canto);
     }
     
   }
