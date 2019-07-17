@@ -193,7 +193,7 @@ a {
 }
 
 .nav{
-  column-count:3;
+  column-count:2;
   column-gap:0px;
   margin:20px 0px;
 }
@@ -241,9 +241,11 @@ a {
 
 .RegresarPagina{
   position: absolute;
-  top:10px;
-  left:5px;
+  top:20px;
+  left:10px;
   padding:5px;
+  padding: 5px;
+  font-size:20px;
 }
 
 .botonTransportar{
