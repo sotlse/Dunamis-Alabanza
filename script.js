@@ -27,7 +27,7 @@ if (cantoBody){
   if (winW > 750){
     cantoBody.style.fontSize = "150%"; 
     slur.height = "14";
-    slur.width = "65";
+    slur.width = "60";
   }
 }
 if (letraBody){
