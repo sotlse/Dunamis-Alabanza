@@ -161,7 +161,9 @@ class UI {
     }
     
     if (contenidoCanto){
+      let filtroCanto = baseCanciones.filter(function(audio){
         
+      });  
     }
     
   }
