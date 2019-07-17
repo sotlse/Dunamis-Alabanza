@@ -162,10 +162,12 @@ class UI {
     }
     
     if (contenidoCanto){
-      let audioCanto = baseCanciones.filter(function(audio){
-        return  audio.titulo === tituloCanto; 
+      let audioCanto = baseCanciones.filter(function(canto){
+        console.log(canto.titulo)
+        return  canto.titulo === tituloCanto.innerHTML; 
       });
-      
+    UI.agregarAudio(audioCanto);
+      console.log(tituloCanto.innerHTML);
     }
     
   }
@@ -177,8 +179,8 @@ class UI {
     olLista.appendChild(crearli);
   }
   
-  static agregarAudio(canto){
-    console.log(canto.audio);
+  static agregarAudio(audiocanto){
+    console.log("hola");
   }
 }
 
@@ -219,7 +221,7 @@ function Regresar(){
 
 //Boton Audio event
 if(botonAudio){
-  botonAudio.addEventListener("click", Audio);
+  botonAudio.addEventListener("click", UI.desplegarCantos);
 }
 function Audio(){
   const divAudio = document.querySelector(".divAudio");
