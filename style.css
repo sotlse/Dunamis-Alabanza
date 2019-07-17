@@ -240,6 +240,9 @@ a {
 }
 
 .RegresarPagina{
+  position: absolute;
+  top:10px;
+  left:5px;
   padding:5px;
 }
 
