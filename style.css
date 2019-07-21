@@ -321,14 +321,14 @@ a {
   font-weight:bold;
 }
 
-.canto_body div{
-  margin:5px 0 2px 0;
+.canto_body div div pre{
+  margin:5px 0 -2px 0;
 }
 
 .tituloCanto{
   background-color:Black;
   color:white;
-  margin:0px 0px -13px 0px;
+  margin:0px 0px -10px 0px;
   padding:2px;
   font-weight:bold;
   font-family:Arial, "Benton Sans", "Helvetica Neue", helvetica;
