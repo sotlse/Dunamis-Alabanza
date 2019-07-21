@@ -575,7 +575,7 @@ function agregarCanto(e){
       const div = document.createElement ('div');
       div.className = 'anuncio';
       div.appendChild(document.createTextNode("Canto agregado a DOMINGO"));
-      const container = document.querySelector(".contenido");
+      const container = document.querySelector(".contenidoLista");
       const ul = document.querySelector(".cuerpo-lista");
       container.insertBefore(div,ul);
       setTimeout(()=> document.querySelector(".anuncio").remove(),2500);
@@ -603,7 +603,7 @@ function agregarCanto(e){
       const div = document.createElement ('div');
       div.className = 'anuncioM';
       div.appendChild(document.createTextNode("Canto agregado a MIERCOLES"));
-      const container = document.querySelector(".contenido");
+      const container = document.querySelector(".contenidoLista");
       const ul = document.querySelector(".cuerpo-lista");
       container.insertBefore(div,ul);
       setTimeout(()=> document.querySelector(".anuncioM").remove(),2500);
