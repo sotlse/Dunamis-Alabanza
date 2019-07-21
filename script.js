@@ -24,9 +24,10 @@ let titulo2;
 //desplegar letra de acordes en tamano mas grande si es tablet
 var winW = window.innerWidth;
 var winH = window.innerHeight;
+let bodyPlaylist
 console.log(winW,winH);
 if (cantoBody){
-  if (winW > 750){
+  if (winW > 850){
     cantoBody.style.fontSize = "150%"; 
     if (slur){
       slur.height = "14";
@@ -35,7 +36,7 @@ if (cantoBody){
   }
 }
 if (letraBody){
-  if(winW>750){
+  if(winW>850){
     letraBody.style.fontSize = "150%";
   }
 }
