@@ -19,7 +19,7 @@ let link;
 let tipo;
 let totalCantos=300
 let seleccionado;
-let titulo2;
+
 
 //desplegar letra de acordes en tamano mas grande si es tablet
 var winW = window.innerWidth;
@@ -27,7 +27,9 @@ var winH = window.innerHeight;
 let bodyPlaylist = document.querySelector(".playlistCantos")
 console.log(winW,winH);
 if (bodyPlaylist){
-  bodyPlaylist.style.fontSize = "150%";
+  if (winW >850){
+    bodyPlaylist.style.fontSize = "150%";
+  }
 }
 if (cantoBody){
   if (winW > 850){
@@ -43,7 +45,8 @@ if (letraBody){
     letraBody.style.fontSize = "150%";
   }
 }
-titulo2=titulo;
+
+
 //Constructor de canto guardado
 class cantoGuardado {
   constructor(link,tipo,titulo){
