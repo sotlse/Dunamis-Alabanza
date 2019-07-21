@@ -81,10 +81,19 @@ class UI {
     },
     
     {
+      pagina:"Aqui_Estoy.html",
+      titulo: "Aqui Estoy",
+      autor: "Jaime Murrel",
+      tono: "A",
+      categoria: ["Adoracion","Servicio"],
+      audio:"",
+    },  
+    
+    {
       pagina:"Por_Siempre.html",
-      titulo: "Abre los Cielos",
-      autor: "Jesus Adrian Romero",
-      tono: "A#",
+      titulo: "Por Siempre",
+      autor: "Vino Nuevo",
+      tono: "Bb",
       categoria: ["Alabanza"],
       audio:"",
     },
