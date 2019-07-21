@@ -66,7 +66,7 @@ class UI {
       autor: "Jesus Adrian Romero",
       tono: "Bb",
       categoria: ["Adoracion"],
-      audio:"",
+      audio:"https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FJESUS%20ADRIAN%20ROMERO%20AL%20ALTO%20Y%20SUBLIME.mp3?v=1563671665519",
     },
   
     {
