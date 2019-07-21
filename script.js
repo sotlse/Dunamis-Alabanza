@@ -28,8 +28,10 @@ console.log(winW,winH);
 if (cantoBody){
   if (winW > 750){
     cantoBody.style.fontSize = "150%"; 
-    slur.height = "14";
-    slur.width = "60";
+    if (slur){
+      slur.height = "14";
+      slur.width = "60";
+    }
   }
 }
 if (letraBody){
@@ -78,6 +80,15 @@ class UI {
       audio:"",
     },
     
+    {
+      pagina:"Por_Siempre.html",
+      titulo: "Abre los Cielos",
+      autor: "Jesus Adrian Romero",
+      tono: "A#",
+      categoria: ["Alabanza"],
+      audio:"",
+    },
+      
     {
       pagina:"Santo.html",
       titulo:"Santo",
