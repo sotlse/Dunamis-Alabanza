@@ -1,8 +1,8 @@
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
-var botonRegresar = document.querySelector(".RegresarPagina");
-//let botonRegresar = document.querySelector(".fas fa-arrow-left");
+//var botonRegresar = document.querySelector(".RegresarPagina");
+let botonRegresar = document.querySelector(".arrowRegresar");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
 const lista = document.querySelector(".playlistCantos");
@@ -256,8 +256,13 @@ function filterItems(e){
 }
 
 //Boton regresar event
+
+
 if(botonRegresar){
-  botonRegresar.addEventListener("click", Regresar);
+  botonRegresar.addEventListener("click",(e) =>  {
+    window.history.back();
+  });
+  //botonRegresar.addEventListener("click", Regresar);
 }
 function Regresar(){
   window.history.back();
