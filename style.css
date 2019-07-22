@@ -354,7 +354,9 @@ a {
 }
 
 .navCanto{
-  
+  background-color:lightblue;
+  padding:10px;
+  margin:1px -25px 10px -25px;
 }
 
 #dialogvarley{
