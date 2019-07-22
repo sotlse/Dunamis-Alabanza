@@ -193,8 +193,8 @@ a {
 }
 
 .nav{
-  column-count:2;
-  column-gap:0px;
+  /*column-count:2;
+  column-gap:0px;*/
   margin:20px 0px;
 }
 
@@ -353,6 +353,9 @@ a {
   margin:-1% 0;
 }
 
+.navCanto{
+  
+}
 
 #dialogvarley{
   display:none;
