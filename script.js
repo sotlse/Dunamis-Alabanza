@@ -2,6 +2,7 @@ var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 var botonRegresar = document.querySelector(".RegresarPagina");
+var botonRegresar = document.querySelector
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
 const lista = document.querySelector(".playlistCantos");
@@ -217,7 +218,7 @@ class UI {
       divAudio.appendChild(x);
       botonAudio.style.display="none";
       x.onclick = function (){
-        botonAudio.style.display="block";
+        botonAudio.style.display="inline-block";
         while (divAudio.hasChildNodes()) {   
             divAudio.removeChild(divAudio.firstChild);
         }
