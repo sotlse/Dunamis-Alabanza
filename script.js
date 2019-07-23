@@ -535,8 +535,10 @@ if(playlistFlag == 1 && botonAvanzar){
   botonAvanzar.addEventListener("click",(e) =>  {
     let cancionesDomingos = JSON.parse(localStorage.getItem("cancionesDomingo"));
     const pagActual = location.href;
-    cancionesDomingos.forEach(function (canto){
-      if (canto.pagina =)
+    cancionesDomingos.forEach(function (canto, index){
+      if (canto.pagina === pagActual){
+        console.log(index);
+      }
     });
     console.log(cancionesDomingos[2].pagina);
     console.log(pagActual);
