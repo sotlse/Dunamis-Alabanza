@@ -3,6 +3,7 @@ var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 //var botonRegresar = document.querySelector(".RegresarPagina");
 let botonRegresar = document.querySelector(".arrowRegresar");
+let botonAvanzar = document.querySelector(".arrowAvanzar");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
 const lista = document.querySelector(".playlistCantos");
@@ -18,8 +19,9 @@ let cancionesDomingo = [];
 let cancionesMiercoles = [];
 let link;
 let tipo;
-let totalCantos=300
+let totalCantos=300;
 let seleccionado;
+let domingoFlag=0;
 
 
 //desplegar letra de acordes en tamano mas grande si es tablet
@@ -202,6 +204,7 @@ class UI {
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- Tono:${canto.tono}`;
     olLista.appendChild(crearli);
+    domingoFlag = 0;
   }
   
   static agregarAudio(audiocanto){
@@ -262,11 +265,13 @@ if(botonRegresar){
   botonRegresar.addEventListener("click",(e) =>  {
     window.history.back();
   });
-  //botonRegresar.addEventListener("click", Regresar);
 }
-function Regresar(){
-  window.history.back();
+
+console.log(domingoFlag);
+if(botonAvanzar){
+  
 }
+
 
 //Boton Audio event
 if(botonAudio){
@@ -511,6 +516,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
+  domingoFlag = "1";
 }  
 
 //Cuando se cargue la pagina Playlist Miercoles, agregar cantos
@@ -525,8 +531,8 @@ if(titulo === "Playlist Miercoles"){
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
+  domingoFlag++;
 }  
-
 
 //botonAgregar function
 function agregarCanto(e){
