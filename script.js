@@ -21,7 +21,8 @@ let link;
 let tipo;
 let totalCantos=300;
 let seleccionado;
-let domingoFlag=0;
+let domingoFlag;
+let playlistFlag;
 
 
 //desplegar letra de acordes en tamano mas grande si es tablet
@@ -121,6 +122,7 @@ class UI {
     //const cantos = baseCanciones;
     if(titulo === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+      domingoFlag = 0;
     }
     
     else if(titulo === "Dunamis Adoracion | Adoracion"){
@@ -188,6 +190,7 @@ class UI {
         }
       });
       filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
+      domingoFlag = 0;
     }
     
     if (contenidoCanto){
@@ -204,7 +207,6 @@ class UI {
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- Tono:${canto.tono}`;
     olLista.appendChild(crearli);
-    domingoFlag = 0;
   }
   
   static agregarAudio(audiocanto){
@@ -266,12 +268,6 @@ if(botonRegresar){
     window.history.back();
   });
 }
-
-console.log(domingoFlag);
-if(botonAvanzar){
-  
-}
-
 
 //Boton Audio event
 if(botonAudio){
@@ -516,7 +512,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
-  domingoFlag = "1";
+  domingoFlag = 1;
 }  
 
 //Cuando se cargue la pagina Playlist Miercoles, agregar cantos
@@ -531,8 +527,18 @@ if(titulo === "Playlist Miercoles"){
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
-  domingoFlag++;
+  domingoFlag = 1;
 }  
+
+console.log(domingoFlag);
+if(domingoFlag == 1){
+  let playlistFlag = 1;
+}
+
+console.log(playlistFlag)
+if (botonAvanzar ){
+  
+}
 
 //botonAgregar function
 function agregarCanto(e){
