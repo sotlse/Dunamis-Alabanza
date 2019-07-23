@@ -543,7 +543,8 @@ if(playlistFlag > 0 && botonAvanzar){
     const pagActual = location.href;
     cancionesPlaylist.forEach(function (canto, index){
       if (canto.pagina === pagActual){
-        console.log(index);
+        index++;
+        console.log(canto.pagina);
       }
     });
   });
