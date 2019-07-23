@@ -548,8 +548,7 @@ if(playlistFlag > 0 && botonAvanzar){
       }
       if (proxCanto == index){ 
         window.location.assign(canto.pagina);
-      }
-        
+      }     
     });
   });
 
