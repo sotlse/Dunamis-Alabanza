@@ -534,7 +534,7 @@ if(playlistFlag == 1 && botonAvanzar){
   botonAvanzar.style.display = "block";
   botonAvanzar.addEventListener("click",(e) =>  {
     let cancionesDomingos = JSON.parse(localStorage.getItem("cancionesDomingo"));
-    
+    const x = location.href;
     console.log(cancionesDomingos);
   });
 
