@@ -257,6 +257,16 @@ a {
   opacity:0.7;
 }
 
+.arrowAvanzar{
+  position: absolute;
+  bottom:0px;
+  right:5px;
+  padding:5px;
+  font-size:30px;
+  opacity:1;
+  display:none;
+}
+
 .botonTransportar{
   padding:5px;
 }
