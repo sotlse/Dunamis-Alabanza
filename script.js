@@ -21,8 +21,7 @@ let link;
 let tipo;
 let totalCantos=300;
 let seleccionado;
-let domingoFlag;
-let playlistFlag;
+
 
 
 //desplegar letra de acordes en tamano mas grande si es tablet
@@ -122,7 +121,7 @@ class UI {
     //const cantos = baseCanciones;
     if(titulo === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
-      domingoFlag = 0;
+      localStorage.setItem("playlistFlag",0);
     }
     
     else if(titulo === "Dunamis Adoracion | Adoracion"){
@@ -190,7 +189,7 @@ class UI {
         }
       });
       filtroCategorias.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
-      domingoFlag = 0;
+      localStorage.setItem("playlistFlag",0); 
     }
     
     if (contenidoCanto){
@@ -527,16 +526,17 @@ if(titulo === "Playlist Miercoles"){
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
-  domingoFlag = 1;
+  localStorage.setItem("playlistFlag",1);
 }  
 
-console.log(domingoFlag);
-if(domingoFlag === 1){
-  playlistFlag = 1;
-  console.log(playlistFlag);
+let playlistFlag = localStorage.getItem("playlistFlag");
+console.log(playlistFlag); 
+if(playlistFlag == 1){
+  console.log("Hi");
+
 }
 
-console.log(playlistFlag);
+
 if (botonAvanzar ){
   
 }
