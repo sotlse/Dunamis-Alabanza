@@ -532,6 +532,11 @@ if(titulo === "Playlist Miercoles"){
 let playlistFlag = localStorage.getItem("playlistFlag");
 if(playlistFlag == 1 && botonAvanzar){
   botonAvanzar.style.display = "block";
+  botonAvanzar.addEventListener("click",(e) =>  {
+    let cancionesDomingos = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    
+    console.log(cancionesDomingos);
+  });
 
 }
 
