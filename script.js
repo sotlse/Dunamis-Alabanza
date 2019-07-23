@@ -526,21 +526,27 @@ if(titulo === "Playlist Miercoles"){
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
-  localStorage.setItem("playlistFlag",1);
+  localStorage.setItem("playlistFlag",2);
 }  
 
 let playlistFlag = localStorage.getItem("playlistFlag");
-if(playlistFlag == 1 && botonAvanzar){
+if(playlistFlag > 1 && botonAvanzar){
   botonAvanzar.style.display = "block";
   botonAvanzar.addEventListener("click",(e) =>  {
-    let cancionesDomingos = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    let cancionesPlaylist;
+    if(playlistFlag == 1){
+      cancionesPlaylist = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    }
+    else if(playlistFlag == 2){
+      cancionesPlaylist = JSON.parse(localStorage.getItem("cancionesMiercoles"));
+    }
     const pagActual = location.href;
-    cancionesDomingos.forEach(function (canto, index){
+    cancionesPlaylist.forEach(function (canto, index){
       if (canto.pagina === pagActual){
         console.log(index);
       }
     });
-    console.log(cancionesDomingos[2].pagina);
+    console.log(cancionesPlaylist[2].pagina);
     console.log(pagActual);
   });
 
