@@ -546,9 +546,7 @@ if(playlistFlag > 0 && botonAvanzar){
       if (canto.pagina === pagActual){
         proxCanto = index+1; 
       }
-      console.log(index, proxCanto);
-      if (proxCanto == index){
-        console.log(canto.pagina);
+      if (proxCanto == index){ 
         window.location.assign(canto.pagina);
       }
         
