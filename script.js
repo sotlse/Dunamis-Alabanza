@@ -512,7 +512,7 @@ if(titulo === "Playlist Domingo"){
   Playlist.funcionBotonOk(lista,canciones);
   Playlist.borrarCanto(lista,mensaje,canciones,playlist);
   Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
-  domingoFlag = 1;
+  localStorage.setItem("playlistFlag",1);
 }  
 
 //Cuando se cargue la pagina Playlist Miercoles, agregar cantos
@@ -531,11 +531,12 @@ if(titulo === "Playlist Miercoles"){
 }  
 
 console.log(domingoFlag);
-if(domingoFlag == 1){
-  let playlistFlag = 1;
+if(domingoFlag === 1){
+  playlistFlag = 1;
+  console.log(playlistFlag);
 }
 
-console.log(playlistFlag)
+console.log(playlistFlag);
 if (botonAvanzar ){
   
 }
