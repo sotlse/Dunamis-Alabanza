@@ -534,8 +534,12 @@ if(playlistFlag == 1 && botonAvanzar){
   botonAvanzar.style.display = "block";
   botonAvanzar.addEventListener("click",(e) =>  {
     let cancionesDomingos = JSON.parse(localStorage.getItem("cancionesDomingo"));
-    const x = location.href;
-    console.log(cancionesDomingos);
+    const pagActual = location.href;
+    cancionesDomingos.forEach(function (canto){
+      if (canto.pagina =)
+    });
+    console.log(cancionesDomingos[2].pagina);
+    console.log(pagActual);
   });
 
 }
