@@ -530,16 +530,12 @@ if(titulo === "Playlist Miercoles"){
 }  
 
 let playlistFlag = localStorage.getItem("playlistFlag");
-console.log(playlistFlag); 
-if(playlistFlag == 1){
-  console.log("Hi");
+if(playlistFlag == 1 && botonAvanzar){
+  botonAvanzar.style.display = "block";
 
 }
 
 
-if (botonAvanzar ){
-  
-}
 
 //botonAgregar function
 function agregarCanto(e){
