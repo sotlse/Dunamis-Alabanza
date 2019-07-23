@@ -534,6 +534,7 @@ if(playlistFlag > 0 && botonAvanzar){
   botonAvanzar.style.display = "block";
   botonAvanzar.addEventListener("click",(e) =>  {
     let cancionesPlaylist;
+    let proxCanto;
     if(playlistFlag == 1){
       cancionesPlaylist = JSON.parse(localStorage.getItem("cancionesDomingo"));
     }
@@ -543,9 +544,13 @@ if(playlistFlag > 0 && botonAvanzar){
     const pagActual = location.href;
     cancionesPlaylist.forEach(function (canto, index){
       if (canto.pagina === pagActual){
-        index++;
-        console.log(canto.pagina);
+        proxCanto = index+1;
+        console.log(index, proxCanto);
       }
+      if (proxCanto > index){
+        console.log(index, proxCanto);
+      }
+        
     });
   });
 
