@@ -547,7 +547,9 @@ if(playlistFlag > 0 && botonAvanzar){
       }
       if (proxCanto == index){ 
         window.location.assign(canto.pagina);
-      }     
+      }  
+      console.log(proxCanto); 
+      console.log(cancionesPlaylist.lenght);
     });
   });
 
