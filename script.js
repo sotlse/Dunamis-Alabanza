@@ -1,7 +1,6 @@
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
-//var botonRegresar = document.querySelector(".RegresarPagina");
 let botonRegresar = document.querySelector(".arrowRegresar");
 let botonAvanzar = document.querySelector(".arrowAvanzar");
 var botonEditar = document.querySelector(".EditarLista");
