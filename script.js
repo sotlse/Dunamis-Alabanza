@@ -203,7 +203,6 @@ class UI {
       });
     UI.agregarAudio(Canto);
     }
-    
   }
 
   static agregarCantosAListaCategoria(canto){
@@ -214,7 +213,8 @@ class UI {
   }
   
   static agregarSubtemasACanto (canto){
-    
+    const bodySubtema = document.createElement("ul");
+    const olLista = document.querySelector("#lista");
   }
 
   static agregarAudio(audiocanto){
