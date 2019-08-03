@@ -69,6 +69,7 @@ class UI {
       tono: "F",
       categoria: ["Adoracion","Servicio"],
       audio:"",
+      subpaginas: ["Letra","Acorde"]
     },
   
     {
