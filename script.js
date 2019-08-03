@@ -69,7 +69,7 @@ class UI {
       tono: "F",
       categoria: ["Adoracion","Servicio"],
       audio:"",
-      subpaginas: ["Letra","Acorde"]
+      subpaginas: ["Letra","Acordes"],
     },
   
     {
@@ -79,6 +79,7 @@ class UI {
       tono: "Bb",
       categoria: ["Adoracion"],
       audio:"https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FJESUS%20ADRIAN%20ROMERO%20AL%20ALTO%20Y%20SUBLIME.mp3?v=1563671665519",
+      subpaginas: ["Letra","Acordes"],
     },
   
     {
@@ -88,6 +89,7 @@ class UI {
       tono: "A#",
       categoria: ["Alabanza"],
       audio:"",
+      subpaginas: ["Letra","Acordes"],
     },
     
     {
@@ -97,6 +99,7 @@ class UI {
       tono: "A",
       categoria: ["Adoracion","Servicio"],
       audio:"",
+      subpaginas: ["Letra","Acordes"],
     },  
     
     {
@@ -106,6 +109,7 @@ class UI {
       tono: "Bb",
       categoria: ["Alabanza"],
       audio:"",
+      subpaginas: ["Letra","Acordes"],
     },
       
     {
@@ -115,6 +119,7 @@ class UI {
       tono:"D",
       categoria:["Alabanza"],
       audio:"https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FSANTO-COALO%20ZAMORANO%20(LETRA).mp3?v=1563233873479",
+      subpaginas: ["Letra","Acordes"],
     }
       
     ];
@@ -208,6 +213,10 @@ class UI {
     olLista.appendChild(crearli);
   }
   
+  static agregarSubtemasACanto (canto){
+    
+  }
+
   static agregarAudio(audiocanto){
     botonAudio.onclick = function (){
       console.log(audiocanto[0].audio);
