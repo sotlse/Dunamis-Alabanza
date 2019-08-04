@@ -210,12 +210,11 @@ class UI {
     const crearli = document.createElement('li');
     crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- Tono:${canto.tono}`;
     olLista.appendChild(crearli);
-    olLista.addEventListener("click",(e) =>  {
+    olLista.addEventListener("click",(e) => {
       let el = e.target;
       console.log(el);
-      console.log(e);
-      if (el.classList.contains("a")){
-
+      if (el.firstElementChild == "a"){
+        console.log(e);
       }
     });
   }
