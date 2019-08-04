@@ -213,10 +213,12 @@ class UI {
     
     olLista.addEventListener("click",(e) => {
       let el = e.target;
-      console.log(el);
+      console.log(e);
+      console.log(el.firstChild.localName);
       if (el.firstElementChild == "a"){
-        const bodySubtema = document.createElement("ul");
-        ul.
+        console.log("hola");
+        const bodySubtema = document.createElement("li");
+        ul.innerHTML = `<a> Hola </a>`;
         olLista.insertBefore(bodySubtema,crearli);
       }
     });
