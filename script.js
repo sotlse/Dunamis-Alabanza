@@ -213,7 +213,8 @@ class UI {
     olLista.addEventListener("click",(e) =>  {
       let el = e.target;
       console.log(el);
-      if (el.classList.contains("boton-delete")){
+      console.log(e);
+      if (el.classList.contains("a")){
 
       }
     });
