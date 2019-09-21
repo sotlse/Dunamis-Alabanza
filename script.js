@@ -63,7 +63,7 @@ class UI {
   static desplegarCantos(){
     const baseCanciones = [
     {
-      pagina: "\Cantos\Info\A_Cada_Instante.html",
+      pagina: "Cantos/Info/A_Cada_Instante.html",
       titulo: "A Cada Instante",
       autor: "Marco Barrientos",
       tono: "F",
@@ -73,7 +73,7 @@ class UI {
     },
   
     {
-      pagina: "Cantos\Info\A_El_Alto_Y_Sublime.html",
+      pagina: "Cantos/Info/A_El_Alto_Y_Sublime.html",
       titulo: "A el Alto y Sublime",
       autor: "Jesus Adrian Romero",
       tono: "Bb",
@@ -83,7 +83,7 @@ class UI {
     },
   
     {
-      pagina:"Abre_Los_Cielos.html",
+      pagina:"Cantos/Info/Abre_Los_Cielos.html",
       titulo: "Abre los Cielos",
       autor: "Jesus Adrian Romero",
       tono: "A#",
@@ -93,7 +93,7 @@ class UI {
     },
     
     {
-      pagina:"Aqui_Estoy.html",
+      pagina:"Cantos/Info/Aqui_Estoy.html",
       titulo: "Aqui Estoy",
       autor: "Jaime Murrel",
       tono: "A",
@@ -103,7 +103,7 @@ class UI {
     },  
     
     {
-      pagina:"Por_Siempre.html",
+      pagina:"Cantos/Info/Por_Siempre.html",
       titulo: "Por Siempre",
       autor: "Vino Nuevo",
       tono: "Bb",
@@ -113,7 +113,7 @@ class UI {
     },
       
     {
-      pagina:"Santo.html",
+      pagina:"Cantos/Info/Santo.html",
       titulo:"Santo",
       autor:"Coalo Zamorano",
       tono:"D",
