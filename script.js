@@ -63,7 +63,7 @@ class UI {
   static desplegarCantos(){
     const baseCanciones = [
     {
-      pagina: "A_Cada_Instante.html",
+      pagina: "\Cantos\Info\A_Cada_Instante.html",
       titulo: "A Cada Instante",
       autor: "Marco Barrientos",
       tono: "F",
@@ -73,7 +73,7 @@ class UI {
     },
   
     {
-      pagina: "A_El_Alto_Y_Sublime.html",
+      pagina: "Cantos\Info\A_El_Alto_Y_Sublime.html",
       titulo: "A el Alto y Sublime",
       autor: "Jesus Adrian Romero",
       tono: "Bb",
