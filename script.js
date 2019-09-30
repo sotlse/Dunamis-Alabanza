@@ -103,6 +103,16 @@ class UI {
     },  
     
     {
+      pagina:"Cantos/Info/Dios_De_Pactos.html",
+      titulo: "Dios de Pactos",
+      autor: "Marcos Witt",
+      tono: "A",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },  
+    
+    {
       pagina:"Cantos/Info/Por_Siempre.html",
       titulo: "Por Siempre",
       autor: "Vino Nuevo",
