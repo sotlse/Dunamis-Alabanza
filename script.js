@@ -130,6 +130,16 @@ class UI {
       categoria:["Alabanza"],
       audio:"https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FSANTO-COALO%20ZAMORANO%20(LETRA).mp3?v=1563233873479",
       subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina:"Cantos/Info/Tu_Eres_Dios_MV.html",
+      titulo:"Tu Eres Dios",
+      autor:"Marcos Vidal",
+      tono:"E",
+      categoria:["Alabanza","Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
     }
       
     ];
