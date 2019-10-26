@@ -75,8 +75,8 @@ class UI {
     {
       pagina: "Cantos/Info/A_El_Alto_Y_Sublime.html",
       titulo: "A el Alto y Sublime",
-      autor: "Jesus Adrian Romero",
-      tono: "Bb",
+      autor: "Roberto Torres",
+      tono: "A",
       categoria: ["Adoracion"],
       audio:"https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FJESUS%20ADRIAN%20ROMERO%20AL%20ALTO%20Y%20SUBLIME.mp3?v=1563671665519",
       subpaginas: ["Letra","Acordes"],
@@ -122,6 +122,16 @@ class UI {
       subpaginas: ["Letra","Acordes"],
     },  
     
+    {
+      pagina:"Cantos/Info/Gracias_Dios.html",
+      titulo: "Gracias Dios",
+      autor: "Don Moen",
+      tono: "F",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
     {
       pagina:"Cantos/Info/Por_Siempre.html",
       titulo: "Por Siempre",
