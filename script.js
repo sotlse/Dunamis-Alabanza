@@ -103,6 +103,16 @@ class UI {
     },  
 
     {
+      pagina:"Cantos/Info/Cordero_Santo.html",
+      titulo: "Cordero Santo",
+      autor: "Roberto Torres",
+      tono: "F",
+      categoria: ["Adoracion","Servicio"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
       pagina:"Cantos/Info/Eres_Fiel.html",
       titulo: "Eres Fiel",
       autor: "Coalo Zamorano",
