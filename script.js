@@ -107,7 +107,7 @@ class UI {
       titulo: "Cordero Santo",
       autor: "Roberto Torres",
       tono: "F",
-      categoria: ["Adoracion","Servicio"],
+      categoria: ["Adoracion"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
     }, 
