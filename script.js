@@ -113,16 +113,6 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Eres_Fiel.html",
-      titulo: "Eres Fiel",
-      autor: "Coalo Zamorano",
-      tono: "C",
-      categoria: ["Alabanza"],
-      audio:"",
-      subpaginas: ["Letra","Acordes"],
-    },
-    
-    {
       pagina:"Cantos/Info/Dios_De_Pactos.html",
       titulo: "Dios de Pactos",
       autor: "Marcos Witt",
@@ -130,7 +120,17 @@ class UI {
       categoria: ["Adoracion"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
-    },  
+    }, 
+
+    {
+      pagina:"Cantos/Info/Eres_Fiel.html",
+      titulo: "Eres Fiel",
+      autor: "Coalo Zamorano",
+      tono: "C",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },   
     
     {
       pagina:"Cantos/Info/Gracias_Dios.html",
