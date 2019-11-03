@@ -113,6 +113,16 @@ class UI {
     }, 
 
     {
+      pagina:"Cantos/Info/Digno_Es_El_Senor.html",
+      titulo: "Digno es el Senor",
+      autor: "Marcela Gandara",
+      tono: "D",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
       pagina:"Cantos/Info/Dios_De_Pactos.html",
       titulo: "Dios de Pactos",
       autor: "Marcos Witt",
