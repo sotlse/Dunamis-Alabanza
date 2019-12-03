@@ -123,6 +123,16 @@ class UI {
     }, 
 
     {
+      pagina:"Cantos/Info/Dios_Esta_Aqui.html",
+      titulo: "Dios esta aqui",
+      autor: "Darlene Zschech",
+      tono: "D",
+      categoria: ["Navidad","Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
       pagina:"Cantos/Info/Dios_De_Pactos.html",
       titulo: "Dios de Pactos",
       autor: "Marcos Witt",
