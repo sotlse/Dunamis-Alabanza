@@ -352,6 +352,33 @@ a {
   font-family:Arial, "Benton Sans", "Helvetica Neue", helvetica;
 }
 
+.tituloVerso{
+  background-color:blue;
+  color:white;
+  margin:0px 0px -10px 0px;
+  padding:2px;
+  font-weight:bold;
+  font-family:Arial, "Benton Sans", "Helvetica Neue", helvetica;
+}
+
+.tituloCoro{
+  background-color:rgb(226, 43, 43);
+  color:white;
+  margin:0px 0px -10px 0px;
+  padding:2px;
+  font-weight:bold;
+  font-family:Arial, "Benton Sans", "Helvetica Neue", helvetica;
+}
+
+.tituloPuente{
+  background-color: rgb(130, 24, 230);
+  color:white;
+  margin:0px 0px -10px 0px;
+  padding:2px;
+  font-weight:bold;
+  font-family:Arial, "Benton Sans", "Helvetica Neue", helvetica;
+}
+
 .divAudio{
   text-align:center;
 }
