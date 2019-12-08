@@ -193,6 +193,16 @@ class UI {
     },
 
     {
+      pagina:"Cantos/Info/Sobrenatural.html",
+      titulo: "Sobrenatural",
+      autor: "Marcos Witt",
+      tono: "A",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
       pagina:"Cantos/Info/Tu_Eres_Dios_MV.html",
       titulo:"Tu Eres Dios",
       autor:"Marcos Vidal",
