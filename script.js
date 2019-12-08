@@ -81,6 +81,16 @@ class UI {
       audio:"https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FJESUS%20ADRIAN%20ROMERO%20AL%20ALTO%20Y%20SUBLIME.mp3?v=1563671665519",
       subpaginas: ["Letra","Acordes"],
     },
+
+    {
+      pagina:"Cantos/Info/Al_Mundo_Paz_IBI.html",
+      titulo: "Al mundo paz - Hay libertad",
+      autor: "IBI",
+      tono: "D",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
   
     {
       pagina:"Cantos/Info/Abre_Los_Cielos.html",
