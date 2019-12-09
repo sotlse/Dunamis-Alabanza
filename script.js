@@ -87,7 +87,7 @@ class UI {
       titulo: "Al mundo paz - Hay libertad",
       autor: "IBI",
       tono: "D",
-      categoria: ["Alabanza"],
+      categoria: ["Navidad"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
     },
@@ -181,6 +181,16 @@ class UI {
       audio:"",
       subpaginas: ["Letra","Acordes"],
     }, 
+
+    {
+      pagina:"Cantos/Info/Navidad_Ya_Va_Llegando.html",
+      titulo: "Navidad ya va llegando",
+      autor: "Epic kids",
+      tono: "D",
+      categoria: ["Navidad"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
 
     {
       pagina:"Cantos/Info/Por_Siempre.html",
