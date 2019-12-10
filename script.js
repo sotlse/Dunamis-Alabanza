@@ -203,10 +203,10 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Oh_Ven_html",
+      pagina:"Cantos/Info/Oh_Ven_Bendito_Emanuel.html",
       titulo: "Oh ven bendito Emanuel",
-      autor: "Epic kids",
-      tono: "D",
+      autor: "Marcos Witt",
+      tono: "Bb",
       categoria: ["Navidad"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
