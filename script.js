@@ -101,6 +101,16 @@ class UI {
       audio:"",
       subpaginas: ["Letra","Acordes"],
     },
+
+    {
+      pagina:"Cantos/Info/Alabanzas_Al_Rey.html",
+      titulo: "Alabanzas al Rey",
+      autor: "Marcela Gandara",
+      tono: "Cm",
+      categoria: ["Navidad"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
     
     {
       pagina:"Cantos/Info/Aqui_Estoy.html",
