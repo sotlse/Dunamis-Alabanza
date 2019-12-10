@@ -203,6 +203,16 @@ class UI {
     },
 
     {
+      pagina:"Cantos/Info/Oh_Ven_html",
+      titulo: "Oh ven bendito Emanuel",
+      autor: "Epic kids",
+      tono: "D",
+      categoria: ["Navidad"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
       pagina:"Cantos/Info/Por_Siempre.html",
       titulo: "Por Siempre",
       autor: "Vino Nuevo",
