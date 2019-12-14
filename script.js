@@ -213,6 +213,16 @@ class UI {
     },
 
     {
+      pagina:"Cantos/Info/Noche_De_Paz.html",
+      titulo: "Oh ven bendito Emanuel",
+      autor: "Marcos Witt",
+      tono: "Bb",
+      categoria: ["Navidad"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
       pagina:"Cantos/Info/Por_Siempre.html",
       titulo: "Por Siempre",
       autor: "Vino Nuevo",
