@@ -206,7 +206,7 @@ class UI {
       pagina:"Cantos/Info/Oh_Ven_Bendito_Emanuel.html",
       titulo: "Oh ven bendito Emanuel",
       autor: "Marcos Witt",
-      tono: "Bb",
+      tono: "Bm",
       categoria: ["Navidad"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
@@ -214,8 +214,8 @@ class UI {
 
     {
       pagina:"Cantos/Info/Noche_De_Paz.html",
-      titulo: "Oh ven bendito Emanuel",
-      autor: "Marcos Witt",
+      titulo: "Noche de paz",
+      autor: "Himno 58",
       tono: "Bb",
       categoria: ["Navidad"],
       audio:"",
