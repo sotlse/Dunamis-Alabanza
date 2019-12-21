@@ -8,7 +8,9 @@ console.log(current_mode.type)
 console.log(current_mode.angle)
 
 fullScreen();
-screen.orientation.lock("landscape-primary");
+botonRotar.addEventListener('click', function() {
+  screen.orientation.lock("landscape-primary");
+});
 
 function fullScreen() {
   // Kind of painful, but this is how it works for now
