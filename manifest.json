@@ -5,7 +5,6 @@
   "display": "standalone",
   "background_color": "#FFE9D2",
   "theme_color": "#FFE1C4",
-  "orientation": "portrait-primary",
   "icons":[
     {
       "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
