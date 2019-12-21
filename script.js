@@ -21,7 +21,8 @@ let seleccionado;
 //Botones para configuracion de cantos
 let botonAudio = document.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
-let botonTexto = document.querySelector(".botonTexto");
+let botonTextoChico = document.querySelector(".botonTextoChico");
+let botonTextoGrande = document.querySelector(".botonTextoGrande");
 
 
 
@@ -52,7 +53,7 @@ if (letraBody){
 }
 
 //Cambiar texto
-
+botonTextoChico
 
 
 //Constructor de canto guardado
