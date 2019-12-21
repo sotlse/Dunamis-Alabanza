@@ -25,6 +25,7 @@ let botonTexto = document.querySelector(".botonTexto");
 
 
 
+
 //desplegar letra de acordes en tamano mas grande si es tablet
 var winW = window.innerWidth;
 var winH = window.innerHeight;
@@ -49,6 +50,9 @@ if (letraBody){
     letraBody.style.fontSize = "150%";
   }
 }
+
+//Cambiar texto
+
 
 
 //Constructor de canto guardado

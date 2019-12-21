@@ -1,4 +1,5 @@
 var current_mode = screen.orientation;
+let botonRotar = document.querySelector(".botonRotar");
 
 // type
 console.log(current_mode.type)

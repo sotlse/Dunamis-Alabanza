@@ -267,11 +267,20 @@ a {
   display:none;
 }
 
+/*Botones para configuracion de canto */
 .botonTransportar{
   padding:5px;
 }
 
 .botonAudio{
+  padding:5px;
+}
+
+.botonTexto{
+  padding:5px;
+}
+
+.botonRotar{
   padding:5px;
 }
 
