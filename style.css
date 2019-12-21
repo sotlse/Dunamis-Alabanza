@@ -276,7 +276,11 @@ a {
   padding:5px;
 }
 
-.botonTexto{
+.botonTextoChico{
+  padding:5px;
+}
+
+.botonTextoGrande{
   padding:5px;
 }
 
