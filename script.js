@@ -9,8 +9,6 @@ const lista = document.querySelector(".playlistCantos");
 let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
 let titulo = document.querySelector('title').textContent;
-let botonAudio = document.querySelector(".botonAudio");
-let botonTransportar = document.querySelector(".botonTransportar");
 let contenidoCanto = document.querySelector(".contenido");
 let tituloCanto = document.querySelector(".tituloDelCanto");
 let slur = document.querySelector(".slur");
@@ -20,6 +18,10 @@ let link;
 let tipo;
 let totalCantos=300;
 let seleccionado;
+//Botones para configuracion de cantos
+let botonAudio = document.querySelector(".botonAudio");
+let botonTransportar = document.querySelector(".botonTransportar");
+let botonTexto = document.querySelector(".botonTexto");
 
 
 
