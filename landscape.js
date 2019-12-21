@@ -1,4 +1,4 @@
-fullScreen();
+/*fullScreen();
 ScreenOrientation.lock('landscape-primary');
 
 function fullScreen() {
@@ -12,4 +12,22 @@ function fullScreen() {
   } else if (document.documentElement.msRequestFullscreen) {
     document.documentElement.msRequestFullscreen();
   }
-}
+}*/
+
+var current_mode = screen.orientation;
+
+// type
+console.log(current_mode.type)
+
+// angle
+console.log(current_mode.angle)
+
+
+
+screen.orientation.lock("landscape-primary")
+.then(function() {
+  alert('Locked');
+})
+.catch(function(error) {
+  alert(error);
+});
