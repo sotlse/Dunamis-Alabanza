@@ -25,6 +25,5 @@ function fullScreen() {
   } else if (document.documentElement.msRequestFullscreen) {
     document.documentElement.msRequestFullscreen();
   }
-  alert(screen.orientation.type);
 }
 
