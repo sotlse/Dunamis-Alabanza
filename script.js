@@ -52,8 +52,11 @@ if (letraBody){
   }
 }
 
+/*
 //Cambiar texto
-botonTextoChico
+botonTextoChico.addEventListener("click", function() {
+  alert("Hola");
+});*/
 
 
 //Constructor de canto guardado
