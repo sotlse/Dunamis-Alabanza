@@ -1,5 +1,5 @@
 fullScreen();
-screen.orientation.lock('landscape-primary');
+ScreenOrientation.lock('landscape-primary');
 
 function fullScreen() {
   // Kind of painful, but this is how it works for now
