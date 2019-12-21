@@ -1,6 +1,7 @@
 var current_mode = screen.orientation;
 let botonRotar = document.querySelector(".botonRotar");
 
+
 // type
 console.log(current_mode.type)
 
@@ -8,6 +9,7 @@ console.log(current_mode.type)
 console.log(current_mode.angle)
 
 fullScreen();
+//alert(screen.orientation.type);
 botonRotar.addEventListener('click', function() {
   screen.orientation.lock("landscape-primary");
 });
@@ -23,5 +25,6 @@ function fullScreen() {
   } else if (document.documentElement.msRequestFullscreen) {
     document.documentElement.msRequestFullscreen();
   }
+  alert(screen.orientation.type);
 }
 
