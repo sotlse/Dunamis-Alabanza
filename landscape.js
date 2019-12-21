@@ -22,7 +22,8 @@ console.log(current_mode.type)
 // angle
 console.log(current_mode.angle)
 
-
+if(document.documentElement.requestFullscreen)
+		console.log("Hola");
 
 screen.orientation.lock("landscape-primary")
 .then(function() {
