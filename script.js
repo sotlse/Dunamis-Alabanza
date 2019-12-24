@@ -27,6 +27,7 @@ let botonTextoGrande = document.querySelector(".botonTextoGrande");
 //Rotacion de pantalla
 var current_mode = screen.orientation;
 let botonRotar = document.querySelector(".botonRotar");
+let banderaRotar;
 
 
 /*Rotacion de pantalla*/
@@ -38,6 +39,9 @@ console.log(current_mode.angle);
 fullScreen();
 if(botonRotar){
   botonRotar.addEventListener('click', function() {
+    if (banderaRotar){
+      
+    }
     screen.orientation.lock("landscape-primary");
   });
 }
@@ -313,14 +317,12 @@ class UI {
     }
       
     ];
-    //const cantos = baseCanciones;
     if(titulo === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
       localStorage.setItem("playlistFlag",0);
     }
     
-    else i  t;
-ion"){
+    else if(titulo === "Dunamis Adoracion | Adoracion"){
       CategoriaCantos("Adoracion");
     }
     
@@ -328,9 +330,11 @@ ion"){
       CategoriaCantos("Alabanza");
     }
     
-    else if(titulo === "Dunamis Adorelse if(titulo === "Dunamis Adoracion | Adoracion"){
-      CategoriaCantos("Adoracion");
-    }namis Adoracion | Evangelismo"){
+    else if(titulo === "Dunamis Adoracion | Confesion"){
+      CategoriaCantos("Confesion");
+    }
+    
+    else if(titulo === "Dunamis Adoracion | Evangelismo"){
       CategoriaCantos("Evangelismo");
     }
     
