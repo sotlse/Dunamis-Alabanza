@@ -1,3 +1,4 @@
+/*Variables*/
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
@@ -23,9 +24,51 @@ let botonAudio = document.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
 let botonTextoChico = document.querySelector(".botonTextoChico");
 let botonTextoGrande = document.querySelector(".botonTextoGrande");
+//Rotacion de pantalla
+var current_mode = screen.orientation;
+let botonRotar = document.querySelector(".botonRotar");
 
 
+/*Rotacion de pantalla*/
+// type
+console.log(current_mode.type)
+// angle
+console.log(current_mode.angle)
 
+fullScreen();
+//alert(screen.orientation.type);
+botonRotar.addEventListener('click', function() {
+  screen.orientation.lock("landscape-primary");
+});
+
+function fullScreen() {
+  // Kind of painful, but this is how it works for now
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) {
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) {
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) {
+    document.documentElement.msRequestFullscreen();
+  }
+}
+
+
+/*Cambiar tamano de texto*/
+//Cambiar texto mas chico
+if(botonTextoChico){
+  botonTextoChico.addEventListener("click",(e) => {
+    alert("Haciendo el texto mas pequeno");
+  });
+}
+
+//Cambiar texto mas grande
+if(botonTextoGrande){
+  botonTextoGrande.addEventListener("click",(e) => {
+    alert("Haciendo el texto mas grande");
+  });
+}
 
 //desplegar letra de acordes en tamano mas grande si es tablet
 var winW = window.innerWidth;
@@ -51,12 +94,6 @@ if (letraBody){
     letraBody.style.fontSize = "150%";
   }
 }
-
-/*
-//Cambiar texto
-botonTextoChico.addEventListener("click", function() {
-  alert("Hola");
-});*/
 
 
 //Constructor de canto guardado
@@ -279,7 +316,8 @@ class UI {
       localStorage.setItem("playlistFlag",0);
     }
     
-    else if(titulo === "Dunamis Adoracion | Adoracion"){
+    else if(ti
+    ion"){
       CategoriaCantos("Adoracion");
     }
     
