@@ -39,9 +39,8 @@ console.log(current_mode.angle);
 fullScreen();
 if(botonRotar){
   botonRotar.addEventListener('click', function() {
-    if (banderaRotar){
-      
-    }
+    banderaRotar++;
+    console.log(banderaRotar);
     screen.orientation.lock("landscape-primary");
   });
 }
