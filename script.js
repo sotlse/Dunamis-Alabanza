@@ -31,15 +31,16 @@ let botonRotar = document.querySelector(".botonRotar");
 
 /*Rotacion de pantalla*/
 // type
-console.log(current_mode.type)
+console.log(current_mode.type);
 // angle
-console.log(current_mode.angle)
+console.log(current_mode.angle);
 
 fullScreen();
-//alert(screen.orientation.type);
-botonRotar.addEventListener('click', function() {
-  screen.orientation.lock("landscape-primary");
-});
+if(botonRotar){
+  botonRotar.addEventListener('click', function() {
+    screen.orientation.lock("landscape-primary");
+  });
+}
 
 function fullScreen() {
   // Kind of painful, but this is how it works for now
@@ -53,7 +54,6 @@ function fullScreen() {
     document.documentElement.msRequestFullscreen();
   }
 }
-
 
 /*Cambiar tamano de texto*/
 //Cambiar texto mas chico
@@ -94,6 +94,9 @@ if (letraBody){
     letraBody.style.fontSize = "150%";
   }
 }
+
+
+
 
 
 //Constructor de canto guardado
@@ -316,8 +319,8 @@ class UI {
       localStorage.setItem("playlistFlag",0);
     }
     
-    else if(ti
-    ion"){
+    else i  t;
+ion"){
       CategoriaCantos("Adoracion");
     }
     
@@ -325,11 +328,9 @@ class UI {
       CategoriaCantos("Alabanza");
     }
     
-    else if(titulo === "Dunamis Adoracion | Confesion"){
-      CategoriaCantos("Confesion");
-    }
-    
-    else if(titulo === "Dunamis Adoracion | Evangelismo"){
+    else if(titulo === "Dunamis Adorelse if(titulo === "Dunamis Adoracion | Adoracion"){
+      CategoriaCantos("Adoracion");
+    }namis Adoracion | Evangelismo"){
       CategoriaCantos("Evangelismo");
     }
     
