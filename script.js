@@ -28,7 +28,7 @@ let botonTextoGrande = document.querySelector(".botonTextoGrande");
 var current_mode = screen.orientation;
 let botonRotar = document.querySelector(".botonRotar");
 let banderaRotar;
-
+//let rotacion;
 
 /*Rotacion de pantalla*/
 // type
@@ -39,8 +39,9 @@ console.log(current_mode.angle);
 fullScreen();
 if(botonRotar){
   botonRotar.addEventListener('click', function() {
-    banderaRotar++;
+    banderaRotar=1;
     console.log(banderaRotar);
+    localStorage.setItem("rotacion","1");
     screen.orientation.lock("landscape-primary");
   });
 }
