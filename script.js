@@ -34,6 +34,7 @@ let tamano;
 /*Rotacion de pantalla*//*
 // type
 console.log(current_mode.type);
+cantoBody.style.columnCount=
 // angle
 console.log(current_mode.angle);
 
