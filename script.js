@@ -85,7 +85,7 @@ if(botonTextoGrande){
     console.log (tamano);
     if (tamano === undefined)
     {
-      tamano = 88;
+      tamano = 89;
     }
     console.log (tamano);
     //tamano = 150;
