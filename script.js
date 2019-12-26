@@ -70,9 +70,11 @@ if(botonTextoChico){
 //Cambiar texto mas grande
 if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
+    //let bodyPlaylist = document.querySelector(".playlistCantos");
+    //bodyPlaylist.style.fontSize = "150%";
+    cantoBody.style.fontSize = "150%";
+    //letraBody.style.fontSize = "150%";
     alert("Haciendo el texto mas grande");
-    let bodyPlaylist = document.querySelector(".playlistCantos")
-    bodyPlaylist.style.fontSize = "150%";
   });
 }
 /*
