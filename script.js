@@ -71,9 +71,11 @@ if(botonTextoChico){
 if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
     alert("Haciendo el texto mas grande");
+    let bodyPlaylist = document.querySelector(".playlistCantos")
+    bodyPlaylist.style.fontSize = "150%";
   });
 }
-
+/*
 //desplegar letra de acordes en tamano mas grande si es tablet
 var winW = window.innerWidth;
 var winH = window.innerHeight;
@@ -98,7 +100,7 @@ if (letraBody){
     letraBody.style.fontSize = "150%";
   }
 }
-
+*/
 
 
 
