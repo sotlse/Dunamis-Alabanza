@@ -72,6 +72,8 @@ function fullScreen() {
 }*/
 
 /*Cambiar tamano de texto*/
+
+
 //Cambiar texto mas chico
 if(botonTextoChico){
   botonTextoChico.addEventListener("click",(e) => {
