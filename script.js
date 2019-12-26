@@ -82,9 +82,15 @@ if(botonTextoChico){
 //Cambiar texto mas grande
 if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
-    tamano = 150;
+    console.log (tamano);
+    if (tamano === NaN)
+    {
+      tamano = 50;
+    }
+    console.log (tamano);
+    //tamano = 150;
     cantoBody.style.fontSize = tamano + "%" ;
-    //localStorage.setItem("letra",JSON.stringify(letra));
+    //localStorage.setItem("letra",JSON.stringify(tamano));
     //letraBody.style.fontSize = "150%";
     alert("Haciendo el texto mas grande");
   });
