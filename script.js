@@ -72,6 +72,7 @@ if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
     //let bodyPlaylist = document.querySelector(".playlistCantos");
     //bodyPlaylist.style.fontSize = "150%";
+    let size 
     cantoBody.style.fontSize = "150%";
     //letraBody.style.fontSize = "150%";
     alert("Haciendo el texto mas grande");
