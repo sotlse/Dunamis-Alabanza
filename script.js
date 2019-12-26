@@ -83,6 +83,7 @@ if(botonTextoChico){
 if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
     console.log (tamano);
+    console.log(window.getComputedStyle(cantoBody).fontSize);
     if (tamano === undefined)
     {
       tamano = 89;
