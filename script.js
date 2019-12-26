@@ -72,13 +72,11 @@ function fullScreen() {
 }*/
 
 /*Cambiar tamano de texto*/
-console.log (tamano);
-console.log(window.getComputedStyle(cantoBody).fontSize);
+//console.log(window.getComputedStyle(cantoBody).fontSize);
 if (tamano === undefined)
 {
   tamano = 89;
 }
-console.log (tamano);
 
 //Cambiar texto mas chico
 if(botonTextoChico){
@@ -93,7 +91,7 @@ if(botonTextoGrande){
     tamano = tamano + 10;
     console.log (tamano);
     cantoBody.style.fontSize = tamano + "%" ;
-    //localStorage.setItem("letra",JSON.stringify(tamano));
+    localStorage.setItem("letra",JSON.stringify(tamano));
     //letraBody.style.fontSize = "150%";
     alert("Haciendo el texto mas grande");
   });
