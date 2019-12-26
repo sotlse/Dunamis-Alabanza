@@ -35,7 +35,7 @@ let tamano;
 if (cantoBody)
 {
   if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary")
-  cantoBody.style.columnCount="1";
+  cantoBody.style.columnCount= "1";
   
   else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary")
   cantoBody.style.columnCount="2";
