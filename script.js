@@ -30,7 +30,7 @@ let botonRotar = document.querySelector(".botonRotar");
 let banderaRotar;
 //let rotacion;
 
-/*Rotacion de pantalla*/
+/*Rotacion de pantalla*//*
 // type
 console.log(current_mode.type);
 // angle
@@ -57,7 +57,7 @@ function fullScreen() {
   } else if (document.documentElement.msRequestFullscreen) {
     document.documentElement.msRequestFullscreen();
   }
-}
+}*/
 
 /*Cambiar tamano de texto*/
 //Cambiar texto mas chico
