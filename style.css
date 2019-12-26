@@ -346,7 +346,7 @@ a {
   column-count:2;
   column-gap:20px;
   column-rule-style: solid;
-  word-spacing: -2px;
+  /*word-spacing: -2px;*/
 }
 
 .canto_body a{
