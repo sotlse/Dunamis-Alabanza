@@ -84,7 +84,7 @@ if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
     tamano = 150;
     cantoBody.style.fontSize = tamano + "%" ;
-    //localStorage.setItem("letra","1");
+    //localStorage.setItem("letra",JSON.stringify(letra));
     //letraBody.style.fontSize = "150%";
     alert("Haciendo el texto mas grande");
   });
