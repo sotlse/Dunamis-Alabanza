@@ -74,13 +74,13 @@ function fullScreen() {
 /*Cambiar tamano de texto*/
 
 //console.log(window.getComputedStyle(cantoBody).fontSize);
+localStorage.removeItem("letraTamano");
+tamano = JSON.parse(localStorage.getItem("letraTamano"));
 if (tamano === undefined)
 {
   tamano = 89;
   localStorage.setItem("letraTamano",JSON.stringify(tamano));
 }
-
-tamano = JSON.parse(localStorage.getItem("letraTamano"));
 
 //Cambiar texto mas chico
 if(botonTextoChico){
