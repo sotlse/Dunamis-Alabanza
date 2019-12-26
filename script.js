@@ -83,9 +83,9 @@ if(botonTextoChico){
 if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
     console.log (tamano);
-    if (tamano === NaN)
+    if (tamano === undefined)
     {
-      tamano = 50;
+      tamano = 88;
     }
     console.log (tamano);
     //tamano = 150;
