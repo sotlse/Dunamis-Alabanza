@@ -28,7 +28,8 @@ let botonTextoGrande = document.querySelector(".botonTextoGrande");
 var current_mode = screen.orientation;
 let botonRotar = document.querySelector(".botonRotar");
 let banderaRotar;
-//let rotacion;
+//Tamano de letra
+let tamano;
 
 /*Rotacion de pantalla*//*
 // type
@@ -70,10 +71,9 @@ if(botonTextoChico){
 //Cambiar texto mas grande
 if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
-    //let bodyPlaylist = document.querySelector(".playlistCantos");
-    //bodyPlaylist.style.fontSize = "150%";
-    let size 
-    cantoBody.style.fontSize = "150%";
+    tamano = 150;
+    cantoBody.style.fontSize = tamano + "%" ;
+    //localStorage.setItem("letra","1");
     //letraBody.style.fontSize = "150%";
     alert("Haciendo el texto mas grande");
   });
