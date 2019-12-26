@@ -31,6 +31,7 @@ let banderaRotar;
 //Tamano de letra
 let tamano;
 
+//Rotacion de pantalla
 if (cantoBody)
 {
   if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary")
@@ -39,7 +40,6 @@ if (cantoBody)
   else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary")
   cantoBody.style.columnCount="2";
 }
-
 
 /*Rotacion de pantalla*//*
 // type
