@@ -31,10 +31,20 @@ let banderaRotar;
 //Tamano de letra
 let tamano;
 
+if (cantoBody)
+{
+  if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary")
+  cantoBody.style.columnCount="1";
+  
+  else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary")
+  cantoBody.style.columnCount="2";
+}
+
+
 /*Rotacion de pantalla*//*
 // type
 console.log(current_mode.type);
-cantoBody.style.columnCount=
+
 // angle
 console.log(current_mode.angle);
 
