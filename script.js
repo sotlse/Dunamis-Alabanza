@@ -72,7 +72,13 @@ function fullScreen() {
 }*/
 
 /*Cambiar tamano de texto*/
-
+console.log (tamano);
+console.log(window.getComputedStyle(cantoBody).fontSize);
+if (tamano === undefined)
+{
+  tamano = 89;
+}
+console.log (tamano);
 
 //Cambiar texto mas chico
 if(botonTextoChico){
@@ -84,14 +90,8 @@ if(botonTextoChico){
 //Cambiar texto mas grande
 if(botonTextoGrande){
   botonTextoGrande.addEventListener("click",(e) => {
+    tamano = tamano + 10;
     console.log (tamano);
-    console.log(window.getComputedStyle(cantoBody).fontSize);
-    if (tamano === undefined)
-    {
-      tamano = 89;
-    }
-    console.log (tamano);
-    //tamano = 150;
     cantoBody.style.fontSize = tamano + "%" ;
     //localStorage.setItem("letra",JSON.stringify(tamano));
     //letraBody.style.fontSize = "150%";
