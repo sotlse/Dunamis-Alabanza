@@ -66,7 +66,7 @@ a {
   position:relative;
   background-color:rgba(158, 216, 254,.3);
   padding: 0em 0;
-  margin:-20px -25px 0px -25px;
+  margin:-20px -25px -3px -25px;
 }
 .encabezado-lista h2{
   color:blue;
@@ -319,8 +319,8 @@ a {
   /*position:relative;*/
   font-size:13px;
   font-weight:bold;
-  margin:1px -25px 10px -25px;
-  padding:5px;
+  margin:-4px -25px 10px -25px;
+  padding:3px;
   background-color:rgba(239, 238, 238,.5);
   /*overflow:hidden;*/
   column-count: 3;
@@ -363,22 +363,23 @@ a {
 }
 
 .canto_body{
-  margin:1px -23px;
+  margin:-8px -23px;
   font-size:89%;
   /*font-size:11.5px;*/
   column-count:2;
   column-gap:20px;
   column-rule-style: solid;
   /*word-spacing: -2px;*/
+  /*background-color:red;*/
 }
 
 .canto_body a{
   font-weight:bold;
 }
 
-.canto_body div div pre{
-  margin:5px 0 -2px 0;
-  background-color:lightblue;
+.canto_body pre{
+  margin:0px;
+  /*background-color:lightblue;*/
 }
 
 .tituloCanto{
