@@ -1,4 +1,4 @@
-/*Variables*/
+/*--VARIABLES--*/
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
@@ -32,7 +32,7 @@ var current_mode = screen.orientation;
 //Tamano de letra
 let tamano;
 
-//Rotacion de pantalla
+/*-----------------------ROTACION DE PANTALLA-----------------------*/
 if (cantoBody)
 {
   if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary")
@@ -40,52 +40,28 @@ if (cantoBody)
   
   else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary")
   cantoBody.style.columnCount="2";
+
+  window.onorientationchange = function() { 
+    if(screen.orientation.type === "portrait-primary"){
+      cantoBody.style.columnCount= "1";
+    }
+    else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary"){
+      cantoBody.style.columnCount= "2";
+    }
+  };
 }
 
-window.onorientationchange = function() { 
-  //alert("the orientation of the device is now " + screen.orientation.type);
-  if(screen.orientation.type === "portrait-primary"){
-    cantoBody.style.columnCount= "1";
-  }
-  else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary"){
-    cantoBody.style.columnCount= "2";
-  }
-};
-
-/*Rotacion de pantalla*//*
+/*
 // type
 console.log(current_mode.type);
 
 // angle
 console.log(current_mode.angle);
+*/
 
-fullScreen();
-if(botonRotar){
-  botonRotar.addEventListener('click', function() {
-    banderaRotar=1;
-    console.log(banderaRotar);
-    localStorage.setItem("rotacion","1");
-    screen.orientation.lock("landscape-primary");
-  });
-}
-
-function fullScreen() {
-  // Kind of painful, but this is how it works for now
-  if (document.documentElement.requestFullscreen) {
-    document.documentElement.requestFullscreen();
-  } else if (document.documentElement.mozRequestFullScreen) {
-    document.documentElement.mozRequestFullScreen();
-  } else if (document.documentElement.webkitRequestFullscreen) {
-    document.documentElement.webkitRequestFullscreen();
-  } else if (document.documentElement.msRequestFullscreen) {
-    document.documentElement.msRequestFullscreen();
-  }
-}*/
-
-/*Cambiar tamano de texto*/
+/*-----------------------CAMBIAR TAMANO DE TEXTO-----------------------*/
 
 //console.log(window.getComputedStyle(cantoBody).fontSize);
-//localStorage.removeItem("letraTamano");
 tamano = JSON.parse(localStorage.getItem("letraTamano"));
 
 if (tamano === null)
@@ -102,7 +78,6 @@ if(botonTextoChico){
     console.log (tamano);
     cantoBody.style.fontSize = tamano + "%" ;
     localStorage.setItem("letraTamano",JSON.stringify(tamano));
-    //alert("Haciendo el texto mas pequeno");
   });
 }
 
@@ -114,8 +89,6 @@ if(botonTextoGrande){
     console.log (tamano);
     cantoBody.style.fontSize = tamano + "%" ;
     localStorage.setItem("letraTamano",JSON.stringify(tamano));
-    //letraBody.style.fontSize = "150%";
-    //alert("Haciendo el texto mas grande");
   });
 }
 if (cantoBody)
@@ -150,14 +123,14 @@ if (letraBody){
 }
 */
 
-//Boton Home
+/*-----------------------BOTON HOME-----------------------*/
 if(botonCasa){
   botonCasa.addEventListener("click",(e) => {
     window.location.assign("https://dunamis-alabanza.glitch.me/");
   });
 }
 
-
+/*-----------------------BASE DE DATOS-----------------------*/
 //Constructor de canto guardado
 class cantoGuardado {
   constructor(link,tipo,titulo){
@@ -509,7 +482,7 @@ if(opcionesItems){
 opcionesItems.addEventListener("click", agregarCanto);
 }
   
-//Filter event
+/*-----------------------BUSQUEDA FILTRO-----------------------*/
 if (busquedaItem){
 busquedaItem.addEventListener("keyup",filterItems);
 }
@@ -528,7 +501,7 @@ function filterItems(e){
   }
 }
 
-//Boton regresar event
+/*-----------------------BOTON REGRESAR PAGINA-----------------------*/
 if(botonRegresar){
   botonRegresar.addEventListener("click",(e) =>  {
     window.history.back();
@@ -540,13 +513,13 @@ if(botonRegresar2){
   });
 }
 
-//Boton Audio event
+/*-----------------------BOTON AUDIO DE CANTO-----------------------*/
 if(botonAudio){
   document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
 }
 
 
-//Playlist
+/*-----------------------MANIPULACION DE PLAYLISTS-----------------------*/
 class Playlist{
   static agregarCantos(canciones,lista){
     if (canciones != null){
@@ -630,7 +603,6 @@ class Playlist{
       divOk.style.display = "block";
       
       //Seleccionar canto a editar
-      
       let items = document.querySelectorAll(".playlistCantos li");
       items.forEach(function (item){
          array.push(item.innerHTML);
