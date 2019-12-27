@@ -24,10 +24,9 @@ let botonAudio = document.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
 let botonTextoChico = document.querySelector(".botonTextoChico");
 let botonTextoGrande = document.querySelector(".botonTextoGrande");
+let botonCasa = document.querySelector(".botonCasa");
 //Rotacion de pantalla
 var current_mode = screen.orientation;
-let botonRotar = document.querySelector(".botonRotar");
-//let banderaRotar;
 //Tamano de letra
 let tamano;
 
@@ -139,7 +138,12 @@ if (letraBody){
 }
 */
 
-
+//Boton Home
+if(botonCasa){
+  botonCasa.addEventListener("click",(e) => {
+    window.location.assign("https://dunamis-alabanza.glitch.me/");
+  });
+}
 
 
 //Constructor de canto guardado
