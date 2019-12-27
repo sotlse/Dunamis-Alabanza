@@ -4,6 +4,7 @@ var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 let botonRegresar = document.querySelector(".arrowRegresar");
 let botonAvanzar = document.querySelector(".arrowAvanzar");
+let botonAvanzar2 = document.querySelector(".arrowAvanzar2");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
 const lista = document.querySelector(".playlistCantos");
@@ -787,9 +788,11 @@ if(titulo === "Playlist Miercoles"){
 }  
 
 let playlistFlag = localStorage.getItem("playlistFlag");
-if(playlistFlag > 0 && botonAvanzar){
+if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
   botonAvanzar.style.display = "block";
-  botonAvanzar.addEventListener("click",(e) =>  {
+  botonAvanzar2.style.display = "block";
+  
+  botonAvanzar.addEventListener("click",(e) => {
     let cancionesPlaylist;
     let proxCanto;
     if(playlistFlag == 1){
