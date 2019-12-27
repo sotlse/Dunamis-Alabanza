@@ -27,7 +27,7 @@ let botonTextoGrande = document.querySelector(".botonTextoGrande");
 //Rotacion de pantalla
 var current_mode = screen.orientation;
 let botonRotar = document.querySelector(".botonRotar");
-let banderaRotar;
+//let banderaRotar;
 //Tamano de letra
 let tamano;
 
