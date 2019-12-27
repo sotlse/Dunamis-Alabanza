@@ -38,7 +38,7 @@
       </div>
       
       <div class="canto_body">  
-        <pre>
+        <pre data-key="Bm">
 <p class="tituloCanto">INTRO:</p>
 <a>F#m7</a>     <a>Bm7</a> 
 <a>Em7</a>      <a>F#m7</a>  <a>Bm7</a> 
@@ -106,7 +106,14 @@ vendrá a Ti muy pronto Israel.
         
       </nav>
           <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-    <!--<script src="/landscape.js" ></script>-->
+      <script src="/script.js" defer></script>
+      <!--<script src="/landscape.js" ></script>-->
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+      <script type="text/javascript" src="/jquery.transposer.js"></script>
+      <script type="text/javascript">
+        $(function() {
+          $("pre").transpose();
+        });
+      </script>
     </body>
 </html>

@@ -492,3 +492,33 @@ a {
 #dialogbox > div > #dialogboxhead {background:rgba(158, 216, 254,.3); font-size:19px; padding:10px;}
 /*#dialogbox > div > #dialogboxbody {background:#333; padding:20px; color:#FFF;}*/
 #dialogbox > div > #dialogboxfoot {background:rgba(230, 230, 230,.5); padding:10px 5px; text-align:right;}
+
+
+/*--------Transportar acorde----*/
+span.c { 
+  font-weight: bold; 
+  color: #2159D6;
+}
+
+.transpose-keys {
+	margin: 10px 0;
+	overflow: auto;
+	font: normal 11px sans-serif;
+}
+.transpose-keys a { 
+	display: block;
+	float: left;
+	width: 2.25em;
+	text-align: center;
+	margin: 0 .25em .25em 0;
+	color: #333;
+	background: #eee;
+	text-decoration: none;
+	padding: .4em 0;
+	border: solid 1px transparent;
+	outline: none;
+}
+.transpose-keys a.selected { 
+  background: #2159D6; 
+  color: #FFF;
+}
