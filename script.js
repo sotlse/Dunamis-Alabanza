@@ -476,11 +476,6 @@ class UI {
 
 //Cuando se cargue la pagina, agregar base de datos
 document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
-
-//Boton Add event
-if(opcionesItems){
-opcionesItems.addEventListener("click", agregarCanto);
-}
   
 /*-----------------------BUSQUEDA FILTRO-----------------------*/
 if (busquedaItem){
@@ -773,6 +768,7 @@ if(titulo === "Playlist Miercoles"){
   localStorage.setItem("playlistFlag",2);
 }  
 
+//Solo cuando se encuentre en una playlist, se muestra el boton de avanzar a siguiente canto
 let playlistFlag = localStorage.getItem("playlistFlag");
 if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
   botonAvanzar.style.display = "block";
@@ -803,20 +799,20 @@ if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
       if (proxCanto == cancionesPlaylist.length){
 
           window.location.assign("https://dunamis-alabanza.glitch.me/");
-        
-
-        
       }
-      
     });
   }
   //});
-
 }
 
 
+/*-----------------------BOTON AGREGAR CANTO A UNA PLAYLIST-----------------------*/
 
-//botonAgregar function
+//Boton Add event
+if(opcionesItems){
+  opcionesItems.addEventListener("click", agregarCanto);
+  }
+
 function agregarCanto(e){
   if(e.target.classList.contains("boton-add")){
     let botonAdd = document.querySelector(".cuerpo-lista");
@@ -854,7 +850,7 @@ function agregarCanto(e){
     
     function Domingo(e){
       link = cancion.querySelector('a').href;
-      tipo=cancion.querySelector('a').textContent;
+      tipo = cancion.querySelector('a').textContent;
       const CantoGuardado = new cantoGuardado(link,tipo,titulo);
       if(localStorage.getItem("cancionesDomingo") === null){
         cancionesDomingo = [];
@@ -882,7 +878,7 @@ function agregarCanto(e){
     
     function Miercoles(e){
       link = cancion.querySelector('a').href;
-      tipo=cancion.querySelector('a').textContent;
+      tipo = cancion.querySelector('a').textContent;
       const CantoGuardado = new cantoGuardado(link,tipo,titulo);
       if(localStorage.getItem("cancionesMiercoles") === null){
         cancionesMiercoles = [];
@@ -908,8 +904,3 @@ function agregarCanto(e){
     }
   }
 }
-
-
-
-
-
