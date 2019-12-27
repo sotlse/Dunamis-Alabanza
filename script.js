@@ -795,9 +795,11 @@ if(playlistFlag > 0 && botonAvanzar){
       cancionesPlaylist = JSON.parse(localStorage.getItem("cancionesMiercoles"));
     }
     const pagActual = location.href;
+    console.log (pagActual);
+    console.log (proxCanto);
     cancionesPlaylist.forEach(function (canto, index){
       if (canto.pagina === pagActual){
-        proxCanto = index+1; 
+        proxCanto = index + 1; 
       }
       if (proxCanto == index){ 
         window.location.assign(canto.pagina);
