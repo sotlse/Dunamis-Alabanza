@@ -76,7 +76,7 @@ function fullScreen() {
 //console.log(window.getComputedStyle(cantoBody).fontSize);
 //localStorage.removeItem("letraTamano");
 tamano = JSON.parse(localStorage.getItem("letraTamano"));
-console.log(tamano);
+
 if (tamano === null)
 {
   tamano = 89;
@@ -86,7 +86,12 @@ if (tamano === null)
 //Cambiar texto mas chico
 if(botonTextoChico){
   botonTextoChico.addEventListener("click",(e) => {
-    alert("Haciendo el texto mas pequeno");
+    tamano = JSON.parse(localStorage.getItem("letraTamano"));
+    tamano = tamano - 10;
+    console.log (tamano);
+    cantoBody.style.fontSize = tamano + "%" ;
+    localStorage.setItem("letraTamano",JSON.stringify(tamano));
+    //alert("Haciendo el texto mas pequeno");
   });
 }
 
