@@ -74,9 +74,10 @@ function fullScreen() {
 /*Cambiar tamano de texto*/
 
 //console.log(window.getComputedStyle(cantoBody).fontSize);
-localStorage.removeItem("letraTamano");
+//localStorage.removeItem("letraTamano");
 tamano = JSON.parse(localStorage.getItem("letraTamano"));
-if (tamano === undefined)
+console.log(tamano);
+if (tamano === null)
 {
   tamano = 89;
   localStorage.setItem("letraTamano",JSON.stringify(tamano));
@@ -101,8 +102,11 @@ if(botonTextoGrande){
     //alert("Haciendo el texto mas grande");
   });
 }
+if (cantoBody)
+{
+  cantoBody.style.fontSize = tamano + "%" ;
+}
 
-cantoBody.style.fontSize = tamano + "%" ;
 /*
 //desplegar letra de acordes en tamano mas grande si es tablet
 var winW = window.innerWidth;
