@@ -42,6 +42,13 @@ if (cantoBody)
   cantoBody.style.columnCount="2";
 }
 
+window.onorientationchange = function() { 
+  alert("the orientation of the device is now " + screen.orientation.type);
+  if(screen.orientation.type == "portrait"){
+    cantoBody.style.columnCount= "1";
+  }
+};
+
 /*Rotacion de pantalla*//*
 // type
 console.log(current_mode.type);

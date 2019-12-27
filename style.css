@@ -320,11 +320,11 @@ a {
   font-size:13px;
   font-weight:bold;
   margin:-4px -25px 10px -25px;
-  padding:3px;
+  padding:2px;
   background-color:rgba(239, 238, 238,.5);
   /*overflow:hidden;*/
   column-count: 3;
-  
+  border-bottom: 1px solid black;
 }
 
 .img-tempo{
