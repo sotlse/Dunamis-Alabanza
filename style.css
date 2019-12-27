@@ -57,12 +57,6 @@ a {
   width:100%;
 }
 
-/*Opciones de canto*/
-/*.header {
-  margin:0px;
-  padding:0px;
-}*/
-
 .contenido hr{
   margin:5px -25px;
 }
@@ -71,7 +65,7 @@ a {
   text-align:center;
   position:relative;
   background-color:rgba(158, 216, 254,.3);
-  padding: .1em 0;
+  padding: 0em 0;
   margin:-20px -25px 0px -25px;
 }
 .encabezado-lista h2{
@@ -87,12 +81,6 @@ a {
   margin:5px;
   font-size:15px;
 }
-
-/*.encabezado-lista button{
-  position:absolute;
-  left: 92%;
-  top: 70%;
-}*/
 
 .cuerpo-lista{
   background-color:rgba(230, 230, 230,.5);

@@ -4,6 +4,7 @@ var listaItems = document.getElementById("lista");
 var opcionesItems = document.getElementById("opcionesDeCanto");
 let botonRegresar = document.querySelector(".arrowRegresar");
 let botonAvanzar = document.querySelector(".arrowAvanzar");
+let botonRegresar2 = document.querySelector(".arrowRegresar2");
 let botonAvanzar2 = document.querySelector(".arrowAvanzar2");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
@@ -518,10 +519,13 @@ function filterItems(e){
 }
 
 //Boton regresar event
-
-
 if(botonRegresar){
   botonRegresar.addEventListener("click",(e) =>  {
+    window.history.back();
+  });
+}
+if(botonRegresar2){
+  botonRegresar2.addEventListener("click",(e) =>  {
     window.history.back();
   });
 }
@@ -791,8 +795,11 @@ let playlistFlag = localStorage.getItem("playlistFlag");
 if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
   botonAvanzar.style.display = "block";
   botonAvanzar2.style.display = "block";
-  
-  botonAvanzar.addEventListener("click",(e) => {
+  botonRegresar2.style.display = "block";
+  botonAvanzar.addEventListener("click",avanzar);
+  botonAvanzar2.addEventListener("click",avanzar);
+  function avanzar() {
+  //botonAvanzar.addEventListener("click",(e) => {
     let cancionesPlaylist;
     let proxCanto;
     if(playlistFlag == 1){
@@ -820,7 +827,8 @@ if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
       }
       
     });
-  });
+  }
+  //});
 
 }
 
