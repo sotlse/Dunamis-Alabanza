@@ -139,6 +139,7 @@
       var transposeChord = function (selector, delta, targetKey) {
           var el = $(selector);
           var oldChord = el.text();
+          console.log(o);
           var oldChordRoot = getChordRoot(oldChord);
           var newChordRoot = getNewKey(oldChordRoot, delta, targetKey);
           var newChord = newChordRoot.name + oldChord.substr(oldChordRoot.length);
@@ -187,7 +188,6 @@
       return $(this).each(function() {
       
         var startKey = $(this).attr("data-key");
-        console.log(startKey);
         if (!startKey || $.trim(startKey) == "") {
           startKey = opts.key;
         }
