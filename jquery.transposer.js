@@ -243,11 +243,11 @@
             if (isChordLine(line))
                 output.push("<span>" + wrapChords(line) + "</span>");
             else if (line=="INTRO:")
-                output.push("<span class='tituloCanto'>" + line + "</span>");
+                output.push("<p class='tituloCanto'>" + line + "</p>");
             else if (line=="VERSO:" || line=="VERSO1:" || line=="VERSO2:" || line=="VERSO3:" || line=="VERSO4:")
-                output.push("<span class='tituloVerso'>" + line + "</span>");
+                output.push("<p class='tituloVerso'>" + line + "</p>");
             else if (line=="CORO:" || line=="CORO1:" || line=="CORO2:" || line=="CORO3:" || line=="CORO4:")
-                output.push("<span class='tituloCoro'>" + line + "</span>");
+                output.push("<p class='tituloCoro'>" + line + "</p>");
             else
                 output.push("<span>" + line + "</span>");
         };
