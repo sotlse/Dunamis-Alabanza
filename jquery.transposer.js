@@ -206,6 +206,8 @@
             else
                 keyLinks.push("<a href='#'>" + key.name + "</a>");
         });
+
+        
   
   
         var $this = $(this);
@@ -218,7 +220,7 @@
             $(this).addClass("selected");
             return false;
         });
-        
+        console.log(keysHtml);
         $(this).before(keysHtml);
   
         var output = [];
