@@ -235,7 +235,7 @@
         var output = [];
         var lines = $(this).text().split(/\r\n|\n/g);
         var line, tmp = "";
-        console.log(lines);
+        console.log($(this).text());
   
         for (var i = 0; i < lines.length; i++) {
             line = lines[i];
