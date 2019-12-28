@@ -220,8 +220,13 @@
             $(this).addClass("selected");
             return false;
         });
+
+        //Ocultar botonera de transportar acordes hasta que presionen el boton
+        //keysHtml.hide();
         console.log(keysHtml);
-        $(this).before(keysHtml);
+        //$(this).before(keysHtml);
+        $( ".navCanto" ),before(keysHtml);
+
   
         var output = [];
         var lines = $(this).text().split(/\r\n|\n/g);
