@@ -134,6 +134,9 @@
           });
           
           currentKey = newKey;
+          var raiz = $(".AcordeCanto");
+          //console.log($(".AcordeCanto").replace("B",currentKey));
+          console.log(raiz);
       };
   
       var transposeChord = function (selector, delta, targetKey) {
