@@ -501,15 +501,17 @@ span.c {
 }
 
 .transpose-keys {
-	margin: 10px 0;
+  margin: 10px 0;
+  padding:3px;
 	overflow: auto;
   font: normal 11px sans-serif;
   background-color:rgba(251, 52, 52,.4);
-  /*text-align: center;*/
+  /*display:none;*/
+  text-align: center;
 }
 .transpose-keys a { 
-	display: block;
-	float: left;
+	display: inline-block;
+	/*float: left;*/
 	width: 2.25em;
 	text-align: center;
 	margin: 0 .25em .25em 0;
