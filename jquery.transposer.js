@@ -225,7 +225,8 @@
         //keysHtml.hide();
         console.log(keysHtml);
         //$(this).before(keysHtml);
-        $( ".navCanto" ),before(keysHtml);
+        $( ".navCanto" ).before(keysHtml);
+
 
   
         var output = [];
