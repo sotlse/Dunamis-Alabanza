@@ -221,7 +221,7 @@
             return false;
         });
         //$(this).before(keysHtml);
-        console.log(keysHtml);
+        
         // Mostrar botonera de transportar antes del NavCanto
         $( ".navCanto" ).before(keysHtml);
 
@@ -235,12 +235,19 @@
         var output = [];
         var lines = $(this).text().split(/\r\n|\n/g);
         var line, tmp = "";
+        console.log(lines);
   
         for (var i = 0; i < lines.length; i++) {
             line = lines[i];
   
             if (isChordLine(line))
                 output.push("<span>" + wrapChords(line) + "</span>");
+            else if (line=="INTRO:")
+                output.push("<span class='tituloCanto'>" + line + "</span>");
+            else if (line=="VERSO:" || line=="VERSO1:" || line=="VERSO2:" || line=="VERSO3:" || line=="VERSO4:")
+                output.push("<span class='tituloVerso'>" + line + "</span>");
+            else if (line=="CORO:" || line=="CORO1:" || line=="CORO2:" || line=="CORO3:" || line=="CORO4:")
+                output.push("<span class='tituloCoro'>" + line + "</span>");
             else
                 output.push("<span>" + line + "</span>");
         };
