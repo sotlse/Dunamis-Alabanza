@@ -135,10 +135,8 @@
           
           currentKey = newKey;
           var raiz = $(".AcordeCanto").text();
-          console.log(raiz.replace(/\w/g,function (x) {
-              return x=currentKey;
-          }));
-          console.log(raiz);
+          //console.log(raiz.replace(/\w/g,currentKey.name));
+          $(".AcordeCanto").text().replace(/\w/g,currentKey.name);
       };
   
       var transposeChord = function (selector, delta, targetKey) {
@@ -148,6 +146,7 @@
           var newChordRoot = getNewKey(oldChordRoot, delta, targetKey);
           var newChord = newChordRoot.name + oldChord.substr(oldChordRoot.length);
           el.text(newChord);
+          console.log(el.text(newChord));
   
           var sib = el[0].nextSibling;
           if (sib && sib.nodeType == 3 && sib.nodeValue.length > 0 && sib.nodeValue.charAt(0) != "/") {
