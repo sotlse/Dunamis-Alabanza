@@ -220,12 +220,15 @@
             $(this).addClass("selected");
             return false;
         });
-
-        //Ocultar botonera de transportar acordes hasta que presionen el boton
-        //keysHtml.hide();
-        console.log(keysHtml);
         //$(this).before(keysHtml);
+        console.log(keysHtml);
+        // Mostrar botonera de transportar antes del NavCanto
         $( ".navCanto" ).before(keysHtml);
+
+        //Cuando se presione el boton de transportar, ensenar botonera
+        $(".botonTransportar").click(function() {
+            keysHtml.toggle();
+          });
 
 
   

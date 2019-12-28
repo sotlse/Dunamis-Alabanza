@@ -505,8 +505,8 @@ span.c {
   padding:3px;
 	overflow: auto;
   font: normal 11px sans-serif;
-  background-color:rgba(251, 52, 52,.4);
-  /*display:none;*/
+  /*background-color:lightblue;*/
+  display:none;
   text-align: center;
 }
 .transpose-keys a { 
@@ -514,12 +514,12 @@ span.c {
 	/*float: left;*/
 	width: 2.25em;
 	text-align: center;
-	margin: 0 .25em .25em 0;
+	margin: 0 .25em .25em .25em;
 	color: #333;
 	background: #eee;
 	text-decoration: none;
 	padding: .4em 0;
-	border: solid 1px transparent;
+	border: solid 1px ;
 	outline: none;
 }
 .transpose-keys a.selected { 
