@@ -170,7 +170,6 @@
       var isChordLine = function (input) {
           //var tokens = input.replace(/\s+/, " ").split(" ");
           var tokens = input.replace(/\s+/, " ").replace(/-|[|]/g, " ").split(" ");
-          console.log(tokens);
           // Try to find tokens that aren't chords
           // if we find one we know that this line is not a 'chord' line.
           for (var i = 0; i < tokens.length; i++) {
@@ -188,6 +187,7 @@
       return $(this).each(function() {
       
         var startKey = $(this).attr("data-key");
+        console.log(startKey);
         if (!startKey || $.trim(startKey) == "") {
           startKey = opts.key;
         }
