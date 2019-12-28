@@ -169,7 +169,8 @@
       //Ver en cada linea si es una linea de acordes o de letra
       var isChordLine = function (input) {
           var tokens = input.replace(/\s+/, " ").split(" ");
-          console.log(tokens);
+          var tokens2 = input.replace(/\s+/, " ").replace("-", " ").replace("|", " ").split(" ");
+          console.log(tokens2);
           // Try to find tokens that aren't chords
           // if we find one we know that this line is not a 'chord' line.
           for (var i = 0; i < tokens.length; i++) {
