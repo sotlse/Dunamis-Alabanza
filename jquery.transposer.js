@@ -134,8 +134,10 @@
           });
           
           currentKey = newKey;
-          var raiz = $(".AcordeCanto");
-          //console.log($(".AcordeCanto").replace("B",currentKey));
+          var raiz = $(".AcordeCanto").text();
+          console.log(raiz.replace(/\w/g,function (x) {
+              return x=currentKey;
+          }));
           console.log(raiz);
       };
   
