@@ -36,10 +36,10 @@ let tamano;
 if (cantoBody)
 {
   if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary")
-  cantoBody.style.columnCount= "1";
+    cantoBody.style.columnCount= "1";
   
   else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary")
-  cantoBody.style.columnCount="2";
+    cantoBody.style.columnCount="2";
 
   window.onorientationchange = function() { 
     if(screen.orientation.type === "portrait-primary"){
@@ -52,7 +52,8 @@ if (cantoBody)
 
   window.addEventListener("orientationchange", function() {
     // Announce the new orientation number
-    alert(screen.orientation);
+    if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
+      alert(screen.orientation.angle);
   }, false);
 }
 
