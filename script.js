@@ -50,37 +50,21 @@ if (cantoBody)
   };
 
   //Para dispositivos IOS
-  function onOriChange() {
-    if(!window.orientation){
-      alert (window.orientation);
-        if(window.innerWidth > window.innerHeight){
-            alert("landscape");
-        }else{
-            alert("portrait");
-        }
+  function doOnOrientationChange() {
+    switch(window.orientation) {  
+      case -90: case 90:
+        cantoBody.style.columnCount= "2";
+        break; 
+      default:
+        cantoBody.style.columnCount= "1";
+        break; 
     }
   }
-
-  window.addEventListener('orientationchange', onOriChange);
-
-  // Initial execution if needed
-  onOriChange();
-
-  /*window.addEventListener("orientationchange", function() {
-    // Announce the new orientation number
-    if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
-      cantoBody.style.columnCount= "2";
-    else if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
-      cantoBody.style.columnCount= "1";
-  }, false);
-
-  /*window.addEventListener("resize", function() {
-    if (outerWidth>outerHeight)
-      alert(screen.orientation.angle);
-    // Get screen size (inner/outerWidth, inner/outerHeight)
     
-  }, false);*/
-  
+  window.addEventListener('orientationchange', doOnOrientationChange);
+    
+  // Initial execution if needed
+  doOnOrientationChange();
 }
 
 /*
