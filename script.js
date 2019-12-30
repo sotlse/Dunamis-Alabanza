@@ -49,6 +49,11 @@ if (cantoBody)
       cantoBody.style.columnCount= "2";
     }
   };
+
+  window.addEventListener("orientationchange", function() {
+    // Announce the new orientation number
+    alert(screen.orientation);
+  }, false);
 }
 
 /*
