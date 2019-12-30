@@ -133,9 +133,10 @@
           });
           
           currentKey = newKey;
-          var raiz = $(".AcordeCanto").text();
-          //console.log(raiz.replace(/\w/g,currentKey.name));
-          $(".AcordeCanto").text().replace(/\w/g,currentKey.name);
+          
+          //Cambiar 
+          var raiz = $(".AcordeCanto").text().replace(/\w/g,currentKey.name);
+          $(".AcordeCanto").html(raiz);
       };
   
       var transposeChord = function (selector, delta, targetKey) {
@@ -233,7 +234,7 @@
           });
 
 
-  
+          
         var output = [];
         var lines = $(this).text().split(/\r\n|\n/g);
         var line, tmp = "";
@@ -249,10 +250,11 @@
                 output.push("<p class='tituloVerso'>" + line + "</p>");
             else if (line=="CORO:" || line=="CORO1:" || line=="CORO2:" || line=="CORO3:" || line=="CORO4:")
                 output.push("<p class='tituloCoro'>" + line + "</p>");
+            else if (line=="PUENTE:" || line=="PUENTE1:" || line=="PUENTE2:" || line=="PUENTE3:")
+                output.push("<p class='tituloPuente'>" + line + "</p>");
             else
                 output.push("<span>" + line + "</span>");
         };
-        console.log(output);
         $(this).html(output.join("\n"));
       });
     };
