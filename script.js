@@ -42,18 +42,19 @@ if (cantoBody)
     cantoBody.style.columnCount="2";
 
   window.onorientationchange = function() { 
-    if(screen.orientation.type === "portrait-primary"){
+    if(screen.orientation.type === "portrait-primary")
       cantoBody.style.columnCount= "1";
-    }
-    else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary"){
+    else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary")
       cantoBody.style.columnCount= "2";
-    }
   };
 
   window.addEventListener("orientationchange", function() {
     // Announce the new orientation number
     if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
-      //alert(screen.orientation.angle);
+      cantoBody.style.columnCount= "2";
+    else if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
+    cantoBody.style.columnCount= "1";
+      alert(screen.orientation.angle);
   }, false);
 
   /*window.addEventListener("resize", function() {
@@ -61,8 +62,9 @@ if (cantoBody)
       alert(screen.orientation.angle);
     // Get screen size (inner/outerWidth, inner/outerHeight)
     
-  }, false);
-}*/
+  }, false);*/
+  
+}
 
 /*
 // type
