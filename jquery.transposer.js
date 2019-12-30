@@ -121,10 +121,6 @@
       };
   
       var transposeSong = function (target, key) {
-          /*if (JSON.parse(localStorage.getItem("TonoActual")))
-            startKey = JSON.parse(localStorage.getItem("TonoActual"));
-        else*/
-          //var newKey =JSON.parse(localStorage.getItem("TonoActual"));
           var newKey = getKeyByName(key);
           console.log(newKey.name); 
           if (currentKey.name == newKey.name) {
@@ -151,7 +147,6 @@
   
       var transposeChord = function (selector, delta, targetKey) {
           var el = $(selector);
-          console.log(el);
           var oldChord = el.text();
           var oldChordRoot = getChordRoot(oldChord);
           var newChordRoot = getNewKey(oldChordRoot, delta, targetKey);
@@ -203,7 +198,7 @@
         
         var startKey = $(this).attr("data-key");
         
-        console.log(startKey);
+        
         if (!startKey || $.trim(startKey) == "") {
           startKey = opts.key;
         }
@@ -228,13 +223,12 @@
         });
 
         
-  
+        
         
         var $this = $(this);
         var keysHtml = $("<div class='transpose-keys'></div>");
         keysHtml.html(keyLinks.join(""));
         $("a", keysHtml).click(function(e) {
-            console.log(e);
             e.preventDefault();
             transposeSong($this, $(this).text());
             $(".transpose-keys a").removeClass("selected");
@@ -250,9 +244,14 @@
         //Cuando se presione el boton de transportar, ensenar botonera
         $(".botonTransportar").click(function() {
             keysHtml.toggle();
-          });
-
-
+        });
+        var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
+        console.log(currentKey.name);
+        console.log(startKey);
+        console.log(TonoActual);
+        /*if(startKey == TonoActual)
+            
+        else*/
           
         var output = [];
         var lines = $(this).text().split(/\r\n|\n/g);
