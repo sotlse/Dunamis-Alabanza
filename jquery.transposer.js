@@ -209,13 +209,13 @@
         // Build tranpose links ===========================================
         var keyLinks = [];
         $(keys).each(function(i, key) {
-            if (currentKey.name == key.name)
-                keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
-            else if (currentKey.name == startKey)
+            if (key.name == startKey)
                 keyLinks.push("<a href='#' class='original'>" + key.name + "</a>");
+            else if (currentKey.name == key.name)
+                keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
             else
                 keyLinks.push("<a href='#'>" + key.name + "</a>");
-        console.log(i);
+        console.log(key.name);
         console.log(currentKey.name);
         });
 

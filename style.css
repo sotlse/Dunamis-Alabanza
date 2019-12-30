@@ -526,3 +526,11 @@ span.c {
   background: #2159D6; 
   color: #FFF;
 }
+.transpose-keys a.original { 
+  background: rgb(214, 33, 63,.3); 
+  color: rgb(12, 0, 0);
+}
+.transpose-keys a.original.selected { 
+  background: rgb(214, 33, 63); 
+  color: #FFF;
+}
