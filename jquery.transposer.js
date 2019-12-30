@@ -122,7 +122,6 @@
   
       var transposeSong = function (target, key) {
           var newKey = getKeyByName(key);
-          console.log(newKey);
           if (currentKey.name == newKey.name) {
             return;
           }
@@ -146,7 +145,6 @@
           var newChordRoot = getNewKey(oldChordRoot, delta, targetKey);
           var newChord = newChordRoot.name + oldChord.substr(oldChordRoot.length);
           el.text(newChord);
-          console.log(el.text(newChord));
   
           var sib = el[0].nextSibling;
           if (sib && sib.nodeType == 3 && sib.nodeValue.length > 0 && sib.nodeValue.charAt(0) != "/") {
@@ -240,7 +238,6 @@
         var lines = $(this).text().split(/\r\n|\n/g);
         var line, tmp = "";
         
-  
         for (var i = 0; i < lines.length; i++) {
             line = lines[i];
   
@@ -255,7 +252,7 @@
             else
                 output.push("<span>" + line + "</span>");
         };
-  
+        console.log(output);
         $(this).html(output.join("\n"));
       });
     };
