@@ -133,8 +133,8 @@
           });
           
           currentKey = newKey;
-          console.log(currentKey.name);
           localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
+
           /*------------Cambiar Tono de class = Tono en la cabecera del canto------------*/
           var tono = $(".AcordeCanto").text()
           //Si tiene un bemol o sostenido, entonces removerlo
@@ -220,7 +220,7 @@
 
         
   
-  
+        
         var $this = $(this);
         var keysHtml = $("<div class='transpose-keys'></div>");
         keysHtml.html(keyLinks.join(""));
@@ -233,6 +233,7 @@
         });
         //$(this).before(keysHtml);
         
+
         // Mostrar botonera de transportar antes del NavCanto
         $( ".navCanto" ).before(keysHtml);
 
