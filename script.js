@@ -35,6 +35,7 @@ let tamano;
 /*-----------------------ROTACION DE PANTALLA-----------------------*/
 if (cantoBody)
 {
+  //Para dispositivos Android
   if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary")
     cantoBody.style.columnCount= "1";
   
@@ -48,7 +49,23 @@ if (cantoBody)
       cantoBody.style.columnCount= "2";
   };
 
-  window.addEventListener("orientationchange", function() {
+  //Para dispositivos IOS
+  function onOriChange() {
+    if(!window.orientation){
+        if(window.innerWidth > window.innerHeight){
+            alert('landscape');
+        }else{
+            alert('portrait');
+        }
+    }
+  }
+
+  window.addEventListener('orientationchange', onOriChange);
+
+  // Initial execution if needed
+  onOriChange();
+
+  /*window.addEventListener("orientationchange", function() {
     // Announce the new orientation number
     if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
       cantoBody.style.columnCount= "2";
