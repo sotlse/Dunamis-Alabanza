@@ -204,6 +204,7 @@
         }
         
         currentKey = getKeyByName(startKey);
+        startKey = startKey.substr(0,1);
   
         // Build tranpose links ===========================================
         var keyLinks = [];
@@ -211,10 +212,11 @@
             if (currentKey.name == key.name)
                 keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
             else if (currentKey.name == startKey)
-                
+                keyLinks.push("<a href='#' class='original'>" + key.name + "</a>");
             else
                 keyLinks.push("<a href='#'>" + key.name + "</a>");
-        
+        console.log(i);
+        console.log(currentKey.name);
         });
 
         
