@@ -134,8 +134,8 @@
           
           currentKey = newKey;
           
-          //Cambiar 
-          var raiz = $(".AcordeCanto").text().replace(/\w/g,currentKey.name);
+          //Cambiar Tono 
+          var raiz = $(".AcordeCanto").text().replace(/[A-Z]/g,currentKey.name);
           $(".AcordeCanto").html(raiz);
       };
   
