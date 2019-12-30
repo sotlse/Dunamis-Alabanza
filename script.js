@@ -53,8 +53,7 @@ if (cantoBody)
     if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
       cantoBody.style.columnCount= "2";
     else if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
-    cantoBody.style.columnCount= "1";
-      alert(screen.orientation.angle);
+      cantoBody.style.columnCount= "1";
   }, false);
 
   /*window.addEventListener("resize", function() {
