@@ -52,10 +52,11 @@ if (cantoBody)
   //Para dispositivos IOS
   function onOriChange() {
     if(!window.orientation){
+      alert (window.orientation);
         if(window.innerWidth > window.innerHeight){
-            alert('landscape');
+            alert("landscape");
         }else{
-            alert('portrait');
+            alert("portrait");
         }
     }
   }
