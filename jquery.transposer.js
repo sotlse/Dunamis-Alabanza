@@ -133,7 +133,8 @@
           });
           
           currentKey = newKey;
-          
+          console.log(currentKey.name);
+          localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
           /*------------Cambiar Tono de class = Tono en la cabecera del canto------------*/
           var tono = $(".AcordeCanto").text()
           //Si tiene un bemol o sostenido, entonces removerlo
@@ -215,8 +216,6 @@
                 keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
             else
                 keyLinks.push("<a href='#'>" + key.name + "</a>");
-        console.log(key.name);
-        console.log(currentKey.name);
         });
 
         
