@@ -210,9 +210,11 @@
         $(keys).each(function(i, key) {
             if (currentKey.name == key.name)
                 keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
-            el
+            else if (currentKey.name == startKey)
+                
             else
                 keyLinks.push("<a href='#'>" + key.name + "</a>");
+        
         });
 
         
