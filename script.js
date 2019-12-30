@@ -53,9 +53,16 @@ if (cantoBody)
   window.addEventListener("orientationchange", function() {
     // Announce the new orientation number
     if (screen.orientation.angle == "90" || screen.orientation.angle == "270")
-      alert(screen.orientation.angle);
+      //alert(screen.orientation.angle);
   }, false);
-}
+
+  /*window.addEventListener("resize", function() {
+    if (outerWidth>outerHeight)
+      alert(screen.orientation.angle);
+    // Get screen size (inner/outerWidth, inner/outerHeight)
+    
+  }, false);
+}*/
 
 /*
 // type
