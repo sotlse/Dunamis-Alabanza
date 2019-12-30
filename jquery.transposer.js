@@ -134,8 +134,12 @@
           
           currentKey = newKey;
           
-          //Cambiar Tono 
-          var raiz = $(".AcordeCanto").text().replace(/[A-Z]/g,currentKey.name);
+          /*------------Cambiar Tono de class = Tono en la cabecera del canto------------*/
+          var tono = $(".AcordeCanto").text()
+          //Si tiene un bemol o sostenido, entonces removerlo
+          if (tono.length>1)
+            tono = tono.substr(0,1);
+          var raiz = tono.replace(/[A-Z]/g,currentKey.name);
           $(".AcordeCanto").html(raiz);
       };
   
@@ -206,6 +210,7 @@
         $(keys).each(function(i, key) {
             if (currentKey.name == key.name)
                 keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
+            el
             else
                 keyLinks.push("<a href='#'>" + key.name + "</a>");
         });
