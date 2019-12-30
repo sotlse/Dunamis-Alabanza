@@ -121,8 +121,12 @@
       };
   
       var transposeSong = function (target, key) {
+          /*if (JSON.parse(localStorage.getItem("TonoActual")))
+            startKey = JSON.parse(localStorage.getItem("TonoActual"));
+        else*/
+          //var newKey =JSON.parse(localStorage.getItem("TonoActual"));
           var newKey = getKeyByName(key);
-          console.log(newKey.name);
+          console.log(newKey.name); 
           if (currentKey.name == newKey.name) {
             return;
           }
@@ -230,6 +234,7 @@
         var keysHtml = $("<div class='transpose-keys'></div>");
         keysHtml.html(keyLinks.join(""));
         $("a", keysHtml).click(function(e) {
+            console.log(e);
             e.preventDefault();
             transposeSong($this, $(this).text());
             $(".transpose-keys a").removeClass("selected");
