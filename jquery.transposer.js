@@ -285,11 +285,17 @@
             $(this).html(output.join("\n"));
             
             /*----------------------Guardar canto con tono seleccionado----------------------*/
-            var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
-            if (TonoActual !== null){
-                transposeSong($this, TonoActual);
+            var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
+            let Tonos = TonoCanciones.filter(function(canto){
+                return  canto.titulo === $(".tituloDelCanto").text(); 
+            });
+            //console.log(Tonos[0].tono);
+            //var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
+            //if (TonoActual !== null){
+                transposeSong($this, Tonos[0].tono);
+                //transposeSong($this, TonoActual);
                 //console.log(TonoActual);
-            }
+            //}
         });
     };
   
