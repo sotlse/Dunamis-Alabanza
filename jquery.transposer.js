@@ -16,23 +16,24 @@
         var currentKey = null;
         
         var keys = [
-            { name: 'Ab',  value: 0,   type: 'F' },
-            { name: 'A',   value: 1,   type: 'N' },
-            { name: 'A#',  value: 2,   type: 'S' },
-            { name: 'Bb',  value: 2,   type: 'F' },
-            { name: 'B',   value: 3,   type: 'N' },
-            { name: 'C',   value: 4,   type: 'N' },
-            { name: 'C#',  value: 5,   type: 'S' },
-            { name: 'Db',  value: 5,   type: 'F' },
-            { name: 'D',   value: 6,   type: 'N' },
-            { name: 'D#',  value: 7,   type: 'S' },
-            { name: 'Eb',  value: 7,   type: 'F' },
-            { name: 'E',   value: 8,   type: 'N' },
-            { name: 'F',   value: 9,   type: 'N' },
-            { name: 'F#',  value: 10,  type: 'S' },
-            { name: 'Gb',  value: 10,  type: 'F' },
-            { name: 'G',   value: 11,  type: 'N' },
-            { name: 'G#',  value: 0,   type: 'S' }
+            { name: 'Ab',  value: 0,   type: 'F', botonera: 0 },
+            { name: 'A',   value: 1,   type: 'N', botonera: 1 },
+            { name: 'A#',  value: 2,   type: 'S', botonera: 2 },
+            { name: 'Bb',  value: 2,   type: 'F', botonera: 3 },
+            { name: 'Bb',  value: 2,   type: 'F', botonera: 4 },
+            { name: 'B',   value: 3,   type: 'N', botonera: 5 },
+            { name: 'C',   value: 4,   type: 'N', botonera: 6 },
+            { name: 'C#',  value: 5,   type: 'S', botonera: 7 },
+            { name: 'Db',  value: 5,   type: 'F', botonera: 8 },
+            { name: 'D',   value: 6,   type: 'N', botonera: 9 },
+            { name: 'D#',  value: 7,   type: 'S', botonera: 10 },
+            { name: 'Eb',  value: 7,   type: 'F', botonera: 11 },
+            { name: 'E',   value: 8,   type: 'N', botonera: 12 },
+            { name: 'F',   value: 9,   type: 'N', botonera: 13 },
+            { name: 'F#',  value: 10,  type: 'S', botonera: 14 },
+            { name: 'Gb',  value: 10,  type: 'F', botonera: 15 },
+            { name: 'G',   value: 11,  type: 'N', botonera: 16 },
+            { name: 'G#',  value: 0,   type: 'S', botonera: 17 }
         ];
         
         var getKeyByName = function (name) {
@@ -292,19 +293,15 @@
                 return  canto.titulo === $(".tituloDelCanto").text(); 
             });
             
-            /*let valorTono = keys.filter(function(boton){
-                return boton.name === Tonos[0].tono
-            });*/
-            let valorTono = $("a", keysHtml).filter(function(boton){
-                console.log(boton);
-                return boton===Tonos[0].tono;
+            let valorTono = keys.filter(function(boton){
+                return boton.name === Tonos[0].tono;
             });
-            console.log($("a", keysHtml));
             console.log(valorTono);
-            /*let otro = $("a", keysHtml).filter(function(boton){
-                return  boton === valorTono[0].value; 
+
+            let otro = $("a", keysHtml).filter(function(boton){
+                return  boton === valorTono[0].botonera; 
             });
-            console.log(otro.text());*/
+            console.log(otro);
 
             //var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
             //if (TonoActual !== null){
