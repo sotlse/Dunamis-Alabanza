@@ -291,12 +291,16 @@
             let Tonos = TonoCanciones.filter(function(canto){
                 return  canto.titulo === $(".tituloDelCanto").text(); 
             });
+            let valorTono = keys.filter(function(boton){
+                return boton.name === Tonos[0].tono
+            });
             //console.log($("a", keysHtml));
             let otro = $("a", keysHtml).filter(function(boton){
+                console.log(valorTono[0].value);
                 console.log(boton);
-                return  boton.text === Tonos[0].tono; 
+                return  boton === valorTono[0].value; 
             });
-            console.log(otro);
+            console.log(otro.text());
             //var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
             //if (TonoActual !== null){
             transposeSong($this, Tonos[0].tono);
