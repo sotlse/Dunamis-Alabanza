@@ -137,14 +137,14 @@
             currentKey = newKey;
 
             /*---------------Guardar en cual acorde se quedo transportado---------------*/
+            //Leer toda la lista de cantos con su tono y encontrar cual es el canto y su tono y cambiar tono
             var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
             let Tonos = TonoCanciones.filter(function(canto){
                 return  canto.titulo === $(".tituloDelCanto").text(); 
             });
             Tonos[0].tono = currentKey.name
-            console.log(Tonos);
-            console.log(TonoCanciones);
-            localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
+            localStorage.setItem("TonosActuales",JSON.stringify(TonoCanciones));
+            //localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
 
             /*------------Cambiar Tono de class = Tono en la cabecera del canto------------*/
             var tono = $(".AcordeCanto").text()
