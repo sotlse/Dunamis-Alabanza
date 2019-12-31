@@ -443,11 +443,14 @@ class UI {
     }
 
     //Guardar todos los tonos de los cantos en localStorage para despues manipularlos
-    /*const tonos = baseCanciones.map(function(cantos){
-      return cantos.tono;
-    });*/
-    const tonos = baseCanciones.map(cantos => ({titulo: cantos.titulo, autor: cantos.autor, tono:cantos.tono}));
+    let tonos;
+    tonos = JSON.parse(localStorage.getItem("TonosActuales"));
     console.log(tonos);
+    if (tonos == null){
+      tonos = baseCanciones.map(cantos => ({titulo: cantos.titulo, autor: cantos.autor, tono:cantos.tono}));
+      localStorage.setItem("TonosActuales", JSON.stringify(tonos));
+      console.log(tonos);
+    }
     
   }
 
