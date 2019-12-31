@@ -441,12 +441,8 @@ class UI {
       UI.agregarAudio(Canto);
     }
 
-    let filtroTono = baseCanciones.filter(function(cantos){
-      for (let i=0; i<totalCantos;i++){
-        if (cantos.tono [i]== categoria){
-          return true;
-        }
-      }
+    let filtroTono = baseCanciones.forEach(function(cantos){
+      
     });
     console.log(filtroTono);
   }
