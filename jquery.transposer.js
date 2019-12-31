@@ -141,7 +141,9 @@
             let Tonos = TonoCanciones.filter(function(canto){
                 return  canto.titulo === $(".tituloDelCanto").text(); 
             });
+            Tonos[0].tono = currentKey.name
             console.log(Tonos);
+            console.log(TonoCanciones);
             localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
 
             /*------------Cambiar Tono de class = Tono en la cabecera del canto------------*/
