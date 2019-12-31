@@ -424,6 +424,7 @@ class UI {
     
     function CategoriaCantos(categoria){
       let filtroCategorias = baseCanciones.filter(function(cantos){
+        //for (let i=0; i<baseCanciones.length;i++){
         for (let i=0; i<totalCantos;i++){
           if (cantos.categoria [i]== categoria){
             return true;
@@ -441,10 +442,12 @@ class UI {
       UI.agregarAudio(Canto);
     }
 
-    let filtroTono = baseCanciones.forEach(function(cantos){
-      
+    //Guardar todos los tonos de los cantos en localStorage para despues manipularlos
+    const tonos = baseCanciones.map(function(cantos){
+      return cantos.tono;
     });
-    console.log(filtroTono);
+    console.log(tonos);
+    
   }
 
   static agregarCantosAListaCategoria(canto){
