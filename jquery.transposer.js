@@ -223,8 +223,8 @@
         });
 
         
-        
-        
+        /*---------------Crear botonera de acordes----------------*/
+        /*---------------Si presionan boton de acorde, ejecutar----------------*/
         var $this = $(this);
         var keysHtml = $("<div class='transpose-keys'></div>");
         keysHtml.html(keyLinks.join(""));
@@ -238,21 +238,21 @@
         //$(this).before(keysHtml);
         
 
-        // Mostrar botonera de transportar antes del NavCanto
+        /*----------------------Mostrar botonera de transportar ----------------------*/
+        //Mostrar antes de la seccion NavCanto
         $( ".navCanto" ).before(keysHtml);
 
         //Cuando se presione el boton de transportar, ensenar botonera
         $(".botonTransportar").click(function() {
             keysHtml.toggle();
         });
+
         var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
         console.log(currentKey.name);
         console.log(startKey);
         console.log(TonoActual);
-        /*if(startKey == TonoActual)
-            
-        else*/
-          
+        
+        /*----------------------Agarrar todas las lineas del <pre>----------------------*/
         var output = [];
         var lines = $(this).text().split(/\r\n|\n/g);
         var line, tmp = "";
