@@ -235,6 +235,7 @@
             /*---------------Crear botonera de acordes----------------*/
             /*---------------Si presionan boton de acorde, ejecutar----------------*/
             var $this = $(this); //<pre> del canto
+            var botonSelected;
             var keysHtml = $("<div class='transpose-keys'></div>");
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
@@ -243,9 +244,10 @@
                 transposeSong($this, $(this).text()); //Envia <pre> y texto del boton a transportar (el acorde a transportar)
                 $(".transpose-keys a").removeClass("selected");
                 $(this).addClass("selected");
-                console.log(botonSeleccionado);
+                //console.log(botonSeleccionado);
                 return false;
             });
+            console.log(botonSelected);
             //$(this).before(keysHtml);
             
 
