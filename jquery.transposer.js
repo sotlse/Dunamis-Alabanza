@@ -122,7 +122,8 @@
     
         var transposeSong = function (target, key) {
             var newKey = getKeyByName(key);
-            console.log(target); 
+            console.log(newKey.name); 
+            console.log(currentKey.name); 
             if (currentKey.name == newKey.name) {
                 return;
             }
@@ -247,8 +248,9 @@
             });
 
             var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
-            if (TonoActual != null){
+            if (TonoActual !== null){
                 transposeSong($this, TonoActual);
+                console.log(TonoActual);
             }
             console.log(currentKey.name);
             console.log(startKey);
