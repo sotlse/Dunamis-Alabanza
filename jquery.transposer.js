@@ -122,8 +122,8 @@
     
         var transposeSong = function (target, key) {
             var newKey = getKeyByName(key);
-            console.log(newKey.name); 
-            console.log(currentKey.name); 
+            //console.log(newKey.name); 
+            //console.log(currentKey.name); 
             if (currentKey.name == newKey.name) {
                 return;
             }
@@ -136,7 +136,10 @@
             
             currentKey = newKey;
 
-            //Guardar en cual acorde se quedo transportado
+            /*---------------Guardar en cual acorde se quedo transportado---------------*/
+            var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
+            console.log(TonoCanciones);
+
             localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
 
             /*------------Cambiar Tono de class = Tono en la cabecera del canto------------*/
@@ -151,10 +154,10 @@
         var transposeChord = function (selector, delta, targetKey) {
             var el = $(selector);
             var oldChord = el.text();
-            console.log(oldChord);
+            //console.log(oldChord);
             var oldChordRoot = getChordRoot(oldChord);
             var newChordRoot = getNewKey(oldChordRoot, delta, targetKey);
-            console.log(newChordRoot);
+            //console.log(newChordRoot);
             var newChord = newChordRoot.name + oldChord.substr(oldChordRoot.length);
             el.text(newChord);
     
@@ -281,7 +284,7 @@
             var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
             if (TonoActual !== null){
                 transposeSong($this, TonoActual);
-                console.log(TonoActual);
+                //console.log(TonoActual);
             }
         });
     };
