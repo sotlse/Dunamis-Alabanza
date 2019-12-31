@@ -160,87 +160,83 @@
             }
         };
   
-      var getNewWhiteSpaceLength = function (a, b, c) {
-          if (a > b)
-              return (c + (a - b));
-          else if (a < b)
-              return (c - (b - a));
-          else
-              return c;
-      };
-  
-      var makeString = function (s, repeat) {
-          var o = [];
-          for (var i = 0; i < repeat; i++) o.push(s);
-          return o.join("");
-      }
-      
-      
-      
-      
-      return $(this).each(function() {
-      
-        
-        var startKey = $(this).attr("data-key");
-        
-        
-        if (!startKey || $.trim(startKey) == "") {
-          startKey = opts.key;
-        }
-  
-        if (!startKey || $.trim(startKey) == "") {
-          throw("Starting key not defined.");
-          return this;
-        }
-        
-        currentKey = getKeyByName(startKey);
-        startKey = startKey.substr(0,1);
-  
-        /*----------------------Construir la botonera para transportar----------------------*/
-        var keyLinks = [];
-        $(keys).each(function(i, key) {
-            if (key.name == startKey)
-                keyLinks.push("<a href='#' class='original'>" + key.name + "</a>");
-            else if (currentKey.name == key.name)
-                keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
+        var getNewWhiteSpaceLength = function (a, b, c) {
+            if (a > b)
+                return (c + (a - b));
+            else if (a < b)
+                return (c - (b - a));
             else
-                keyLinks.push("<a href='#'>" + key.name + "</a>");
-        });
+                return c;
+        };
+  
+        var makeString = function (s, repeat) {
+            var o = [];
+            for (var i = 0; i < repeat; i++) o.push(s);
+            return o.join("");
+        }
+      
+      
+      
+      
+        return $(this).each(function() {
+            var startKey = $(this).attr("data-key");
+            if (!startKey || $.trim(startKey) == "") {
+                startKey = opts.key;
+            }
+    
+            if (!startKey || $.trim(startKey) == "") {
+                throw("Starting key not defined.");
+                return this;
+            }
+        
+            currentKey = getKeyByName(startKey);
+            startKey = startKey.substr(0,1);
+  
+            /*----------------------Construir la botonera para transportar----------------------*/
+            var keyLinks = [];
+            $(keys).each(function(i, key) {
+                if (key.name == startKey)
+                    keyLinks.push("<a href='#' class='original'>" + key.name + "</a>");
+                else if (currentKey.name == key.name)
+                    keyLinks.push("<a href='#' class='selected'>" + key.name + "</a>");
+                else
+                    keyLinks.push("<a href='#'>" + key.name + "</a>");
+            });
 
         
-        /*---------------Crear botonera de acordes----------------*/
-        /*---------------Si presionan boton de acorde, ejecutar----------------*/
-        var $this = $(this);
-        var keysHtml = $("<div class='transpose-keys'></div>");
-        keysHtml.html(keyLinks.join(""));
-        $("a", keysHtml).click(function(e) {
-            e.preventDefault();
-            transposeSong($this, $(this).text());
-            $(".transpose-keys a").removeClass("selected");
-            $(this).addClass("selected");
-            return false;
-        });
-        //$(this).before(keysHtml);
+            /*---------------Crear botonera de acordes----------------*/
+            /*---------------Si presionan boton de acorde, ejecutar----------------*/
+            var $this = $(this);
+            var keysHtml = $("<div class='transpose-keys'></div>");
+            keysHtml.html(keyLinks.join(""));
+            $("a", keysHtml).click(function(e) {
+                e.preventDefault();
+                transposeSong($this, $(this).text());
+                $(".transpose-keys a").removeClass("selected");
+                $(this).addClass("selected");
+                return false;
+            });
+            //$(this).before(keysHtml);
         
 
-        /*----------------------Mostrar botonera de transportar ----------------------*/
-        //Mostrar antes de la seccion NavCanto
-        $( ".navCanto" ).before(keysHtml);
+            /*----------------------Mostrar botonera de transportar ----------------------*/
+            //Mostrar antes de la seccion NavCanto
+            $( ".navCanto" ).before(keysHtml);
 
-        //Cuando se presione el boton de transportar, ensenar botonera
-        $(".botonTransportar").click(function() {
-            keysHtml.toggle();
-        });
+            //Cuando se presione el boton de transportar, ensenar botonera
+            $(".botonTransportar").click(function() {
+                keysHtml.toggle();
+            });
 
-        var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
-        console.log(currentKey.name);
-        console.log(startKey);
-        console.log(TonoActual);
-        
-        /*----------------------Agarrar todas las lineas del <pre> y revisar si es acorde o un titulo----------------------*/
-        var output = [];
-        var lines = $(this).text().split(/\r\n|\n/g);
-        var line, tmp = "";
+            var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
+            console.log(currentKey.name);
+            console.log(startKey);
+            console.log(TonoActual);
+            
+            /*----------------------Agarrar todas las lineas del <pre> y revisar si es acorde o un titulo----------------------*/
+            var output = [];
+            var lines = $(this).text().split(/\r\n|\n/g);
+            var line, tmp = "";
         
         for (var i = 0; i < lines.length; i++) {
             line = lines[i];
