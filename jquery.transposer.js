@@ -138,8 +138,10 @@
 
             /*---------------Guardar en cual acorde se quedo transportado---------------*/
             var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
-            console.log(TonoCanciones);
-
+            let Tonos = TonoCanciones.filter(function(canto){
+                return  canto.titulo === $(".tituloDelCanto"); 
+              });
+            console.log(Tonos);
             localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
 
             /*------------Cambiar Tono de class = Tono en la cabecera del canto------------*/

@@ -448,7 +448,7 @@ class UI {
     if (tonos == null){
       tonos = baseCanciones.map(cantos => ({titulo: cantos.titulo, autor: cantos.autor, tono:cantos.tono}));
       localStorage.setItem("TonosActuales", JSON.stringify(tonos));
-      console.log(tonos);
+      //console.log(tonos);
     }
     
   }
