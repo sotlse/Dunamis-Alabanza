@@ -235,7 +235,6 @@
             /*---------------Crear botonera de acordes----------------*/
             /*---------------Si presionan boton de acorde, ejecutar----------------*/
             var $this = $(this); //<pre> del canto
-            var botonSelected;
             var keysHtml = $("<div class='transpose-keys'></div>");
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
@@ -247,7 +246,6 @@
                 //console.log(botonSeleccionado);
                 return false;
             });
-            console.log(botonSelected);
             //$(this).before(keysHtml);
             
 
@@ -293,7 +291,12 @@
             let Tonos = TonoCanciones.filter(function(canto){
                 return  canto.titulo === $(".tituloDelCanto").text(); 
             });
-            //console.log(Tonos[0].tono);
+            //console.log($("a", keysHtml));
+            let otro = $("a", keysHtml).filter(function(boton){
+                console.log(boton);
+                return  boton.text === Tonos[0].tono; 
+            });
+            console.log(otro);
             //var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
             //if (TonoActual !== null){
             transposeSong($this, Tonos[0].tono);
