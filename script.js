@@ -156,7 +156,7 @@ class cantoGuardado {
   }
 }
 
-//Base de datos de canciones
+//Base de datos de canciones, el titulo debe coincidir con el titulo del canto y el tono con el original
 class UI {
   static desplegarCantos(){
     const baseCanciones = [

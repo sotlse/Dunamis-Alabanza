@@ -249,11 +249,7 @@
                 keysHtml.toggle();
             });
 
-            var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
-            if (TonoActual !== null){
-                transposeSong($this, TonoActual);
-                console.log(TonoActual);
-            }
+            
             /*console.log(currentKey.name);
             console.log(startKey);
             console.log(TonoActual);
@@ -280,6 +276,13 @@
                     output.push("<span>" + line + "</span>");
             };
             $(this).html(output.join("\n"));
+            
+            /*----------------------Guardar canto con tono seleccionado----------------------*/
+            var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
+            if (TonoActual !== null){
+                transposeSong($this, TonoActual);
+                console.log(TonoActual);
+            }
         });
     };
   
