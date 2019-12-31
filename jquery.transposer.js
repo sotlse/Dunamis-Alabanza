@@ -12,9 +12,9 @@
 
     $.fn.transpose = function(options) {
         var opts = $.extend({}, $.fn.transpose.defaults, options);
-      
+        
         var currentKey = null;
-      
+        
         var keys = [
             { name: 'Ab',  value: 0,   type: 'F' },
             { name: 'A',   value: 1,   type: 'N' },
@@ -34,7 +34,7 @@
             { name: 'G',   value: 11,  type: 'N' },
             { name: 'G#',  value: 0,   type: 'S' }
         ];
-    
+        
         var getKeyByName = function (name) {
             if (name.charAt(name.length-1) == "m") {
                 name = name.substring(0, name.length-1);
@@ -45,14 +45,14 @@
                 }
             }
         };
-  
+    
         var getChordRoot = function (input) {
             if (input.length > 1 && (input.charAt(1) == "b" || input.charAt(1) == "#"))
                 return input.substr(0, 2);
             else
                 return input.substr(0, 1);
         };
-  
+    
         var getNewKey = function (oldKey, delta, targetKey) {
             var keyValue = getKeyByName(oldKey).value + delta;
     
@@ -61,7 +61,7 @@
             } else if (keyValue < 0) {
                 keyValue += 12;
             }
-          
+            
             var i=0;
             if (keyValue == 0 || keyValue == 2 || keyValue == 5 || keyValue == 7 || keyValue == 10) {
                 // Return the Flat or Sharp Key
@@ -99,7 +99,7 @@
                 }
             }
         };
-  
+    
         var getChordType = function (key) {
             switch (key.charAt(key.length - 1)) {
                 case "b":
@@ -110,7 +110,7 @@
                     return "N";
             }
         };
-  
+    
         var getDelta = function (oldIndex, newIndex) {
             if (oldIndex > newIndex)
                 return 0 - (oldIndex - newIndex);
@@ -119,7 +119,7 @@
             else
                 return 0;
         };
-  
+    
         var transposeSong = function (target, key) {
             var newKey = getKeyByName(key);
             console.log(newKey.name); 
@@ -144,7 +144,7 @@
             var raiz = tono.replace(/[A-Z]/g,currentKey.name);
             $(".AcordeCanto").html(raiz);
         };
-  
+    
         var transposeChord = function (selector, delta, targetKey) {
             var el = $(selector);
             var oldChord = el.text();
@@ -159,7 +159,7 @@
                 sib.nodeValue = makeString(" ", wsLength);
             }
         };
-  
+    
         var getNewWhiteSpaceLength = function (a, b, c) {
             if (a > b)
                 return (c + (a - b));
@@ -168,30 +168,46 @@
             else
                 return c;
         };
-  
+    
         var makeString = function (s, repeat) {
             var o = [];
             for (var i = 0; i < repeat; i++) o.push(s);
             return o.join("");
         }
-      
-      
-      
-      
+        
+        /*-----------------Revisar en cada linea si es una linea de acordes o de letra-----------------*/
+        var isChordLine = function (input) {
+            //var tokens = input.replace(/\s+/, " ").split(" ");
+            var tokens = input.replace(/\s+/, " ").replace(/-|[|]/g, " ").split(" ");
+            // Try to find tokens that aren't chords, if we find one we know that this line is not a 'chord' line.
+            for (var i = 0; i < tokens.length; i++) {
+                if (!$.trim(tokens[i]).length == 0 && !tokens[i].match(opts.chordRegex))
+                    return false;
+            }
+            return true;
+        };
+        
+        var wrapChords = function (input) {
+            return input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>");
+        };
+        
+        
         return $(this).each(function() {
+        
+            
             var startKey = $(this).attr("data-key");
             if (!startKey || $.trim(startKey) == "") {
-                startKey = opts.key;
+            startKey = opts.key;
             }
     
             if (!startKey || $.trim(startKey) == "") {
-                throw("Starting key not defined.");
-                return this;
+            throw("Starting key not defined.");
+            return this;
             }
-        
+            
             currentKey = getKeyByName(startKey);
             startKey = startKey.substr(0,1);
-  
+    
             /*----------------------Construir la botonera para transportar----------------------*/
             var keyLinks = [];
             $(keys).each(function(i, key) {
@@ -203,7 +219,7 @@
                     keyLinks.push("<a href='#'>" + key.name + "</a>");
             });
 
-        
+            
             /*---------------Crear botonera de acordes----------------*/
             /*---------------Si presionan boton de acorde, ejecutar----------------*/
             var $this = $(this);
@@ -217,7 +233,7 @@
                 return false;
             });
             //$(this).before(keysHtml);
-        
+            
 
             /*----------------------Mostrar botonera de transportar ----------------------*/
             //Mostrar antes de la seccion NavCanto
@@ -237,25 +253,25 @@
             var output = [];
             var lines = $(this).text().split(/\r\n|\n/g);
             var line, tmp = "";
-        
-        for (var i = 0; i < lines.length; i++) {
-            line = lines[i];
-  
-            if (isChordLine(line))
-                output.push("<span>" + wrapChords(line) + "</span>");
-            else if (line=="INTRO:")
-                output.push("<p class='tituloCanto'>" + line + "</p>");
-            else if (line=="VERSO:" || line=="VERSO1:" || line=="VERSO2:" || line=="VERSO3:" || line=="VERSO4:")
-                output.push("<p class='tituloVerso'>" + line + "</p>");
-            else if (line=="CORO:" || line=="CORO1:" || line=="CORO2:" || line=="CORO3:" || line=="CORO4:")
-                output.push("<p class='tituloCoro'>" + line + "</p>");
-            else if (line=="PUENTE:" || line=="PUENTE1:" || line=="PUENTE2:" || line=="PUENTE3:")
-                output.push("<p class='tituloPuente'>" + line + "</p>");
-            else
-                output.push("<span>" + line + "</span>");
-        };
-        $(this).html(output.join("\n"));
-      });
+            
+            for (var i = 0; i < lines.length; i++) {
+                line = lines[i];
+    
+                if (isChordLine(line))
+                    output.push("<span>" + wrapChords(line) + "</span>");
+                else if (line=="INTRO:")
+                    output.push("<p class='tituloCanto'>" + line + "</p>");
+                else if (line=="VERSO:" || line=="VERSO1:" || line=="VERSO2:" || line=="VERSO3:" || line=="VERSO4:")
+                    output.push("<p class='tituloVerso'>" + line + "</p>");
+                else if (line=="CORO:" || line=="CORO1:" || line=="CORO2:" || line=="CORO3:" || line=="CORO4:")
+                    output.push("<p class='tituloCoro'>" + line + "</p>");
+                else if (line=="PUENTE:" || line=="PUENTE1:" || line=="PUENTE2:" || line=="PUENTE3:")
+                    output.push("<p class='tituloPuente'>" + line + "</p>");
+                else
+                    output.push("<span>" + line + "</span>");
+            };
+            $(this).html(output.join("\n"));
+        });
     };
   
   
@@ -264,4 +280,4 @@
         chordReplaceRegex: /([A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*)/g
     };
   
-})(jQuery);
+  })(jQuery);
