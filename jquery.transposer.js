@@ -244,6 +244,7 @@
                 transposeSong($this, $(this).text()); //Envia <pre> y texto del boton a transportar (el acorde a transportar)
                 $(".transpose-keys a").removeClass("selected");
                 $(this).addClass("selected");
+                console.log(botonSeleccionado);
                 return false;
             });
             //$(this).before(keysHtml);
