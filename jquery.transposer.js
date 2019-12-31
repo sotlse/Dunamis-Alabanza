@@ -223,6 +223,7 @@
             /*---------------Crear botonera de acordes----------------*/
             /*---------------Si presionan boton de acorde, ejecutar----------------*/
             var $this = $(this);
+            console.log($this)
             var keysHtml = $("<div class='transpose-keys'></div>");
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
