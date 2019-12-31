@@ -139,8 +139,8 @@
             /*---------------Guardar en cual acorde se quedo transportado---------------*/
             var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
             let Tonos = TonoCanciones.filter(function(canto){
-                return  canto.titulo === $(".tituloDelCanto"); 
-              });
+                return  canto.titulo === $(".tituloDelCanto").text(); 
+            });
             console.log(Tonos);
             localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
 
