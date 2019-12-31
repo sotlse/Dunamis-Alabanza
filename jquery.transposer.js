@@ -122,7 +122,7 @@
     
         var transposeSong = function (target, key) {
             var newKey = getKeyByName(key);
-            console.log(newKey.name); 
+            console.log(target); 
             if (currentKey.name == newKey.name) {
                 return;
             }
@@ -222,13 +222,12 @@
             
             /*---------------Crear botonera de acordes----------------*/
             /*---------------Si presionan boton de acorde, ejecutar----------------*/
-            var $this = $(this);
-            console.log($this)
+            var $this = $(this); //<pre>
             var keysHtml = $("<div class='transpose-keys'></div>");
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
                 e.preventDefault();
-                transposeSong($this, $(this).text());
+                transposeSong($this, $(this).text()); //Envia <pre> y texto del boton a transportar (el acorde a transportar)
                 $(".transpose-keys a").removeClass("selected");
                 $(this).addClass("selected");
                 return false;
