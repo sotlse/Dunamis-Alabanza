@@ -134,6 +134,8 @@
             });
             
             currentKey = newKey;
+
+            //Guardar en cual acorde se quedo transportado
             localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
 
             /*------------Cambiar Tono de class = Tono en la cabecera del canto------------*/
@@ -222,7 +224,7 @@
             
             /*---------------Crear botonera de acordes----------------*/
             /*---------------Si presionan boton de acorde, ejecutar----------------*/
-            var $this = $(this); //<pre>
+            var $this = $(this); //<pre> del canto
             var keysHtml = $("<div class='transpose-keys'></div>");
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
@@ -245,6 +247,9 @@
             });
 
             var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
+            if (TonoActual != null){
+                transposeSong($this, TonoActual);
+            }
             console.log(currentKey.name);
             console.log(startKey);
             console.log(TonoActual);
