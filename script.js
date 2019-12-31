@@ -438,8 +438,17 @@ class UI {
       let Canto = baseCanciones.filter(function(canto){
         return  canto.titulo === tituloCanto.innerHTML; 
       });
-    UI.agregarAudio(Canto);
+      UI.agregarAudio(Canto);
     }
+
+    let filtroTono = baseCanciones.filter(function(cantos){
+      for (let i=0; i<totalCantos;i++){
+        if (cantos.tono [i]== categoria){
+          return true;
+        }
+      }
+    });
+    console.log(filtroTono);
   }
 
   static agregarCantosAListaCategoria(canto){
