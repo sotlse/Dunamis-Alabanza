@@ -293,19 +293,21 @@
                 return  canto.titulo === $(".tituloDelCanto").text(); 
             });
             
+            /*--------------Mostrar en la botonera que tono esta el canto-----------------*/
             let valorTono = keys.filter(function(boton){
                 return boton.name === Tonos[0].tono;
             });
-            console.log(valorTono);
 
-            let otro = $("a", keysHtml).filter(function(boton){
-                return  boton === valorTono[0].botonera; 
+            let boton = $("a", keysHtml).filter(function(botones){
+                return  botones === valorTono[0].botonera; 
             });
-            console.log(otro);
+            boton.addClass("selected");
 
+            
+            /*-----------------Transportar desde el inicio el canto con el tono guardado--------------*/
+            transposeSong($this, Tonos[0].tono);
             //var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
             //if (TonoActual !== null){
-            transposeSong($this, Tonos[0].tono);
                 //transposeSong($this, TonoActual);
                 //console.log(TonoActual);
             //}
