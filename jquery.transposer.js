@@ -20,20 +20,20 @@
             { name: 'A',   value: 1,   type: 'N', botonera: 1 },
             { name: 'A#',  value: 2,   type: 'S', botonera: 2 },
             { name: 'Bb',  value: 2,   type: 'F', botonera: 3 },
-            { name: 'Bb',  value: 2,   type: 'F', botonera: 4 },
-            { name: 'B',   value: 3,   type: 'N', botonera: 5 },
-            { name: 'C',   value: 4,   type: 'N', botonera: 6 },
-            { name: 'C#',  value: 5,   type: 'S', botonera: 7 },
-            { name: 'Db',  value: 5,   type: 'F', botonera: 8 },
-            { name: 'D',   value: 6,   type: 'N', botonera: 9 },
-            { name: 'D#',  value: 7,   type: 'S', botonera: 10 },
-            { name: 'Eb',  value: 7,   type: 'F', botonera: 11 },
-            { name: 'E',   value: 8,   type: 'N', botonera: 12 },
-            { name: 'F',   value: 9,   type: 'N', botonera: 13 },
-            { name: 'F#',  value: 10,  type: 'S', botonera: 14 },
-            { name: 'Gb',  value: 10,  type: 'F', botonera: 15 },
-            { name: 'G',   value: 11,  type: 'N', botonera: 16 },
-            { name: 'G#',  value: 0,   type: 'S', botonera: 17 }
+            //{ name: 'Bb',  value: 2,   type: 'F', botonera: 4 },
+            { name: 'B',   value: 3,   type: 'N', botonera: 4 },
+            { name: 'C',   value: 4,   type: 'N', botonera: 5 },
+            { name: 'C#',  value: 5,   type: 'S', botonera: 6 },
+            { name: 'Db',  value: 5,   type: 'F', botonera: 7 },
+            { name: 'D',   value: 6,   type: 'N', botonera: 8 },
+            { name: 'D#',  value: 7,   type: 'S', botonera: 9 },
+            { name: 'Eb',  value: 7,   type: 'F', botonera: 10 },
+            { name: 'E',   value: 8,   type: 'N', botonera: 11 },
+            { name: 'F',   value: 9,   type: 'N', botonera: 12 },
+            { name: 'F#',  value: 10,  type: 'S', botonera: 13 },
+            { name: 'Gb',  value: 10,  type: 'F', botonera: 14 },
+            { name: 'G',   value: 11,  type: 'N', botonera: 15 },
+            { name: 'G#',  value: 0,   type: 'S', botonera: 16 }
         ];
         
         var getKeyByName = function (name) {
@@ -219,7 +219,9 @@
             }
             
             currentKey = getKeyByName(startKey);
-            startKey = startKey.substr(0,1);
+            if (startKey.charAt(1)==="m")
+                startKey = startKey.substr(0,1);
+            console.log(startKey);
     
             /*----------------------Construir la botonera para transportar----------------------*/
             var keyLinks = [];
