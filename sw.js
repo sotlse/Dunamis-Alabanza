@@ -1,5 +1,5 @@
-var CACHE_NAME = 'cache-v1';
-var urlsToCache = [
+const cacheName = 'cache-v1';
+const urlsToCache = [
   '/',
   '/style.css',
   '/script.js'
@@ -10,7 +10,7 @@ self.addEventListener('install',e => {
   console.log('Service Worker: Installed');
   // Perform install steps
   e.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(cacheName)
       .then(cache => {
         console.log('Opened cache');
         cache.addAll(urlsToCache);
@@ -20,16 +20,17 @@ self.addEventListener('install',e => {
 });
 
 /*-------------------------LLAMAR PARA ACTIVAR-------------------------*/
-self.addEventListener('activate', function(event) {
-
-  var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
-
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+self.addEventListener('activate', e => {
+  console.log('Service Worker: Activated');
+  //var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+  //Remove unwanted caches
+  e.waitUntil(
+    caches.keys().then(cacheNames => {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
+        cacheNames.map(cache => {
+          if (cache !== cacheName) {
+            console.log('Service Worker: Clearing Old Cache');
+            return caches.delete(cache);
           }
         })
       );
