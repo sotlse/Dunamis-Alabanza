@@ -1,7 +1,6 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'cache-v1';
 var urlsToCache = [
   '/',
-  //'/index.hmtl',
   '/style.css',
   '/script.js'
 ];
