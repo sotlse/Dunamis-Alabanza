@@ -32,7 +32,7 @@ var current_mode = screen.orientation;
 //Tamano de letra
 let tamano;
 
-/*-------------------------------SERVICE WORKER----------------------------------*/
+/*-------------------------------REGISTRO DE SERVICE WORKER----------------------------------*/
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
