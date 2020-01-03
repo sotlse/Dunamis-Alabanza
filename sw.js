@@ -5,7 +5,7 @@ const urlsToCache = [
   '/script.js'
 ];
 
-/*-------------------------LLAMAR PARA INSTALAR-------------------------*/
+/*-------------------------LLAMAR ELEMENTO INSTALAR-------------------------*/
 self.addEventListener('install',e => {
   console.log('Service Worker: Installed');
   // Perform install steps
@@ -19,11 +19,10 @@ self.addEventListener('install',e => {
   );
 });
 
-/*-------------------------LLAMAR PARA ACTIVAR-------------------------*/
+/*-------------------------LLAMAR ELEMENTO ACTIVAR-------------------------*/
 self.addEventListener('activate', e => {
   console.log('Service Worker: Activated');
-  //var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
-  //Remove unwanted caches
+  //Eliminar caches no deseados 
   e.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
@@ -37,10 +36,12 @@ self.addEventListener('activate', e => {
     })
   );
 });
-/*
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
+
+/*-------------------------LLAMAR ELEMENTO FETCH (para mostrar las paginas en offline)-------------------------*/
+self.addEventListener('fetch', e => {
+  console.log('Service Worker: Fetching');
+  e.respondWith(
+    fetch(e.request).catch(() => caches.match(e.reques))
       .then(function(response) {
         // Cache hit - return response
         if (response) {
@@ -51,6 +52,6 @@ self.addEventListener('fetch', function(event) {
     )
   );
 });
-*/
+
 
 
