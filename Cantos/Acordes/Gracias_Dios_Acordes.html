@@ -72,34 +72,69 @@ F       C                  Bb2   C
 Gracias Dios, por tu gran amor Señor
 
 VERSO2:
-F                              C  Gm7                    Dm
-  Por lo que haz hecho por mi    me diste vida me diste tu luz
-Bb2      C      Bb2      C
+F                          C 
+  Por lo que haz hecho por mi
+Gm7                Dm
+  me diste vida me diste tu luz
+Bb2     C     Bb2     C
 Gracias Dios, gracias Dios
 
-F                       C  Gm7                   Dm
-  Porque lavaste mi ser    sanaste toda herida en mi
-Bb2      C      Bb2      C
+F                   C  
+  Porque lavaste mi ser
+Gm7              Dm
+  sanaste toda herida en mi
+Bb2     C     Bb2     C
 Gracias Dios, gracias Dios
- </pre></div>
-            <br>
+        
+        </pre>
+<!---------------Este es el limite-----> 
+      </div>
+      <div class = "flechasRegresarAvanzar">
+        <div class ="arrowRegresar2">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class ="arrowAvanzar2">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+            
       <div class="divAudio">
       </div>
       
+      <br>
 
       <nav class = "navCanto">
-           <button class="botonTransportar">
-             Transportar
-           </button>  
+        <button class="botonTransportar">
+          C->D
+        </button>  
 
-           <button class="botonAudio">
-             <i class="fas fa-music"></i>
-           </button>  
+        <button class="botonAudio">
+          <i class="fas fa-music"></i>
+        </button>  
 
+        <button class="botonTextoChico">
+          <i class="fas fa-text-height"> -</i>
+        </button> 
+
+        <button class="botonTextoGrande">
+          <!--<i class="material-icons">format_size</i>-->
+          <i class="fas fa-text-height"> +</i>
+        </button> 
+
+        <button class="botonCasa">
+          <i class="fa fa-home"></i>
+        </button> 
         
       </nav>
           <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-    <!--<script src="/landscape.js" ></script>-->
+      <script src="/script.js" defer></script>
+      <!--<script src="/landscape.js" ></script>-->
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+      <script type="text/javascript" src="/jquery.transposer.js"></script>
+      <script type="text/javascript">
+        $(function() {
+          $("pre").transpose();
+        });
+      </script>
     </body>
 </html>

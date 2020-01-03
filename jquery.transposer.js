@@ -283,6 +283,8 @@
                     output.push("<p class='tituloCoro'>" + line + "</p>");
                 else if (line=="PUENTE:" || line=="PUENTE1:" || line=="PUENTE2:" || line=="PUENTE3:")
                     output.push("<p class='tituloPuente'>" + line + "</p>");
+                else if (line=="PRE-CORO:" || line=="PRE-CORO1:" || line=="PRE-CORO2:" || line=="PRE-CORO3:")
+                    output.push("<p class='tituloPreCoro'>" + line + "</p>");
                 else
                     output.push("<span>" + line + "</span>");
             };
