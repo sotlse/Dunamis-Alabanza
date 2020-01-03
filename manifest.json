@@ -8,42 +8,42 @@
   "start_url": "/index.html",
   "icons": [
     {
-      "src": "/Imagenes/icon-96x96.png",
+      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-72x72.png?v=1578025811581",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/Imagenes/icon-96x96.png",
+      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-96x96.png?v=1578025805104",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/Imagenes/icon-128x128.png",
+      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-128x128.png?v=1578025797971",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/Imagenes/icon-144x144.png",
+      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-144x144.png?v=1578025708108",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/Imagenes/icon-152x152.png",
+      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-152x152.png?v=1578025697458",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "/Imagenes/icon-192x192.png",
+      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-192x192.png?v=1578025684468",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/Imagenes/icon-384x384.png",
+      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-384x384.png?v=1578025595291",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "/Imagenes/icon-512x512.png",
+      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-512x512.png?v=1578025879948",
       "sizes": "512x512",
       "type": "image/png"
     }
