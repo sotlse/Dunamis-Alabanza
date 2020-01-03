@@ -29,7 +29,7 @@
       
       <div class="infoCanto">
         <div class="tempo">
-            <span style='font-size:18px;'>&#9833;</span>= XX</div>
+          <span style='font-size:18px;'>&#9833;</span>= XX</div>
         <div class="nombre">
           ACORDES</div>
         <div class="tono">
@@ -38,7 +38,7 @@
       </div>
       
       <div class="canto_body">  
-          <pre data-key="D">
+        <pre data-key="D">
 INTRO:
 G   D   Bm   A   
 
@@ -84,25 +84,54 @@ Puente:
 //CORO://
 
 
-</pre></div>
-            <br>
+        </pre>
+      </div>
+      <div class = "flechasRegresarAvanzar">
+        <div class ="arrowRegresar2">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class ="arrowAvanzar2">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+            
       <div class="divAudio">
       </div>
-      
+
+      <br>
 
       <nav class = "navCanto">
-           <button class="botonTransportar">
-             Transportar
-           </button>  
+        <button class="botonTransportar">
+          C->D
+        </button>  
 
-           <button class="botonAudio">
-             <i class="fas fa-music"></i>
-           </button>  
+        <button class="botonAudio">
+          <i class="fas fa-music"></i>
+        </button>  
 
+        <button class="botonTextoChico">
+          <i class="fas fa-text-height"> -</i>
+        </button> 
+
+        <button class="botonTextoGrande">
+          <!--<i class="material-icons">format_size</i>-->
+          <i class="fas fa-text-height"> +</i>
+        </button> 
+
+        <button class="botonCasa">
+          <i class="fa fa-home"></i>
+        </button> 
         
       </nav>
           <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-    <!--<script src="/landscape.js" ></script>-->
+      <script src="/script.js" defer></script>
+      <!--<script src="/landscape.js" ></script>-->
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+      <script type="text/javascript" src="/jquery.transposer.js"></script>
+      <script type="text/javascript">
+        $(function() {
+          $("pre").transpose();
+        });
+      </script>
     </body>
 </html>
