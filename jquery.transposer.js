@@ -191,7 +191,7 @@
         /*-----------------Revisar en cada linea si es una linea de acordes o de letra-----------------*/
         var isChordLine = function (input) {
             //var tokens = input.replace(/\s+/, " ").split(" ");
-            var tokens = input.replace(/\s+/, " ").replace(/-|[|]/g, " ").split(" ");
+            var tokens = input.replace(/\s+/, " ").replace(/-|[|]|[/]/g, " ").split(" ");
             // Try to find tokens that aren't chords, if we find one we know that this line is not a 'chord' line.
             for (var i = 0; i < tokens.length; i++) {
                 if (!$.trim(tokens[i]).length == 0 && !tokens[i].match(opts.chordRegex))
@@ -221,7 +221,6 @@
             currentKey = getKeyByName(startKey);
             if (startKey.charAt(1)==="m")
                 startKey = startKey.substr(0,1);
-            console.log(startKey);
     
             /*----------------------Construir la botonera para transportar----------------------*/
             var keyLinks = [];
@@ -280,7 +279,7 @@
                     output.push("<p class='tituloCanto'>" + line + "</p>");
                 else if (line=="VERSO:" || line=="VERSO1:" || line=="VERSO2:" || line=="VERSO3:" || line=="VERSO4:")
                     output.push("<p class='tituloVerso'>" + line + "</p>");
-                else if (line=="CORO:" || line=="CORO1:" || line=="CORO2:" || line=="CORO3:" || line=="CORO4:")
+                else if (line=="CORO:" || line=="//CORO://" || line=="CORO1:" || line=="CORO2:" || line=="CORO3:" || line=="CORO4:")
                     output.push("<p class='tituloCoro'>" + line + "</p>");
                 else if (line=="PUENTE:" || line=="PUENTE1:" || line=="PUENTE2:" || line=="PUENTE3:")
                     output.push("<p class='tituloPuente'>" + line + "</p>");
