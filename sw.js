@@ -52,7 +52,7 @@ self.addEventListener('fetch', e => {
           cache.put(e.request, respClone);
         });
       return res;
-    }).catch(err => caches)
+    }).catch(err => caches.match(e.request).then(res => res))
   );
   //e.respondWith(fetch(e.request).catch(() => caches.match(e.request))
       /*.then(function(response) {
