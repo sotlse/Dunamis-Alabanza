@@ -32,6 +32,20 @@ var current_mode = screen.orientation;
 //Tamano de letra
 let tamano;
 
+/*-----------------------SERVICE WORKER-----------------------*/
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+
 /*-----------------------ROTACION DE PANTALLA-----------------------*/
 if (cantoBody)
 {
@@ -341,9 +355,9 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Sobrenatural.html",
-      titulo: "Sobrenatural",
-      autor: "Marcos Witt",
+      pagina:"Cantos/Info/Sobretodo.html",
+      titulo: "Sobretodo",
+      autor: "Vino Nuevo",
       tono: "A",
       categoria: ["Alabanza"],
       audio:"",
@@ -455,9 +469,7 @@ class UI {
     //Guardar todos los tonos de los cantos en localStorage para despues manipularlos
     let tonos,flag;
     tonos = JSON.parse(localStorage.getItem("TonosActuales"));
-    console.log(tonos.length);
-    console.log(baseCanciones.length);
-    if (tonos == null || tonos.length !== baseCanciones.length){
+    if ((tonos == null) || (tonos.length != baseCanciones.length)){
       tonos = baseCanciones.map(cantos => ({titulo: cantos.titulo, autor: cantos.autor, tono:cantos.tono}));
       localStorage.setItem("TonosActuales", JSON.stringify(tonos));
     }
