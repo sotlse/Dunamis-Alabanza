@@ -32,7 +32,7 @@ var current_mode = screen.orientation;
 //Tamano de letra
 let tamano;
 
-/*-----------------------SERVICE WORKER-----------------------*/
+/*-------------------------------SERVICE WORKER----------------------------------*/
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -46,7 +46,7 @@ if ('serviceWorker' in navigator) {
 }
 
 
-/*-----------------------ROTACION DE PANTALLA-----------------------*/
+/*-------------------------------ROTACION DE PANTALLA---------------------------*/
 if (cantoBody)
 {
   //Para dispositivos Android
