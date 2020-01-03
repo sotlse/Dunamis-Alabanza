@@ -1,60 +1,52 @@
 {
   "name": "Dunamis Adoracion",
   "short_name": "Adoracion",
-  "start_url": "/index.html",
+  "theme_color": "#ffe1c4",
+  "background_color": "#ffe9d2",
   "display": "standalone",
-  "background_color": "#FFE9D2",
-  "theme_color": "#FFE1C4",
-  "icons":[
+  "Scope": "/",
+  "start_url": "/index.html",
+  "icons": [
     {
-      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
-      "type": "image/jpg",
-      "sizes": "72x72"
+      "src": "/Imagenes/icon-96x96.png",
+      "sizes": "72x72",
+      "type": "image/png"
     },
-    
     {
-      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
-      "type": "image/jpg",
-      "sizes": "96x96"
+      "src": "/Imagenes/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
     },
-    
     {
-      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
-      "type": "image/jpg",
-      "sizes": "128x128"
+      "src": "/Imagenes/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
     },
-    
     {
-      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
-      "type": "image/jpg",
-      "sizes": "144x144"
+      "src": "/Imagenes/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
     },
-    
     {
-      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
-      "type": "image/jpg",
-      "sizes": "152x152"
+      "src": "/Imagenes/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
     },
-    
     {
-      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
-      "type": "image/jpg",
-      "sizes": "192x192"
+      "src": "/Imagenes/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
-    
     {
-      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
-      "type": "image/jpg",
-      "sizes": "384x384"
+      "src": "/Imagenes/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
     },
-    
     {
-      "src": "https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FIcon_Dunamis.PNG?1557374456557",
-      "type": "image/jpg",
-      "sizes": "512x512"
+      "src": "/Imagenes/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-    
-    ]
-  
-  
+  ],
+  "splash_pages": null
 }
