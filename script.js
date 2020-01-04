@@ -51,19 +51,26 @@ Notification.requestPermission(function(status) {
   console.log('Notification permission status:', status);
 });
 
+//displayNotification();
+
 //Mostrar notificacion
 function displayNotification() {
   if (Notification.permission == 'granted') {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
-        body: 'Este es el body',
-        icon: '',
-        vibrate: [100,50,100],
-        //allows us to identify notifications
+        body: 'Here is a notification body!',
+        icon: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-384x384.png?v=1578025595291',
+        vibrate: [100, 50, 100],
         data: {
           dateOfArrival: Date.now(),
           primaryKey: 1
-        }
+        },
+        actions: [
+          {action: 'explore', title: 'Explore this new world',
+            icon: 'images/checkmark.png'},
+          {action: 'close', title: 'Close notification',
+            icon: 'images/xmark.png'},
+        ]
       };
       reg.showNotification('Hello world!', options);
     });
