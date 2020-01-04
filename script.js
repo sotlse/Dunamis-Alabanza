@@ -45,6 +45,26 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+/*-------------------------------NOTIFICACIONES----------------------------------*/
+//Preguntar si pueden mostrar notificaciones
+Notification.requestPermission(function(status) {
+  console.log('Notification permission status:', status);
+});
+
+var options = {
+  body: 'Este es el body',
+  icon: '',
+  vibrate: []
+}
+
+//Mostrar notificacion
+function displayNotification() {
+  if (Notification.permission == 'granted') {
+    navigator.serviceWorker.getRegistration().then(function(reg) {
+      reg.showNotification('Hello world!');
+    });
+  }
+}
 
 /*-------------------------------ROTACION DE PANTALLA---------------------------*/
 if (cantoBody)
