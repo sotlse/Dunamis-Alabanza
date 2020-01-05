@@ -237,9 +237,9 @@ class UI {
   
     {
       pagina:"Cantos/Info/Abre_Los_Cielos.html",
-      titulo: "Abre los Cielos",
-      autor: "Jesus Adrian Romero",
-      tono: "A#",
+      titulo: "Abre los cielos",
+      autor: "Vino Nuevo",
+      tono: "G",
       categoria: ["Alabanza"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
