@@ -162,12 +162,13 @@
   /*El dia de hoy*/
   .cal1 .clndr .clndr-table tr .day.today,
   .cal1 .clndr .clndr-table tr .day.my-today {
-    background:  rgb(214, 33, 63);
+    background: rgb(214, 33, 63,.5);
     color: #fff;
   }
+  /*Seleccionar el dia de hoy con evento*/
   .cal1 .clndr .clndr-table tr .day.today:hover,
   .cal1 .clndr .clndr-table tr .day.my-today:hover {
-    background: #72c6d8;
+    background:  rgb(214, 33, 63);
   }
   /*Evento el dia de hoy*/
   .cal1 .clndr .clndr-table tr .day.today.event,
@@ -179,6 +180,7 @@
   .cal1 .clndr .clndr-table tr .day.my-event {
     background: #B4E09F;
   }
+  /*Seleccionar un dia con evento*/
   .cal1 .clndr .clndr-table tr .day.event:hover,
   .cal1 .clndr .clndr-table tr .day.my-event:hover {
     background: #96d478;
