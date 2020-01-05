@@ -129,9 +129,9 @@
   /*Encabezado del calendario*/
   .cal1 .clndr .clndr-table .header-days {
     height: 30px;
-    font-size: 10px;
+    font-size: 15px;
     background: #0D70A6;
-    fo
+    font-weight: bold;
   }
   .cal1 .clndr .clndr-table .header-days .header-day {
     vertical-align: middle;
@@ -158,18 +158,22 @@
   .cal1 .clndr .clndr-table tr .day:hover {
     background: #eee;
   }
+  /*El dia de hoy*/
   .cal1 .clndr .clndr-table tr .day.today,
   .cal1 .clndr .clndr-table tr .day.my-today {
     background:  rgb(214, 33, 63);
+    color: #fff;
   }
   .cal1 .clndr .clndr-table tr .day.today:hover,
   .cal1 .clndr .clndr-table tr .day.my-today:hover {
     background: #72c6d8;
   }
+  /*Evento el dia de hoy*/
   .cal1 .clndr .clndr-table tr .day.today.event,
   .cal1 .clndr .clndr-table tr .day.my-today.event {
     background: #a7dbc1;
   }
+  /*Evento en cualquier otro dia*/
   .cal1 .clndr .clndr-table tr .day.event,
   .cal1 .clndr .clndr-table tr .day.my-event {
     background: #B4E09F;
