@@ -80,7 +80,7 @@ $(document).ready( function() {
     });
 
     // Calendar 2 uses a custom length of time: 2 weeks paging 7 days
-    calendars.clndr2 = $('.cal2').clndr({
+    /*calendars.clndr2 = $('.cal2').clndr({
         lengthOfTime: {
             days: 14,
             interval: 7
@@ -106,7 +106,7 @@ $(document).ready( function() {
                 console.log('Cal-2 interval changed');
             }
         }
-    });
+    });*/
 
     // Calendar 3 renders two months at a time, paging 1 month
     calendars.clndr3 = $('.cal3').clndr({

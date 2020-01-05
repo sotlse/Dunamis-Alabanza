@@ -126,10 +126,12 @@
     table-layout: fixed;
     width: 100%;
   }
+  /*Encabezado del calendario*/
   .cal1 .clndr .clndr-table .header-days {
     height: 30px;
     font-size: 10px;
     background: #0D70A6;
+    fo
   }
   .cal1 .clndr .clndr-table .header-days .header-day {
     vertical-align: middle;
@@ -158,7 +160,7 @@
   }
   .cal1 .clndr .clndr-table tr .day.today,
   .cal1 .clndr .clndr-table tr .day.my-today {
-    background: #9AD6E3;
+    background:  rgb(214, 33, 63);
   }
   .cal1 .clndr .clndr-table tr .day.today:hover,
   .cal1 .clndr .clndr-table tr .day.my-today:hover {
