@@ -1,3 +1,11 @@
+//Funcion regresar pagina
+let botonRegresar = document.querySelector(".arrowRegresar");
+if(botonRegresar){
+    botonRegresar.addEventListener("click",(e) =>  {
+      window.history.back();
+    });
+  }
+
 // Call this from the developer console and you can control both instances
 var calendars = {};
 

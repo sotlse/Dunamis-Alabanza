@@ -155,8 +155,9 @@
     width: 100%;
     height: inherit;
   }
+  /*Seleccionar un dia que no tenga actividad*/
   .cal1 .clndr .clndr-table tr .day:hover {
-    background: #eee;
+    background: #72c6d8;
   }
   /*El dia de hoy*/
   .cal1 .clndr .clndr-table tr .day.today,
