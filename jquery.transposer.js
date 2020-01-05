@@ -275,7 +275,7 @@
     
                 if (isChordLine(line))
                     output.push("<span>" + wrapChords(line) + "</span>");
-                else if (line=="INTRO:")
+                else if (line=="INTRO:" || line=="INTRO1:" || line=="INTRO2:")
                     output.push("<p class='tituloCanto'>" + line + "</p>");
                 else if (line=="VERSO:" || line=="VERSO1:" || line=="VERSO2:" || line=="VERSO3:" || line=="VERSO4:")
                     output.push("<p class='tituloVerso'>" + line + "</p>");
