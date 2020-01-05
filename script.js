@@ -276,6 +276,16 @@ class UI {
     }, 
 
     {
+      pagina:"Cantos/Info/Cubiertos_Por_Tu_Sangre.html",
+      titulo: "Cuberitos por tu sangre",
+      autor: "En Espirity y en Verdad",
+      tono: "F",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
       pagina:"Cantos/Info/Digno_Es_El_Senor.html",
       titulo: "Digno es el Senor",
       autor: "Marcela Gandara",
@@ -386,9 +396,9 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Sobretodo.html",
-      titulo: "Sobretodo",
-      autor: "Vino Nuevo",
+      pagina:"Cantos/Info/Sobrenatural.html",
+      titulo: "Sobrenatural",
+      autor: "Marcos Witt",
       tono: "A",
       categoria: ["Alabanza"],
       audio:"",
@@ -396,9 +406,9 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Sobrenatural.html",
-      titulo: "Sobrenatural",
-      autor: "Marcos Witt",
+      pagina:"Cantos/Info/Sobretodo.html",
+      titulo: "Sobretodo",
+      autor: "Vino Nuevo",
       tono: "A",
       categoria: ["Alabanza"],
       audio:"",
