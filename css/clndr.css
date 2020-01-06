@@ -67,8 +67,8 @@
 
   /*----------Calendario 1-----------*/
   .cal1 {
-    margin: 30px auto;
-    max-width: 600px;
+    margin: 30px 0;
+    max-width: 100%;
     font-family: 'Droid Sans Mono';
     font-size: 20px;
   }
@@ -134,6 +134,7 @@
   .cal1 .clndr .clndr-table {
     table-layout: fixed;
     width: 100%;
+    
   }
   /*Encabezado del calendario*/
   .cal1 .clndr .clndr-table .header-days {
