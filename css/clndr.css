@@ -5,13 +5,9 @@
     src: local('Droid Sans Mono Regular'), local('DroidSansMono-Regular'), url(http://fonts.gstatic.com/s/droidsansmono/v11/6NUO8FuJNQ2MbkrZ5-J8lKFrp7pRef2u.ttf) format('truetype');
   }
 
-  .container{
+  /*.container{
       background: red;
-  }
-
-  .cal1{
-      background: black;
-  }
+  }*/
 
   .clearfix:after {
     content: ".";
@@ -68,11 +64,13 @@
   .right-align {
     text-align: right;
   }
+
+  /*----------Calendario 1-----------*/
   .cal1 {
     margin: 30px auto;
     max-width: 600px;
     font-family: 'Droid Sans Mono';
-    font-size: 14px;
+    font-size: 20px;
   }
   .cal1 .clndr .clndr-controls {
     display: inline-block;
@@ -80,10 +78,12 @@
     position: relative;
     margin-bottom: 10px;
   }
+  /*Mes del calendario 1*/
   .cal1 .clndr .clndr-controls .month {
     float: left;
     width: 33%;
     text-align: center;
+    font-weight: bold;
   }
   .cal1 .clndr .clndr-controls .clndr-control-button {
     float: left;
