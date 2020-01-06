@@ -90,6 +90,7 @@
     float: left;
     width: 33%;
     font-size: 50px;
+    font-weight: bold;
   }
   .cal1 .clndr .clndr-controls .clndr-control-button.rightalign {
     text-align: right;
@@ -103,7 +104,6 @@
     /* Firefox */
     -ms-user-select: none;
     /* IE10+ */
-    w
   }
   .cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button:hover {
     background: #ddd;
