@@ -4,6 +4,15 @@
     font-weight: 400;
     src: local('Droid Sans Mono Regular'), local('DroidSansMono-Regular'), url(http://fonts.gstatic.com/s/droidsansmono/v11/6NUO8FuJNQ2MbkrZ5-J8lKFrp7pRef2u.ttf) format('truetype');
   }
+
+  .container{
+      background: red;
+  }
+
+  .cal1{
+      background: black;
+  }
+
   .clearfix:after {
     content: ".";
     display: block;
