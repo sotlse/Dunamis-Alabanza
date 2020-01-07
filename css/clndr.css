@@ -84,7 +84,7 @@
     width: 33%;
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
   }
   .cal1 .clndr .clndr-controls .clndr-control-button {
     float: left;
@@ -141,7 +141,7 @@
   /*Encabezado del calendario*/
   .cal1 .clndr .clndr-table .header-days {
     height: 30px;
-    font-size: 20px;
+    font-size: 25px;
     background: #0D70A6;
     font-weight: bold;
   }
@@ -207,8 +207,9 @@
   .cal1 .clndr .clndr-table tr .day .day-contents {
     box-sizing: border-box;
     padding: 8px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: right;
+    font-weight: bold;
   }
   .cal1 .clndr .clndr-table tr .empty,
   .cal1 .clndr .clndr-table tr .adjacent-month,
