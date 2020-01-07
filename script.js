@@ -137,7 +137,10 @@ if(botonTextoChico){
     tamano = JSON.parse(localStorage.getItem("letraTamano"));
     tamano = tamano - 10;
     console.log (tamano);
-    cantoBody.style.fontSize = tamano + "%" ;
+    if (cantoBody)
+      cantoBody.style.fontSize = tamano + "%" ;
+    else if (letraBody)
+      letraBody.style.fontSize = tamano + "%" ;
     localStorage.setItem("letraTamano",JSON.stringify(tamano));
   });
 }
@@ -148,7 +151,10 @@ if(botonTextoGrande){
     tamano = JSON.parse(localStorage.getItem("letraTamano"));
     tamano = tamano + 10;
     console.log (tamano);
-    cantoBody.style.fontSize = tamano + "%" ;
+    if (cantoBody)
+      cantoBody.style.fontSize = tamano + "%" ;
+    else if (letraBody)
+      letraBody.style.fontSize = tamano + "%" ;
     localStorage.setItem("letraTamano",JSON.stringify(tamano));
   });
 }
@@ -156,6 +162,12 @@ if (cantoBody)
 {
   cantoBody.style.fontSize = tamano + "%" ;
 }
+
+if (letraBody)
+{
+  letraBody.style.fontSize = tamano + "%" ;
+}
+
 
 /*
 //desplegar letra de acordes en tamano mas grande si es tablet
