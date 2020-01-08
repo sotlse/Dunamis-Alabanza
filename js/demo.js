@@ -26,16 +26,24 @@ $(document).ready( function() {
             title: 'Multi-Day Event',
             endDate: thisMonth + '-14',
             startDate: thisMonth + '-10'
-        },*/ {
-            endDate: thisMonth + '-23',
-            startDate: thisMonth + '-21',
-            title: 'Another Multi-Day Event'
         }, {
             date: thisMonth + '-26',
             title: 'Single Day Event'
+        },*/ 
+        {
+            endDate: '2020-01-12', startDate: '2020-01-12',
+            title: 'Programa Dominical 2',
+            cantos: 'Hola como estas_Gracias Dios_Venimos hoy ante ti'
+        }, {
+            endDate: '2020-01-19', startDate: '2020-01-19',
+            title: 'Programa Dominical 3',
+            cantos: 'Dios poderoso_El Dios que adoramos'
+        }, {
+            endDate: '2020-01-19', startDate: thisMonth + '2020-01-19',
+            title: 'Programa Dominical 4',
+            cantos: 'En ti_Porque tu eres el gozo'
         }
     ];
-    
 
     // The order of the click handlers is predictable. Direct click action
     // callbacks come first: click, nextMonth, previousMonth, nextYear,
@@ -46,7 +54,7 @@ $(document).ready( function() {
         events: eventArray,
         clickEvents: {
             click: function (target) {
-                console.log('Cal-1 clicked: ', target);
+                console.log('Cal-1 clicked: ', target.events[0].cantos);
             },
             today: function () {
                 console.log('Cal-1 today');
@@ -144,7 +152,7 @@ $(document).ready( function() {
         },
         template: $('#template-calendar-months').html()
     });
-    console.log(calendars.clndr3);
+
     // Bind all clndrs to the left and right arrow keys
     $(document).keydown( function(e) {
         // Left arrow
