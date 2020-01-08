@@ -26,15 +26,20 @@ $(document).ready( function() {
             title: 'Multi-Day Event',
             endDate: thisMonth + '-14',
             startDate: thisMonth + '-10'
-        },*/ {
+        }, {
             endDate: thisMonth + '-23',
             startDate: thisMonth + '-21',
             title: 'Another Multi-Day Event'
+        },*/ {
+            //date: thisMonth + '-26',
+            date: '2020-01' + '-26',
+            title: 'Single Day Event'
         }, {
             date: thisMonth + '-26',
             title: 'Single Day Event'
         }
     ];
+    console.log(eventArray);
 
     // The order of the click handlers is predictable. Direct click action
     // callbacks come first: click, nextMonth, previousMonth, nextYear,
