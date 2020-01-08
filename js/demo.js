@@ -39,7 +39,7 @@ $(document).ready( function() {
             title: 'Programa Dominical 3',
             cantos: 'Dios poderoso_El Dios que adoramos'
         }, {
-            endDate: '2020-01-19', startDate: thisMonth + '2020-01-19',
+            endDate: '2020-01-26', startDate: '2020-01-26',
             title: 'Programa Dominical 4',
             cantos: 'En ti_Porque tu eres el gozo'
         }
@@ -54,7 +54,12 @@ $(document).ready( function() {
         events: eventArray,
         clickEvents: {
             click: function (target) {
-                console.log('Cal-1 clicked: ', target.events[0].cantos);
+                //console.log('Cal-1 clicked: ', target.events[0].cantos);
+                let cantos = target.events[0].cantos;
+                if (cantos)
+                {
+                    console.log(cantos.split('_'));
+                }
             },
             today: function () {
                 console.log('Cal-1 today');
