@@ -33,15 +33,15 @@ $(document).ready( function() {
         {
             endDate: '2020-01-12', startDate: '2020-01-12',
             title: 'Programa Dominical 2',
-            cantos: 'Hola como estas_Gracias Dios_Venimos hoy ante ti'
+            cantos: 'Bueno es Dios_Cristo te exaltamos_Canta al Senor_Al estar aqui_Hermoso Dios'
         }, {
             endDate: '2020-01-19', startDate: '2020-01-19',
             title: 'Programa Dominical 3',
-            cantos: 'Dios poderoso_El Dios que adoramos'
+            cantos: 'No a nosotros_Cerca de mi_Dios_Sentado en su trono_Tu nombre levantare'
         }, {
             endDate: '2020-01-26', startDate: '2020-01-26',
             title: 'Programa Dominical 4',
-            cantos: 'En ti_Porque tu eres el gozo'
+            cantos: 'Al que me cine_Quien nos se'
         }
     ];
 
