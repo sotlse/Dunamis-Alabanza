@@ -41,7 +41,23 @@ $(document).ready( function() {
         }, {
             endDate: '2020-01-26', startDate: '2020-01-26',
             title: 'Programa Dominical 4',
-            cantos: 'Al que me cine_Quien nos se'
+            cantos: 'Al que me cine_Quien nos separara_Al alto y sublime_Con mis manos levantadas_Bueno es Dios'
+        }, {
+            endDate: '2020-02-02', startDate: '2020-02-02',
+            title: 'Programa Dominical 5',
+            cantos: 'Eres fiel_Eres bendito_Mas el Dios de toda gracia_Santo Santo Santo_Cuando yo senti'
+        }, {
+            endDate: '2020-02-09', startDate: '2020-02-09',
+            title: 'Programa Dominical 6',
+            cantos: 'Por Siempre,Vino Nuevo_Quiero entender_Sendas Dios hara_Temprano yo te buscare_Tu habitas'
+        }, {
+            endDate: '2020-02-16', startDate: '2020-02-16',
+            title: 'Programa Dominical 7',
+            cantos: 'Tu eres Santo_Nuestro Salvador_Dios puede salvar_Jesus mi fiel amigo_Tu nombre oh Dios'
+        }, {
+            endDate: '2020-02-23', startDate: '2020-02-23',
+            title: 'Programa Dominical 8',
+            cantos: 'Tu eres Dios,En espiritu y Verdad_Te dare lo mejor_Jesus es el Senor_Cerca de ti_Somos el pueblo de Dios'
         }
     ];
 
@@ -58,6 +74,7 @@ $(document).ready( function() {
                 let cantos = target.events[0].cantos;
                 if (cantos)
                 {
+                    
                     console.log(cantos.split('_'));
                 }
             },
