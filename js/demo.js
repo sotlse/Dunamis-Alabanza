@@ -1,3 +1,7 @@
+//Variables
+let divListaActividades = document.querySelector(".ListaActividades");
+let 
+
 //Funcion regresar pagina
 let botonRegresar = document.querySelector(".arrowRegresar");
 if(botonRegresar){
@@ -74,8 +78,8 @@ $(document).ready( function() {
                 let cantos = target.events[0].cantos;
                 if (cantos)
                 {
-                    
-                    console.log(cantos.split('_'));
+                    cantos = cantos.split('_');
+                    console.log(cantos);
                 }
             },
             today: function () {
