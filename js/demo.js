@@ -83,10 +83,11 @@ $(document).ready( function() {
                 {
                     cantos = cantos.split('_');
                     TituloListaAct.innerHTML = titulo;
-                    console.log(cantos);
+                    ulCantosDelDia.removeChild(list.childNodes[0]); 
                     cantos.forEach(canto => {
                         const crearli = document.createElement('li');
-                        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
+                        crearli.innerHTML = canto;
+                        //`<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
                         ulCantosDelDia.appendChild(crearli);
                     });
                 }
