@@ -1,6 +1,8 @@
 //Variables
 let divListaActividades = document.querySelector(".ListaActividades");
-let 
+let TituloListaAct = document.querySelector(".TituloListaAct");
+let divDesplegarCantos = documet.querySelector(".DesplegarCantos");
+let ulCantosDelDia = document.querySelector(".CantosDelDia");
 
 //Funcion regresar pagina
 let botonRegresar = document.querySelector(".arrowRegresar");
@@ -76,9 +78,11 @@ $(document).ready( function() {
             click: function (target) {
                 //console.log('Cal-1 clicked: ', target.events[0].cantos);
                 let cantos = target.events[0].cantos;
+                let titulo = target.events[0].title;
                 if (cantos)
                 {
                     cantos = cantos.split('_');
+                    TituloListaAct.innerHTML = titulo
                     console.log(cantos);
                 }
             },
