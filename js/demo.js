@@ -83,7 +83,14 @@ $(document).ready( function() {
                 {
                     cantos = cantos.split('_');
                     TituloListaAct.innerHTML = titulo;
-                    ulCantosDelDia.removeChild(list.childNodes[0]); 
+                    if (ulCantosDelDia){
+                        console.log();
+                        for(let i;i<ulCantosDelDia.length;i++)
+                        {
+                            ulCantosDelDia.removeChild(ulCantosDelDia.childNodes[i]); 
+                        }
+                    }
+                    
                     cantos.forEach(canto => {
                         const crearli = document.createElement('li');
                         crearli.innerHTML = canto;
