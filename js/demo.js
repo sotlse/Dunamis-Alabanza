@@ -1,7 +1,7 @@
 //Variables
-let divListaActividades = document.querySelector(".ListaActividades");
+//let divListaActividades = document.querySelector(".ListaActividades");
 let TituloListaAct = document.querySelector(".TituloListaAct");
-let divDesplegarCantos = documet.querySelector(".DesplegarCantos");
+//let divDesplegarCantos = documet.querySelector(".DesplegarCantos");
 let ulCantosDelDia = document.querySelector(".CantosDelDia");
 
 //Funcion regresar pagina
@@ -82,8 +82,13 @@ $(document).ready( function() {
                 if (cantos)
                 {
                     cantos = cantos.split('_');
-                    TituloListaAct.innerHTML = titulo
+                    TituloListaAct.innerHTML = titulo;
                     console.log(cantos);
+                    cantos.forEach(canto => {
+                        const crearli = document.createElement('li');
+                        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
+                        ulCantosDelDia.appendChild(crearli);
+                    });
                 }
             },
             today: function () {
