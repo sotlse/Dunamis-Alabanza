@@ -79,17 +79,18 @@ $(document).ready( function() {
                 //console.log('Cal-1 clicked: ', target.events[0].cantos);
                 let cantos = target.events[0].cantos;
                 let titulo = target.events[0].title;
+                
+                console.log(ulCantosDelDia.lastElementChild);
+                if (ulCantosDelDia.lastElementChild !== null){
+                    console.log("Si");
+                    ulCantosDelDia.removeChild(ulCantosDelDia.childNodes[0]); 
+                }
+
                 if (cantos)
                 {
                     cantos = cantos.split('_');
                     TituloListaAct.innerHTML = titulo;
-                    if (ulCantosDelDia){
-                        console.log();
-                        for(let i;i<ulCantosDelDia.length;i++)
-                        {
-                            ulCantosDelDia.removeChild(ulCantosDelDia.childNodes[i]); 
-                        }
-                    }
+                    
                     
                     cantos.forEach(canto => {
                         const crearli = document.createElement('li');
