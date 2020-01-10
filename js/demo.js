@@ -79,26 +79,22 @@ $(document).ready( function() {
                 //console.log('Cal-1 clicked: ', target.events[0].cantos);
                 let cantos = target.events[0].cantos;
                 let titulo = target.events[0].title;
-                
-                console.log(ulCantosDelDia.lastElementChild);
-                if (ulCantosDelDia.lastElementChild !== null){
-                    console.log("Si");
-                    ulCantosDelDia.removeChild(ulCantosDelDia.childNodes[0]); 
+
+                //Borrar toda la lista de cantos cuando se presione un evento
+                while (ulCantosDelDia.hasChildNodes()) {   
+                    ulCantosDelDia.removeChild(ulCantosDelDia.firstChild);
                 }
 
-                if (cantos)
-                {
-                    cantos = cantos.split('_');
-                    TituloListaAct.innerHTML = titulo;
-                    
-                    
-                    cantos.forEach(canto => {
-                        const crearli = document.createElement('li');
-                        crearli.innerHTML = canto;
-                        //`<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
-                        ulCantosDelDia.appendChild(crearli);
-                    });
-                }
+                //Agregar cantos cuando se presione un evento
+                cantos = cantos.split('_');
+                TituloListaAct.innerHTML = titulo;
+                cantos.forEach(canto => {
+                    const crearli = document.createElement('li');
+                    crearli.innerHTML = canto;
+                    //`<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
+                    ulCantosDelDia.appendChild(crearli);
+                });
+                
             },
             today: function () {
                 console.log('Cal-1 today');
