@@ -39,6 +39,11 @@ $(document).ready( function() {
             title: 'Single Day Event'
         },*/ 
         {
+            endDate: '2020-07-25', startDate: '2020-07-18',
+            title: 'Viaje Misionero',
+            cantos: ''
+        },
+        {
             endDate: '2020-01-12', startDate: '2020-01-12',
             title: 'Programa Dominical 2 - 1 de Enero',
             cantos: 'Bueno es Dios_Cristo te exaltamos_Canta al Senor_Al estar aqui_Hermoso Dios'
