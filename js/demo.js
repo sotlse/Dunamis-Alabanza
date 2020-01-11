@@ -25,9 +25,9 @@ $(document).ready( function() {
      moment.locale('es-do');
 
     // Here's some magic to make sure the dates are happening this month.
-    var thisMonth = moment().format('YYYY-MM');
+    //var thisMonth = moment().format('YYYY-MM');
     var thisDay = moment().format('YYYY-MM-DD');
-    console.log(thisDay);
+    console.log(thisDay.replace(/-/g,""));
     // Events to load into calendar
     var eventArray = [
         /*{
@@ -40,31 +40,31 @@ $(document).ready( function() {
         },*/ 
         {
             endDate: '2020-01-12', startDate: '2020-01-12',
-            title: 'Programa Dominical 2 - 1' de Enero,
+            title: 'Programa Dominical 2 - 1 de Enero',
             cantos: 'Bueno es Dios_Cristo te exaltamos_Canta al Senor_Al estar aqui_Hermoso Dios'
         }, {
             endDate: '2020-01-19', startDate: '2020-01-19',
-            title: 'Programa Dominical 3' - 19 de Enero,
+            title: 'Programa Dominical 3 - 19 de Enero',
             cantos: 'No a nosotros_Cerca de mi_Dios_Sentado en su trono_Tu nombre levantare'
         }, {
             endDate: '2020-01-26', startDate: '2020-01-26',
-            title: 'Programa Dominical 4' - 26 de Enero,
+            title: 'Programa Dominical 4 - 26 de Enero',
             cantos: 'Al que me cine_Quien nos separara_Al alto y sublime_Con mis manos levantadas_Bueno es Dios'
         }, {
             endDate: '2020-02-02', startDate: '2020-02-02',
-            title: 'Programa Dominical 5' - 02 de Febrero,
+            title: 'Programa Dominical 5 - 02 de Febrero',
             cantos: 'Eres fiel_Eres bendito_Mas el Dios de toda gracia_Santo Santo Santo_Cuando yo senti'
         }, {
             endDate: '2020-02-09', startDate: '2020-02-09',
-            title: 'Programa Dominical 6' - 09 de Febrero,
+            title: 'Programa Dominical 6 - 09 de Febrero',
             cantos: 'Por Siempre,Vino Nuevo_Quiero entender_Sendas Dios hara_Temprano yo te buscare_Tu habitas'
         }, {
             endDate: '2020-02-16', startDate: '2020-02-16',
-            title: 'Programa Dominical 7' - 16 de Febrero,
+            title: 'Programa Dominical 7 - 16 de Febrero',
             cantos: 'Tu eres Santo_Nuestro Salvador_Dios puede salvar_Jesus mi fiel amigo_Tu nombre oh Dios'
         }, {
             endDate: '2020-02-23', startDate: '2020-02-23',
-            title: 'Programa Dominical 8' - 23 de Febrero,
+            title: 'Programa Dominical 8 - 23 de Febrero',
             cantos: 'Tu eres Dios,En espiritu y Verdad_Te dare lo mejor_Jesus es el Senor_Cerca de ti_Somos el pueblo de Dios'
         }
     ];
