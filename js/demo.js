@@ -112,8 +112,9 @@ $(document).ready( function() {
                         //Separamos el canto del autor
                         cantoYAutor = canto.split(',')
                         console.log(cantoYAutor[1]);
-                        //crearli.innerHTML = canto;
-                        crearli.innerHTML = `<a href="">${cantoYAutor[0]} - ${cantoYAutor[1]}</a>`; 
+                        cantoPagina = "Cantos/Info/" + "A_Cada_Instante" + ".html"
+                        crearli.innerHTML = `<a href="${cantoPagina}">${cantoYAutor[0]} - ${cantoYAutor[1]}</a>`;
+                        //crearli.innerHTML = canto; 
                         ulCantosDelDia.appendChild(crearli);
                     });
                 }
