@@ -465,3 +465,8 @@
     opacity: 0.5;
     cursor: default;
   }
+
+  /*Lista de cantos*/
+  .DesplegarCantos{
+    font-size:30%;
+  }
