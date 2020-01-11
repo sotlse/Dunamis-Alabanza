@@ -38,22 +38,12 @@ $(document).ready( function() {
             date: thisMonth + '-26',
             title: 'Single Day Event'
         },*/ 
-        /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
-        {
-            endDate: '2020-07-25', startDate: '2020-07-18',
-            title: 'Viaje Misionero',
-            cantos: 'No'
-        },
-        {
-            date: '2020-07-19',
-            title: 'Single Day Event',
-            cantos: 'Bueno es Dios_Cristo te exaltamos_Canta al Senor_Al estar aqui_Hermoso Dios'
-        },
+        
         /*Actividades con cantos*/
         {
             endDate: '2020-01-12', startDate: '2020-01-12',
             title: 'Programa Dominical 2 - 1 de Enero',
-            cantos: 'Bueno es Dios_Cristo te exaltamos_Canta al Senor_Al estar aqui_Hermoso Dios'
+            cantos: 'Bueno es Dios,Don Moen_Cristo te exaltamos,Don Moen_Canta al Senor,Don Moen_Al estar aqui, Marcos Witt_Hermoso Dios'
         }, {
             endDate: '2020-01-19', startDate: '2020-01-19',
             title: 'Programa Dominical 3 - 19 de Enero',
@@ -61,7 +51,7 @@ $(document).ready( function() {
         }, {
             endDate: '2020-01-26', startDate: '2020-01-26',
             title: 'Programa Dominical 4 - 26 de Enero',
-            cantos: 'Al que me cine_Quien nos separara_Al alto y sublime_Con mis manos levantadas_Bueno es Dios'
+            cantos: 'Al que me cine_Quien nos separara_Al alto y sublime_Con mis manos levantadas_Bueno es alabar'
         }, {
             endDate: '2020-02-02', startDate: '2020-02-02',
             title: 'Programa Dominical 5 - 02 de Febrero',
@@ -78,6 +68,13 @@ $(document).ready( function() {
             endDate: '2020-02-23', startDate: '2020-02-23',
             title: 'Programa Dominical 8 - 23 de Febrero',
             cantos: 'Tu eres Dios,En espiritu y Verdad_Te dare lo mejor_Jesus es el Senor_Cerca de ti_Somos el pueblo de Dios'
+        },
+
+        /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
+        {
+            endDate: '2020-07-25', startDate: '2020-07-18',
+            title: 'Viaje Misionero',
+            cantos: 'No'
         }
     ];
 
@@ -102,6 +99,7 @@ $(document).ready( function() {
                     let cantos = target.events[0].cantos;
                     let titulo = target.events[0].title;
                     
+                    //Si es un evento sin cantos
                     if (cantos ==="No")
                         divDesplegarCantos.style.display = "none";
 
@@ -111,6 +109,7 @@ $(document).ready( function() {
                     cantos.forEach(canto => {
                         const crearli = document.createElement('li');
                         crearli.innerHTML = canto;
+                        console.log(canto.split(','));
                         //`<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
                         ulCantosDelDia.appendChild(crearli);
                     });
