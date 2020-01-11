@@ -38,11 +38,18 @@ $(document).ready( function() {
             date: thisMonth + '-26',
             title: 'Single Day Event'
         },*/ 
+        /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
         {
             endDate: '2020-07-25', startDate: '2020-07-18',
             title: 'Viaje Misionero',
-            cantos: ''
+            cantos: 'No'
         },
+        {
+            date: '2020-07-19',
+            title: 'Single Day Event',
+            cantos: 'Bueno es Dios_Cristo te exaltamos_Canta al Senor_Al estar aqui_Hermoso Dios'
+        },
+        /*Actividades con cantos*/
         {
             endDate: '2020-01-12', startDate: '2020-01-12',
             title: 'Programa Dominical 2 - 1 de Enero',
@@ -94,6 +101,9 @@ $(document).ready( function() {
                 if (target.events[0] !== undefined){
                     let cantos = target.events[0].cantos;
                     let titulo = target.events[0].title;
+                    
+                    if (cantos ==="No")
+                        divDesplegarCantos.style.display = "none";
 
                     //Agregar cantos cuando se presione un evento
                     cantos = cantos.split('_');
