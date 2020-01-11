@@ -470,6 +470,7 @@
   .TituloListaAct
   {
     font-size:230%;
+    font-weight: bold;
     color: blue;
   }
   .DesplegarCantos{
