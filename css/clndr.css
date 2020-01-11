@@ -475,5 +475,8 @@
   }
   .DesplegarCantos{
     font-size:180%;
+    background-color:#f7f4f4;
+    padding: 10px;
+    display: none;
   }
   
