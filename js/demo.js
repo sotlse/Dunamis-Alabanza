@@ -79,6 +79,7 @@ $(document).ready( function() {
                 //console.log('Cal-1 clicked: ', target.events[0].cantos);
                 divDesplegarCantos.style.display = "block";
 
+                if (cantos && ti)
                 let cantos = target.events[0].cantos;
                 let titulo = target.events[0].title;
 
