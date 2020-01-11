@@ -467,6 +467,12 @@
   }
 
   /*Lista de cantos*/
-  .DesplegarCantos{
-    font-size:30%;
+  .TituloListaAct
+  {
+    font-size:230%;
+    color: blue;
   }
+  .DesplegarCantos{
+    font-size:180%;
+  }
+  
