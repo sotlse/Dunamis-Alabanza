@@ -78,26 +78,27 @@ $(document).ready( function() {
             click: function (target) {
                 //console.log('Cal-1 clicked: ', target.events[0].cantos);
                 divDesplegarCantos.style.display = "block";
-
-                if (cantos && ti)
-                let cantos = target.events[0].cantos;
-                let titulo = target.events[0].title;
-
                 //Borrar toda la lista de cantos cuando se presione un evento
                 while (ulCantosDelDia.hasChildNodes()) {   
                     ulCantosDelDia.removeChild(ulCantosDelDia.firstChild);
                 }
 
-                //Agregar cantos cuando se presione un evento
-                cantos = cantos.split('_');
-                TituloListaAct.innerHTML = titulo;
-                cantos.forEach(canto => {
-                    const crearli = document.createElement('li');
-                    crearli.innerHTML = canto;
-                    //`<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
-                    ulCantosDelDia.appendChild(crearli);
-                });
-                
+                console.log(target.events[0]);
+
+                if (target.events[0] !== undefined){
+                    let cantos = target.events[0].cantos;
+                    let titulo = target.events[0].title;
+
+                    //Agregar cantos cuando se presione un evento
+                    cantos = cantos.split('_');
+                    TituloListaAct.innerHTML = titulo;
+                    cantos.forEach(canto => {
+                        const crearli = document.createElement('li');
+                        crearli.innerHTML = canto;
+                        //`<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
+                        ulCantosDelDia.appendChild(crearli);
+                    });
+                }
             },
             today: function () {
                 console.log('Cal-1 today');
