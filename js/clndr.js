@@ -44,7 +44,7 @@
           '</div>' +
           "<div class='month'><%= month %> <%= year %></div>" +
           "<div class='clndr-control-button rightalign'>" +
-              "<span class='clndr-next-button'>&rsaquo;</span>" +
+              "<div class='clndr-next-button'>&rsaquo;</div>" +
           '</div>' +
       '</div>' +
       "<table class='clndr-table' border='0' cellspacing='0' cellpadding='0'>" +
