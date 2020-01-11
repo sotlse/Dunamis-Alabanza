@@ -98,6 +98,7 @@ $(document).ready( function() {
                 if (target.events[0] !== undefined){
                     let cantos = target.events[0].cantos;
                     let titulo = target.events[0].title;
+                    let cantoYAutor;
                     
                     //Si es un evento sin cantos
                     if (cantos ==="No")
@@ -108,9 +109,11 @@ $(document).ready( function() {
                     TituloListaAct.innerHTML = titulo;
                     cantos.forEach(canto => {
                         const crearli = document.createElement('li');
-                        crearli.innerHTML = canto;
-                        console.log(canto.split(','));
-                        //`<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
+                        //Separamos el canto del autor
+                        cantoYAutor = canto.split(',')
+                        console.log(cantoYAutor[1]);
+                        //crearli.innerHTML = canto;
+                        crearli.innerHTML = `<a href="">${cantoYAutor[0]} - ${cantoYAutor[1]}</a>`; 
                         ulCantosDelDia.appendChild(crearli);
                     });
                 }
