@@ -83,8 +83,7 @@ $(document).ready( function() {
                     ulCantosDelDia.removeChild(ulCantosDelDia.firstChild);
                 }
 
-                console.log(target.events[0]);
-
+                /*Si presionan un dia que tiene evento*/
                 if (target.events[0] !== undefined){
                     let cantos = target.events[0].cantos;
                     let titulo = target.events[0].title;
@@ -98,6 +97,12 @@ $(document).ready( function() {
                         //`<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
                         ulCantosDelDia.appendChild(crearli);
                     });
+                }
+
+                /*Cuando presionen otro dia que no tenga evento*/
+                else {
+                    TituloListaAct.innerHTML = "";
+                    divDesplegarCantos.style.display = "none";
                 }
             },
             today: function () {
