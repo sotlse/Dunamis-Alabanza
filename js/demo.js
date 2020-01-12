@@ -43,7 +43,7 @@ $(document).ready( function() {
         {
             endDate: '2020-01-12', startDate: '2020-01-12',
             title: 'Programa Dominical 2 - 1 de Enero',
-            cantos: 'Bueno es Dios,Don Moen_Cristo te exaltamos,Don Moen_Canta al Senor,Don Moen_Al estar aqui, Marcos Witt_Hermoso Dios'
+            cantos: 'Bueno es Dios,Don Moen_Cristo te exaltamos,Don Moen_Canta al Senor,Don Moen_Al estar aqui, Marcos Witt_Hermoso Dios,Conquistando Fronteras'
         }, {
             endDate: '2020-01-19', startDate: '2020-01-19',
             title: 'Programa Dominical 3 - 19 de Enero',
