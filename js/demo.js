@@ -104,7 +104,7 @@ $(document).ready( function() {
                     if (cantos ==="No")
                         divDesplegarCantos.style.display = "none";
 
-                    //Agregar cantos cuando se presione un evento
+                    //Agregar cantos cuando se presione un evento y convertirlo en un link al canto
                     cantos = cantos.split('_');
                     TituloListaAct.innerHTML = titulo;
                     cantos.forEach(cantoConAutor => {
@@ -113,10 +113,9 @@ $(document).ready( function() {
                         cantoConAutor = cantoConAutor.split(',')
                         canto = cantoConAutor[0];
                         autor = cantoConAutor[1];
-                        cantoPagina = 
-                        cantoPagina = canto.replace(/ /g,"_");
+                        cantoPagina = mayuscula(canto).replace(/ /g,"_");
                         pagina = "Cantos/Info/" + cantoPagina + ".html";
-                        console.log(pagina);
+                        console.log(pagina)
                         crearli.innerHTML = `<a href="${pagina}">${canto} - ${autor}</a>`;
                         //crearli.innerHTML = cantoConAutor; 
                         ulCantosDelDia.appendChild(crearli);
@@ -242,4 +241,14 @@ $(document).ready( function() {
             calendars.clndr3.forward();
         }
     });
+
+    /*------------Funcion para hacer la primera letra de cada palabra del canto en mayuscula para enviar a la pagina--*/
+    function mayuscula (canto){
+        canto = canto.split(" ");
+        for (var i = 0, x = canto.length; i < x; i++) {
+            canto[i] = canto[i][0].toUpperCase() + canto[i].substr(1);
+        }
+    
+        return canto.join(" ");
+    }
 });
