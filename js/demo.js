@@ -93,7 +93,8 @@ $(document).ready( function() {
                 while (ulCantosDelDia.hasChildNodes()) {   
                     ulCantosDelDia.removeChild(ulCantosDelDia.firstChild);
                 }
-                console.log(script.desplegarCantos);
+              
+                //let cantos = import { cancionesDomingo } from './script.js'
 
                 /*Si presionan un dia que tiene evento*/
                 if (target.events[0] !== undefined){
