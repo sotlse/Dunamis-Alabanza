@@ -47,11 +47,11 @@ $(document).ready( function() {
         }, {
             endDate: '2020-01-19', startDate: '2020-01-19',
             title: 'Programa Dominical 3 - 19 de Enero',
-            cantos: 'No a nosotros_Cerca de mi_Dios_Sentado en su trono_Tu nombre levantare'
+            cantos: 'No a nosotros,Jesus Adrian Romero_Cerca de mi_Dios_Sentado en su trono_Tu nombre levantare'
         }, {
             endDate: '2020-01-26', startDate: '2020-01-26',
             title: 'Programa Dominical 4 - 26 de Enero',
-            cantos: 'Al que me cine_Quien nos separara_Al alto y sublime_Con mis manos levantadas_Bueno es alabar'
+            cantos: 'Al que me cine,Jesus Adrian Romero_Quien nos separara_Al alto y sublime_Con mis manos levantadas_Bueno es alabar'
         }, {
             endDate: '2020-02-02', startDate: '2020-02-02',
             title: 'Programa Dominical 5 - 02 de Febrero',

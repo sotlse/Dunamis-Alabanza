@@ -185,7 +185,7 @@
   /*Evento el dia de hoy*/
   .cal1 .clndr .clndr-table tr .day.today.event,
   .cal1 .clndr .clndr-table tr .day.my-today.event {
-    background: #a7dbc1;
+    background: rgb(214, 33, 63);
   }
   /*Evento en cualquier otro dia*/
   .cal1 .clndr .clndr-table tr .day.event,
