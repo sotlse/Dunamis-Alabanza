@@ -93,7 +93,7 @@ $(document).ready( function() {
                 while (ulCantosDelDia.hasChildNodes()) {   
                     ulCantosDelDia.removeChild(ulCantosDelDia.firstChild);
                 }
-                console.log();
+                console.log(script.desplegarCantos);
 
                 /*Si presionan un dia que tiene evento*/
                 if (target.events[0] !== undefined){

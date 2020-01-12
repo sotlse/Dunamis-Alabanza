@@ -474,14 +474,16 @@
     color: blue;
   }
   .DesplegarCantos{
-    font-size:130%;
+    font-size:120%;
     background-color:#f7f4f4;
     padding: 10px;
     display: none;
   }
   .DesplegarCantos li{
-    color:black;
     margin: 10px 0;
+  }
+  .DesplegarCantos a{
+    color:black;
   }
 
   
