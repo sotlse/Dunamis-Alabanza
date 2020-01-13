@@ -80,20 +80,25 @@ function displayNotification() {
 /*-------------------------------ROTACION DE PANTALLA---------------------------*/
 if (cantoBody)
 {
+  console.log(current_mode.type);
   //Para dispositivos Android
-  if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary")
+  if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary"){
+    //console.log(current_mode);
     cantoBody.style.columnCount= "1";
+  }
   
-  else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary")
+  else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary"){
+    //console.log(current_mode);
     cantoBody.style.columnCount="2";
+  }
 
-  window.onorientationchange = function() { 
+  /*window.onorientationchange = function() { 
     if(screen.orientation.type === "portrait-primary")
       cantoBody.style.columnCount= "1";
     else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary")
       cantoBody.style.columnCount= "2";
-  };
-
+  };*/
+/*
   //Para dispositivos IOS
   function doOnOrientationChange() {
     switch(window.orientation) {  
@@ -109,7 +114,7 @@ if (cantoBody)
   window.addEventListener('orientationchange', doOnOrientationChange);
     
   // Initial execution if needed
-  doOnOrientationChange();
+  doOnOrientationChange();*/
 }
 
 /*
