@@ -5,12 +5,12 @@ let divDesplegarCantos = document.querySelector(".DesplegarCantos");
 let ulCantosDelDia = document.querySelector(".CantosDelDia");
 
 //Funcion regresar pagina
-let botonRegresar = document.querySelector(".arrowRegresar");
+/*let botonRegresar = document.querySelector(".arrowRegresar");
 if(botonRegresar){
     botonRegresar.addEventListener("click",(e) =>  {
       window.history.back();
     });
-  }
+  }*/
 
 // Call this from the developer console and you can control both instances
 var calendars = {};
@@ -97,6 +97,11 @@ $(document).ready( function() {
                 //let cantos = import { cancionesDomingo } from './script.js'
 
                 /*Si presionan un dia que tiene evento*/
+                //if (target.events[0] !== undefined){
+                    let cantos = target.events[0].cantos;
+                    let titulo = target.events[0].title;
+                    let canto, autor, cantoPagina, pagina;
+
                 if (target.events[0] !== undefined){
                     let cantos = target.events[0].cantos;
                     let titulo = target.events[0].title;
