@@ -115,7 +115,8 @@ $(document).ready( function() {
                         canto = cantoConAutor[0];
                         autor = cantoConAutor[1];
                         console.log (canto , autor);
-                        BaseCantos filter()
+                        
+                        console.log(LosCantos);
                         /*cantoPagina = mayuscula(canto).replace(/ /g,"_");
                         pagina = "Cantos/Info/" + cantoPagina + ".html";
                         console.log(pagina)
