@@ -5,14 +5,16 @@ let divDesplegarCantos = document.querySelector(".DesplegarCantos");
 let ulCantosDelDia = document.querySelector(".CantosDelDia");
 //import { name } from '/script.js';
 //console.log(name);
+let cantos = JSON.parse(localStorage.getItem("TonosActuales"));
+console.log(cantos);
 
 //Funcion regresar pagina
-/*let botonRegresar = document.querySelector(".arrowRegresar");
+let botonRegresar = document.querySelector(".arrowRegresar");
 if(botonRegresar){
     botonRegresar.addEventListener("click",(e) =>  {
       window.history.back();
     });
-  }*/
+  }
 
 // Call this from the developer console and you can control both instances
 var calendars = {};
