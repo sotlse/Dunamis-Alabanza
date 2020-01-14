@@ -98,7 +98,7 @@ $(document).ready( function() {
                 if (target.events[0] !== undefined){
                     let cantos = target.events[0].cantos;
                     let titulo = target.events[0].title;
-                    let canto, autor, cantoPagina, pagina;
+                    let canto, autor, cantoPagina, pagina, cantoMinusculas, autorMinusculas;
                     
                     //Si es un evento sin cantos
                     if (cantos ==="No")
@@ -113,13 +113,18 @@ $(document).ready( function() {
                         //Separamos el canto del autor
                         cantoConAutor = cantoConAutor.split(',')
                         canto = cantoConAutor[0];
+                        cantoMinusculas = canto.toLowerCase();
                         autor = cantoConAutor[1];
-                        console.log (canto);
+                        autorMinusculas = autor.toLowerCase();
+                        console.log (cantoMinusculas);
                         let LosCantos = BaseCantos.filter(function(cancion){
-                            return  cancion.titulo === canto; 
+                            return  cancion.titulo.toLowerCase() === cantoMinusculas; 
                         });
-                        console.log(LosCantos.pagina);
-                        
+                        if (LosCantos[0] !== undefined)
+                            crearli.innerHTML = `<a href="${LosCantos[0].pagina}">${canto} - ${autor}</a>`
+                        else
+                            crearli.innerHTML = `<a href="">${canto} - ${autor}</a>`
+
                         /*cantoPagina = mayuscula(canto).replace(/ /g,"_");
                         pagina = "Cantos/Info/" + cantoPagina + ".html";
                         console.log(pagina)

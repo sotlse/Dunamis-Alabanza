@@ -435,6 +435,16 @@ class UI {
     },
 
     {
+      pagina:"Cantos/Info/Tu_Eres_Dios_EEYV.html",
+      titulo:"Tu Eres Dios",
+      autor:"Marcos Vidal",
+      tono:"E",
+      categoria:["Alabanza","Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
       pagina:"Cantos/Info/Tu_Eres_Dios_MV.html",
       titulo:"Tu Eres Dios",
       autor:"Marcos Vidal",
