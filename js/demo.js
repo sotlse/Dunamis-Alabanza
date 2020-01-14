@@ -119,7 +119,10 @@ $(document).ready( function() {
                         let LosCantos = BaseCantos.filter(function(cancion){
                             return  cancion.titulo.toLowerCase() === cantoMinusculas; 
                         });
-                        if (LosCantos.length>1)
+                        if (LosCantos.length>1) {
+                            
+
+                        }
                             console.log("LosCantos.length");
 
                         if (LosCantos[0] !== undefined)
