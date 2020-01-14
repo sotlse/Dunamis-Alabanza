@@ -107,7 +107,7 @@ $(document).ready( function() {
                     //Agregar cantos cuando se presione un evento y convertirlo en un link al canto
                     cantos = cantos.split('_');
                     TituloListaAct.innerHTML = titulo;
-                    console.log(BaseCantos);
+                    //console.log(BaseCantos);
                     cantos.forEach(cantoConAutor => {
                         const crearli = document.createElement('li');
                         //Separamos el canto del autor
@@ -115,13 +115,15 @@ $(document).ready( function() {
                         canto = cantoConAutor[0];
                         cantoMinusculas = canto.toLowerCase();
                         autor = cantoConAutor[1];
-                        autorMinusculas = autor.toLowerCase();
-                        console.log(autorMinusculas);
                         let LosCantos = BaseCantos.filter(function(cancion){
                             return  cancion.titulo.toLowerCase() === cantoMinusculas; 
                         });
+                        console.log(LosCantos);
                         if (LosCantos.length>1) {
+                            console.log(LosCantos);
                             let LosCantos = LosCantos.filter(function(cancion){
+                                autorMinusculas = autor.toLowerCase();
+                                
                                 return  cancion.autor.toLowerCase() === autorMinusculas; 
                             });
                         }
