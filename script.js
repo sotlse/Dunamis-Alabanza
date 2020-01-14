@@ -526,6 +526,10 @@ class UI {
       UI.agregarAudio(Canto);
     }
 
+    console.log(titulo);
+    if(titulo === "Calendario")
+      UI.hola(baseCanciones);
+
     //Guardar todos los tonos de los cantos en localStorage para despues manipularlos
     let tonos,flag;
     tonos = JSON.parse(localStorage.getItem("TonosActuales"));
@@ -579,13 +583,13 @@ class UI {
             divAudio.removeChild(divAudio.firstChild);
         }
       }
-    }
-    
+    } 
+  }
+  static hola(canto){
+    console.log("hola");
+    export const name = "Hola";
   }
 }
-
-console.log(UI.desplegarCantos.baseCanciones);
-//export const name = "Hola";
 
 //Cuando se cargue la pagina, agregar base de datos
 document.addEventListener("DOMContentLoaded", UI.desplegarCantos);

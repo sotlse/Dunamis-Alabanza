@@ -3,8 +3,8 @@
 let TituloListaAct = document.querySelector(".TituloListaAct");
 let divDesplegarCantos = document.querySelector(".DesplegarCantos");
 let ulCantosDelDia = document.querySelector(".CantosDelDia");
-import { name } from '/script.js';
-console.log(name);
+//import { name } from '/script.js';
+//console.log(name);
 
 //Funcion regresar pagina
 /*let botonRegresar = document.querySelector(".arrowRegresar");
