@@ -137,6 +137,7 @@ if (tamano === null)
   tamano = 89;
   localStorage.setItem("letraTamano",JSON.stringify(tamano));
 }
+
 export const name = "Hola";
 
 //Cambiar texto mas chico

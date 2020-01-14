@@ -94,7 +94,7 @@ $(document).ready( function() {
                     ulCantosDelDia.removeChild(ulCantosDelDia.firstChild);
                 }
               
-                import { name } from './script.js'
+                import { name } from './script.js';
                 console.log(name);
 
                 /*------Si presionan un dia que tiene evento-------*/
