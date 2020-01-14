@@ -3,6 +3,8 @@
 let TituloListaAct = document.querySelector(".TituloListaAct");
 let divDesplegarCantos = document.querySelector(".DesplegarCantos");
 let ulCantosDelDia = document.querySelector(".CantosDelDia");
+import { name } from '/script.js';
+console.log(name);
 
 //Funcion regresar pagina
 /*let botonRegresar = document.querySelector(".arrowRegresar");
@@ -93,9 +95,6 @@ $(document).ready( function() {
                 while (ulCantosDelDia.hasChildNodes()) {   
                     ulCantosDelDia.removeChild(ulCantosDelDia.firstChild);
                 }
-              
-                import { name } from './script.js';
-                console.log(name);
 
                 /*------Si presionan un dia que tiene evento-------*/
                 if (target.events[0] !== undefined){

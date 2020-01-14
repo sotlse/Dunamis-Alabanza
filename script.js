@@ -138,8 +138,6 @@ if (tamano === null)
   localStorage.setItem("letraTamano",JSON.stringify(tamano));
 }
 
-export const name = "Hola";
-
 //Cambiar texto mas chico
 if(botonTextoChico){
   botonTextoChico.addEventListener("click",(e) => {
@@ -585,6 +583,9 @@ class UI {
     
   }
 }
+
+console.log(UI.desplegarCantos.baseCanciones);
+//export const name = "Hola";
 
 //Cuando se cargue la pagina, agregar base de datos
 document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
