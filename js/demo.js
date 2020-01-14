@@ -94,14 +94,10 @@ $(document).ready( function() {
                     ulCantosDelDia.removeChild(ulCantosDelDia.firstChild);
                 }
               
-                //let cantos = import { cancionesDomingo } from './script.js'
+                import { name } from './script.js'
+                console.log(name);
 
-                /*Si presionan un dia que tiene evento*/
-                //if (target.events[0] !== undefined){
-                    let cantos = target.events[0].cantos;
-                    let titulo = target.events[0].title;
-                    let canto, autor, cantoPagina, pagina;
-
+                /*------Si presionan un dia que tiene evento-------*/
                 if (target.events[0] !== undefined){
                     let cantos = target.events[0].cantos;
                     let titulo = target.events[0].title;
