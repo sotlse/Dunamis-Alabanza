@@ -114,11 +114,11 @@ $(document).ready( function() {
                         cantoConAutor = cantoConAutor.split(',')
                         canto = cantoConAutor[0];
                         autor = cantoConAutor[1];
-                        console.log (canto , autor);
-                        let LosCantos = BaseCantos.filter(function(canto){
-                            console.log(canto.titulo);
-                            return  canto.titulo === canto; 
+                        console.log (canto);
+                        let LosCantos = BaseCantos.filter(function(cancion){
+                            return  cancion.titulo === canto; 
                         });
+                        console.log(LosCantos.pagina);
                         
                         /*cantoPagina = mayuscula(canto).replace(/ /g,"_");
                         pagina = "Cantos/Info/" + cantoPagina + ".html";
