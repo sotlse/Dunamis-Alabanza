@@ -115,11 +115,13 @@ $(document).ready( function() {
                         canto = cantoConAutor[0];
                         cantoMinusculas = canto.toLowerCase();
                         autor = cantoConAutor[1];
-                        autorMinusculas = autor.toLowerCase();
-                        console.log (cantoMinusculas);
+                        //autorMinusculas = autor.toLowerCase();
                         let LosCantos = BaseCantos.filter(function(cancion){
                             return  cancion.titulo.toLowerCase() === cantoMinusculas; 
                         });
+                        if (LosCantos.length>1)
+                            console.log("LosCantos.length");
+
                         if (LosCantos[0] !== undefined)
                             crearli.innerHTML = `<a href="${LosCantos[0].pagina}">${canto} - ${autor}</a>`
                         else

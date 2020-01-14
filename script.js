@@ -437,8 +437,8 @@ class UI {
     {
       pagina:"Cantos/Info/Tu_Eres_Dios_EEYV.html",
       titulo:"Tu Eres Dios",
-      autor:"Marcos Vidal",
-      tono:"E",
+      autor:"En Espiritu y Verdad",
+      tono:"C",
       categoria:["Alabanza","Adoracion"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
