@@ -526,17 +526,13 @@ class UI {
       UI.agregarAudio(Canto);
     }
 
-    /*console.log(titulo);
-    if(titulo === "Calendario")
-      UI.exportarCantos(baseCanciones);*/
-
     //Guardar todos los tonos de los cantos en localStorage para despues manipularlos
     let tonos,flag;
     tonos = JSON.parse(localStorage.getItem("TonosActuales"));
     if ((tonos == null) || (tonos.length != baseCanciones.length)){
       tonos = baseCanciones.map(cantos => ({titulo: cantos.titulo, autor: cantos.autor, tono:cantos.tono, pagina:cantos.pagina}));
       localStorage.setItem("TonosActuales", JSON.stringify(tonos));
-      console.log(tonos);
+      alert("Se actualizo la lista de cantos");
     }
     
     
@@ -587,10 +583,6 @@ class UI {
       }
     } 
   }
-  /*static exportarCantos(canto){
-    console.log("hola");
-    export const name = "Hola";
-  }*/
 }
 
 //Cuando se cargue la pagina, agregar base de datos

@@ -1,12 +1,9 @@
 //Variables
-//let divListaActividades = document.querySelector(".ListaActividades");
 let TituloListaAct = document.querySelector(".TituloListaAct");
 let divDesplegarCantos = document.querySelector(".DesplegarCantos");
 let ulCantosDelDia = document.querySelector(".CantosDelDia");
-//import { name } from '/script.js';
-//console.log(name);
-let cantos = JSON.parse(localStorage.getItem("TonosActuales"));
-console.log(cantos);
+let BaseCantos = JSON.parse(localStorage.getItem("TonosActuales"));
+
 
 //Funcion regresar pagina
 let botonRegresar = document.querySelector(".arrowRegresar");
@@ -24,8 +21,7 @@ $(document).ready( function() {
         'Welcome to the CLNDR demo. Click around on the calendars and' +
         'the console will log different events that fire.');
 
-    // Assuming you've got the appropriate language files,
-    // clndr will respect whatever moment's language is set to.
+    // Assuming you've got the appropriate language files clndr will respect whatever moment's language is set to.
      moment.locale('es-do');
 
     // Here's some magic to make sure the dates are happening this month.
@@ -111,16 +107,19 @@ $(document).ready( function() {
                     //Agregar cantos cuando se presione un evento y convertirlo en un link al canto
                     cantos = cantos.split('_');
                     TituloListaAct.innerHTML = titulo;
+                    console.log(BaseCantos);
                     cantos.forEach(cantoConAutor => {
                         const crearli = document.createElement('li');
                         //Separamos el canto del autor
                         cantoConAutor = cantoConAutor.split(',')
                         canto = cantoConAutor[0];
                         autor = cantoConAutor[1];
-                        cantoPagina = mayuscula(canto).replace(/ /g,"_");
+                        console.log (canto , autor);
+                        BaseCantos filter()
+                        /*cantoPagina = mayuscula(canto).replace(/ /g,"_");
                         pagina = "Cantos/Info/" + cantoPagina + ".html";
                         console.log(pagina)
-                        crearli.innerHTML = `<a href="${pagina}">${canto} - ${autor}</a>`;
+                        crearli.innerHTML = `<a href="${pagina}">${canto} - ${autor}</a>`;*/
                         //crearli.innerHTML = cantoConAutor; 
                         ulCantosDelDia.appendChild(crearli);
                     });
