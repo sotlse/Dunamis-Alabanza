@@ -115,15 +115,17 @@ $(document).ready( function() {
                         canto = cantoConAutor[0];
                         cantoMinusculas = canto.toLowerCase();
                         autor = cantoConAutor[1];
-                        //autorMinusculas = autor.toLowerCase();
+                        autorMinusculas = autor.toLowerCase();
+                        console.log(autorMinusculas);
                         let LosCantos = BaseCantos.filter(function(cancion){
                             return  cancion.titulo.toLowerCase() === cantoMinusculas; 
                         });
                         if (LosCantos.length>1) {
-                            
-
+                            let LosCantos = LosCantos.filter(function(cancion){
+                                return  cancion.autor.toLowerCase() === autorMinusculas; 
+                            });
                         }
-                            console.log("LosCantos.length");
+                            //console.log("LosCantos.length");
 
                         if (LosCantos[0] !== undefined)
                             crearli.innerHTML = `<a href="${LosCantos[0].pagina}">${canto} - ${autor}</a>`
