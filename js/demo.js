@@ -118,16 +118,16 @@ $(document).ready( function() {
                         let LosCantos = BaseCantos.filter(function(cancion){
                             return  cancion.titulo.toLowerCase() === cantoMinusculas; 
                         });
-                        console.log(LosCantos);
+
                         if (LosCantos.length>1) {
-                            console.log(LosCantos);
-                            let LosCantos = LosCantos.filter(function(cancion){
+                            
+                            LosCantos = LosCantos.filter(function(cancion){
                                 autorMinusculas = autor.toLowerCase();
-                                
                                 return  cancion.autor.toLowerCase() === autorMinusculas; 
                             });
+                            //console.log(LosCantos);
                         }
-                            //console.log("LosCantos.length");
+
 
                         if (LosCantos[0] !== undefined)
                             crearli.innerHTML = `<a href="${LosCantos[0].pagina}">${canto} - ${autor}</a>`
