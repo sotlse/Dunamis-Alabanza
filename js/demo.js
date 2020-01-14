@@ -115,8 +115,11 @@ $(document).ready( function() {
                         canto = cantoConAutor[0];
                         autor = cantoConAutor[1];
                         console.log (canto , autor);
+                        let LosCantos = BaseCantos.filter(function(canto){
+                            console.log(canto.titulo);
+                            return  canto.titulo === canto; 
+                        });
                         
-                        console.log(LosCantos);
                         /*cantoPagina = mayuscula(canto).replace(/ /g,"_");
                         pagina = "Cantos/Info/" + cantoPagina + ".html";
                         console.log(pagina)
