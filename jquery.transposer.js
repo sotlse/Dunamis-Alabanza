@@ -141,9 +141,17 @@
             //Leer toda la lista de cantos con su tono y encontrar cual es el canto y su tono y cambiar tono
             var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
             let Tonos = TonoCanciones.filter(function(canto){
-                return  canto.titulo === $(".tituloDelCanto").text(); 
+                return  canto.titulo.toLowerCase() === $(".tituloDelCanto").text().toLowerCase(); 
             });
-            
+            console.log(Tonos);
+            //Si hay 2 o mas cantos con el mismo titulo, buscar el autor
+            if (Tonos.length>1) {
+                Tonos = Tonos.filter(function(canto){
+                    return  canto.autor.toLowerCase() === $(".autorDelCanto").text().toLowerCase(); 
+                });
+                console.log(Tonos);
+            }
+
             Tonos[0].tono = currentKey.name
             localStorage.setItem("TonosActuales",JSON.stringify(TonoCanciones));
             //localStorage.setItem("TonoActual",JSON.stringify(currentKey.name));
@@ -296,14 +304,14 @@
             let Tonos = TonoCanciones.filter(function(canto){
                 return  canto.titulo.toLowerCase() === $(".tituloDelCanto").text().toLowerCase(); 
             });
-            console.log(Tonos);
+            //console.log(Tonos);
             
             //Si hay 2 o mas cantos con el mismo titulo, buscar el autor
             if (Tonos.length>1) {
                 Tonos = Tonos.filter(function(canto){
                     return  canto.autor.toLowerCase() === $(".autorDelCanto").text().toLowerCase(); 
                 });
-                console.log(Tonos);
+                //console.log(Tonos);
             }
             
             /*--------------Mostrar en la botonera que tono esta el canto-----------------*/
