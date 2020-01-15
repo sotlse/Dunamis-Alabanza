@@ -107,7 +107,6 @@ $(document).ready( function() {
                     //Agregar cantos cuando se presione un evento y convertirlo en un link al canto
                     cantos = cantos.split('_');
                     TituloListaAct.innerHTML = titulo;
-                    //console.log(BaseCantos);
                     cantos.forEach(cantoConAutor => {
                         const crearli = document.createElement('li');
                         //Separamos el canto del autor
@@ -118,9 +117,9 @@ $(document).ready( function() {
                         let LosCantos = BaseCantos.filter(function(cancion){
                             return  cancion.titulo.toLowerCase() === cantoMinusculas; 
                         });
-
+                        
+                        //Si hay 2 o mas cantos con el mismo titulo, buscar el autor
                         if (LosCantos.length>1) {
-                            
                             LosCantos = LosCantos.filter(function(cancion){
                                 autorMinusculas = autor.toLowerCase();
                                 return  cancion.autor.toLowerCase() === autorMinusculas; 
@@ -136,14 +135,13 @@ $(document).ready( function() {
 
                         /*cantoPagina = mayuscula(canto).replace(/ /g,"_");
                         pagina = "Cantos/Info/" + cantoPagina + ".html";
-                        console.log(pagina)
                         crearli.innerHTML = `<a href="${pagina}">${canto} - ${autor}</a>`;*/
                         //crearli.innerHTML = cantoConAutor; 
                         ulCantosDelDia.appendChild(crearli);
                     });
                 }
 
-                /*Cuando presionen otro dia que no tenga evento*/
+                /*Cuando presionen otro dia que no tenga evento, ocultar el div de la lista de cantos*/
                 else {
                     TituloListaAct.innerHTML = "";
                     divDesplegarCantos.style.display = "none";
