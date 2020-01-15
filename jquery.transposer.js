@@ -295,6 +295,7 @@
             let Tonos = TonoCanciones.filter(function(canto){
                 return  canto.titulo === $(".tituloDelCanto").text(); 
             });
+            console.log(Tonos);
             
             /*--------------Mostrar en la botonera que tono esta el canto-----------------*/
             let valorTono = keys.filter(function(boton){

@@ -30,7 +30,8 @@ $(document).ready( function() {
     console.log(thisDay.replace(/-/g,""));
     // Events to load into calendar
     var eventArray = [
-        /*{
+        /* Ejemplos
+        {
             title: 'Multi-Day Event',
             endDate: thisMonth + '-14',
             startDate: thisMonth + '-10'
@@ -79,10 +80,8 @@ $(document).ready( function() {
     ];
 
     // The order of the click handlers is predictable. Direct click action
-    // callbacks come first: click, nextMonth, previousMonth, nextYear,
-    // previousYear, nextInterval, previousInterval, or today. Then
-    // onMonthChange (if the month changed), inIntervalChange if the interval
-    // has changed, and finally onYearChange (if the year changed).
+    //callbacks come first: click, nextMonth, previousMonth, nextYear,previousYear, nextInterval, previousInterval, or today. Then
+    //onMonthChange (if the month changed), inIntervalChange if the interval has changed, and finally onYearChange (if the year changed).
     calendars.clndr1 = $('.cal1').clndr({
         events: eventArray,
         clickEvents: {
