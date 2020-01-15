@@ -41,7 +41,7 @@
       
     <div class="canto_body">
 <!---------------Este es el limite----->   
-      <pre>
+      <pre data-key="E">
 INTRO:                    
  |E - A2|    |E - A2|    |E - A2| 
  |Bsus4 - A2 - G#m7 - F#m7|
@@ -70,24 +70,24 @@ Señor sobre cielo y tierra
    Que toda criatura adore    
                  A2      Bsus4  
 Que toda nación se postre
-|C#m7 - A2 - Bsus4|          A2    E-A2   E-A2
- A ti,  Se - ñor     Tu eres Dios
+|C#m7 - A2 - Bsus4|         A2   E-A2  E-A2
+ A ti,  Se - ñor    Tu eres Dios
 
 CORO2:
 Subida: 
 A2    E-A2   E-A2 - X - Bsus4 - C#m7 
 
-F#                     B2   C#     F#
+F#                B2   C#     F#
    Que tu eres la roca eterna 
-                 B2      C#   
+            B2      C#   
 Señor sobre cielo y tierra
 |D#m7 - B2 - C#| 
  Tu e - res   Dios
- F#                  B2   C#     F#
+ F#             B2   C#     F#
    Que toda criatura adore    
                  B2      C#  
 Que toda nación se postre
-|D#m7 - B2 - C#|           B2-F#-B2   B2-F#-B2   
+|D#m7 - B2 - C#|         B2-F#-B2   B2-F#-B2   
  A ti,  Se - ñor Tu eres Dios
  
 FINAL:
@@ -99,31 +99,55 @@ C#sus4   F#
 
 
             
-         </pre>
-        
+      </pre>
+<!---------------Este es el limite----->         
+    </div>
+
+    <div class = "flechasRegresarAvanzar">
+      <div class ="arrowRegresar2">
+        <i class="fas fa-arrow-left"></i>
       </div>
-
-      
-      <br>
-
-      <div class="divAudio">
+      <div class ="arrowAvanzar2">
+        <i class="fas fa-arrow-right"></i>
       </div>
+    </div>
+            
+    <div class="divAudio">
+    </div>
+      
+    <br>
 
-      <nav class = "navCanto">
-           <button class="botonTransportar">
-             Transportar
-           </button>  
+    <nav class = "navCanto">
+      <button class="botonTransportar">
+        C->D
+      </button>  
 
-           <button class="botonAudio">
-             <i class="fas fa-music"></i>
-           </button>  
+      <button class="botonAudio">
+        <i class="fas fa-music"></i>
+      </button>  
 
+      <button class="botonTextoChico">
+        <i class="fas fa-text-height"> -</i>
+      </button> 
+
+      <button class="botonTextoGrande">
+        <!--<i class="material-icons">format_size</i>-->
+        <i class="fas fa-text-height"> +</i>
+      </button> 
+
+      <button class="botonCasa">
+        <i class="fa fa-home"></i>
+      </button> 
         
-      </nav>
-      
-      
+    </nav>
           <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-    <script src="/landscape.js" ></script>
-    </body>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/jquery.transposer.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("pre").transpose();
+      });
+    </script>
+  </body>
 </html>
