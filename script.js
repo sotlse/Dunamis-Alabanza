@@ -32,6 +32,13 @@ var current_mode = screen.orientation;
 //Tamano de letra
 let tamano;
 
+/*-------------------------------MOSTRAR ERROR EN ALERT----------------------------------*/
+window.onerror = function(msg, url, linenumber) {
+  alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+  return true;
+}
+
+
 /*-------------------------------REGISTRO DE SERVICE WORKER----------------------------------*/
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
