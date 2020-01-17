@@ -1,7 +1,20 @@
-const 
+const title = document.querySelector('title').textContent;
+const h2 = document.querySelector('.tituloDelCanto');
+const h3 = document.querySelector('.autorDelCanto');
 
 let BodyTemplate =
-    
+    <div class='encabezado-lista'>
+        <h2 class='tituloDelCanto'>Tu eres Dios</h2>
+        <h3 class='autorDelCanto'>Marcos Vidal</h3>
+        <div class ='arrowRegresar'>
+            <i class='fas fa-arrow-left'></i>
+        </div>
+        <div class ="arrowAvanzar">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+    </div>
+
+    <hr>  
 
     "<div class = 'flechasRegresarAvanzar'>" +
         "<div class ='arrowRegresar2'>" +
