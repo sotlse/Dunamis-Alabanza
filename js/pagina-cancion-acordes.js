@@ -1,9 +1,10 @@
 //const title = document.querySelector('title').textContent;
-const h2 = document.querySelector('.tituloDelCanto');
-const h3 = document.querySelector('.autorDelCanto');
+const h2 = document.querySelector('.tituloDelCanto').textContent;
+const h3 = document.querySelector('.autorDelCanto').textContent;
 //const AcordeCanto = document.qquerySelector('.AcordeCanto');
-const pre = document.querySelector('pre');
-const tono = document.querySelector('.tono');
+const pre = document.querySelector('canto_body').innerHTML;
+const tono = document.querySelector('.tono').innerHTML;
+const tempo = document.querySelector('.tempo').innerHTML;
 
 let BodyTemplate =
     "<div class='encabezado-lista'>" +
@@ -21,7 +22,8 @@ let BodyTemplate =
 
     "<div class='infoCanto'>" +
         "<div class='tempo'>" +
-            "<span style='font-size:18px;'>&#9833;</span>= XX" +
+            `${tempo}` +
+            //"<span style='font-size:18px;'>&#9833;</span>= XX" +
         '</div>' +
         "<div class='nombre'>" +
             'ACORDES' +
@@ -72,3 +74,5 @@ let BodyTemplate =
         '</button>' +
    
     '</nav>';
+
+    console.log(BodyTemplate);
