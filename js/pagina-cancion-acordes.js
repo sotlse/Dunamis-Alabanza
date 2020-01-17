@@ -27,9 +27,14 @@ let BodyTemplate =
             'ACORDES' +
         '</div>' +
         "<div class='tono'>" +
-            Tono: <span class = 'AcordeCanto'>E</span> +
+            `${tono}` +
+            //Tono: <span class = 'AcordeCanto'>E</span> +
         '</div>' +
     '</div>' +
+
+    "<div class='canto_body'>" + 
+        `${pre}` +
+    '</div>' +  
 
     "<div class = 'flechasRegresarAvanzar'>" +
         "<div class ='arrowRegresar2'>" +
