@@ -250,7 +250,7 @@
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
                 e.preventDefault();
-                var botonSeleccionado = $(this);
+                //var botonSeleccionado = $(this);
                 transposeSong($this, $(this).text()); //Envia <pre> y texto del boton a transportar (el acorde a transportar)
                 $(".transpose-keys a").removeClass("selected");
                 $(this).addClass("selected");
