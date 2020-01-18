@@ -980,7 +980,7 @@ function agregarCanto(e){
       link = cancion.querySelector('a').href;
       tipo = cancion.querySelector('a').textContent;
       const CantoGuardado = new cantoGuardado(link,tipo,titulo);
-      console.log(CantoGuardado.pagina);
+
       //Si no existe ningun canto, entonces agregar canto
       if(localStorage.getItem("cancionesDomingo") === null){
         cancionesDomingo = [];
@@ -990,12 +990,12 @@ function agregarCanto(e){
       //Si existe entonces buscar si ya esta agregado, en caso de que si: Mostrar mensaje de ya agregado, en caso de que no: agregar canto a la lista
       else{
         cancionesDomingo = JSON.parse(localStorage.getItem("cancionesDomingo"));
-        /*
+        
         let LosCantos = cancionesDomingo.filter(function(cancion){
-          return  cancion.pagina === CantoGuardado; 
+          return  cancion.pagina === CantoGuardado.pagina; 
         });
-        console.log(LosCantos);
-        */
+        console.log(LosCantos.length);
+        
         cancionesDomingo.push(CantoGuardado);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
       }
