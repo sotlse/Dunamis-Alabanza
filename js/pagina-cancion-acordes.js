@@ -1,8 +1,11 @@
+document.addEventListener("DOMContentLoaded", desplegar);
+  
+function desplegar(){}
 //const title = document.querySelector('title').textContent;
 const h2 = document.querySelector('.tituloDelCanto').textContent;
 const h3 = document.querySelector('.autorDelCanto').textContent;
 //const AcordeCanto = document.qquerySelector('.AcordeCanto');
-const pre = document.querySelector('canto_body').innerHTML;
+const pre = document.querySelector('.canto_body').innerHTML;
 const tono = document.querySelector('.tono').innerHTML;
 const tempo = document.querySelector('.tempo').innerHTML;
 
@@ -62,6 +65,7 @@ let BodyTemplate =
         '</button>' +
 
         "<button class='botonTextoChico'>" +
+        //<i class="material-icons">format_size</i>
             "<i class='fas fa-text-height'> -</i>" +
         '</button>' +
 
