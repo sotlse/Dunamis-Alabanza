@@ -996,6 +996,17 @@ function agregarCanto(e){
         });
         console.log(LosCantos.length);
         
+        //Si se repite el canto
+        switch (LosCantos.length){
+          case 0:
+            console.log("No repetido");
+            break;
+
+          case 1:
+            console.log("Repetido");
+            break;
+        }
+
         cancionesDomingo.push(CantoGuardado);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
       }
