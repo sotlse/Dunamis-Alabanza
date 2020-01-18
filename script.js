@@ -54,9 +54,9 @@ if ('serviceWorker' in navigator) {
 
 /*-------------------------------NOTIFICACIONES----------------------------------*/
 //Preguntar si pueden mostrar notificaciones
-Notification.requestPermission(function(status) {
+/*Notification.requestPermission(function(status) {
   console.log('Notification permission status:', status);
-});
+});*/
 
 //displayNotification();
 
@@ -182,34 +182,6 @@ if (letraBody)
   letraBody.style.fontSize = tamano + "%" ;
 }
 
-
-/*
-//desplegar letra de acordes en tamano mas grande si es tablet
-var winW = window.innerWidth;
-var winH = window.innerHeight;
-let bodyPlaylist = document.querySelector(".playlistCantos")
-console.log(winW,winH);
-if (bodyPlaylist){
-  if (winW >850){
-    bodyPlaylist.style.fontSize = "150%";
-  }
-}
-if (cantoBody){
-  if (winW > 850){
-    cantoBody.style.fontSize = "150%";
-    if (slur){
-      slur.height = "14";
-      slur.width = "60";
-    }
-  }
-}
-if (letraBody){
-  if(winW>850){
-    letraBody.style.fontSize = "150%";
-  }
-}
-*/
-
 /*-----------------------BOTON HOME-----------------------*/
 if(botonCasa){
   botonCasa.addEventListener("click",(e) => {
@@ -217,7 +189,7 @@ if(botonCasa){
   });
 }
 
-/*-----------------------BASE DE DATOS-----------------------*/
+/*----------------------------BASE DE DATOS----------------------------*/
 //Constructor de canto guardado
 class cantoGuardado {
   constructor(link,tipo,titulo){
@@ -948,7 +920,6 @@ function agregarCanto(e){
     var cancion = e.target.parentElement;
     var winW = window.innerWidth;
     var winH = window.innerHeight;
-    console.log(winW,winH);
     var dialogverlay = document.getElementById('dialogverlay');
     var dialogbox = document.getElementById('dialogbox');
     dialogverlay.style.display = "block";
@@ -971,7 +942,7 @@ function agregarCanto(e){
     MiercolesBoton.onclick = function () {Playlist('cancionesMiercoles','MIERCOLES','rgb(247, 225, 153)');}
                                    
     
-    function Cancelar(e){
+    function Cancelar(){
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
       botonAdd.style.opacity = "1";
@@ -1048,7 +1019,6 @@ function agregarCanto(e){
       tipo = cancion.querySelector('a').textContent;
       const CantoGuardado = new cantoGuardado(link,tipo,titulo);
 
-
       //Si no existe ningun canto, entonces agregar canto
       if(localStorage.getItem(playlist) === null){
         canciones = [];
@@ -1056,6 +1026,7 @@ function agregarCanto(e){
         localStorage.setItem(playlist,JSON.stringify(canciones));
         mostrarMensajeAgregado (`Canto agregado a ${dia}`,color);
       }
+      
       //Si existe entonces buscar si ya esta agregado, en caso de que si: Mostrar mensaje de ya agregado, en caso de que no: agregar canto a la lista
       else{
         canciones = JSON.parse(localStorage.getItem(playlist));
@@ -1068,7 +1039,7 @@ function agregarCanto(e){
           case 0:
             console.log("No repetido");
             canciones.push(CantoGuardado);
-            localStorage.setItem(playlist,JSON.stringify(cancionesDomingo)); 
+            localStorage.setItem(playlist,JSON.stringify(canciones)); 
             mostrarMensajeAgregado (`Canto agregado a ${dia}`,color);
             break;
 
