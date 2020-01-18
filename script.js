@@ -986,7 +986,7 @@ function agregarCanto(e){
         cancionesDomingo = [];
         cancionesDomingo.push(CantoGuardado);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
-        mostrarMensajeAgregado ('Canto agregado a Domingo','rgb(153, 247, 166)');
+        mostrarMensajeAgregado ('Canto agregado a DOMINGO','rgb(153, 247, 166)');
       }
       //Si existe entonces buscar si ya esta agregado, en caso de que si: Mostrar mensaje de ya agregado, en caso de que no: agregar canto a la lista
       else{
@@ -1001,33 +1001,16 @@ function agregarCanto(e){
             console.log("No repetido");
             cancionesDomingo.push(CantoGuardado);
             localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
-            mostrarMensajeAgregado ('Canto agregado a Domingo','rgb(153, 247, 166)');
+            mostrarMensajeAgregado ('Canto agregado a DOMINGO','rgb(153, 247, 166)');
             break;
 
           case 1:
             console.log("Repetido");
-            mostrarMensajeAgregado ('Canto Repetido en Domingo','rgb(153, 247, 166)');
+            mostrarMensajeAgregado ('Canto REPETIDO en Domingo','tomato');
             break;
         }
-
       }
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogverlay').style.display = "none";
-
     }
-
-    function mostrarMensajeAgregado(mensaje,color){
-      const div = document.createElement ('div');
-      div.className = 'anuncio';
-      div.style.backgroundColor = color;
-      div.appendChild(document.createTextNode(`${mensaje}`));
-      const container = document.querySelector(".contenidoLista");
-      const ul = document.querySelector(".cuerpo-lista");
-      container.insertBefore(div,ul);
-      setTimeout(()=> document.querySelector(".anuncio").remove(),2500);
-      botonAdd.style.opacity = "1";
-    }
-    
     
     function Miercoles(e){
       link = cancion.querySelector('a').href;
@@ -1053,6 +1036,58 @@ function agregarCanto(e){
       const ul = document.querySelector(".cuerpo-lista");
       container.insertBefore(div,ul);
       setTimeout(()=> document.querySelector(".anuncioM").remove(),2500);
+      botonAdd.style.opacity = "1";
+    }
+    
+    Playlist('cancionesDomingo','DOMINGO','rgb(153, 247, 166)')
+
+    function Playlist(playlist,dia,color){
+      link = cancion.querySelector('a').href;
+      tipo = cancion.querySelector('a').textContent;
+      const CantoGuardado = new cantoGuardado(link,tipo,titulo);
+
+      //Si no existe ningun canto, entonces agregar canto
+      if(localStorage.getItem(playlist) === null){
+        canciones = [];
+        canciones.push(CantoGuardado);
+        localStorage.setItem(playlist,JSON.stringify(canciones));
+        mostrarMensajeAgregado (`Canto agregado a ${dia}`,color);
+      }
+      //Si existe entonces buscar si ya esta agregado, en caso de que si: Mostrar mensaje de ya agregado, en caso de que no: agregar canto a la lista
+      else{
+        canciones = JSON.parse(localStorage.getItem(playlist));
+        
+        let LosCantos = canciones.filter(function(cancion){
+          return  cancion.pagina === CantoGuardado.pagina; 
+        });
+        
+        switch (LosCantos.length){
+          case 0:
+            console.log("No repetido");
+            canciones.push(CantoGuardado);
+            localStorage.setItem(playlist,JSON.stringify(cancionesDomingo)); 
+            mostrarMensajeAgregado (`Canto agregado a ${dia}`,color);
+            break;
+
+          case 1:
+            console.log("Repetido");
+            mostrarMensajeAgregado (Canto REPETIDO en ${dia},'tomato');
+            break;
+        }
+      }
+    }
+
+    function mostrarMensajeAgregado(mensaje,color){
+      document.getElementById('dialogbox').style.display = "none";
+      document.getElementById('dialogverlay').style.display = "none";
+      const div = document.createElement ('div');
+      div.className = 'anuncio';
+      div.style.backgroundColor = color;
+      div.appendChild(document.createTextNode(`${mensaje}`));
+      const container = document.querySelector(".contenidoLista");
+      const ul = document.querySelector(".cuerpo-lista");
+      container.insertBefore(div,ul);
+      setTimeout(()=> document.querySelector(".anuncio").remove(),2500);
       botonAdd.style.opacity = "1";
     }
   }
