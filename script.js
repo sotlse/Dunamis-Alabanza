@@ -965,8 +965,10 @@ function agregarCanto(e){
     var DomingoBoton = document.getElementById ('Domingo');
     var MiercolesBoton = document.getElementById ('Miercoles');
     CancelarBoton.addEventListener ("click",Cancelar);
-    DomingoBoton.addEventListener ("click",Domingo);
-    MiercolesBoton.addEventListener ("click",Miercoles);
+    //DomingoBoton.addEventListener ("click",Domingo);
+    DomingoBoton.onclick = function () {Playlist('cancionesDomingo','DOMINGO','rgb(153, 247, 166)');}
+    //MiercolesBoton.addEventListener ("click",Miercoles);
+    MiercolesBoton.onclick = function () {Playlist('cancionesMiercoles','MIERCOLES','rgb(247, 225, 153)');}
                                    
     
     function Cancelar(e){
@@ -975,7 +977,7 @@ function agregarCanto(e){
       botonAdd.style.opacity = "1";
     } 
     
-    
+    /*
     function Domingo(e){
       link = cancion.querySelector('a').href;
       tipo = cancion.querySelector('a').textContent;
@@ -1038,13 +1040,14 @@ function agregarCanto(e){
       setTimeout(()=> document.querySelector(".anuncioM").remove(),2500);
       botonAdd.style.opacity = "1";
     }
+    */
     
-    Playlist('cancionesDomingo','DOMINGO','rgb(153, 247, 166)')
 
     function Playlist(playlist,dia,color){
       link = cancion.querySelector('a').href;
       tipo = cancion.querySelector('a').textContent;
       const CantoGuardado = new cantoGuardado(link,tipo,titulo);
+
 
       //Si no existe ningun canto, entonces agregar canto
       if(localStorage.getItem(playlist) === null){
@@ -1071,7 +1074,7 @@ function agregarCanto(e){
 
           case 1:
             console.log("Repetido");
-            mostrarMensajeAgregado (Canto REPETIDO en ${dia},'tomato');
+            mostrarMensajeAgregado (`Canto REPETIDO en ${dia}`,'tomato');
             break;
         }
       }
