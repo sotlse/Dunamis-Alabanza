@@ -1,6 +1,8 @@
-document.addEventListener("DOMContentLoaded", desplegar);
+/*-------------NO FUNCIONO-------------*/
+
+//document.addEventListener("DOMContentLoaded", desplegar);
   
-function desplegar(){}
+//function desplegar(){
 //const title = document.querySelector('title').textContent;
 const h2 = document.querySelector('.tituloDelCanto').textContent;
 const h3 = document.querySelector('.autorDelCanto').textContent;
@@ -80,3 +82,4 @@ let BodyTemplate =
     '</nav>';
 
     console.log(BodyTemplate);
+//}

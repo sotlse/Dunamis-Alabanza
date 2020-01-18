@@ -984,7 +984,11 @@ function agregarCanto(e){
         cancionesDomingo = [];
         cancionesDomingo.push(CantoGuardado);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
-      }else{
+      }
+      else if{
+        console.log();
+      }
+      else{
         cancionesDomingo = JSON.parse(localStorage.getItem("cancionesDomingo"));
         cancionesDomingo.push(CantoGuardado);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
