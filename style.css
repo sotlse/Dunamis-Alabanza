@@ -169,7 +169,7 @@ a {
 .anuncio{
   text-align:center;
   margin: 20px;
-  background-color:rgb(153, 247, 166);
+  /*background-color:rgb(153, 247, 166);*/
   padding: 5px;
 }
 

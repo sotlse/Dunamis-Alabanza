@@ -986,7 +986,7 @@ function agregarCanto(e){
         cancionesDomingo = [];
         cancionesDomingo.push(CantoGuardado);
         localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
-        mostrarMensajeAgregado ('Domingo');
+        mostrarMensajeAgregado ('Canto agregado a Domingo','rgb(153, 247, 166)');
       }
       //Si existe entonces buscar si ya esta agregado, en caso de que si: Mostrar mensaje de ya agregado, en caso de que no: agregar canto a la lista
       else{
@@ -1001,25 +1001,26 @@ function agregarCanto(e){
             console.log("No repetido");
             cancionesDomingo.push(CantoGuardado);
             localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
-            mostrarMensajeAgregado ('Domingo');
+            mostrarMensajeAgregado ('Canto agregado a Domingo','rgb(153, 247, 166)');
             break;
 
           case 1:
             console.log("Repetido");
+            mostrarMensajeAgregado ('Canto Repetido en Domingo','rgb(153, 247, 166)');
             break;
         }
 
       }
       document.getElementById('dialogbox').style.display = "none";
       document.getElementById('dialogverlay').style.display = "none";
-    
 
     }
 
-    function mostrarMensajeAgregado(lista){
+    function mostrarMensajeAgregado(mensaje,color){
       const div = document.createElement ('div');
       div.className = 'anuncio';
-      div.appendChild(document.createTextNode(`Canto agregado a ${lista}`));
+      div.style.backgroundColor = color;
+      div.appendChild(document.createTextNode(`${mensaje}`));
       const container = document.querySelector(".contenidoLista");
       const ul = document.querySelector(".cuerpo-lista");
       container.insertBefore(div,ul);
