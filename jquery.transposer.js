@@ -208,10 +208,11 @@
         var isChordLine = function (input) {
             //var tokens = input.replace(/\s+/, " ").split(" ");
             var tokens = input.replace(/\s+/, " ").split(" ");
-            console.log(tokens);
+            console.log(tokens.length);
             //var tokens = input.replace(/\s+/, " ").replace(/-|[|]|[/]/g, " ").split(" ");
             // Try to find tokens that aren't chords, if we find one we know that this line is not a 'chord' line.
             for (var i = 0; i < tokens.length; i++) {
+                console.log($.trim(tokens[i]).length);
                 if (!$.trim(tokens[i]).length == 0 && !tokens[i].match(opts.chordRegex))
                     return false;
             }
