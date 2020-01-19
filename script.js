@@ -53,7 +53,7 @@ if ('serviceWorker' in navigator) {
 }
 
 /*-------------------------------NOTIFICACIONES----------------------------------*/
-//Preguntar si pueden mostrar notificaciones
+//Preguntar si pueden mostrar notificaciones (no compatible con IOS)
 /*Notification.requestPermission(function(status) {
   console.log('Notification permission status:', status);
 });*/
@@ -87,11 +87,11 @@ function displayNotification() {
 /*-------------------------------ROTACION DE PANTALLA---------------------------*/
 if (cantoBody)
 {
-  alert(current_mode.type);
-  alert(screen.orientation.type);
+  //alert(current_mode.type);
+  //alert(screen.orientation.type);
   alert(window.orientation);
   //Para dispositivos Android
-  if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary"){
+  /*if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary"){
     //console.log(current_mode);
     cantoBody.style.columnCount= "1";
   }
@@ -99,15 +99,15 @@ if (cantoBody)
   else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary"){
     //console.log(current_mode);
     cantoBody.style.columnCount="2";
-  }
+  }*/
 
-  window.onorientationchange = function() { 
+  /*window.onorientationchange = function() { 
     if(screen.orientation.type === "portrait-primary")
       cantoBody.style.columnCount= "1";
     else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary")
       cantoBody.style.columnCount= "2";
-  };
-/*
+  };*/
+
   //Para dispositivos IOS
   function doOnOrientationChange() {
     switch(window.orientation) {  
@@ -123,7 +123,7 @@ if (cantoBody)
   window.addEventListener('orientationchange', doOnOrientationChange);
     
   // Initial execution if needed
-  doOnOrientationChange();*/
+  doOnOrientationChange();
 }
 
 /*
