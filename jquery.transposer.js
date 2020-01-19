@@ -184,6 +184,7 @@
             if (sib && sib.nodeType == 3 && sib.nodeValue.length > 0 && sib.nodeValue.charAt(0) != "/") {
                 var wsLength = getNewWhiteSpaceLength(oldChord.length, newChord.length, sib.nodeValue.length);
                 sib.nodeValue = makeString(" ", wsLength);
+                console.log(sib.nodeValue);
             }
         };
     
@@ -195,10 +196,10 @@
             else
                 return c;
         };
-    
+        
+        //Funcion para saber cuantos espacios son entre cada acorde
         var makeString = function (s, repeat) {
             var o = [];
-            console.log(repeat);
             for (var i = 0; i < repeat; i++) o.push(s);
             return o.join("");
         }
