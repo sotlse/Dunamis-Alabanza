@@ -130,9 +130,9 @@
             }
     
             var delta = getDelta(currentKey.value, newKey.value);
-            
             $("span.c", target).each(function (i, el) {
                 transposeChord(el, delta, newKey);
+                console.log(target);
             });
             
             currentKey = newKey;
@@ -184,7 +184,6 @@
             if (sib && sib.nodeType == 3 && sib.nodeValue.length > 0 && sib.nodeValue.charAt(0) != "/") {
                 var wsLength = getNewWhiteSpaceLength(oldChord.length, newChord.length, sib.nodeValue.length);
                 sib.nodeValue = makeString(" ", wsLength);
-                console.log(sib.nodeValue);
             }
         };
     
