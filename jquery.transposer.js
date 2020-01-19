@@ -133,7 +133,7 @@
 
             $("span.c", target).each(function (i, el) {
                 transposeChord(el, delta, newKey);
-                console.log($("span.c", target));
+                //console.log($("span.c", target));
             });
             
             currentKey = newKey;
@@ -207,7 +207,9 @@
         /*-----------------Revisar en cada linea si es una linea de acordes o de letra-----------------*/
         var isChordLine = function (input) {
             //var tokens = input.replace(/\s+/, " ").split(" ");
-            var tokens = input.replace(/\s+/, " ").replace(/-|[|]|[/]/g, " ").split(" ");
+            var tokens = input.replace(/\s+/, " ").split(" ");
+            console.log(tokens);
+            //var tokens = input.replace(/\s+/, " ").replace(/-|[|]|[/]/g, " ").split(" ");
             // Try to find tokens that aren't chords, if we find one we know that this line is not a 'chord' line.
             for (var i = 0; i < tokens.length; i++) {
                 if (!$.trim(tokens[i]).length == 0 && !tokens[i].match(opts.chordRegex))
