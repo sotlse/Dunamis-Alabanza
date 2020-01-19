@@ -48,7 +48,7 @@ $(document).ready( function() {
         }, {
             endDate: '2020-01-19', startDate: '2020-01-19',
             title: 'Programa Dominical 3 - 19 de Enero',
-            cantos: 'No a nosotros,Jesus Adrian Romero_Cerca de mi,Su presencia_Dios,Danilo Montero_Sentado en su trono,Jesus Adrian Romero_Tu nombre levantare,Marcos Witt'
+            cantos: 'No a nosotros,Jesus Adrian Romero_Cerca de mi,Su presencia_Dios,Danilo Montero_Sentado en su trono,Danilo Montero_Tu nombre levantare,Marcos Witt'
         }, {
             endDate: '2020-01-26', startDate: '2020-01-26',
             title: 'Programa Dominical 4 - 26 de Enero',
