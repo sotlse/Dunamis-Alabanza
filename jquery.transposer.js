@@ -177,7 +177,7 @@
             var newChord = newChordRoot.name + oldChord.substr(oldChordRoot.length);
             //console.log(newChord);
             el.text(newChord);
-            console.log(el);
+            //console.log(el);
     
             var sib = el[0].nextSibling;
             //console.log(sib);
@@ -198,6 +198,7 @@
     
         var makeString = function (s, repeat) {
             var o = [];
+            console.log(repeat);
             for (var i = 0; i < repeat; i++) o.push(s);
             return o.join("");
         }
