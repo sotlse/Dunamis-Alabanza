@@ -131,7 +131,7 @@
             }
     
             var delta = getDelta(currentKey.value, newKey.value);
-
+        
             $("span.c", target).each(function (i, el) {
                 transposeChord(el, delta, newKey);
                 //console.log($("span.c", target));
@@ -315,7 +315,7 @@
                     output.push("<span>" + line + "</span>");
             };
             $(this).html(output.join("\n"));
-            
+            console.log(output);
             /*----------------------Guardar canto con tono seleccionado----------------------*/
             var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
             let Tonos = TonoCanciones.filter(function(canto){
