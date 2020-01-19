@@ -123,6 +123,7 @@
     
         var transposeSong = function (target, key) {
             var newKey = getKeyByName(key);
+            console.log(target);
             //console.log(newKey.name); 
             //console.log(currentKey.name); 
             if (currentKey.name == newKey.name) {
@@ -261,13 +262,11 @@
             /*---------------Crear botonera de acordes----------------*/
             /*---------------Si presionan boton de acorde, ejecutar----------------*/
             var $this = $(this); //<pre> del canto
-            console.log($this);
+            //console.log($this);
             var keysHtml = $("<div class='transpose-keys'></div>");
-            console.log(keyLinks);
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
                 e.preventDefault();
-                console.log($this);
                 //var botonSeleccionado = $(this);
                 transposeSong($this, $(this).text()); //Envia <pre> y texto del boton a transportar (el acorde a transportar)
                 $(".transpose-keys a").removeClass("selected");
