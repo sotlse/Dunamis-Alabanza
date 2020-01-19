@@ -224,7 +224,7 @@
         };
         
         var wrapChords = function (input) {
-            console.log(input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>"));
+            //console.log(input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>"));
             return input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>");
         };
         
@@ -261,10 +261,13 @@
             /*---------------Crear botonera de acordes----------------*/
             /*---------------Si presionan boton de acorde, ejecutar----------------*/
             var $this = $(this); //<pre> del canto
+            console.log($this);
             var keysHtml = $("<div class='transpose-keys'></div>");
+            console.log(keyLinks);
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
                 e.preventDefault();
+                console.log($this);
                 //var botonSeleccionado = $(this);
                 transposeSong($this, $(this).text()); //Envia <pre> y texto del boton a transportar (el acorde a transportar)
                 $(".transpose-keys a").removeClass("selected");
