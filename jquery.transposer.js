@@ -214,6 +214,7 @@
             for (var i = 0; i < tokens.length; i++) {
                 console.log(tokens[i]);
                 console.log($.trim(tokens[i]).length);
+                console.log(tokens[i].match(opts.chordRegex));
                 if (!$.trim(tokens[i]).length == 0 && !tokens[i].match(opts.chordRegex))
                     return false;
             }
