@@ -304,7 +304,7 @@
     
                 if (isChordLine(line))
                     output.push("<span>" + wrapChords(line) + "</span>");
-                else if (line=="INTRO:" || line=="INTRO1:" || line=="INTRO2:")
+                else if (line=="INTRO:" || line=="//INTRO://" || line=="INTRO1:" || line=="INTRO2:")
                     output.push("<p class='tituloCanto'>" + line + "</p>");
                 else if (line=="VERSO:" || line=="VERSO1:" || line=="VERSO2:" || line=="VERSO3:" || line=="VERSO4:")
                     output.push("<p class='tituloVerso'>" + line + "</p>");
@@ -314,11 +314,14 @@
                     output.push("<p class='tituloPuente'>" + line + "</p>");
                 else if (line=="PRE-CORO:" || line=="PRE-CORO1:" || line=="PRE-CORO2:" || line=="PRE-CORO3:")
                     output.push("<p class='tituloPreCoro'>" + line + "</p>");
+                else if(line=="FINAL:" || line=="//FINAL://" || line=="FINAL1:" || line=="FINAL2:")
+                    output.push("<p class='tituloFinal'>" + line + "</p>");
                 else
                     output.push("<span>" + line + "</span>");
             };
             $(this).html(output.join("\n"));
-            console.log(output);
+            //console.log(output);
+
             /*----------------------Guardar canto con tono seleccionado----------------------*/
             var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
             let Tonos = TonoCanciones.filter(function(canto){

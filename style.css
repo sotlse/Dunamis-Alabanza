@@ -518,6 +518,10 @@ span.c {
   font-weight: bold; 
   color: #2159D6;
 }
+span.o { 
+  font-weight: bold; 
+  /*color: #2159D6;*/
+}
 
 .transpose-keys {
   margin: 10px 0;
