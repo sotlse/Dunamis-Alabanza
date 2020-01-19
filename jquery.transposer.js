@@ -123,7 +123,7 @@
     
         var transposeSong = function (target, key) {
             var newKey = getKeyByName(key);
-            console.log(target);
+            //console.log(target);
             //console.log(newKey.name); 
             //console.log(currentKey.name); 
             if (currentKey.name == newKey.name) {
