@@ -130,9 +130,10 @@
             }
     
             var delta = getDelta(currentKey.value, newKey.value);
+
             $("span.c", target).each(function (i, el) {
                 transposeChord(el, delta, newKey);
-                console.log(el);
+                console.log($("span.c", target));
             });
             
             currentKey = newKey;
