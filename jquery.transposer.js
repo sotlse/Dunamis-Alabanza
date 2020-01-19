@@ -224,9 +224,12 @@
             return true;
         };
         
+        //Colocar class='c' a todos los acordes y class='o' a los simbolos "|" y "-" que se encuentran en la linea de acordes
         var wrapChords = function (input) {
-            //console.log(input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>"));
-            return input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>");
+            //console.log(input);
+            //console.log(input.replace("|","<span class='o'>|</span>"));
+            //console.log(input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>").replace(/[|]/g,"<span class='o'>|</span>").replace(/[-]/g,"<span class='o'>-</span>"));
+            return input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>").replace(/[|]/g,"<span class='o'>|</span>").replace(/[-]/g,"<span class='o'>-</span>");
         };
         
         
