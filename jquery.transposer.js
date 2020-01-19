@@ -213,6 +213,8 @@
             // Try to find tokens that aren't chords, if we find one we know that this line is not a 'chord' line.
             for (var i = 0; i < tokens.length; i++) {
                 console.log(tokens[i]);
+                if (tokens[i].startsWith("|") || tokens[i].startsWith("-"))
+                    return true
                 console.log(!$.trim(tokens[i]).length);
                 console.log(!tokens[i].match(opts.chordRegex));
                 if (!$.trim(tokens[i]).length == 0 && !tokens[i].match(opts.chordRegex))
