@@ -143,13 +143,13 @@
             let Tonos = TonoCanciones.filter(function(canto){
                 return  canto.titulo.toLowerCase() === $(".tituloDelCanto").text().toLowerCase(); 
             });
-            console.log(Tonos);
+            //console.log(Tonos);
             //Si hay 2 o mas cantos con el mismo titulo, buscar el autor
             if (Tonos.length>1) {
                 Tonos = Tonos.filter(function(canto){
                     return  canto.autor.toLowerCase() === $(".autorDelCanto").text().toLowerCase(); 
                 });
-                console.log(Tonos);
+                //console.log(Tonos);
             }
 
             Tonos[0].tono = currentKey.name
@@ -167,15 +167,20 @@
     
         var transposeChord = function (selector, delta, targetKey) {
             var el = $(selector);
+            //console.log(el);
             var oldChord = el.text();
             //console.log(oldChord);
             var oldChordRoot = getChordRoot(oldChord);
+            //console.log(oldChordRoot);
             var newChordRoot = getNewKey(oldChordRoot, delta, targetKey);
             //console.log(newChordRoot);
             var newChord = newChordRoot.name + oldChord.substr(oldChordRoot.length);
+            //console.log(newChord);
             el.text(newChord);
+            console.log(el);
     
             var sib = el[0].nextSibling;
+            //console.log(sib);
             if (sib && sib.nodeType == 3 && sib.nodeValue.length > 0 && sib.nodeValue.charAt(0) != "/") {
                 var wsLength = getNewWhiteSpaceLength(oldChord.length, newChord.length, sib.nodeValue.length);
                 sib.nodeValue = makeString(" ", wsLength);
