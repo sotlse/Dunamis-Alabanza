@@ -420,7 +420,7 @@ class UI {
       tono:"C",
       categoria:["Alabanza","Adoracion"],
       audio:"",
-      subpaginas: ["Letra","Acordes"],
+      subpaginas: ["Letra","Acordes","Piano"],
     },
 
     {
