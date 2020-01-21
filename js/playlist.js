@@ -6,6 +6,7 @@ let botonRegresar2 = document.querySelector(".arrowRegresar2");
 let botonAvanzar2 = document.querySelector(".arrowAvanzar2");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
+const lista = document.querySelector(".playlistCantos");
 
 /*-----------------------MANIPULACION DE PLAYLISTS-----------------------*/
 class Playlist{

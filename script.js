@@ -1,14 +1,16 @@
 /*--VARIABLES--*/
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
-var opcionesItems = document.getElementById("opcionesDeCanto");
+//Playlist
+/*var opcionesItems = document.getElementById("opcionesDeCanto");
 let botonRegresar = document.querySelector(".arrowRegresar");
 let botonAvanzar = document.querySelector(".arrowAvanzar");
 let botonRegresar2 = document.querySelector(".arrowRegresar2");
 let botonAvanzar2 = document.querySelector(".arrowAvanzar2");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
-const lista = document.querySelector(".playlistCantos");
+const lista = document.querySelector(".playlistCantos");*/
+//
 let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
 let titulo = document.querySelector('title').textContent;
@@ -619,7 +621,7 @@ if(botonAudio){
 }
 
 
-/*-----------------------MANIPULACION DE PLAYLISTS-----------------------*/
+/*-----------------------MANIPULACION DE PLAYLISTS-----------------------*//*
 class Playlist{
   static agregarCantos(canciones,lista){
     if (canciones != null){
@@ -911,7 +913,7 @@ if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
 }
 
 
-/*-----------------------BOTON AGREGAR CANTO A UNA PLAYLIST-----------------------*/
+/*-----------------------BOTON AGREGAR CANTO A UNA PLAYLIST-----------------------*//*
 
 //Boton Add event
 if(opcionesItems){
@@ -929,7 +931,7 @@ function agregarCanto(e){
     var dialogbox = document.getElementById('dialogbox');
     dialogverlay.style.display = "block";
     dialogverlay.style.height = (winH) + "px";
-    dialogbox.style.right = /*(winW/2) - (500*0.5) + */"12%";
+    dialogbox.style.right = /*(winW/2) - (500*0.5) + */"12%";/*
     dialogbox.style.top = "100px";
     dialogbox.style.display = "block";
     
@@ -1018,7 +1020,7 @@ function agregarCanto(e){
     }
     */
     
-
+    /*
     function Playlist(playlist,dia,color){
       link = cancion.querySelector('a').href;
       tipo = cancion.querySelector('a').textContent;
@@ -1070,4 +1072,4 @@ function agregarCanto(e){
       botonAdd.style.opacity = "1";
     }
   }
-}
+}*/
