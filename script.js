@@ -89,7 +89,7 @@ if (cantoBody)
 {
   //alert(current_mode.type);
   //alert(screen.orientation.type);
-  alert(window.orientation);
+  //alert(window.orientation);
   //Para dispositivos Android
   /*if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary"){
     //console.log(current_mode);
@@ -110,13 +110,18 @@ if (cantoBody)
 
   //Para dispositivos IOS
   function doOnOrientationChange() {
-    switch(window.orientation) {  
-      case -90: case 90:
-        cantoBody.style.columnCount= "2";
-        break; 
-      default:
-        cantoBody.style.columnCount= "1";
-        break; 
+    if (window.orientation){
+      switch(window.orientation) {  
+        case -90: case 90:
+          cantoBody.style.columnCount= "2";
+          break; 
+        default:
+          cantoBody.style.columnCount= "1";
+          break; 
+      }
+    }
+    else {
+      alert("yes");
     }
   }
     
