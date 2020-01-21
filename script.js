@@ -101,15 +101,9 @@ if (cantoBody)
     cantoBody.style.columnCount="2";
   }*/
 
-  /*window.onorientationchange = function() { 
-    if(screen.orientation.type === "portrait-primary")
-      cantoBody.style.columnCount= "1";
-    else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary")
-      cantoBody.style.columnCount= "2";
-  };*/
-
-  //Para dispositivos IOS
+  
   function doOnOrientationChange() {
+    //Para dispositivos moviles (IOS y Android)
     if (window.orientation){
       switch(window.orientation) {  
         case -90: case 90:
@@ -120,8 +114,14 @@ if (cantoBody)
           break; 
       }
     }
+    //Para laptops
     else {
-      alert("yes");
+      /*window.onorientationchange = function() { 
+        if(screen.orientation.type === "portrait-primary")
+          cantoBody.style.columnCount= "1";
+        else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary")
+          cantoBody.style.columnCount= "2";
+      };*/
     }
   }
     
