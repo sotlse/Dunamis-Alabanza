@@ -3,13 +3,14 @@ var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 //Playlist
 /*var opcionesItems = document.getElementById("opcionesDeCanto");
+var botonEditar = document.querySelector(".EditarLista");
+var botonBorrarLista = document.querySelector(".borrarLista");
+const lista = document.querySelector(".playlistCantos");*/
+//Botones avanzar y regresar
 let botonRegresar = document.querySelector(".arrowRegresar");
 let botonAvanzar = document.querySelector(".arrowAvanzar");
 let botonRegresar2 = document.querySelector(".arrowRegresar2");
 let botonAvanzar2 = document.querySelector(".arrowAvanzar2");
-var botonEditar = document.querySelector(".EditarLista");
-var botonBorrarLista = document.querySelector(".borrarLista");
-const lista = document.querySelector(".playlistCantos");*/
 //
 let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
@@ -614,6 +615,44 @@ if(botonRegresar2){
   botonRegresar2.addEventListener("click",(e) =>  {
     window.history.back();
   });
+}
+
+/*-----------------------BOTON AVANZAR PAGINA-----------------------*/
+//Solo cuando se encuentre en una playlist, se muestra el boton de avanzar a siguiente canto
+let playlistFlag = localStorage.getItem("playlistFlag");
+if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
+  botonAvanzar.style.display = "block";
+  botonAvanzar2.style.display = "block";
+  //botonRegresar2.style.display = "block";
+  botonAvanzar.addEventListener("click",avanzar);
+  botonAvanzar2.addEventListener("click",avanzar);
+  function avanzar() {
+  //botonAvanzar.addEventListener("click",(e) => {
+    let cancionesPlaylist;
+    let proxCanto;
+    if(playlistFlag == 1){
+      cancionesPlaylist = JSON.parse(localStorage.getItem("cancionesDomingo"));
+    }
+    else if(playlistFlag == 2){
+      cancionesPlaylist = JSON.parse(localStorage.getItem("cancionesMiercoles"));
+    }
+    const pagActual = location.href;
+    console.log (pagActual);
+    console.log (proxCanto);
+    cancionesPlaylist.forEach(function (canto, index){
+      if (canto.pagina === pagActual){
+        proxCanto = index + 1; 
+      }
+      if (proxCanto == index){ 
+        window.location.assign(canto.pagina);
+      }  
+      if (proxCanto == cancionesPlaylist.length){
+
+          window.location.assign("https://dunamis-alabanza.glitch.me/");
+      }
+    });
+  }
+  //});
 }
 
 /*-----------------------BOTON AUDIO DE CANTO-----------------------*/
