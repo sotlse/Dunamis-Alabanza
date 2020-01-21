@@ -13,7 +13,8 @@ const lista = document.querySelector(".playlistCantos");*/
 //
 let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
-let titulo = document.querySelector('title').textContent;
+//let titulo = document.querySelector('title').textContent;
+let tituloTexto = document.querySelector('title').textContent;
 let contenidoCanto = document.querySelector(".contenido");
 let tituloCanto = document.querySelector(".tituloDelCanto");
 let slur = document.querySelector(".slur");
@@ -441,64 +442,64 @@ class UI {
     }
       
     ];
-    if(titulo === "Dunamis Adoracion | General"){
+    if(tituloTexto === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
       localStorage.setItem("playlistFlag",0);
     }
     
-    else if(titulo === "Dunamis Adoracion | Adoracion"){
+    else if(tituloTexto === "Dunamis Adoracion | Adoracion"){
       CategoriaCantos("Adoracion");
     }
     
-    else if(titulo === "Dunamis Adoracion | Alabanza"){
+    else if(tituloTexto === "Dunamis Adoracion | Alabanza"){
       CategoriaCantos("Alabanza");
     }
     
-    else if(titulo === "Dunamis Adoracion | Confesion"){
+    else if(tituloTexto === "Dunamis Adoracion | Confesion"){
       CategoriaCantos("Confesion");
     }
     
-    else if(titulo === "Dunamis Adoracion | Evangelismo"){
+    else if(tituloTexto === "Dunamis Adoracion | Evangelismo"){
       CategoriaCantos("Evangelismo");
     }
     
-    else if(titulo === "Dunamis Adoracion | Servicio"){
+    else if(tituloTexto === "Dunamis Adoracion | Servicio"){
       CategoriaCantos("Servicio");
     }
     
-    else if(titulo === "Dunamis Adoracion | Unidad"){
+    else if(tituloTexto === "Dunamis Adoracion | Unidad"){
       CategoriaCantos("Unidad");
     }
     
-    else if(titulo === "Dunamis Adoracion | Oracion"){
+    else if(tituloTexto === "Dunamis Adoracion | Oracion"){
       CategoriaCantos("Oracion");
     }
     
-    else if(titulo === "Dunamis Adoracion | Fortaleza"){
+    else if(tituloTexto === "Dunamis Adoracion | Fortaleza"){
       CategoriaCantos("Fortaleza");
     }
     
-    else if(titulo === "Dunamis Adoracion | Perdon"){
+    else if(tituloTexto === "Dunamis Adoracion | Perdon"){
       CategoriaCantos("Perdon");
     }
     
-    else if(titulo === "Dunamis Adoracion | Accion de Gracias"){
+    else if(tituloTexto === "Dunamis Adoracion | Accion de Gracias"){
       CategoriaCantos("Accion de Gracias");
     }
     
-    else if(titulo === "Dunamis Adoracion | Semana Santa"){
+    else if(tituloTexto === "Dunamis Adoracion | Semana Santa"){
       CategoriaCantos("Semana Santa");
     }
     
-    else if(titulo === "Dunamis Adoracion | Navidad"){
+    else if(tituloTexto === "Dunamis Adoracion | Navidad"){
       CategoriaCantos("Navidad");
     }
     
-    else if(titulo === "Dunamis Adoracion | Himnos"){
+    else if(tituloTexto === "Dunamis Adoracion | Himnos"){
       CategoriaCantos("Himnos");
     }
     
-    else if(titulo === "Dunamis Adoracion | Servicios Especiales"){
+    else if(tituloTexto === "Dunamis Adoracion | Servicios Especiales"){
       CategoriaCantos("Servicios Especiales");
     }
     
