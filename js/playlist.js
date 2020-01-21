@@ -1,9 +1,5 @@
 let titulo = document.querySelector('title').textContent;
 var opcionesItems = document.getElementById("opcionesDeCanto");
-//let botonRegresar = document.querySelector(".arrowRegresar");
-//let botonAvanzar = document.querySelector(".arrowAvanzar");
-//let botonRegresar2 = document.querySelector(".arrowRegresar2");
-//let botonAvanzar2 = document.querySelector(".arrowAvanzar2");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
 const lista = document.querySelector(".playlistCantos");
@@ -292,9 +288,7 @@ class Playlist{
       var DomingoBoton = document.getElementById ('Domingo');
       var MiercolesBoton = document.getElementById ('Miercoles');
       CancelarBoton.addEventListener ("click",Cancelar);
-      //DomingoBoton.addEventListener ("click",Domingo);
       DomingoBoton.onclick = function () {Playlist('cancionesDomingo','DOMINGO','rgb(153, 247, 166)');}
-      //MiercolesBoton.addEventListener ("click",Miercoles);
       MiercolesBoton.onclick = function () {Playlist('cancionesMiercoles','MIERCOLES','rgb(247, 225, 153)');}
                                      
       
@@ -304,72 +298,6 @@ class Playlist{
         botonAdd.style.opacity = "1";
       } 
       
-      /*
-      function Domingo(e){
-        link = cancion.querySelector('a').href;
-        tipo = cancion.querySelector('a').textContent;
-        const CantoGuardado = new cantoGuardado(link,tipo,titulo);
-  
-        //Si no existe ningun canto, entonces agregar canto
-        if(localStorage.getItem("cancionesDomingo") === null){
-          cancionesDomingo = [];
-          cancionesDomingo.push(CantoGuardado);
-          localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
-          mostrarMensajeAgregado ('Canto agregado a DOMINGO','rgb(153, 247, 166)');
-        }
-        //Si existe entonces buscar si ya esta agregado, en caso de que si: Mostrar mensaje de ya agregado, en caso de que no: agregar canto a la lista
-        else{
-          cancionesDomingo = JSON.parse(localStorage.getItem("cancionesDomingo"));
-          
-          let LosCantos = cancionesDomingo.filter(function(cancion){
-            return  cancion.pagina === CantoGuardado.pagina; 
-          });
-          
-          switch (LosCantos.length){
-            case 0:
-              console.log("No repetido");
-              cancionesDomingo.push(CantoGuardado);
-              localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
-              mostrarMensajeAgregado ('Canto agregado a DOMINGO','rgb(153, 247, 166)');
-              break;
-  
-            case 1:
-              console.log("Repetido");
-              mostrarMensajeAgregado ('Canto REPETIDO en Domingo','tomato');
-              break;
-          }
-        }
-      }
-      
-      function Miercoles(e){
-        link = cancion.querySelector('a').href;
-        tipo = cancion.querySelector('a').textContent;
-        const CantoGuardado = new cantoGuardado(link,tipo,titulo);
-        if(localStorage.getItem("cancionesMiercoles") === null){
-          cancionesMiercoles = [];
-          cancionesMiercoles.push(CantoGuardado);
-          localStorage.setItem("cancionesMiercoles",JSON.stringify(cancionesMiercoles));
-        }else{
-          cancionesMiercoles = JSON.parse(localStorage.getItem("cancionesMiercoles"));
-          cancionesMiercoles.push(CantoGuardado);
-          localStorage.setItem("cancionesMiercoles",JSON.stringify(cancionesMiercoles));
-        } 
-        document.getElementById('dialogbox').style.display = "none";
-        document.getElementById('dialogverlay').style.display = "none";
-        
-        //Mostrar mensaje de canto agregado
-        const div = document.createElement ('div');
-        div.className = 'anuncioM';
-        div.appendChild(document.createTextNode("Canto agregado a MIERCOLES"));
-        const container = document.querySelector(".contenidoLista");
-        const ul = document.querySelector(".cuerpo-lista");
-        container.insertBefore(div,ul);
-        setTimeout(()=> document.querySelector(".anuncioM").remove(),2500);
-        botonAdd.style.opacity = "1";
-      }
-      */
-      
-  
       function Playlist(playlist,dia,color){
         link = cancion.querySelector('a').href;
         tipo = cancion.querySelector('a').textContent;

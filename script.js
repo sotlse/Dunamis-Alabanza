@@ -1,11 +1,6 @@
 /*--VARIABLES--*/
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
-//Playlist
-/*var opcionesItems = document.getElementById("opcionesDeCanto");
-var botonEditar = document.querySelector(".EditarLista");
-var botonBorrarLista = document.querySelector(".borrarLista");
-const lista = document.querySelector(".playlistCantos");*/
 //Botones avanzar y regresar
 let botonRegresar = document.querySelector(".arrowRegresar");
 let botonAvanzar = document.querySelector(".arrowAvanzar");
@@ -14,7 +9,6 @@ let botonAvanzar2 = document.querySelector(".arrowAvanzar2");
 //
 let cantoBody = document.querySelector(".canto_body");
 let letraBody = document.querySelector(".letra_body")
-//let titulo = document.querySelector('title').textContent;
 let tituloTexto = document.querySelector('title').textContent;
 let contenidoCanto = document.querySelector(".contenido");
 let tituloCanto = document.querySelector(".tituloDelCanto");
@@ -585,7 +579,12 @@ class UI {
 
 //Cuando se cargue la pagina, agregar base de datos
 document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
-  
+
+/*-----------------------BOTON AUDIO DE CANTO-----------------------*/
+if(botonAudio){
+  document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
+}
+
 /*-----------------------BUSQUEDA FILTRO-----------------------*/
 if (busquedaItem){
 busquedaItem.addEventListener("keyup",filterItems);
@@ -655,11 +654,12 @@ if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
   //});
 }
 
-/*-----------------------BOTON AUDIO DE CANTO-----------------------*/
-if(botonAudio){
-  document.addEventListener("DOMContentLoaded", UI.desplegarCantos);
-}
-
+//Playlist variables
+/*var opcionesItems = document.getElementById("opcionesDeCanto");
+var botonEditar = document.querySelector(".EditarLista");
+var botonBorrarLista = document.querySelector(".borrarLista");
+const lista = document.querySelector(".playlistCantos");
+let titulo = document.querySelector('title').textContent;*/
 
 /*-----------------------MANIPULACION DE PLAYLISTS-----------------------*//*
 class Playlist{
