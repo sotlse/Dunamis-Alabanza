@@ -115,12 +115,7 @@ if (cantoBody)
     //Para laptops
     else {
       alert("Es una lap");
-      /*window.onorientationchange = function() { 
-        if(screen.orientation.type === "portrait-primary")
-          cantoBody.style.columnCount= "1";
-        else if(screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary")
-          cantoBody.style.columnCount= "2";
-      };*/
+      
     }
   }
     
