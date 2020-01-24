@@ -15,8 +15,12 @@ const body = document.querySelector("body");
 const script = document.querySelectorAll("script");
 
 
-console.log(tono.length);
-
+console.log(tono[(tono.length-1)])
+for (let i=0;i<tono.length;i++){
+    console.log(tono[i]);
+    if (tono[i]="m")
+        
+}
 
 let HeadTemaplate  =
     "<title>" + `${title}` + "</title>" +
