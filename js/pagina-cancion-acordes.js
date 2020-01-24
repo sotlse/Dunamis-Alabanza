@@ -17,16 +17,12 @@ let menor = "";
 let acorde;
 
 //console.log(tono[(tono.length-1)])
-for (i=0;i<tono.length;i++){
-    if (tono[i] === "m"){
-        console.log(tono[i]);
-        menor = "m";
-    }
-    else
-        console.log(tono[i]);
+if (tono.includes("m")){
+    menor = "m"
+    tono.replace("m","");
 }
 
-console.log(acorde);
+console.log(tono);
 console.log(menor);
 
 let HeadTemaplate  =
