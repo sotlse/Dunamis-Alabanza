@@ -101,9 +101,9 @@ let BodyTemplate =
     "<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js'></script>" +
     "<script type='text/javascript' src='/jquery.transposer.js'></script>" +
     "<script type='text/javascript'>" +
-      "$(function() {" +
-        `$('pre').transpose();` +
-      '});' +
+      $(function() { 
+        $("pre").transpose(); 
+      }); 
     '</script>';
 
     head.innerHTML = HeadTemaplate;
