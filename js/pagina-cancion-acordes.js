@@ -45,8 +45,8 @@ let BodyTemplate =
 
     "<div class='infoCanto'>" +
         "<div class='tempo'>" +
-            `${tempo}` +
-            //"<span style='font-size:18px;'>&#9833;</span>= XX" +
+            //`${tempo}` +
+            `<span style='font-size:18px;'>&#9833;</span>= ${tempo}` +
         '</div>' +
         "<div class='nombre'>" +
             'ACORDES' +
