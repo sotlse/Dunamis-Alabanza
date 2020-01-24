@@ -9,7 +9,7 @@ const head = document.querySelector("head");
 const body = document.querySelector("body");
 const script = document.querySelectorAll("script");
 let menor = "";
-//let acorde = tono;
+let botonRotar;
 
 if (tono.includes("m")){
     menor = "m";
@@ -114,16 +114,28 @@ let BodyTemplate =
         //Para laptops
         else {
             let nav = document.querySelector(".navCanto");
-            let botonRotar = document.createElement('button');
+            botonRotar = document.createElement('button');
             botonRotar.className = "botonRotar";
             botonRotar.appendChild(document.createTextNode("Rotar"));
             nav.appendChild(botonRotar);
         }
-      }
+    }
         
-      window.addEventListener('orientationchange', doOnOrientationChange);
+    window.addEventListener('orientationchange', doOnOrientationChange);
         
       // Initial execution if needed
-      doOnOrientationChange();
+    doOnOrientationChange();
+
+      //Si presionan el boton rotar
+        cantoBody = document.querySelector(".canto_body").style;
+    console.log(cantoBody);
+    if (botonRotar){
+        botonRotar.onclick = function(){
+            if (cantoBody.style.columnCount == "2")
+                cantoBody.style.columnCount = "1";
+            else
+            cantoBody.style.columnCount = "2";
+        }
+    }
 
 //}
