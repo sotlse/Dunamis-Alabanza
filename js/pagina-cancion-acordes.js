@@ -13,16 +13,20 @@ const tempo = document.querySelector('.tempo').innerHTML;
 const head = document.querySelector("head");
 const body = document.querySelector("body");
 const script = document.querySelectorAll("script");
-const menor = "";
+let menor = "";
+let acorde;
 
 //console.log(tono[(tono.length-1)])
-for (let i=0;i<tono.length;i++){
-    if (tono[i]==="m"){
-        //menor = "m";
+for (i=0;i<tono.length;i++){
+    if (tono[i] === "m"){
+        console.log(tono[i]);
+        menor = "m";
     }
-    tono = tono[i];
+    else
+        console.log(tono[i]);
 }
-console.log(tono);
+
+console.log(acorde);
 console.log(menor);
 
 let HeadTemaplate  =
