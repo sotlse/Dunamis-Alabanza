@@ -12,6 +12,8 @@ const tono = document.querySelector('.tono').innerHTML;
 const tempo = document.querySelector('.tempo').innerHTML;
 const head = document.querySelector("head");
 const body = document.querySelector("body");
+const script = document.querySelectorAll("script");
+
 
 console.log(head);
 
@@ -95,16 +97,7 @@ let BodyTemplate =
             "<i class='fa fa-home'></i>" +
         '</button>' +
    
-    '</nav>' +
-
-    "<script src='/script.js' defer></script>" +
-    "<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js'></script>" +
-    "<script type='text/javascript' src='/jquery.transposer.js'></script>" +
-    "<script type='text/javascript'>" +
-      $(function() { 
-        $("pre").transpose(); 
-      }); 
-    '</script>';
+    '</nav>';
 
     head.innerHTML = HeadTemaplate;
     console.log(head);
