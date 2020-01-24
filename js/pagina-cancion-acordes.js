@@ -1,28 +1,20 @@
-/*-------------NO FUNCIONO-------------*/
 
-//document.addEventListener("DOMContentLoaded", desplegar);
-  
-//function desplegar(){
 const title = document.querySelector('title').textContent;
 const h2 = document.querySelector('.tituloDelCanto').textContent;
 const h3 = document.querySelector('.autorDelCanto').textContent;
-//const AcordeCanto = document.qquerySelector('.AcordeCanto');
 const pre = document.querySelector('.canto_body').innerHTML;
-const tono = document.querySelector('.tono').innerHTML;
+let tono = document.querySelector('.tono').innerHTML;
 const tempo = document.querySelector('.tempo').innerHTML;
 const head = document.querySelector("head");
 const body = document.querySelector("body");
 const script = document.querySelectorAll("script");
 let menor = "";
-let acorde = tono;
+//let acorde = tono;
 
 if (tono.includes("m")){
-    menor = "m"
-    acorde = tono.substring(0, tono.length-1);
+    menor = "m";
+    tono = tono.substring(0, tono.length-1);
 }
-
-console.log(acorde);
-console.log(menor);
 
 let HeadTemaplate  =
     "<title>" + `${title}` + "</title>" +
@@ -58,8 +50,7 @@ let BodyTemplate =
             'ACORDES' +
         '</div>' +
         "<div class='tono'>" +
-            //`${tono}` +
-            `Tono: <span class = 'AcordeCanto'>${acorde}</span>${menor}` +
+            `Tono: <span class = 'AcordeCanto'>${tono}</span>${menor}` +
         '</div>' +
     '</div>' +
 
@@ -108,5 +99,31 @@ let BodyTemplate =
     body.innerHTML = BodyTemplate;
     console.log(body);
 
+    function doOnOrientationChange() {
+        //Para dispositivos moviles (IOS y Android)
+        if (window.orientation != undefined){
+          switch(window.orientation) {  
+            case -90: case 90:
+              cantoBody.style.columnCount= "2";
+              break; 
+            default:
+              cantoBody.style.columnCount= "1";
+              break; 
+          }
+        }
+        //Para laptops
+        else {
+            let nav = document.querySelector(".navCanto");
+            let botonRotar = document.createElement('button');
+            botonRotar.className = "botonRotar";
+            botonRotar.appendChild(document.createTextNode("Rotar"));
+            nav.appendChild(botonRotar);
+        }
+      }
+        
+      window.addEventListener('orientationchange', doOnOrientationChange);
+        
+      // Initial execution if needed
+      doOnOrientationChange();
 
 //}

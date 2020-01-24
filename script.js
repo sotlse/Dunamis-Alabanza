@@ -99,7 +99,7 @@ if (cantoBody)
     cantoBody.style.columnCount="2";
   }*/
 
-  
+  /*
   function doOnOrientationChange() {
     //Para dispositivos moviles (IOS y Android)
     if (window.orientation != undefined){
@@ -122,7 +122,7 @@ if (cantoBody)
   window.addEventListener('orientationchange', doOnOrientationChange);
     
   // Initial execution if needed
-  doOnOrientationChange();
+  doOnOrientationChange();*/
 }
 
 /*
