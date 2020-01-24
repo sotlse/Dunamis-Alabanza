@@ -1,4 +1,3 @@
-
 const title = document.querySelector('title').textContent;
 const h2 = document.querySelector('.tituloDelCanto').textContent;
 const h3 = document.querySelector('.autorDelCanto').textContent;
@@ -99,6 +98,7 @@ let BodyTemplate =
     body.innerHTML = BodyTemplate;
     console.log(body);
 
+    /*---------------Rotacion de la pantalla (pasar de 2 columnas a 1)-----------*/
     function doOnOrientationChange() {
         //Para dispositivos moviles (IOS y Android)
         if (window.orientation != undefined){
@@ -127,8 +127,7 @@ let BodyTemplate =
     doOnOrientationChange();
 
       //Si presionan el boton rotar
-        cantoBody = document.querySelector(".canto_body").style;
-    console.log(cantoBody);
+    document.querySelector(".canto_body").style.columnCount="2";
     if (botonRotar){
         botonRotar.onclick = function(){
             if (cantoBody.style.columnCount == "2")
