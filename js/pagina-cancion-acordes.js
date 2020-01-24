@@ -4,13 +4,14 @@
   
 //function desplegar(){
 const title = document.querySelector('title').textContent;
-//const h2 = document.querySelector('.tituloDelCanto').textContent;
-//const h3 = document.querySelector('.autorDelCanto').textContent;
+const h2 = document.querySelector('.tituloDelCanto').textContent;
+const h3 = document.querySelector('.autorDelCanto').textContent;
 //const AcordeCanto = document.qquerySelector('.AcordeCanto');
-//const pre = document.querySelector('.canto_body').innerHTML;
-//const tono = document.querySelector('.tono').innerHTML;
-//const tempo = document.querySelector('.tempo').innerHTML;
+const pre = document.querySelector('.canto_body').innerHTML;
+const tono = document.querySelector('.tono').innerHTML;
+const tempo = document.querySelector('.tempo').innerHTML;
 const head = document.querySelector("head");
+const body = document.querySelector("body");
 
 console.log(head);
 
@@ -25,9 +26,6 @@ let HeadTemaplate  =
     "<link rel='manifest' href='/manifest.json'>" +
     "<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>" +
     "<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>";
-
-    head.innerHTML = HeadTemaplate;
-    console.log(head);
 
 let BodyTemplate =
     "<div class='encabezado-lista'>" +
@@ -97,9 +95,21 @@ let BodyTemplate =
             "<i class='fa fa-home'></i>" +
         '</button>' +
    
-    '</nav>';
+    '</nav>' +
 
-    console.log(BodyTemplate);
+    "<script src='/script.js' defer></script>" +
+    "<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js'></script>" +
+    "<script type='text/javascript' src='/jquery.transposer.js'></script>" +
+    "<script type='text/javascript'>" +
+      "$(function() {" +
+        `$('pre').transpose();` +
+      '});' +
+    '</script>';
+
+    head.innerHTML = HeadTemaplate;
+    console.log(head);
+    body.innerHTML = BodyTemplate;
+    console.log(body);
 
 
 //}
