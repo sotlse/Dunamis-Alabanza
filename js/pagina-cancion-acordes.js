@@ -57,9 +57,7 @@ let BodyTemplate =
         '</div>' +
     '</div>' +
 
-    "<div class='canto_body'>" + 
-        `${pre}` +
-    '</div>' +  
+"<div class='canto_body'>" + `${pre}` + '</div>' +  
 
     "<div class = 'flechasRegresarAvanzar'>" +
         "<div class ='arrowRegresar2'>" +
