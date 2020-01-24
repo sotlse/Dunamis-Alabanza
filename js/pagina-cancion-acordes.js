@@ -14,15 +14,14 @@ const head = document.querySelector("head");
 const body = document.querySelector("body");
 const script = document.querySelectorAll("script");
 let menor = "";
-let acorde;
+let acorde = tono;
 
-//console.log(tono[(tono.length-1)])
 if (tono.includes("m")){
     menor = "m"
-    tono.replace("m","");
+    acorde = tono.substring(0, tono.length-1);
 }
 
-console.log(tono);
+console.log(acorde);
 console.log(menor);
 
 let HeadTemaplate  =
@@ -60,7 +59,7 @@ let BodyTemplate =
         '</div>' +
         "<div class='tono'>" +
             //`${tono}` +
-            //Tono: <span class = 'AcordeCanto'>B</span>m +
+            `Tono: <span class = 'AcordeCanto'>${acorde}</span>${menor}` +
         '</div>' +
     '</div>' +
 
