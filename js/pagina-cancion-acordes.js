@@ -15,7 +15,8 @@ const body = document.querySelector("body");
 const script = document.querySelectorAll("script");
 
 
-console.log(head);
+console.log(tono.length);
+
 
 let HeadTemaplate  =
     "<title>" + `${title}` + "</title>" +
@@ -45,15 +46,14 @@ let BodyTemplate =
 
     "<div class='infoCanto'>" +
         "<div class='tempo'>" +
-            //`${tempo}` +
             `<span style='font-size:18px;'>&#9833;</span>= ${tempo}` +
         '</div>' +
         "<div class='nombre'>" +
             'ACORDES' +
         '</div>' +
         "<div class='tono'>" +
-            `${tono}` +
-            //Tono: <span class = 'AcordeCanto'>E</span> +
+            //`${tono}` +
+            //Tono: <span class = 'AcordeCanto'>B</span>m +
         '</div>' +
     '</div>' +
 
