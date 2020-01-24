@@ -82,4 +82,6 @@ let BodyTemplate =
     '</nav>';
 
     console.log(BodyTemplate);
+let HeadTemaplate  =
+    
 //}
