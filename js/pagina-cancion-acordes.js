@@ -3,14 +3,14 @@
 //document.addEventListener("DOMContentLoaded", desplegar);
   
 //function desplegar(){
-//const title = document.querySelector('title').textContent;
-const h2 = document.querySelector('.tituloDelCanto').textContent;
-const h3 = document.querySelector('.autorDelCanto').textContent;
+const title = document.querySelector('title').textContent;
+//const h2 = document.querySelector('.tituloDelCanto').textContent;
+//const h3 = document.querySelector('.autorDelCanto').textContent;
 //const AcordeCanto = document.qquerySelector('.AcordeCanto');
-const pre = document.querySelector('.canto_body').innerHTML;
-const tono = document.querySelector('.tono').innerHTML;
-const tempo = document.querySelector('.tempo').innerHTML;
-const head = document.queryqquerySelector("head");
+//const pre = document.querySelector('.canto_body').innerHTML;
+//const tono = document.querySelector('.tono').innerHTML;
+//const tempo = document.querySelector('.tempo').innerHTML;
+const head = document.querySelector("head");
 
 console.log(head);
 
@@ -25,6 +25,8 @@ let HeadTemaplate  =
     "<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>" +
     "<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>";
 
+    head.innerHTML = HeadTemaplate;
+    console.log(head);
 
 let BodyTemplate =
     "<div class='encabezado-lista'>" +
