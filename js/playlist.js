@@ -3,6 +3,7 @@ var opcionesItems = document.getElementById("opcionesDeCanto");
 var botonEditar = document.querySelector(".EditarLista");
 var botonBorrarLista = document.querySelector(".borrarLista");
 const lista = document.querySelector(".playlistCantos");
+let seleccionado;
 
 /*-----------------------MANIPULACION DE PLAYLISTS-----------------------*/
 class Playlist{
@@ -83,7 +84,7 @@ class Playlist{
         });
         
         //Ocultar y mostrar bloques
-        div.style.display = "block";
+        //div.style.display = "block";
         divEditar.style.display = "none";
         divOk.style.display = "block";
         
@@ -101,7 +102,8 @@ class Playlist{
             this.className = "selected";
             noseleccionado = this;
             items = document.querySelectorAll(".playlistCantos li");
-            seleccionado = item;         
+            seleccionado = item;   
+            div.style.display = "block";
           } 
         });
         

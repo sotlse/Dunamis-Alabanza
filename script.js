@@ -19,7 +19,6 @@ let cancionesMiercoles = [];
 let link;
 let tipo;
 let totalCantos=300;
-let seleccionado;
 //Para paginas info
 let ulSubtemasInfo = document.querySelector("#opcionesDeCanto");
 //let cantoSeleccionado;
