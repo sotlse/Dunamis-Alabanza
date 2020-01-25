@@ -647,7 +647,7 @@ if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
       }  
       if (proxCanto == cancionesPlaylist.length){
 
-          window.location.assign("https://dunamis-alabanza.glitch.me/");
+          window.location.assign(home);
       }
     });
   }
