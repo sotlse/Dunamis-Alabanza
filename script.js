@@ -23,6 +23,7 @@ let seleccionado;
 //Para paginas info
 let ulSubtemasInfo = document.querySelector("#opcionesDeCanto");
 let autorcanto = document.querySelector("h3").textContent;
+//let cantoSeleccionado;
 //Botones para configuracion de cantos
 let botonAudio = document.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
@@ -574,10 +575,16 @@ class UI {
   
   static agregarSubtemasACanto(cantoSubtemas){
     console.log(cantoSubtemas);
-    localStorage.setItem(cantoSeleccionado,JSON.stringify(cantoSubtemas));
+    localStorage.setItem("cantoSeleccionado",JSON.stringify(cantoSubtemas));
+    /*canciones.forEach(function (canto){
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
+      lista.appendChild(li);
+    });*/
+    cantoSubtemas.forEach(canto => )
     const lista = document.createElement("li");
     lista.className = "lista";
-    //forEach
+    
     lista.innerHTML = `<a href="/Cantos/Letra/Tu_Eres_Dios_EEYV_Letra.html">Letra</a> <button class="boton-add">
       +</button></li>`;
 
