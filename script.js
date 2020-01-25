@@ -574,12 +574,13 @@ class UI {
   
   static agregarSubtemasACanto(cantoSubtemas){
     console.log(cantoSubtemas);
+    localStorage.setItem(cantoSeleccionado,JSON.stringify(cantoSubtemas));
     const lista = document.createElement("li");
     lista.className = "lista";
     //forEach
     lista.innerHTML = `<a href="/Cantos/Letra/Tu_Eres_Dios_EEYV_Letra.html">Letra</a> <button class="boton-add">
       +</button></li>`;
-      
+
     ulSubtemasInfo.appendChild(lista);
   }
 
