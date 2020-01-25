@@ -576,10 +576,10 @@ class UI {
   static agregarSubtemasACanto(cantoSubtemas){
     localStorage.setItem("cantoSeleccionado",JSON.stringify(cantoSubtemas));
     cantoSubtemas[0].subpaginas.forEach((subtema) => {
-      cantoSubtemas[0].pagina.replace("Info",subtema)
+      let pagina = cantoSubtemas[0].pagina.replace("Info",subtema).replace(".html","");
       const lista = document.createElement("li");
       lista.className = "lista";
-      lista.innerHTML = `<a href="/${cantoSubtemas[0].pagina}_Letra.html">Letra</a> <button class="boton-add">
+      lista.innerHTML = `<a href="/${pagina}_${subtema}.html">${subtema}</a> <button class="boton-add">
         +</button></li>`;
       ulSubtemasInfo.appendChild(lista);
     });
