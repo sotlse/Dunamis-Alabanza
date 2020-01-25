@@ -15,8 +15,7 @@ let HeadTemplate  =
     "<!-- import the webpage's stylesheet -->" +
     "<link rel='stylesheet' href='/style.css'>" + 
     "<link rel='manifest' href='/manifest.json'>" +
-    "<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>" +
-    "<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>";
+    "<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>";
 
 let BodyTemplate =
     "<div class='encabezado-lista'>" +
@@ -32,19 +31,7 @@ let BodyTemplate =
 
     '<hr>'  +
 
-    "<div class='infoCanto'>" +
-        "<div class='tempo'>" +
-            `<span style='font-size:18px;'>&#9833;</span>= ${tempo}` +
-        '</div>' +
-        "<div class='nombre'>" +
-            'ACORDES' +
-        '</div>' +
-        "<div class='tono'>" +
-            `Tono: <span class = 'AcordeCanto'>${tono}</span>${menor}` +
-        '</div>' +
-    '</div>' +
-
-"<div class='canto_body'>" + `${pre}` + '</div>' +  
+    "<div class='canto_body'>" + `${pre}` + '</div>' +  
 
     "<div class = 'flechasRegresarAvanzar'>" +
         "<div class ='arrowRegresar2'>" +
@@ -84,5 +71,5 @@ let BodyTemplate =
    
     '</nav>';
 
-head.innerHTML = HeadTemaplate;
+head.innerHTML = HeadTemplate;
 body.innerHTML = BodyTemplate;

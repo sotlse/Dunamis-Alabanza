@@ -17,7 +17,7 @@ if (tono.includes("m")){
 }
 
 /*----------------TAMPLATE-----------------*/
-let HeadTemaplate  =
+let HeadTemplate  =
     "<title>" + `${h2}` + " | Acordes" + "</title>" +
     "<meta charset='utf-8'>" +
     "<meta http-equiv='X-UA-Compatible' content='IE=edge'>" +
@@ -95,7 +95,7 @@ let BodyTemplate =
    
     '</nav>';
 
-head.innerHTML = HeadTemaplate;
+head.innerHTML = HeadTemplate;
 body.innerHTML = BodyTemplate;
 
 /*---------------Rotacion de la pantalla (pasar de 2 columnas a 1)-----------*/
