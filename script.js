@@ -513,6 +513,7 @@ class UI {
       localStorage.setItem("playlistFlag",0); 
     }
     
+    //Para agregar un audio
     if (contenidoCanto){
       let Canto = baseCanciones.filter(function(canto){
         return  canto.titulo.toLowerCase() === tituloCanto.innerHTML.toLowerCase(); 
@@ -526,6 +527,7 @@ class UI {
       UI.agregarAudio(Canto);
     }
 
+    //Para agregar lista de opciones a las paginas Info
     if(ulSubtemasInfo){
       let Canto = baseCanciones.filter(function(canto){
         return  canto.titulo.toLowerCase() === tituloTexto.toLowerCase(); 
@@ -574,7 +576,11 @@ class UI {
     console.log(cantoSubtemas);
     const lista = document.createElement("li");
     lista.className = "lista";
-    const olLista = document.querySelector("#lista");
+    //forEach
+    lista.innerHTML = `<a href="/Cantos/Letra/Tu_Eres_Dios_EEYV_Letra.html">Letra</a> <button class="boton-add">
+      +</button></li>`;
+      
+    ulSubtemasInfo.appendChild(lista);
   }
 
   static agregarAudio(audiocanto){
