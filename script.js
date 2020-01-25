@@ -123,6 +123,8 @@ if (cantoBody)
     
   // Initial execution if needed
   doOnOrientationChange();*/
+  if (window.orientation != undefined)
+    doOnOrientationChange();
 }
 
 /*

@@ -124,12 +124,17 @@ let BodyTemplate =
     window.addEventListener('orientationchange', doOnOrientationChange);
         
       // Initial execution if needed
-    doOnOrientationChange();
+    if (window.orientation == undefined)
+        doOnOrientationChange();
 
       //Si presionan el boton rotar
-    document.querySelector(".canto_body").style.columnCount="2";
+    //document.querySelector(".canto_body").style.columnCount="2";
     if (botonRotar){
         botonRotar.onclick = function(){
+            console.log(document.querySelector(".canto_body").style.columnCount);
+            if (document.querySelector(".canto_body").style.columnCount)
+
+            document.querySelector(".canto_body").style.columnCount="2";
             if (cantoBody.style.columnCount == "2")
                 cantoBody.style.columnCount = "1";
             else
