@@ -1,10 +1,9 @@
 const casa = "https://dunamis-alabanza.glitch.me/";
-const pagina1 = location.href.replace(casa,"").replace("Info","Acordes");
+const pagina1 = location.href.replace(casa,"").replace("Info","Letra");
 const pagina2 = location.href.replace(casa,"").replace("Info","Acordes");
-console.log(pagina);
 
 let HeadTemplate =
-    `<title>Tu eres Dios</title>` +
+    `<title>${pagina1}</title>` +
     '<meta charset="utf-8">' +
     '<meta http-equiv="X-UA-Compatible" content="IE=edge">' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">' +
@@ -17,8 +16,8 @@ let HeadTemplate =
 let BodyTemplate = 
     '<header class="header">' +
       '<div class="encabezado-lista">' +
-        `<h2>Tu eres Dios</h2>` +
-        `<h3>En Espiritu y Verdad</h3>` +
+        `<h2>${pagina1}</h2>` +
+        `<h3>${pagina1}</h3>` +
         '<div class ="arrowRegresar">' +
           '<i class="fas fa-arrow-left"></i>' +
         '</div>' +
@@ -29,10 +28,10 @@ let BodyTemplate =
         
     '<div class="cuerpo-lista">' +
       '<ul id="opcionesDeCanto">' +
-        `<li class="lista"> <a href="/${pagina}_Letra.html">Letra</a> <button class="boton-add">
+        `<li class="lista"> <a href="/${pagina1}_Letra.html">Letra</a> <button class="boton-add">
           +</button></li>` +
           
-        `<li class="lista"> <a href="/${pagina}_Acordes.html">Acordes</a> <button class="boton-add">
+        `<li class="lista"> <a href="/${pagina2}_Acordes.html">Acordes</a> <button class="boton-add">
           +</button></li>` +
       '</ul>' +
     '</div>' +

@@ -20,6 +20,8 @@ let link;
 let tipo;
 let totalCantos=300;
 let seleccionado;
+//Para paginas info
+const ulSubtemasInfo = document.querySelector("#opcionesDeCanto");
 //Botones para configuracion de cantos
 let botonAudio = document.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
@@ -517,6 +519,14 @@ class UI {
       UI.agregarAudio(Canto);
     }
 
+    if(ulSubtemasInfo){
+      console.log(tituloTexto);
+      let Canto = baseCanciones.filter(function(canto){
+        return  canto.titulo === tituloTexto; 
+      });
+      UI.agregarSubtemasACanto(Canto);
+    }
+
     //Guardar todos los tonos de los cantos en localStorage para despues manipularlos
     let tonos,flag;
     tonos = JSON.parse(localStorage.getItem("TonosActuales"));
@@ -548,8 +558,8 @@ class UI {
     });
   }
   
-  static agregarSubtemasACanto(){
-
+  static agregarSubtemasACanto(cantoSubtemas){
+    console.log(cantoSubtemas);
     const bodySubtema = document.createElement("ul");
     const olLista = document.querySelector("#lista");
   }
