@@ -515,6 +515,7 @@ class UI {
     
     //Para agregar un audio
     if (contenidoCanto){
+      let autorcanto = document.querySelector("h3").textContent;
       let Canto = baseCanciones.filter(function(canto){
         return  canto.titulo.toLowerCase() === tituloCanto.innerHTML.toLowerCase(); 
       });
@@ -574,7 +575,7 @@ class UI {
   }
   
   static agregarSubtemasACanto(cantoSubtemas){
-    localStorage.setItem("cantoSeleccionado",JSON.stringify(cantoSubtemas));
+    //localStorage.setItem("cantoSeleccionado",JSON.stringify(cantoSubtemas));
     cantoSubtemas[0].subpaginas.forEach((subtema) => {
       let pagina = cantoSubtemas[0].pagina.replace("Info",subtema).replace(".html","");
       const lista = document.createElement("li");
