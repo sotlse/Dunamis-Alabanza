@@ -21,7 +21,8 @@ let tipo;
 let totalCantos=300;
 let seleccionado;
 //Para paginas info
-const ulSubtemasInfo = document.querySelector("#opcionesDeCanto");
+let ulSubtemasInfo = document.querySelector("#opcionesDeCanto");
+let autorcanto = document.querySelector("h3").textContent;
 //Botones para configuracion de cantos
 let botonAudio = document.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
@@ -419,7 +420,7 @@ class UI {
 
     {
       pagina:"Cantos/Info/Tu_Eres_Dios_EEYV.html",
-      titulo:"Tu Eres Dios",
+      titulo:"Tu eres Dios",
       autor:"En Espiritu y Verdad",
       tono:"C",
       categoria:["Alabanza","Adoracion"],
@@ -429,7 +430,7 @@ class UI {
 
     {
       pagina:"Cantos/Info/Tu_Eres_Dios_MV.html",
-      titulo:"Tu Eres Dios",
+      titulo:"Tu eres Dios",
       autor:"Marcos Vidal",
       tono:"E",
       categoria:["Alabanza","Adoracion"],
@@ -514,16 +515,27 @@ class UI {
     
     if (contenidoCanto){
       let Canto = baseCanciones.filter(function(canto){
-        return  canto.titulo === tituloCanto.innerHTML; 
+        return  canto.titulo.toLowerCase() === tituloCanto.innerHTML.toLowerCase(); 
       });
+      //Si hay 2 o mas cantos con el mismo titulo, buscar el autor
+      if (Canto.length>1) {
+        Canto = Canto.filter(function(canto){
+            return  canto.autor.toLowerCase() === autorcanto.toLowerCase(); 
+        });
+      }
       UI.agregarAudio(Canto);
     }
 
     if(ulSubtemasInfo){
-      console.log(tituloTexto);
       let Canto = baseCanciones.filter(function(canto){
-        return  canto.titulo === tituloTexto; 
+        return  canto.titulo.toLowerCase() === tituloTexto.toLowerCase(); 
       });
+      //Si hay 2 o mas cantos con el mismo titulo, buscar el autor
+      if (Canto.length>1) {
+        Canto = Canto.filter(function(canto){
+            return  canto.autor.toLowerCase() === autorcanto.toLowerCase(); 
+        });
+      }
       UI.agregarSubtemasACanto(Canto);
     }
 
@@ -560,7 +572,8 @@ class UI {
   
   static agregarSubtemasACanto(cantoSubtemas){
     console.log(cantoSubtemas);
-    const bodySubtema = document.createElement("ul");
+    const lista = document.createElement("li");
+    lista.className = "lista";
     const olLista = document.querySelector("#lista");
   }
 
