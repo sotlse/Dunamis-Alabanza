@@ -116,7 +116,10 @@ body.innerHTML = BodyTemplate;
             let nav = document.querySelector(".navCanto");
             botonRotar = document.createElement('button');
             botonRotar.className = "botonRotar";
-            botonRotar.appendChild(document.createTextNode('<i class="fas fa-sync-alt"></i>'));
+            let icono = document.createElement('i');
+            icono.className = 'fas fa-sync-alt';
+                //"<i class='fas fa-sync-alt'></i>";
+            botonRotar.appendChild(icono);
             nav.appendChild(botonRotar);
         }
     }

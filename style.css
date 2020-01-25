@@ -288,27 +288,32 @@ a {
 /*Botones para configuracion de canto */
 .botonTransportar{
   padding:5px;
-  margin: 0px 2px;
+  margin: 0px 5px;
 }
 
 .botonAudio{
   padding:5px;
-  margin: 0px 2px;
+  margin: 0px 5px;
 }
 
 .botonTextoChico{
   padding:5px;
-  margin: 0px 2px;
+  margin: 0px 5px;
 }
 
 .botonTextoGrande{
   padding:5px;
-  margin: 0px 2px;
+  margin: 0px 5px;
 }
 
 .botonCasa{
   padding:5px;
-  margin: 0px 2px;
+  margin: 0px 5px;
+}
+
+.botonRotar{
+  padding:5px;
+  margin: 0px 5px;
 }
 
 
