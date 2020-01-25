@@ -10,11 +10,14 @@ const script = document.querySelectorAll("script");
 let menor = "";
 let botonRotar;
 
+
+/*-----Separar el acorde si es menor--------*/
 if (tono.includes("m")){
     menor = "m";
     tono = tono.substring(0, tono.length-1);
 }
 
+/*----------------TAMPLATE-----------------*/
 let HeadTemaplate  =
     "<title>" + `${title}` + "</title>" +
     "<meta charset='utf-8'>" +
@@ -94,11 +97,9 @@ let BodyTemplate =
     '</nav>';
 
     head.innerHTML = HeadTemaplate;
-    console.log(head);
     body.innerHTML = BodyTemplate;
-    console.log(body);
 
-    /*---------------Rotacion de la pantalla (pasar de 2 columnas a 1)-----------*/
+/*---------------Rotacion de la pantalla (pasar de 2 columnas a 1)-----------*/
     function doOnOrientationChange() {
         //Para dispositivos moviles (IOS y Android)
         if (window.orientation != undefined){
@@ -127,18 +128,17 @@ let BodyTemplate =
     if (window.orientation == undefined)
         doOnOrientationChange();
 
-      //Si presionan el boton rotar
-    //document.querySelector(".canto_body").style.columnCount="2";
+      //Si presionan el boton rotar para PC o laptops
     if (botonRotar){
         botonRotar.onclick = function(){
-            console.log(document.querySelector(".canto_body").style.columnCount);
-            if (document.querySelector(".canto_body").style.columnCount)
-
-            document.querySelector(".canto_body").style.columnCount="2";
+            if (document.querySelector(".canto_body").style.columnCount==""){
+                document.querySelector(".canto_body").style.columnCount="2";
+                console.log(document.querySelector(".canto_body").style.columnCount);
+            }
             if (cantoBody.style.columnCount == "2")
                 cantoBody.style.columnCount = "1";
             else
-            cantoBody.style.columnCount = "2";
+                cantoBody.style.columnCount = "2";
         }
     }
 

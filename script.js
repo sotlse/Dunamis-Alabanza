@@ -1,4 +1,5 @@
 /*--VARIABLES--*/
+const home = "https://dunamis-alabanza.glitch.me/";
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 //Botones avanzar y regresar
@@ -186,7 +187,7 @@ if (letraBody)
 /*-----------------------BOTON HOME-----------------------*/
 if(botonCasa){
   botonCasa.addEventListener("click",(e) => {
-    window.location.assign("https://dunamis-alabanza.glitch.me/");
+    window.location.assign(home);
   });
 }
 
