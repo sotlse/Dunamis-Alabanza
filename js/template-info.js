@@ -1,10 +1,10 @@
-const casa = "https://dunamis-alabanza.glitch.me/";
-const pagina1 = location.href.replace(casa,"").replace("Info","Letra");
-const pagina2 = location.href.replace(casa,"").replace("Info","Acordes");
-const tituloInfo = document.querySelector("title").textContent;
+const title = document.querySelector('title').textContent;
+const h3 = document.querySelector('h3').textContent;
+const head = document.querySelector("head");
+const body = document.querySelector("body");
 
 let HeadTemplate =
-    `<title>${tituloInfo}</title>` +
+    `<title>${title}</title>` +
     '<meta charset="utf-8">' +
     '<meta http-equiv="X-UA-Compatible" content="IE=edge">' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">' +
@@ -17,8 +17,8 @@ let HeadTemplate =
 let BodyTemplate = 
     '<header class="header">' +
       '<div class="encabezado-lista">' +
-        `<h2>${pagina1}</h2>` +
-        `<h3>${pagina1}</h3>` +
+        `<h2>${title}</h2>` +
+        `<h3>${h3}</h3>` +
         '<div class ="arrowRegresar">' +
           '<i class="fas fa-arrow-left"></i>' +
         '</div>' +
@@ -40,5 +40,8 @@ let BodyTemplate =
         '<div id="dialogboxfoot"></div>' +
       '</div>' +
     '</div>';
+
 console.log(HeadTemplate);
 console.log(BodyTemplate);
+head.innerHTML = HeadTemplate;
+body.innerHTML = BodyTemplate;

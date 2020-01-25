@@ -6,7 +6,6 @@ let tono = document.querySelector('.tono').innerHTML;
 const tempo = document.querySelector('.tempo').innerHTML;
 const head = document.querySelector("head");
 const body = document.querySelector("body");
-const script = document.querySelectorAll("script");
 let menor = "";
 let botonRotar;
 
@@ -96,8 +95,8 @@ let BodyTemplate =
    
     '</nav>';
 
-    head.innerHTML = HeadTemaplate;
-    body.innerHTML = BodyTemplate;
+head.innerHTML = HeadTemaplate;
+body.innerHTML = BodyTemplate;
 
 /*---------------Rotacion de la pantalla (pasar de 2 columnas a 1)-----------*/
     function doOnOrientationChange() {
