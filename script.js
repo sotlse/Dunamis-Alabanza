@@ -574,20 +574,15 @@ class UI {
   }
   
   static agregarSubtemasACanto(cantoSubtemas){
-    console.log(cantoSubtemas[0]);
     localStorage.setItem("cantoSeleccionado",JSON.stringify(cantoSubtemas));
-    /*canciones.forEach(function (canto){
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
-      lista.appendChild(li);
-    });*/
-    /*cantoSubtemas.forEach((canto) => {
+    cantoSubtemas[0].subpaginas.forEach((subtema) => {
+      cantoSubtemas[0].pagina.replace("Info",subtema)
       const lista = document.createElement("li");
       lista.className = "lista";
-      lista.innerHTML = `<a href="/Cantos/Letra/Tu_Eres_Dios_EEYV_Letra.html">Letra</a> <button class="boton-add">
+      lista.innerHTML = `<a href="/${cantoSubtemas[0].pagina}_Letra.html">Letra</a> <button class="boton-add">
         +</button></li>`;
       ulSubtemasInfo.appendChild(lista);
-    });*/
+    });
   }
 
   static agregarAudio(audiocanto){
