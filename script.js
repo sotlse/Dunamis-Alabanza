@@ -22,7 +22,6 @@ let totalCantos=300;
 let seleccionado;
 //Para paginas info
 let ulSubtemasInfo = document.querySelector("#opcionesDeCanto");
-let autorcanto = document.querySelector("h3").textContent;
 //let cantoSeleccionado;
 //Botones para configuracion de cantos
 let botonAudio = document.querySelector(".botonAudio");
@@ -530,6 +529,7 @@ class UI {
 
     //Para agregar lista de opciones a las paginas Info
     if(ulSubtemasInfo){
+      let autorcanto = document.querySelector("h3").textContent;
       let Canto = baseCanciones.filter(function(canto){
         return  canto.titulo.toLowerCase() === tituloTexto.toLowerCase(); 
       });
