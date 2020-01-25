@@ -1,24 +1,13 @@
-//const title = document.querySelector('title').textContent;
+const title = document.querySelector('title').textContent;
 const h2 = document.querySelector('.tituloDelCanto').textContent;
 const h3 = document.querySelector('.autorDelCanto').textContent;
 const pre = document.querySelector('.canto_body').innerHTML;
-let tono = document.querySelector('.tono').innerHTML;
-const tempo = document.querySelector('.tempo').innerHTML;
 const head = document.querySelector("head");
 const body = document.querySelector("body");
-let menor = "";
-let botonRotar;
-
-
-/*-----Separar el acorde si es menor--------*/
-if (tono.includes("m")){
-    menor = "m";
-    tono = tono.substring(0, tono.length-1);
-}
 
 /*----------------TAMPLATE-----------------*/
-let HeadTemaplate  =
-    "<title>" + `${h2}` + " | Acordes" + "</title>" +
+let HeadTemplate  =
+    "<title>" + `${h2}` + " | Letra" + "</title>" +
     "<meta charset='utf-8'>" +
     "<meta http-equiv='X-UA-Compatible' content='IE=edge'>" +
     "<meta name='viewport' content='width=device-width, initial-scale=1'>" +
@@ -97,51 +86,3 @@ let BodyTemplate =
 
 head.innerHTML = HeadTemaplate;
 body.innerHTML = BodyTemplate;
-
-/*---------------Rotacion de la pantalla (pasar de 2 columnas a 1)-----------*/
-    function doOnOrientationChange() {
-        //Para dispositivos moviles (IOS y Android)
-        if (window.orientation != undefined){
-          switch(window.orientation) {  
-            case -90: case 90:
-              cantoBody.style.columnCount= "2";
-              break; 
-            default:
-              cantoBody.style.columnCount= "1";
-              break; 
-          }
-        }
-        //Para laptops
-        else {
-            let nav = document.querySelector(".navCanto");
-            botonRotar = document.createElement('button');
-            botonRotar.className = "botonRotar";
-            let icono = document.createElement('i');
-            icono.className = 'fas fa-sync-alt';
-                //"<i class='fas fa-sync-alt'></i>";
-            botonRotar.appendChild(icono);
-            nav.appendChild(botonRotar);
-        }
-    }
-        
-    window.addEventListener('orientationchange', doOnOrientationChange);
-        
-      // Initial execution if needed
-    if (window.orientation == undefined)
-        doOnOrientationChange();
-
-      //Si presionan el boton rotar para PC o laptops
-    if (botonRotar){
-        botonRotar.onclick = function(){
-            if (document.querySelector(".canto_body").style.columnCount==""){
-                document.querySelector(".canto_body").style.columnCount="2";
-                console.log(document.querySelector(".canto_body").style.columnCount);
-            }
-            if (cantoBody.style.columnCount == "2")
-                cantoBody.style.columnCount = "1";
-            else
-                cantoBody.style.columnCount = "2";
-        }
-    }
-
-//}
