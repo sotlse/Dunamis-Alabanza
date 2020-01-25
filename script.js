@@ -548,7 +548,8 @@ class UI {
     });
   }
   
-  static agregarSubtemasACanto (canto){
+  static agregarSubtemasACanto(){
+
     const bodySubtema = document.createElement("ul");
     const olLista = document.querySelector("#lista");
   }

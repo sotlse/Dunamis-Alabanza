@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", UI.agregarSubtemasACanto);
 
 let HeadTemplate =
     `<title>Tu eres Dios</title>` +
@@ -23,15 +24,15 @@ let BodyTemplate =
     
     '<hr>' +
         
-    <div class="cuerpo-lista">
-      <ul id="opcionesDeCanto">
-        <li class="lista"> <a href="/Cantos/Letra/Tu_Eres_Dios_EEYV_Letra.html">Letra</a> <button class="boton-add">
-          +</button></li>
+    '<div class="cuerpo-lista">'
+      '<ul id="opcionesDeCanto">'
+        `<li class="lista"> <a href="/Cantos/Letra/Tu_Eres_Dios_EEYV_Letra.html">Letra</a> <button class="boton-add">
+          +</button></li>`
           
-        <li class="lista"> <a href="/Cantos/Acordes/Tu_Eres_Dios_EEYV_Acordes.html">Acordes</a> <button class="boton-add">
-          +</button></li>
-      </ul>
-    </div>
+        `<li class="lista"> <a href="/Cantos/Acordes/Tu_Eres_Dios_EEYV_Acordes.html">Acordes</a> <button class="boton-add">
+          +</button></li>`
+      '</ul>'
+    '</div>'
       
     '<div id="dialogverlay"></div>' +
     '<div id="dialogbox">' +
