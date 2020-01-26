@@ -70,6 +70,7 @@ let BodyTemplate =
         '</button>' +
    
     '</nav>';
-console.log
+
 head.innerHTML = HeadTemplate;
+console.log(head);
 body.innerHTML = BodyTemplate;
