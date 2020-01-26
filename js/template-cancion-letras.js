@@ -1,4 +1,4 @@
-const title = document.querySelector('title').textContent;
+//const title = document.querySelector('title').textContent;
 const h2 = document.querySelector('.tituloDelCanto').textContent;
 const h3 = document.querySelector('.autorDelCanto').textContent;
 const pre = document.querySelector('.canto_body').innerHTML;
@@ -70,6 +70,6 @@ let BodyTemplate =
         '</button>' +
    
     '</nav>';
-
+console.log
 head.innerHTML = HeadTemplate;
 body.innerHTML = BodyTemplate;
