@@ -40,7 +40,8 @@ window.onerror = function(msg, url, linenumber) {
 
 
 /*-------------------------------REGISTRO DE SERVICE WORKER----------------------------------*/
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && 'PushManager' in window) {
+  console.log('Service Worker and Push is supported');
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
       // Registration was successful
