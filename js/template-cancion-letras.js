@@ -1,7 +1,7 @@
 //const title = document.querySelector('title').textContent;
 const h2 = document.querySelector('.tituloDelCanto').textContent;
 const h3 = document.querySelector('.autorDelCanto').textContent;
-const pre = document.querySelector('.canto_body').innerHTML;
+const pre = document.querySelector('.letra_body').innerHTML;
 const head = document.querySelector("head");
 const body = document.querySelector("body");
 
@@ -31,7 +31,7 @@ let BodyTemplate =
 
     '<hr>'  +
 
-    "<div class='canto_body'>" + `${pre}` + '</div>' +  
+    "<div class='letra_body'>" + `${pre}` + '</div>' +  
 
     "<div class = 'flechasRegresarAvanzar'>" +
         "<div class ='arrowRegresar2'>" +
@@ -48,9 +48,6 @@ let BodyTemplate =
     '<br>' +
 
     "<nav class = 'navCanto'>" +
-        "<button class='botonTransportar'>" +
-            'C->D' +
-        '</button>' +
 
         "<button class='botonAudio'>" +
             "<i class='fas fa-music'></i>" +
@@ -72,5 +69,4 @@ let BodyTemplate =
     '</nav>';
 
 head.innerHTML = HeadTemplate;
-console.log(head);
 body.innerHTML = BodyTemplate;
