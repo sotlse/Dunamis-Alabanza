@@ -19,11 +19,11 @@ let cancionesMiercoles = [];
 let link;
 let tipo;
 let totalCantos=300;
-//Para paginas info
-let ulSubtemasInfo = document.querySelector("#opcionesDeCanto");
-//let cantoSeleccionado;
-//Botones para configuracion de cantos
-let botonAudio = document.querySelector(".botonAudio");
+o
+ = document.querySelector("#opcionesDeCanto");
+onado;
+figuracion de cantos
+ocument.querySelector(".botonAudio");
 let botonTransportar = document.querySelector(".botonTransportar");
 let botonTextoChico = document.querySelector(".botonTextoChico");
 let botonTextoGrande = document.querySelector(".botonTextoGrande");
