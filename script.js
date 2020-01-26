@@ -1,5 +1,7 @@
 /*--VARIABLES--*/
 const home = "https://dunamis-alabanza.glitch.me/";
+const applicationServerPublicKey = 'BCDkfgdZcsNUNSxXOBX8ttMcS9rpvV8WEoCmCrLV3cc4C9fFiyP3xsSzcjL3ngDLKMBH8B7vOmPl3QLxm2h1DME';
+const applicationServerPrivateKey = '6gCSEeYVDAwtRTKHOs0hCYLzDvoUHykjQ0_X_V6oQ7c';
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 //Botones avanzar y regresar
@@ -40,7 +42,7 @@ window.onerror = function(msg, url, linenumber) {
 
 
 /*-------------------------------REGISTRO DE SERVICE WORKER----------------------------------*/
-if ('serviceWorker' in navigator && 'PushManager' in window) {
+/*if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
@@ -51,7 +53,49 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
       console.log('ServiceWorker registration failed: ', err);
     });
   });
+}*/
+
+if ('serviceWorker' in navigator && 'PushManager' in window) {
+  console.log('Service Worker and Push is supported');
+
+  navigator.serviceWorker.register('/js/sw.js')
+  .then(function(swReg) {
+    console.log('Service Worker is registered', swReg);
+
+    swRegistration = swReg;
+  })
+  .catch(function(error) {
+    console.error('Service Worker Error', error);
+  });
+} else {
+  console.warn('Push messaging is not supported');
+  //pushButton.textContent = 'Push Not Supported';
 }
+
+function initializeUI() {
+  // Set the initial subscription value
+  swRegistration.pushManager.getSubscription()
+  .then(function(subscription) {
+    isSubscribed = !(subscription === null);
+
+    if (isSubscribed) {
+      console.log('User IS subscribed.');
+    } else {
+      console.log('User is NOT subscribed.');
+    }
+
+    //updateBtn();
+  });
+}
+
+navigator.serviceWorker.register('/js/sw.js')
+.then(function(swReg) {
+  console.log('Service Worker is registered', swReg);
+
+  swRegistration = swReg;
+  initializeUI();
+})
+
 
 /*-------------------------------NOTIFICACIONES----------------------------------*/
 //Preguntar si pueden mostrar notificaciones (no compatible con IOS)
