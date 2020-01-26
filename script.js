@@ -19,12 +19,11 @@ let cancionesMiercoles = [];
 let link;
 let tipo;
 let totalCantos=300;
-o
- = document.querySelector("#opcionesDeCanto");
-onado;
-figuracion de cantos
-ocument.querySelector(".botonAudio");
-let botonTransportar = document.querySelector(".botonTransportar");
+//Para paginas info
+let ulSubtemasInfo = document.querySelector("#opcionesDeCanto");
+//Botones para configuracion de cantos
+let botonAudio = document.querySelector(".botonAudio");
+//ar = document.querySelector(".botonTransportar");
 let botonTextoChico = document.querySelector(".botonTextoChico");
 let botonTextoGrande = document.querySelector(".botonTextoGrande");
 let botonCasa = document.querySelector(".botonCasa");
@@ -43,7 +42,7 @@ window.onerror = function(msg, url, linenumber) {
 /*-------------------------------REGISTRO DE SERVICE WORKER----------------------------------*/
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
