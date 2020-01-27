@@ -52,15 +52,15 @@ $(document).ready( function() {
         }, {
             endDate: '2020-01-26', startDate: '2020-01-26',
             title: 'Programa Dominical 4 - 26 de Enero',
-            cantos: 'Al que me cine,Jesus Adrian Romero_Quien nos separara_Al alto y sublime_Con mis manos levantadas_Bueno es alabar'
+            cantos: 'Al que me cine,Jesus Adrian Romero_Quien nos separara_Al alto y sublime,Roberto Torres_Con mis manos levantadas_Bueno es alabar'
         }, {
             endDate: '2020-02-02', startDate: '2020-02-02',
             title: 'Programa Dominical 5 - 02 de Febrero',
-            cantos: 'Eres fiel_Eres bendito_Mas el Dios de toda gracia_Santo Santo Santo_Cuando yo senti'
+            cantos: 'Eres fiel,Coalo Zamorano_Por Siempre,Vino Nuevo_Mas el Dios de toda gracia,Marcos Witt_Santo Santo Santo,Marcos Witt_Cuando yo senti'
         }, {
             endDate: '2020-02-09', startDate: '2020-02-09',
             title: 'Programa Dominical 6 - 09 de Febrero',
-            cantos: 'Por Siempre,Vino Nuevo_Quiero entender_Sendas Dios hara_Temprano yo te buscare_Tu habitas'
+            cantos: 'Eres bendito_Quiero entender_Sendas Dios hara_Temprano yo te buscare_Tu habitas'
         }, {
             endDate: '2020-02-16', startDate: '2020-02-16',
             title: 'Programa Dominical 7 - 16 de Febrero',
