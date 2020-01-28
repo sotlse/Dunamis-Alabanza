@@ -73,6 +73,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
   })
   .catch(function(error) {
     console.error('Service Worker Error', error);
+    alert('Service Worker Error');
   });
 } else {
   console.warn('Push messaging is not supported');
@@ -80,6 +81,15 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 }
 
 function initializeUI() {
+  pushButton.addEventListener('click', function() {
+    pushButton.disabled = true;
+    if (isSubscribed) {
+      unsubscribeUser();
+    } else {
+      subscribeUser();
+    }
+  });
+
   // Set the initial subscription value
   swRegistration.pushManager.getSubscription()
   .then(function(subscription) {
