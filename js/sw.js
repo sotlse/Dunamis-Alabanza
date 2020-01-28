@@ -74,7 +74,7 @@ self.addEventListener('push', function(event) {
   const title = 'Dunamis Alabanza';
   const options = {
     body: 'Cantos del proximo Domingo',
-    icon: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-384x384.png?v=1578025595291'
+    icon: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-384x384.png?v=1578025595291',
     vibrate: [100, 50, 100],
     badge: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Fdove-solid.svg?v=1580176051238'
   };
