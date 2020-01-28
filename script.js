@@ -58,7 +58,6 @@ window.onerror = function(msg, url, linenumber) {
 }*/
 if(tituloTexto === "Configuracion"){
   pushButton = document.querySelector("#pushNotificationBtn");
-  console.log("Yes");
 }
 
 if ('serviceWorker' in navigator && 'PushManager' in window) {
@@ -120,17 +119,17 @@ function subscribeUser() {
     applicationServerKey: applicationServerKey
   })
   .then(function(subscription) {
-    console.log('User is subscribed.');
+    console.log('User is subscribed:',subscription);
 
     updateSubscriptionOnServer(subscription);
 
     isSubscribed = true;
 
-    //updateBtn();
+    updateBtn();
   })
   .catch(function(err) {
     console.log('Failed to subscribe the user: ', err);
-    //updateBtn();
+    updateBtn();
   });
 }
 
@@ -145,6 +144,11 @@ const urlB64ToUint8Array = base64String => {
   return outputArray
 }
 
+function updateSubscriptionOnServer(subscription) {
+  // TODO: Send subscription to application server
+  console.log(subscription);
+  
+}
 
 
 /*-------------------------------NOTIFICACIONES----------------------------------*/
