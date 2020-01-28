@@ -70,11 +70,11 @@ self.addEventListener('push', function(event) {
   console.log('[Service Worker] Push Received.');
   console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
 
-  const title = 'Push Codelab';
+  const title = 'Dunamis Alabanza';
   const options = {
-    body: 'Yay it works.',
-    icon: '',
-    badge: ''
+    body: 'Si funciona',
+    icon: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-192x192.png?v=1578025684468',
+    badge: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Fdove-solid.svg?v=1580176051238'
   };
 
   event.waitUntil(self.registration.showNotification(title, options));
