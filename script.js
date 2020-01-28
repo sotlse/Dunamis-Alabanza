@@ -83,29 +83,31 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 }
 
 function initializeUI() {
-  pushButton.addEventListener('click', function() {
-    pushButton.disabled = true;
-    if (isSubscribed) {
-      unsubscribeUser();
-    } else {
-      subscribeUser();
-    }
-  });
+  if(tituloTexto === "Configuracion"){
+    pushButton.addEventListener('click', function() {
+      pushButton.disabled = true;
+      if (isSubscribed) {
+        unsubscribeUser();
+      } else {
+        subscribeUser();
+      }
+    });
 
-  // Set the initial subscription value
-  swRegistration.pushManager.getSubscription()
-  .then(function(subscription) {
-    isSubscribed = !(subscription === null);
+    // Set the initial subscription value
+    swRegistration.pushManager.getSubscription()
+    .then(function(subscription) {
+      isSubscribed = !(subscription === null);
 
-    if (isSubscribed) {
-      console.log('User IS subscribed.');
-    } else {
-      console.log('User is NOT subscribed.');
-      subscribeUser();
-    }
+      if (isSubscribed) {
+        console.log('User IS subscribed.');
+      } else {
+        console.log('User is NOT subscribed.');
+        subscribeUser();
+      }
 
-    updateBtn();
-  });
+      updateBtn();
+    });
+  }
 }
 
 function updateBtn() {
@@ -189,7 +191,7 @@ function unsubscribeUser() {
 
 function updateSubscriptionOnServer(subscription) {
   // TODO: Send subscription to application server
-  alert(JSON.stringify(subscription));
+  console.log(JSON.stringify(subscription));
   
 }
 
