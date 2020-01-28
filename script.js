@@ -64,6 +64,7 @@ if(tituloTexto === "Configuracion"){
 
 if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
+  alert('Service Worker and Push is supported');
 
   navigator.serviceWorker.register('/js/sw.js')
   .then(function(swReg) {
@@ -77,6 +78,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
   });
 } else {
   console.warn('Push messaging is not supported');
+  alert('Push messaging is not supported');
   pushButton.textContent = 'Push Not Supported';
 }
 
