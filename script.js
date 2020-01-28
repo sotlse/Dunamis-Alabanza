@@ -33,8 +33,10 @@ let botonCasa = document.querySelector(".botonCasa");
 var current_mode = screen.orientation;
 //Tamano de letra
 let tamano;
-//Push button
+//Push notifications & Service Worker
 let pushButton;
+let isSubscribed = false;
+let swRegistration = null;
 
 /*-------------------------------MOSTRAR ERROR EN ALERT----------------------------------*/
 window.onerror = function(msg, url, linenumber) {
@@ -156,6 +158,7 @@ function unsubscribeUser() {
   swRegistration.pushManager.getSubscription()
   .then(function(subscription) {
     if (subscription) {
+      // TODO: Tell application server to delete subscription
       return subscription.unsubscribe();
     }
   })
