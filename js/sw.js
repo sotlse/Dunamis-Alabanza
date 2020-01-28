@@ -1,4 +1,5 @@
 const cacheName = 'cache-v1';
+const home = "https://dunamis-alabanza.glitch.me/";
 /*const urlsToCache = [
   '/',
   '/style.css',
@@ -72,11 +73,22 @@ self.addEventListener('push', function(event) {
 
   const title = 'Dunamis Alabanza';
   const options = {
-    body: 'Si funciona',
+    body: 'Cantos del proximo Domingo',
     icon: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-192x192.png?v=1578025684468',
     badge: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Fdove-solid.svg?v=1580176051238'
   };
 
   event.waitUntil(self.registration.showNotification(title, options));
+});
+
+/*--------------------------- Click en notificaciones -----------------------------*/
+self.addEventListener('notificationclick', function(event) {
+  console.log('[Service Worker] Notification click Received.');
+
+  event.notification.close();
+
+  event.waitUntil(
+    clients.openWindow(home)
+  );
 });
 

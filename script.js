@@ -101,7 +101,7 @@ function updateBtn() {
     updateSubscriptionOnServer(null);
     return;
   }
-  
+
   if (isSubscribed) {
     pushButton.textContent = 'Disable Push Messaging';
   } else {
@@ -119,6 +119,7 @@ navigator.serviceWorker.register('/js/sw.js')
   initializeUI();
 })
 
+//Suscribir usuario
 function subscribeUser() {
   const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
   swRegistration.pushManager.subscribe({
@@ -149,6 +150,26 @@ const urlB64ToUint8Array = base64String => {
     outputArray[i] = rawData.charCodeAt(i)
   }
   return outputArray
+}
+
+function unsubscribeUser() {
+  swRegistration.pushManager.getSubscription()
+  .then(function(subscription) {
+    if (subscription) {
+      return subscription.unsubscribe();
+    }
+  })
+  .catch(function(error) {
+    console.log('Error unsubscribing', error);
+  })
+  .then(function() {
+    updateSubscriptionOnServer(null);
+
+    console.log('User is unsubscribed.');
+    isSubscribed = false;
+
+    updateBtn();
+  });
 }
 
 function updateSubscriptionOnServer(subscription) {
