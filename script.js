@@ -189,7 +189,7 @@ function unsubscribeUser() {
 
 function updateSubscriptionOnServer(subscription) {
   // TODO: Send subscription to application server
-  console.log(subscription);
+  console.log(JSON.stringify(subscription));
   
 }
 
