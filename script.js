@@ -33,6 +33,8 @@ let botonCasa = document.querySelector(".botonCasa");
 var current_mode = screen.orientation;
 //Tamano de letra
 let tamano;
+//Push button
+let pushButton;
 
 /*-------------------------------MOSTRAR ERROR EN ALERT----------------------------------*/
 window.onerror = function(msg, url, linenumber) {
@@ -54,6 +56,10 @@ window.onerror = function(msg, url, linenumber) {
     });
   });
 }*/
+if(tituloTexto === "Configuracion"){
+  pushButton = document.querySelector("#pushNotificationBtn");
+  console.log("Yes");
+}
 
 if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
@@ -69,7 +75,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
   });
 } else {
   console.warn('Push messaging is not supported');
-  //pushButton.textContent = 'Push Not Supported';
+  pushButton.textContent = 'Push Not Supported';
 }
 
 function initializeUI() {
@@ -85,8 +91,18 @@ function initializeUI() {
       subscribeUser();
     }
 
-    //updateBtn();
+    updateBtn();
   });
+}
+
+function updateBtn() {
+  if (isSubscribed) {
+    pushButton.textContent = 'Disable Push Messaging';
+  } else {
+    pushButton.textContent = 'Enable Push Messaging';
+  }
+
+  pushButton.disabled = false;
 }
 
 navigator.serviceWorker.register('/js/sw.js')
