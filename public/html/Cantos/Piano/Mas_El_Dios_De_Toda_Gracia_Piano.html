@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ffavicon.ico?v=1580511400868" type="image/x-icon"/>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>abcjs plugin demo: after</title>
+  <!-- VexFlow Compiled Source -->
+  <script src="/js/abcjs_basic_5.10.3-min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+		var abc = "T: Cooley's\n" +
+			"M: 4/4\n" +
+      "L: 1/8\n" +
+      'Q: 60\n' +
+			"R: reel\n" +
+			"K: Emin\n" +
+      '|:^D2|"Em"EB{c}BA B2 E2|\n' +
+      '|~B2 AB dBAG|FDAD BDAD|FDAD dAFD|\n' +
+			'EBBA B2 EB|"B/G"B2 AB defg|afe^c dBAF|DEFD E2:|\n' +
+			"|:gf|eB B2 efge|eB B2 gedB|A2 FA DAFA|A2 FA defg|\n" +
+			"eB B2 (eBgB|e)B-B2 defg-|gfe^c dBAF| E8:|";
+
+		function load() {
+			ABCJS.renderAbc("paper", abc,{scale:1});
+
+			var transposeHalfSteps = document.querySelector(".transpose-half-steps");
+
+			transposeHalfSteps.addEventListener("change", function() {
+				ABCJS.renderAbc("paper", abc, {
+					visualTranspose: transposeHalfSteps.value
+				});
+			});
+		}
+	</script>
+</head>
+<body onload="load()">
+  
+  <h1>abcjs basic demo page</h1>
+  <label>Transpose half-steps: 
+    <input class="transpose-half-steps" type="number" min="-24" max="24" step="1" value="0">
+  </label>
+    <div id="paper" style="overflow: hidden; height:466.398px;">
+    </div>
+    
+    
+    <!--http://www.lesession.co.uk/abc/abc_notation.htm-->
+  </body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Vexflow demo</title>
+
+        <!-- import the webpage's stylesheet -->
+        <link rel="icon" href="https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ffavicon.ico?v=1580511400868" type="image/x-icon"/>
+        <link rel="manifest" href="/manifest.json">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="/style.css">
+        <link href="/css/vextab.css" media="screen" rel="Stylesheet" type="text/css" />
+        <script>
+            VEXTAB_USE_SVG = true
+        </script>
+        <script src="/js/vextab-div.js"></script>
+        <script>
+            VexTabDiv.Flow.Renderer.USE_CANVAS_PROXY = true;
+            VexTabDiv.Artist.DEBUG = false
+        </script>
+    </head>
+
+    <body>
+      <h2 class="tituloDelCanto">Temprano yo te buscare</h2>
+      <h3 class="autorDelCanto">Marcos Witt</h3>
+      <div class="tempo">60</div>
+      <div class="tono">G</div>
+        <!--<div id="boo"></div>
+        <div id="boo2"></div>-->
+
+        <div class="vex-tabdiv"
+            width=680 scale=0.65 editor="true"
+            editor_width=400 editor_height=330>
+            options space=20
+            tabstave
+            notation=true
+            key=A time=4/4
+
+            notes :q =|: (5/2.5/3.7/4) :8 7-5h6/3 ^3^ 5h6-7/5 ^3^ :q 7V/4 |
+            notes :8 t12p7/4 s5s3/4 :8 3s:16:5-7/5 :h p5/4
+            text :w, |#segno, ,|, :hd, , #tr
+
+
+            options space=25
+        </div>
+        <!--keyword	values
+                notation	true/false
+                tablature	true/false
+                clef	    treble, alto, tenor, bass, percussion
+                key	        C, Am, F, Dm, Bb, Gm, Eb, Cm, Ab, Fm, Db, Bbm, Gb, Ebm, Cb, Abm, G, Em, D, Bm, A, F#m, E,   C#m, B, G#m, F#, D#m, C#, A#m
+                time	    C, C|, #/#
+                tuning	    standard, dropd, eb, E/5,B/4,G/4,D/4,A/3,E/3
+
+            Silencios
+                ##
+
+            Duraciones
+                :w (redonda)
+                :h (blanca)
+                :q (negra)
+                :8 (corchea)
+                :16 (semicorchea)
+                :32 (fusa)
+                Se agrega una 'd' para indicar el punto. Ej :qd
+
+            Ligaduras
+                t - tie
+                s - slide
+                h - hammer
+                p - pull-of
+
+            
+            Repeticiones
+                =||   Double Bar
+                =|:  Repeat Begin
+                =:|  Repeat End
+                =::  Double Repeat
+                =|=  End Bar-->
+        <div class="vex-tabdiv"
+            width=680 scale=0.65 editor="true"
+            editor_width=400 editor_height=330>
+            options space=12 font-size=14
+
+            tabstave notation=true clef=treble key=G time=4/4
+            notes  :q 7/1 :8 7/1 10/2 7-8-7/1 10/2 | :q 7/1 :8 7/1 10/2 7-8-7/1 10/2 | :qd 7/1 :8 8/2 :q 9/3 11/3 |
+            notes  :q 8/2 11-9-7/3 
+            text :w,G ,G ,  C ,D
+        </div>
+      
+          <div class="canto"> 
+<!---------------Este es el limite----->  
+      <pre data-key="G">
+INTRO:
+||: Gadd9   Cadd9 :||
+      
+VERSO1:
+Gadd9                    Dadd9
+//   Temprano yo te buscaré
+Am7                     C/D       D
+    de madrugada yo me acercaré a Ti
+Gadd9                         |D - - G/D|
+     mi alma te anhela y tiene sed
+Am7      G/D           C    D
+    para ver tu gloria y tu poder//
+
+CORO:
+G      D/F#          |Em7 - - D/F#|
+  Mi socorro has sido Tú
+        G             D/F#  C/E       D
+y en la sombra de tus alas  yo me gozaré
+G            D/F#       |Em7 - - G/D| 
+  Mi alma está pegada a Ti    porque
+   Cadd9  C/G-Cadd9          |D - - Em7|
+tu diestra         me ha sostenido  Oh
+   Am7                G/D  D7  Gadd9 
+tu diestra me ha sosteni - i - do
+
+||: Gadd9   Cadd9 :||
+      
+VERSO1:
+Gadd9                    D
+     Temprano yo te buscaré
+Am7                     G/D       D
+    de madrugada yo me acercaré a Ti
+G                            |D - - Em7|
+   mi alma te anhela y tiene sed
+Am7      G/B          |Cadd2 - D7sus4 D|    
+    para ver tu gloria y tu po-der
+
+CORO:
+ G      D/F#          |Em7 - - D/F#|
+// Mi socorro has sido Tú
+        G             D/F#  C/D       D
+y en la sombra de tus alas  yo me gozaré
+G         D/F#         |Em7 - - G/D| 
+  Mi alma está pegada a Ti      porque
+   Cadd9  C/G-Cadd9          |D - - Em7|
+tu diestra         me ha sostenido  Oh
+___________________________________________________
+1.    Am7                G/D   D   
+   tu diestra me ha sosteni - ido//
+___________________________________________________
+2.    Am7                G/D  D   Gadd9 
+   tu diestra me ha sosteni - i - do
+
+FINAL:
+||: Gadd9   Cadd9 :||
+      </pre>
+<!---------------Este es el limite-----> 
+    </div>
+
+
+        <!--
+        <script src="https://npmcdn.com/vexflow@1.2.84/releases/vexflow-debug.js"></script>
+        <script>
+            VF = Vex.Flow;
+            
+            // Create an SVG renderer and attach it to the DIV element named "boo".
+            var div = document.getElementById("boo")
+            var renderer = new VF.Renderer(div, VF.Renderer.Backends.SVG);
+            
+            // Configure the rendering context.
+            renderer.resize(500, 500);
+            var context = renderer.getContext();
+            context.setFont("Arial", 10, "").setBackgroundFillStyle("#eed");
+            
+            // Create a stave of width 400 at position 10, 40 on the canvas.
+            var stave = new VF.Stave(10, 40, 400);
+            
+            // Add a clef and time signature.
+            stave.addClef("treble").addTimeSignature("4/4");
+            
+            // Connect it to the rendering context and draw!
+            stave.setContext(context).draw();
+            
+            // Create the notes  w (redonda), h (blanca), q (negra), 8 (corchea), 16 (semicorchea)
+            var notes = [
+              // A quarter-note A.
+              new VF.StaveNote({ keys: ["a/4"], duration: "8d" }).addDotToAll(),
+              //addAccidental(0, new VF.Accidental("##")).addDotToAll(),
+            
+              // A quarter-note D.
+              new VF.StaveNote({ keys: ["a/4"], duration: "16" }),
+
+              // A quarter-note C.
+              new VF.StaveNote({ keys: ["a/4"], duration: "8" }),
+
+              // A quarter-note C.
+              new VF.StaveNote({ keys: ["b/4"], duration: "8" }),
+
+              // A quarter-note C.
+              new VF.StaveNote({ keys: ["b/4"], duration: "h" }),
+            
+              // A quarter-note rest. Note that the key (b/4) specifies the vertical
+              // position of the rest.
+              //new VF.StaveNote({ keys: ["b/4"], duration: "qr" }),
+            
+              // A C-Major chord.
+              //new VF.StaveNote({ keys: ["c/4", "e/4", "g/4"], duration: "q" })
+            ];
+
+            var beams = VF.Beam.generateBeams(notes);
+            Vex.Flow.Formatter.FormatAndDraw(context, stave, notes);
+            beams.forEach(function(b) {b.setContext(context).draw()})
+          
+            var ties = [
+                new VF.StaveTie({
+                    first_note: notes[1],
+                    last_note: notes[2],
+                    first_indices: [0],
+                    last_indices: [0]
+                }),
+                new VF.StaveTie({
+                    first_note: notes[3],
+                    last_note: notes[4],
+                    first_indices: [0],
+                    last_indices: [0]
+                })
+            ];
+            ties.forEach(function(t) {t.setContext(context).draw()})
+          
+            
+            // Create a voice in 4/4 and add above notes
+            //var voice = new VF.Voice({num_beats: 4,  beat_value: 4});
+            //voice.addTickables(notes);
+            
+            // Format and justify the notes to 400 pixels.
+            //var formatter = new VF.Formatter().joinVoices([voice]).format([voice], 400);
+            
+            // Render voice
+            //voice.draw(context, stave);
+
+            //---------------------------------------------------------------------------
+            // Create an SVG renderer and attach it to the DIV element named "boo".
+            var div = document.getElementById("boo2")
+            var renderer = new VF.Renderer(div, VF.Renderer.Backends.SVG);
+
+            // Configure the rendering context.
+            renderer.resize(500, 500);
+            var context = renderer.getContext();
+            context.setFont("Arial", 10, "").setBackgroundFillStyle("#eed");
+
+            // Create a tab stave of width 400 at position 10, 40 on the canvas.
+            var stave = new VF.TabStave(10, 40, 400);
+            stave.addClef("tab").setContext(context).draw();
+
+            var notes = [
+            // A single note
+            new VF.TabNote({
+                positions: [{str: 3, fret: 7}],
+                duration: "q"}),
+
+            // A chord with the note on the 3rd string bent
+            new VF.TabNote({
+                positions: [{str: 2, fret: 10},
+                            {str: 3, fret: 9}],
+                duration: "q"}).
+            addModifier(new VF.Bend("Full"), 1),
+
+            // A single note with a harsh vibrato
+            new VF.TabNote({
+                positions: [{str: 2, fret: 5}],
+                duration: "h"}).
+            addModifier(new VF.Vibrato().setHarsh(true).setVibratoWidth(70), 0)
+            ];
+
+            VF.Formatter.FormatAndDraw(context, stave, notes);
+
+            
+            </script>-->
+      
+      <script src="/script.js" defer></script>
+
+    </body>
+</html>
