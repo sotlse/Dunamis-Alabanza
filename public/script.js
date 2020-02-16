@@ -820,6 +820,8 @@ class UI {
       }
       UI.agregarSubtemasACanto(Canto);*/
       let Canto = baseCanciones.filter(function(canto){
+        console.log(canto.pagina.toLowerCase());
+        console.log(location.pathname.toLowerCase());
         return  canto.pagina.toLowerCase() === location.pathname.replace("/html/","").toLowerCase(); 
       });
       UI.agregarSubtemasACanto(Canto);
