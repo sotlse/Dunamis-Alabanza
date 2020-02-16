@@ -1,5 +1,6 @@
 /*--VARIABLES--*/
-const home = "https://dunamis-alabanza.glitch.me/";
+//const home = "https://dunamis-alabanza.glitch.me/";
+const home = "https://" + location.hostname;
 const applicationServerPublicKey = 'BCDkfgdZcsNUNSxXOBX8ttMcS9rpvV8WEoCmCrLV3cc4C9fFiyP3xsSzcjL3ngDLKMBH8B7vOmPl3QLxm2h1DME';
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
@@ -65,15 +66,18 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
   //alert('Service Worker and Push is supported');
 
-  navigator.serviceWorker.register('/js/sw.js')
-  .then(function(swReg) {
-    console.log('Service Worker is registered', swReg);
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js')
+    .then(function(swReg) {
+      console.log('Service Worker is registered', swReg);
 
-    swRegistration = swReg;
-  })
-  .catch(function(error) {
-    console.error('Service Worker Error', error);
-    alert('Service Worker Error');
+      swRegistration = swReg;
+      initializeUI();
+    })
+    .catch(function(error) {
+      console.error('Service Worker Error', error);
+      alert('Service Worker Error');
+    });
   });
 } 
 else {
@@ -129,13 +133,13 @@ function updateBtn() {
   pushButton.disabled = false;
 }
 
-navigator.serviceWorker.register('/js/sw.js')
+/*navigator.serviceWorker.register('/js/sw.js')
 .then(function(swReg) {
   console.log('Service Worker is registered', swReg);
 
   swRegistration = swReg;
   initializeUI();
-})
+})*/
 
 //Suscribir usuario
 function subscribeUser() {
@@ -573,6 +577,16 @@ class UI {
     },
 
     {
+      pagina:"Cantos/Info/Nuestro_Salvador.html",
+      titulo: "Nuestro salvador",
+      autor: "Job Gonzalez",
+      tono: "Am",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
       pagina:"Cantos/Info/Oh_Ven_Bendito_Emanuel.html",
       titulo: "Oh ven bendito Emanuel",
       autor: "Marcos Witt",
@@ -689,7 +703,7 @@ class UI {
       tono:"G",
       categoria:["Alabanza"],
       audio:"",
-      subpaginas: ["Letra","Acordes","Guitarra Electrica"],
+      subpaginas: ["Letra","Letra Mujeres","Acordes","Guitarra Electrica"],
     },
 
     {
@@ -806,7 +820,7 @@ class UI {
       }
       UI.agregarSubtemasACanto(Canto);*/
       let Canto = baseCanciones.filter(function(canto){
-        return  canto.pagina === location.href.replace(home + "html/",""); 
+        return  canto.pagina.toLowerCase() === location.pathname.replace("/html/","").toLowerCase(); 
       });
       UI.agregarSubtemasACanto(Canto);
     }

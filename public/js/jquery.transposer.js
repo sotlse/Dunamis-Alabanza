@@ -312,7 +312,7 @@
                     output.push("<p class='tituloCoro'>" + line + "</p>");
                 else if (line=="PUENTE:" || line=="PUENTE1:" || line=="PUENTE2:" || line=="PUENTE3:")
                     output.push("<p class='tituloPuente'>" + line + "</p>");
-                else if (line=="PRE-CORO:" || line=="PRE-CORO1:" || line=="PRE-CORO2:" || line=="PRE-CORO3:")
+                else if (line=="PRECORO:" || line=="PRECORO1:" || line=="PRECORO2:" || line=="PRECORO3:")
                     output.push("<p class='tituloPreCoro'>" + line + "</p>");
                 else if(line=="FINAL:" || line=="//FINAL://" || line=="FINAL1:" || line=="FINAL2:")
                     output.push("<p class='tituloFinal'>" + line + "</p>");
@@ -323,6 +323,8 @@
                 else{
                     if(line.startsWith("//")){
                         line = line.replace("//","<span class= 'fontNotas'>||:  </span>");
+                        if(line.endsWith("//"))
+                            line = line.replace("//","<span class= 'fontNotas'>  :||</span>");
                         output.push(line);
                     }
                     else if(line.endsWith("//")){

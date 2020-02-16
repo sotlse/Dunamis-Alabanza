@@ -93,34 +93,19 @@ function saveSubscriptionToDatabase(subscription) {
 };
 
 /*----------------------Agarrar las subscripciones de la base de datos----------------------------*/
-//(segundos[0-59] opcional, minutos[0-59], horas[0-23], dia del mes[1-31], mes[1-12], dia de la semana[0-7] donde 0 es domingo)
+//(segundos[0-59] opcional, minutos[0-59], horas[0-23], dia del mes[1-31], mes[1-12], dia de la semana[0-6] donde 0 es domingo)
 //Enviar notificacion los lunes y jueves a las 8:00 am ('00 08 * * 1,4')
-const NotificacionCantosDomingo = '10,25,30,56 8,9,11,15 * * 5,6';
+const NotificacionCantosDomingo = '03,15,25,27,34,30,42,56 7,8,9,11,15,18,19,20,23 * * 3,4,5,6';
 //const NotificacionCantosDomingo = new CronTime('10,25,30,52 8,9,11,15 * * 5,6');
 var job = new CronJob(NotificacionCantosDomingo, enviarTrigger, null, true, 'America/Monterrey');
 job.start();
 function enviarTrigger(){
   //Create payload
-  const payload = JSON.stringify({ title: 'Dunamis'});
-  //Create options
-  const options = {
-    body: 'Ve los cantos del proximo Domingo',
-    icon: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-384x384.png?v=1578025595291',
-    vibrate: [150, 100, 150],
-    badge: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Fdove-solid.png?v=1580572378350',
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    /*actions: [
-      {action: 'explore', title: 'Ver calendario',
-        icon: 'images/checkmark.png'},
-      {action: 'close', title: 'Cerrar notificacion',
-        icon: 'images/xmark.png'},
-    ]*/
-  };
+  const payload = JSON.stringify({ 
+    title: 'I.B. Dunamis',
+    body:'Ve los cantos para el proximo Domingo',
+  });
   db.find({}, (err,docs) => {
-    //let subscriptions = JSON.stringify(docs);
     let subscriptions = docs;
     for (let i = 0; i < subscriptions.length; i++) {
       const subscription = subscriptions[i];
@@ -198,3 +183,25 @@ const listener = app.listen(process.env.PORT, function() {
 
 /*const port = 80;
 app.listen(port, () => console.log(`Server started on port ${port}`))*/
+
+
+/*-------------------------------CUMPLEANOS---------------------------------- */
+//Enviar felicitacion a las 8 de la manana
+const CumpleHus = '00 8 2 3 *';
+var Husseim = new CronJob(CumpleHus, enviarTriggerHCE, null, true, 'America/Monterrey');
+Husseim.start();
+function enviarTriggerHCE(){
+  //Create payload
+  const payload = JSON.stringify({ 
+    title:'Feliz Cumpleanos',
+    body:'La I.B. Dunamis te desea un ano lleno de bendiciones',
+  });
+  db.find({}, (err,docs) => {
+    let subscriptions = docs;
+    for (let i = 0; i < subscriptions.length; i++) {
+      const subscription = subscriptions[i];
+      console.log(subscription);
+      webpush.sendNotification(subscription, payload).catch(err => console.error(err));
+    }
+  });
+}
