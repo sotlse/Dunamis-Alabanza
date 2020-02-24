@@ -68,7 +68,7 @@ $(document).ready( function() {
         }, {
             endDate: '2020-02-23', startDate: '2020-02-23',
             title: 'Programa Dominical 8 - 23 de Febrero',
-            cantos: 'Tu eres Dios,En espiritu y Verdad_Te dare lo mejor,Jesus Adrian Romero_Jesus es el Senor,Jesus Adrian Romero_Cerca de ti,Jesus Adrian Romero_Somos el pueblo de Dios,Marcos Witt'
+            cantos: 'Tu eres Dios,En espiritu y Verdad_Te dare lo mejor,Jesus Adrian Romero_Jesus es el Senor,Jesus Adrian Romero_Jesus eres mi buen pastor,Marcos Witt_Somos el pueblo de Dios,Marcos Witt'
         },
 
         /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
