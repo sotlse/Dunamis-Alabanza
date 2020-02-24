@@ -1,6 +1,6 @@
 const cacheName = 'cache-v1';
 const home = "https://" + location.hostname;
-const calendario = home + '/html/Calendario.html';
+const calendario = home + '/html/calendario.html';
 
 /*-------------------------LLAMAR ELEMENTO INSTALAR-------------------------*/
 self.addEventListener('install', e => {
@@ -58,10 +58,8 @@ self.addEventListener('fetch', event => {
       // affect the HTML returned. But if you do use query parameters that
       // uniquely determine your HTML, modify this code to retain them.
       const normalizedUrl = new URL(event.request.url);
-      //if (normalizedUrl.pathname === '/delete-subscription'){
-        //console.log("si entra");
-        //return false;
-      //}
+      console.log(normalizedUrl);
+
       normalizedUrl.search = '';
 
       // Create promises for both the network response,
