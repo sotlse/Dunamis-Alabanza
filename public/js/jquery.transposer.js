@@ -214,7 +214,18 @@
             // Try to find tokens that aren't chords, if we find one we know that this line is not a 'chord' line.
             for (var i = 0; i < tokens.length; i++) {
                 //console.log(tokens[i]);
-                if (tokens[i].startsWith("|") || tokens[i].includes("-") || tokens[i].startsWith("1")|| tokens[i].startsWith("2"))
+                if (tokens[i].startsWith("|") ||        //Compas
+                    tokens[i].includes("-") || 
+                    tokens[i].startsWith("1") || 
+                    tokens[i].startsWith("2") || 
+                    tokens[i].startsWith("3") || 
+                    tokens[i].includes("$") ||              //SEGNO
+                    tokens[i].includes("@") ||              //Simbolo Coda
+                    tokens[i].includes("d.c. al coda") ||    //Da capo al coda
+                    tokens[i].includes("coda") ||           //Coda
+                    tokens[i].includes("d.s.") ||            //Dal Segno
+                    tokens[i].includes("d.c.") ||            //Da Capo
+                    tokens[i].includes("d.s. al coda"))      //Dal Segno al coda
                     return true
                 //console.log(!$.trim(tokens[i]).length);
                 //console.log(!tokens[i].match(opts.chordRegex));
@@ -229,7 +240,24 @@
             //console.log(input);
             //console.log(input.replace("|","<span class='o'>|</span>"));
             //console.log(input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>").replace(/[|]/g,"<span class='o'>|</span>").replace(/[-]/g,"<span class='o'>-</span>"));
-            return input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>").replace("||:","<span class='fontNotas'>||:</span>").replace(":||","<span class='fontNotas'>:||</span>").replace(/[|]/g,"<span class='o'>|</span>").replace(/[-]/g,"<span class='o'>-</span>").replace("1.","<span class='fontNotas'>1.</span>").replace("2.","<span class='fontNotas'>2.</span>").replace("2,3.","<span class='fontNotas'>2,3.</span>");
+            return input
+            .replace(opts.chordReplaceRegex, "<span class='c'>$1</span>")
+            .replace("||:","<span class='fontNotas'>||:</span>")
+            .replace(":||","<span class='fontNotas'>:||</span>")
+            .replace(/[|]/g,"<span class='o'>|</span>")
+            .replace(/[-]/g,"<span class='o'>-</span>")
+            .replace("1.","<span class='fontNotas'>1.</span>")
+            .replace("2.","<span class='fontNotas'>2.</span>")
+            .replace("3.","<span class='fontNotas'>3.</span>")
+            .replace("1,2.","<span class='fontNotas'>1,2.</span>")
+            .replace("2,3.","<span class='fontNotas'>2,3.</span>")
+            .replace(/[$]/g,"<span class='fontNotas'>$</span>")
+            .replace(/[@]/g,"<span class='fontNotas'>@</span>")
+            .replace("d.s. al coda","<span class='fontNotas'>D.S. al coda</span>")
+            .replace("d.c. al coda","<span class='fontNotas'>D.C. al coda</span>")
+            .replace("coda","<span class='fontNotas'>coda</span>")
+            .replace("d.s.","<span class='fontNotas'>D.S.</span>")
+            .replace("d.c.","<span class='fontNotas'>D.C.</span>");
         };
         
         

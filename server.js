@@ -27,7 +27,7 @@ console.log(moment().format('ddd LT'));
 app.use(express.static(path.join(__dirname,'public')))
 // http://expressjs.com/en/starter/static-files.html
 //app.use(express.static("public"));
-
+ 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function(request, response) {
   response.sendFile(__dirname + "/public/index.html");
@@ -86,8 +86,12 @@ function saveSubscriptionToDatabase(subscription) {
         reject(err);
         return;
       }
-
       resolve(newDoc._id);
+    });
+    //Saber cuantos usuarios estan suscritos
+    console.log("Subscription Saved");
+    db.count({}, function (err, count) {
+      console.log(count);
     });
   });
 };
@@ -95,14 +99,14 @@ function saveSubscriptionToDatabase(subscription) {
 /*----------------------Agarrar las subscripciones de la base de datos----------------------------*/
 //(segundos[0-59] opcional, minutos[0-59], horas[0-23], dia del mes[1-31], mes[1-12], dia de la semana[0-6] donde 0 es domingo)
 //Enviar notificacion los lunes y jueves a las 8:00 am ('00 08 * * 1,4')
-const NotificacionCantosDomingo = '03,15,25,27,34,30,42,56 7,8,9,11,15,18,19,20,23 * * 0,1,3,4,5,6';
+const NotificacionCantosDomingo = '03,15,25,27,35,30,42,56 7,8,9,11,15,18,19,20,21,23 * * 0,1,2,3,4,5,6';
 //const NotificacionCantosDomingo = new CronTime('10,25,30,52 8,9,11,15 * * 5,6');
 var job = new CronJob(NotificacionCantosDomingo, enviarTrigger, null, true, 'America/Monterrey');
 job.start();
 function enviarTrigger(){
   //Create payload
   const payload = JSON.stringify({ 
-    title: 'I.B. Dunamis',
+    title: 'I.B. Dunamis Adoracion',
     body:'Ve los cantos para el proximo Domingo',
   });
   db.find({}, (err,docs) => {
@@ -114,7 +118,6 @@ function enviarTrigger(){
     }
   });
 }
-
 
   /*return getSubscriptionsFromDatabase()
   .then(function(subscriptions) {
@@ -172,6 +175,13 @@ app.post('/delete-subscription', (request, response) => {
     db.remove({endpoint:request.body.endpoint}, (err,docs) => {
       if(err) console.log("There's a problem with the database: ", err);
       else console.log("Subscription Deleted");
+    });
+
+    //Send 201 -Resourced created
+    response.status(201).json({});
+    //Saber cuantos usuarios estan suscritos
+    db.count({}, function (err, count) {
+      console.log(count);
     });
 });
 

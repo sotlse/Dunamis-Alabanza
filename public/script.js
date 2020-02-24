@@ -37,6 +37,9 @@ let tamano;
 let pushButton;
 let isSubscribed = false;
 let swRegistration = null;
+//Pagina configuracion
+const slideButton = document.querySelector("#botonSlide");
+const slideLabel = document.querySelector(".labelNotificaciones");
 
 /*-------------------------------MOSTRAR ERROR EN ALERT----------------------------------*/
 window.onerror = function(msg, url, linenumber) {
@@ -66,8 +69,10 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
   //alert('Service Worker and Push is supported');
 
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js')
+  //window.addEventListener('load', function() {
+    send().catch(err => console.error(err));  
+
+    /*navigator.serviceWorker.register('/sw.js')
     .then(function(swReg) {
       console.log('Service Worker is registered', swReg);
 
@@ -77,8 +82,8 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
     .catch(function(error) {
       console.error('Service Worker Error', error);
       alert('Service Worker Error');
-    });
-  });
+    });*/
+  //});
 } 
 else {
   console.warn('Push messaging is not supported');
@@ -88,6 +93,80 @@ else {
   }
 }
 
+//Registrar SW, Registrar Push y Enviar Push
+async function send(){
+  //Registrar Service Worker
+  console.log('Registrando Service Worker...');
+  const swRegistration = await navigator.serviceWorker.register('/sw.js');
+  console.log('Service Worker registrado', swRegistration);
+  if(tituloTexto === "Configuracion"){
+
+    // Set the initial subscription value
+    let subscription = await swRegistration.pushManager.getSubscription()
+    console.log("La subscripcion es: " + JSON.stringify(subscription));
+    isSubscribed = !(subscription === null);
+    console.log(isSubscribed);
+    if (isSubscribed) {
+      console.log('Usuario SUSCRITO.');
+    } 
+    else {
+      console.log('Usuario NO suscrito.');
+    }
+    updateBtn();
+
+    //Si se presiona el boton
+    //pushButton.addEventListener('click', async function() {
+    slideButton.addEventListener('click', async function() {
+      //pushButton.disabled = true;
+      slideButton.disabled = false;
+      console.log(isSubscribed);
+      if (isSubscribed) {
+        //Desinscribir usuario
+        let subscription = await swRegistration.pushManager.getSubscription()
+        console.log('Desinscribiendo al usuario: ',JSON.stringify(subscription))
+        const label = await subscription.unsubscribe();
+        console.log(label);
+        const response = await fetch('/delete-subscription',{
+          method: 'POST',
+          body: JSON.stringify(subscription),
+          headers: {
+            'content-type': 'application/json'
+          }
+        });
+        let commits = await response.json(); 
+        isSubscribed = false;
+        console.log('Usuario NO suscrito....')
+        updateBtn();
+      } 
+      else {
+        //Registrar Push
+        console.log('Registrando Usuario...');
+        const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+        const subscription = await swRegistration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: applicationServerKey
+        });
+        console.log('Usuario registrado y suscrito');
+
+        //Enviar Push
+        console.log('Enviando Suscripcion...');
+        const response = await fetch('/save-subscription',{
+          method: 'POST',
+          body: JSON.stringify(subscription),
+          headers: {
+            'content-type': 'application/json'
+          }
+        });
+        let commits = await response.json(); 
+        isSubscribed = true;
+        console.log('Suscripcion guardada :)')
+        updateBtn();
+      }
+    });
+  }
+} 
+
+/*
 function initializeUI() {
   if(tituloTexto === "Configuracion"){
     pushButton.addEventListener('click', function() {
@@ -115,23 +194,44 @@ function initializeUI() {
     });
   }
 }
-
+*/
 function updateBtn() {
+  console.log(Notification.permission);
   if (Notification.permission === 'denied') {
-    pushButton.textContent = 'Push Messaging Blocked.';
-    pushButton.disabled = true;
-    updateSubscriptionOnServer(null);
+    //pushButton.textContent = 'Push Messaging Bloqueado';
+    //pushButton.disabled = true;
+    //updateSubscriptionOnServer(null);
+    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
+    //updateSubscriptionOnServer(null);
+    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
+    //updateSubscriptionOnServer(null);
+    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
+    //updateSubscriptionOnServer(null);
+    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
+    //updateSubscriptionOnServer(null);
+    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
+    //updateSubscriptionOnServer(null);
+    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
+    slideButton.disabled = true;
     return;
   }
 
   if (isSubscribed) {
-    pushButton.textContent = 'Disable Push Messaging';
+    //pushButton.textContent = 'Deshabilitar Push Messaging';
+    slideLabel.innerHTML = 'Notificaciones Habilitadas';
+    slideButton.checked = true;
   } else {
-    pushButton.textContent = 'Enable Push Messaging';
+    //pushButton.textContent = 'Habilitar Push Messaging';
+    slideLabel.innerHTML = 'Notificaciones Deshabilitadas';
+    slideButton.checked = false;
   }
 
-  pushButton.disabled = false;
+  //pushButton.disabled = false;
 }
+/*
+slideButton.onclick = function (){
+  console.log(slideButton.checked);
+}*/
 
 /*navigator.serviceWorker.register('/js/sw.js')
 .then(function(swReg) {
@@ -140,7 +240,7 @@ function updateBtn() {
   swRegistration = swReg;
   initializeUI();
 })*/
-
+/*
 //Suscribir usuario
 function subscribeUser() {
   const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
@@ -161,7 +261,7 @@ function subscribeUser() {
     console.log('Failed to subscribe the user: ', err);
     updateBtn();
   });
-}
+}*/
 
 const urlB64ToUint8Array = base64String => {
   const padding = '='.repeat((4 - (base64String.length % 4)) % 4)
@@ -173,7 +273,7 @@ const urlB64ToUint8Array = base64String => {
   }
   return outputArray
 }
-
+/*
 function unsubscribeUser() {
   swRegistration.pushManager.getSubscription()
   .then(function(subscription) {
@@ -237,7 +337,7 @@ function updateSubscriptionOnServer(subscription) {
   });
   
 }
-
+*/
 
 /*-------------------------------NOTIFICACIONES----------------------------------*/
 //Preguntar si pueden mostrar notificaciones (no compatible con IOS)
@@ -547,6 +647,26 @@ class UI {
     }, 
 
     {
+      pagina:"Cantos/Info/Jesus_Eres_Mi_Buen_Pastor.html",
+      titulo: "Jesus eres mi buen pastor",
+      autor: "Marcos Witt",
+      tono: "A",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina:"Cantos/Info/Jesus_Es_El_Senor.html",
+      titulo: "Jesus es el Senor",
+      autor: "Jesus Adrian Romero",
+      tono: "G",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
       pagina:"Cantos/Info/Mas_El_Dios_De_Toda_Gracia.html",
       titulo:"Mas el Dios de toda gracia",
       autor:"Marcos Witt",
@@ -721,59 +841,45 @@ class UI {
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
       localStorage.setItem("playlistFlag",0);
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Adoracion"){
       CategoriaCantos("Adoracion");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Alabanza"){
       CategoriaCantos("Alabanza");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Confesion"){
       CategoriaCantos("Confesion");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Evangelismo"){
       CategoriaCantos("Evangelismo");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Servicio"){
       CategoriaCantos("Servicio");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Unidad"){
       CategoriaCantos("Unidad");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Oracion"){
       CategoriaCantos("Oracion");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Fortaleza"){
       CategoriaCantos("Fortaleza");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Perdon"){
       CategoriaCantos("Perdon");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Accion de Gracias"){
       CategoriaCantos("Accion de Gracias");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Semana Santa"){
       CategoriaCantos("Semana Santa");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Navidad"){
       CategoriaCantos("Navidad");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Himnos"){
       CategoriaCantos("Himnos");
     }
-    
     else if(tituloTexto === "Dunamis Adoracion | Servicios Especiales"){
       CategoriaCantos("Servicios Especiales");
     }

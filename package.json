@@ -2,9 +2,9 @@
   "name": "dunamis-alabanza",
   "version": "0.0.1",
   "description": "",
-  "main": "server_fm.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server_fm.js"
+    "start": "node server.js"
   },
   "keyword": [],
   "author": "",
