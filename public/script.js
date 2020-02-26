@@ -202,16 +202,6 @@ function updateBtn() {
     //pushButton.disabled = true;
     //updateSubscriptionOnServer(null);
     slideLabel.innerHTML = 'Notificaciones Bloqueadas';
-    //updateSubscriptionOnServer(null);
-    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
-    //updateSubscriptionOnServer(null);
-    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
-    //updateSubscriptionOnServer(null);
-    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
-    //updateSubscriptionOnServer(null);
-    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
-    //updateSubscriptionOnServer(null);
-    slideLabel.innerHTML = 'Notificaciones Bloqueadas';
     slideButton.disabled = true;
     return;
   }
@@ -493,11 +483,12 @@ class cantoGuardado {
 }
 
 //Base de datos de canciones, el titulo debe coincidir con el titulo del canto y el tono con el original
+const startPath = 'cantos/info/';
 class UI {
   static desplegarCantos(){
     const baseCanciones = [
     {
-      pagina: "Cantos/Info/A_Cada_Instante.html",
+      pagina: startPath + "a_cada_instante.html",
       titulo: "A Cada Instante",
       autor: "Marco Barrientos",
       tono: "F",
@@ -507,7 +498,7 @@ class UI {
     },
   
     {
-      pagina: "Cantos/Info/A_El_Alto_Y_Sublime.html",
+      pagina: startPath + "a_el_alto_y_sublime.html",
       titulo: "A el Alto y Sublime",
       autor: "Roberto Torres",
       tono: "A",
@@ -517,7 +508,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Al_Mundo_Paz_IBI.html",
+      pagina: startPath + "al_mundo_paz_ibi.html",
       titulo: "Al mundo paz - Hay libertad",
       autor: "IBI",
       tono: "D",
@@ -527,7 +518,7 @@ class UI {
     },
   
     {
-      pagina:"Cantos/Info/Abre_Los_Cielos.html",
+      pagina: startPath + "abre_los_cielos.html",
       titulo: "Abre los cielos",
       autor: "Vino Nuevo",
       tono: "G",
@@ -537,7 +528,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Alabanzas_Al_Rey.html",
+      pagina: startPath + "alabanzas_al_rey.html",
       titulo: "Alabanzas al Rey",
       autor: "Marcela Gandara",
       tono: "Cm",
@@ -547,7 +538,7 @@ class UI {
     },
     
     {
-      pagina:"Cantos/Info/Aqui_Estoy.html",
+      pagina: startPath + "aqui_estoy_jm.html",
       titulo: "Aqui Estoy",
       autor: "Jaime Murrel",
       tono: "A",
@@ -557,7 +548,7 @@ class UI {
     },  
 
     {
-      pagina:"Cantos/Info/Cordero_Santo.html",
+      pagina: startPath + "cordero_santo.html",
       titulo: "Cordero Santo",
       autor: "Roberto Torres",
       tono: "F",
@@ -567,7 +558,7 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Cubiertos_Por_Tu_Sangre.html",
+      pagina: startPath + "cubiertos_por_tu_sangre.html",
       titulo: "Cuberitos por tu sangre",
       autor: "En Espirity y en Verdad",
       tono: "F",
@@ -577,7 +568,7 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Digno_Es_El_Senor.html",
+      pagina: startPath + "digno_es_el_senor.html",
       titulo: "Digno es el Senor",
       autor: "Marcela Gandara",
       tono: "D",
@@ -587,7 +578,7 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Dios_Esta_Aqui.html",
+      pagina: startPath + "dios_esta_aqui.html",
       titulo: "Dios esta aqui",
       autor: "Darlene Zschech",
       tono: "D",
@@ -597,7 +588,7 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Dios_De_Pactos.html",
+      pagina: startPath + "dios_de_pactos.html",
       titulo: "Dios de Pactos",
       autor: "Marcos Witt",
       tono: "A",
@@ -607,7 +598,7 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Eres_Bendito.html",
+      pagina: startPath + "eres_bendito.html",
       titulo: "Eres bendito",
       autor: "Jaime Murrel",
       tono: "G",
@@ -617,7 +608,7 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Eres_Digno_De_Gloria.html",
+      pagina: startPath + "eres_digno_de_gloria.html",
       titulo: "Eres digno de gloria",
       autor: "Coalo Zamorano",
       tono: "C",
@@ -627,7 +618,7 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Eres_Fiel.html",
+      pagina: startPath + "eres_fiel.html",
       titulo: "Eres Fiel",
       autor: "Coalo Zamorano",
       tono: "C",
@@ -637,17 +628,17 @@ class UI {
     },   
     
     {
-      pagina:"Cantos/Info/Gracias_Dios.html",
+      pagina: startPath + "gracias_dios.html",
       titulo: "Gracias Dios",
       autor: "Don Moen",
       tono: "F",
-      categoria: ["Adoracion"],
+      categoria: ["Accion de Gracias"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
     }, 
 
     {
-      pagina:"Cantos/Info/Jesus_Eres_Mi_Buen_Pastor.html",
+      pagina: startPath + "jesus_eres_mi_buen_pastor.html",
       titulo: "Jesus eres mi buen pastor",
       autor: "Marcos Witt",
       tono: "A",
@@ -657,7 +648,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Jesus_Es_El_Senor.html",
+      pagina: startPath + "jesus_es_el_senor.html",
       titulo: "Jesus es el Senor",
       autor: "Jesus Adrian Romero",
       tono: "G",
@@ -667,7 +658,7 @@ class UI {
     }, 
 
     {
-      pagina:"Cantos/Info/Mas_El_Dios_De_Toda_Gracia.html",
+      pagina: startPath + "mas_el_dios_de_toda_gracia.html",
       titulo:"Mas el Dios de toda gracia",
       autor:"Marcos Witt",
       tono:"A",
@@ -677,7 +668,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Navidad_Ya_Va_Llegando.html",
+      pagina: startPath + "navidad_ya_va_llegando.html",
       titulo: "Navidad ya va llegando",
       autor: "Epic kids",
       tono: "D",
@@ -687,7 +678,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Noche_De_Paz.html",
+      pagina: startPath + "noche_de_paz.html",
       titulo: "Noche de paz",
       autor: "Himno 58",
       tono: "Bb",
@@ -697,7 +688,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Nuestro_Salvador.html",
+      pagina: startPath + "nuestro_salvador.html",
       titulo: "Nuestro salvador",
       autor: "Job Gonzalez",
       tono: "Am",
@@ -707,7 +698,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Oh_Ven_Bendito_Emanuel.html",
+      pagina: startPath + "oh_ven_bendito_emanuel.html",
       titulo: "Oh ven bendito Emanuel",
       autor: "Marcos Witt",
       tono: "Bm",
@@ -717,7 +708,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Por_Siempre.html",
+      pagina: startPath + "por_siempre.html",
       titulo: "Por Siempre",
       autor: "Vino Nuevo",
       tono: "Bb",
@@ -727,7 +718,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Quiero_Entender.html",
+      pagina: startPath + "quiero_entender.html",
       titulo: "Quiero entender",
       autor: "Jesus Adrian Romero",
       tono: "G",
@@ -737,7 +728,7 @@ class UI {
     },
       
     {
-      pagina:"Cantos/Info/Santo.html",
+      pagina: startPath + "santo.html",
       titulo:"Santo",
       autor:"Coalo Zamorano",
       tono:"D",
@@ -747,7 +738,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Santo_Santo_Santo.html",
+      pagina: startPath + "santo_santo_santo.html",
       titulo:"Santo Santo Santo",
       autor:"Marcos Witt",
       tono:"Bb",
@@ -757,7 +748,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Sendas_Dios_Hara.html",
+      pagina: startPath + "sendas_dios_hara.html",
       titulo:"Sendas Dios hara",
       autor:"Don Moen",
       tono:"G",
@@ -767,7 +758,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Sobrenatural.html",
+      pagina: startPath + "sobrenatural.html",
       titulo: "Sobrenatural",
       autor: "Marcos Witt",
       tono: "A",
@@ -777,7 +768,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Sobretodo.html",
+      pagina: startPath + "sobretodo.html",
       titulo: "Sobretodo",
       autor: "Vino Nuevo",
       tono: "A",
@@ -787,7 +778,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Temprano_Yo_Te_Buscare.html",
+      pagina: startPath + "temprano_yo_te_buscare.html",
       titulo: "Temprano yo te buscare",
       autor: "Marcos Witt",
       tono: "G",
@@ -797,7 +788,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Tu_Eres_Dios_EEYV.html",
+      pagina: startPath + "tu_eres_dios_eeyv.html",
       titulo:"Tu eres Dios",
       autor:"En Espiritu y Verdad",
       tono:"C",
@@ -807,7 +798,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Tu_Eres_Dios_MV.html",
+      pagina: startPath + "tu_eres_dios_mv.html",
       titulo:"Tu eres Dios",
       autor:"Marcos Vidal",
       tono:"E",
@@ -817,7 +808,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Tu_Eres_Santo.html",
+      pagina: startPath + "tu_eres_santo.html",
       titulo:"Tu eres Santo",
       autor:"Michael W. Smith",
       tono:"G",
@@ -827,7 +818,7 @@ class UI {
     },
 
     {
-      pagina:"Cantos/Info/Tu_Palabra.html",
+      pagina: startPath + "tu_palabra.html",
       titulo:"Tu palabra",
       autor:"Juan Carlos Alvarado",
       tono:"A",
@@ -967,10 +958,10 @@ class UI {
   static agregarSubtemasACanto(cantoSubtemas){
     //localStorage.setItem("cantoSeleccionado",JSON.stringify(cantoSubtemas));
     cantoSubtemas[0].subpaginas.forEach((subtema) => {
-      let pagina = cantoSubtemas[0].pagina.replace("Info",subtema).replace(".html","");
+      let pagina = cantoSubtemas[0].pagina.replace("info",subtema.toLowerCase()).replace(".html","");
       const lista = document.createElement("li");
       lista.className = "lista";
-      lista.innerHTML = `<a href="/html/${pagina}_${subtema}.html">${subtema}</a> <button class="boton-add">
+      lista.innerHTML = `<a href="/html/${pagina}_${subtema.toLowerCase()}.html">${subtema}</a> <button class="boton-add">
         +</button></li>`;
       ulSubtemasInfo.appendChild(lista);
     });
