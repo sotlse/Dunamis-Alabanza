@@ -68,7 +68,47 @@ $(document).ready( function() {
         }, {
             endDate: '2020-02-23', startDate: '2020-02-23',
             title: 'Programa Dominical 8 - 23 de Febrero',
-            cantos: 'Tu eres Dios,En espiritu y Verdad_Te dare lo mejor,Jesus Adrian Romero_Jesus es el Senor,Jesus Adrian Romero_Jesus eres mi buen pastor,Marcos Witt_Somos el pueblo de Dios,Marcos Witt'
+            cantos: 'Tu eres Dios,En espiritu y Verdad_Te dare lo mejor,Jesus Adrian Romero_Jesus es el Senor,Jesus Adrian Romero_Jesus eres mi buen pastor,Marcos Witt_Tu nombre levantare'
+        }, {
+            endDate: '2020-03-01', startDate: '2020-03-01',
+            title: 'Programa Dominical 9 - 01 de Marzo',
+            cantos: 'Dios Imparable,Marcos Witt_Enciende una luz,Marcos Witt_La nina de tus ojos,Popular'
+        }, {
+            endDate: '2020-03-08', startDate: '2020-03-08',
+            title: 'Programa Dominical 10 - 08 de Marzo',
+            cantos: 'Vamos a cantar,En espiritu y verdad_Nuestro Salvador,Lakewood/Campanas sin campanas_Digno es el Senor,Marcela Gandara_Tu amor por mi,Marcos Witt_Sera llena la tierra,Marcos Witt'
+        }, {
+            endDate: '2020-03-15', startDate: '2020-03-15',
+            title: 'Programa Dominical 11 - 15 de Marzo',
+            cantos: 'Dios de amor,Danilo Montero_Tu nombre es Cristo,Marcos Witt_Este es mi deseo,Danilo Montero_Dios me ama,Danilo Montero_Eres todopoderoso,Danilo Montero'
+        }, {
+            endDate: '2020-03-22', startDate: '2020-03-22',
+            title: 'Programa Dominical 12 - 22 de Marzo',
+            cantos: 'Nada es imposible,Marco Barrientos_La nube de tu presencia,Conquistando Fronteras_Inmerecedor,Abel Zavala_Salmo 45,Marcos Witt_Noble sosten,Popular'
+        }, {
+            endDate: '2020-03-29', startDate: '2020-03-29',
+            title: 'Programa Dominical 13 - 29 de Marzo',
+            cantos: 'Tu palabra,Juan Carlos Alvarado_Yo te busco,Marcos Witt_Tu amor oh Dios,Generacion sin Fronteras_En el lugar de tu presencia,Vino nuevo_Quien nos separara,Juan Carlos Alvarado'
+        }, {
+            endDate: '2020-04-05', startDate: '2020-04-05',
+            title: 'Programa Dominical 14 - 05 de Abril',
+            cantos: 'Gracia sublime,En espiritu y verdad_Soy sano,Ericson Alexander_Conozco que todo lo puedes,Marco Barrientos_El Senor es mi pastor,Juan Carlos Alvarado_Salmo 113,Popular'
+        }, {
+            endDate: '2020-04-10', startDate: '2020-04-10',
+            title: 'Culto 7 palabras - 10 de Abril',
+            cantos: 'Jesus el mecias,_Dios puede salvar,_Cordero Santo,_Preciosa sangre,Julio Melgar_'
+        }, {
+            endDate: '2020-04-12', startDate: '2020-04-12',
+            title: 'Domingo de Resurreccion - 12 de Abril',
+            cantos: ''
+        }, {
+            endDate: '2020-04-19', startDate: '2020-04-19',
+            title: 'Programa Dominical 16 - 19 de Abril',
+            cantos: ''
+        }, {
+            endDate: '2020-04-26', startDate: '2020-04-26',
+            title: 'Programa Dominical 17 - 26 de Abril',
+            cantos: ''
         },
 
         /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
@@ -77,6 +117,7 @@ $(document).ready( function() {
             title: 'Viaje Misionero',
             cantos: 'No'
         }
+
     ];
 
     // The order of the click handlers is predictable. Direct click action

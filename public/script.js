@@ -571,7 +571,7 @@ class UI {
       pagina: startPath + "digno_es_el_senor.html",
       titulo: "Digno es el Senor",
       autor: "Marcela Gandara",
-      tono: "D",
+      tono: "A",
       categoria: ["Adoracion"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
@@ -589,13 +589,33 @@ class UI {
 
     {
       pagina: startPath + "dios_de_pactos.html",
-      titulo: "Dios de Pactos",
+      titulo: "Dios de pactos",
       autor: "Marcos Witt",
       tono: "A",
       categoria: ["Adoracion"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
     }, 
+
+    {
+      pagina: startPath + "dios_imparable.html",
+      titulo: "Dios imparable",
+      autor: "Marcos Witt",
+      tono: "A",
+      categoria: ["Adoracion","Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina: startPath + "enciende_una_luz.html",
+      titulo: "Enciende una luz",
+      autor: "Marcos Witt",
+      tono: "G",
+      categoria: ["Evangelismo","Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
 
     {
       pagina: startPath + "eres_bendito.html",
@@ -625,7 +645,17 @@ class UI {
       categoria: ["Alabanza"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
-    },   
+    }, 
+    
+    {
+      pagina: startPath + "gracia_sublime_es.html",
+      titulo: "Gracia sublime es",
+      autor: "En espiritu y verdad",
+      tono: "B",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
     
     {
       pagina: startPath + "gracias_dios.html",
@@ -761,7 +791,7 @@ class UI {
       pagina: startPath + "sobrenatural.html",
       titulo: "Sobrenatural",
       autor: "Marcos Witt",
-      tono: "A",
+      tono: "G",
       categoria: ["Alabanza"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
@@ -778,6 +808,16 @@ class UI {
     },
 
     {
+      pagina: startPath + "somos_el_pueblo_de_dios.html",
+      titulo: "Somos el pueblo de Dios",
+      autor: "Marcos Witt",
+      tono: "G",
+      categoria: ["Evangelismo","Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
       pagina: startPath + "temprano_yo_te_buscare.html",
       titulo: "Temprano yo te buscare",
       autor: "Marcos Witt",
@@ -787,6 +827,15 @@ class UI {
       subpaginas: ["Letra","Acordes","Piano"],
     },
 
+    {
+      pagina: startPath + "tu_amor_por_mi.html",
+      titulo:"Tu amor por mi",
+      autor:"Marcos Witt",
+      tono:"D",
+      categoria:["Adoracion","Servicio"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
     {
       pagina: startPath + "tu_eres_dios_eeyv.html",
       titulo:"Tu eres Dios",
@@ -814,7 +863,7 @@ class UI {
       tono:"G",
       categoria:["Alabanza"],
       audio:"",
-      subpaginas: ["Letra","Letra Mujeres","Acordes","Guitarra Electrica"],
+      subpaginas: ["Letra","Acordes","Guitarra Electrica"],
     },
 
     {
@@ -826,7 +875,17 @@ class UI {
       audio:"",
       subpaginas: ["Letra","Acordes"],
     }
-      
+,
+
+    {
+      pagina: startPath + "vamos_a_cantar.html",
+      titulo:"Vamos a cantar",
+      autor:"En espiritu y verdad",
+      tono:"D#",
+      categoria:["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }      
     ];
     if(tituloTexto === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));
@@ -958,10 +1017,11 @@ class UI {
   static agregarSubtemasACanto(cantoSubtemas){
     //localStorage.setItem("cantoSeleccionado",JSON.stringify(cantoSubtemas));
     cantoSubtemas[0].subpaginas.forEach((subtema) => {
-      let pagina = cantoSubtemas[0].pagina.replace("info",subtema.toLowerCase()).replace(".html","");
+      //subtema = subtema.replace(" ","_");
+      let pagina = cantoSubtemas[0].pagina.replace("info",subtema.toLowerCase().replace(" ","")).replace(".html","");      
       const lista = document.createElement("li");
       lista.className = "lista";
-      lista.innerHTML = `<a href="/html/${pagina}_${subtema.toLowerCase()}.html">${subtema}</a> <button class="boton-add">
+      lista.innerHTML = `<a href="/html/${pagina}_${subtema.toLowerCase().replace(" ","_")}.html">${subtema}</a> <button class="boton-add">
         +</button></li>`;
       ulSubtemasInfo.appendChild(lista);
     });
