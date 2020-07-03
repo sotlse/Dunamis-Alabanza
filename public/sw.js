@@ -143,3 +143,29 @@ self.addEventListener('pushsubscriptionchange', function(event) {
     })
   );
 });
+
+
+
+/*------------------POSIBLE REEMPLAZO?----------------------------- */
+
+
+/*-------------------------LLAMAR ELEMENTO FETCH (para mostrar las paginas en offline)-------------------------*/
+/*self.addEventListener('fetch', e => {
+  console.log('Service Worker: Fetching');
+  e.respondWith(
+    fetch(e.request)
+    .then(res => {
+      //Make copy/clone of response
+      const respClone = res.clone();
+      //Open cache
+      caches.open(cacheName)
+        .then(cache => {
+          //Add response to cache 
+          cache.put(e.request, respClone);
+        });
+      return res;
+    }).catch(err => caches.match(e.request).then(res => res))
+  );
+});*/
+
+
