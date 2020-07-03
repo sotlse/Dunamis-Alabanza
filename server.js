@@ -120,6 +120,8 @@ function enviarTrigger(){
 }
 
   /*return getSubscriptionsFromDatabase()
+
+
   .then(function(subscriptions) {
     let promiseChain = Promise.resolve();
 
