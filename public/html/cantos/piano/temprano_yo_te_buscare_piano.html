@@ -1,305 +1,215 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Vexflow demo</title>
-
-        <!-- import the webpage's stylesheet -->
-        <link rel="icon" href="https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ffavicon.ico?v=1580511400868" type="image/x-icon"/>
-        <link rel="manifest" href="/manifest.json">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="/style.css">
-        <link href="/css/vextab.css" media="screen" rel="Stylesheet" type="text/css" />
-        <script>
-            VEXTAB_USE_SVG = true
-        </script>
-        <script src="/js/vextab-div.js"></script>
-        <script>
-            VexTabDiv.Flow.Renderer.USE_CANVAS_PROXY = true;
-            VexTabDiv.Artist.DEBUG = false
-        </script>
-    </head>
-
+  <head>
+  </head>
+  <!--<body onload="load()">-->
     <body>
-      <h2 class="tituloDelCanto">Temprano yo te buscare</h2>
-      <h3 class="autorDelCanto">Marcos Witt</h3>
-      <div class="tempo">60</div>
-      <div class="tono">G</div>
-        <!--<div id="boo"></div>
-        <div id="boo2"></div>-->
-
-        <div class="vex-tabdiv"
-            width=680 scale=0.65 editor="true"
-            editor_width=400 editor_height=330>
-            options space=20
-            tabstave
-            notation=true
-            key=A time=4/4
-
-            notes :q =|: (5/2.5/3.7/4) :8 7-5h6/3 ^3^ 5h6-7/5 ^3^ :q 7V/4 |
-            notes :8 t12p7/4 s5s3/4 :8 3s:16:5-7/5 :h p5/4
-            text :w, |#segno, ,|, :hd, , #tr
-
-
-            options space=25
-        </div>
-        <!--keyword	values
-                notation	true/false
-                tablature	true/false
-                clef	    treble, alto, tenor, bass, percussion
-                key	        C, Am, F, Dm, Bb, Gm, Eb, Cm, Ab, Fm, Db, Bbm, Gb, Ebm, Cb, Abm, G, Em, D, Bm, A, F#m, E,   C#m, B, G#m, F#, D#m, C#, A#m
-                time	    C, C|, #/#
-                tuning	    standard, dropd, eb, E/5,B/4,G/4,D/4,A/3,E/3
-
-            Silencios
-                ##
-
-            Duraciones
-                :w (redonda)
-                :h (blanca)
-                :q (negra)
-                :8 (corchea)
-                :16 (semicorchea)
-                :32 (fusa)
-                Se agrega una 'd' para indicar el punto. Ej :qd
-
-            Ligaduras
-                t - tie
-                s - slide
-                h - hammer
-                p - pull-of
-
-            
-            Repeticiones
-                =||   Double Bar
-                =|:  Repeat Begin
-                =:|  Repeat End
-                =::  Double Repeat
-                =|=  End Bar-->
-        <div class="vex-tabdiv"
-            width=680 scale=0.65 editor="true"
-            editor_width=400 editor_height=330>
-            options space=12 font-size=14
-
-            tabstave notation=true clef=treble key=G time=4/4
-            notes  :q 7/1 :8 7/1 10/2 7-8-7/1 10/2 | :q 7/1 :8 7/1 10/2 7-8-7/1 10/2 | :qd 7/1 :8 8/2 :q 9/3 11/3 |
-            notes  :q 8/2 11-9-7/3 
-            text :w,G ,G ,  C ,D
-        </div>
-
-        <div class="vex-tabdiv"
-            width=680 scale=0.65 editor="false"
-            editor_width=400 editor_height=330>
-            options space=30 font-size=14
-
-            tabstave notation=true clef=treble key=G time=4/4
-            notes  :8 7/3 8/2 10/2 | :h 6/1 :qd 11/1 :16 10-8/1 | :q s10/1 :8 8-6t :q:6/1 :8 6/1 7/3 | :h 8/3 :qd 8/3 :16 10-8/3 
-        </div>
-
-        <div class="vex-tabdiv"
-            width=680 scale=0.65 editor="false"
-            editor_width=400 editor_height=330>
-            options space=30 font-size=14
-
-            tabstave notation=true clef=treble key=G time=4/4
-            notes  :8 7-10/3 6-8/1 :qd s10/1 :16 8-10/1 | :q 11/1 ## :qd 16/1 :16 15-13/1 | :8 15-16-15-13-11t11-13-15-15/1
-        </div>
-
-        <div class="vex-tabdiv"
-            width=680 scale=0.65 editor="false"
-            editor_width=400 editor_height=330>
-            options space=35 font-size=14
-
-            tabstave notation=true clef=treble key=G time=4/4
-            notes :hd 15/1  ## :16 14-15/1 | :8 17-10-17-22/1 :h t22/1 | :hd t22/1
-        </div>
-      
-          <div class="canto"> 
+    <h2 class="tituloDelCanto">Mas el Dios de toda gracia</h2>
+    <h3 class="autorDelCanto">Marcos Witt</h3>
+    <div class="tempo">63</div>
+    <div class="tono">A</div>
+    <div class='canto_body'>  
 <!---------------Este es el limite----->  
-      <pre data-key="G">
+      <pre data-key="A">
 INTRO:
-||: Gadd9   Cadd9 :||
-      
+div id="paper" style="overflow: hidden;">
+/div>
+div id="midi">
+/div>
 VERSO1:
-Gadd9                    Dadd9
-//   Temprano yo te buscaré
-Am7                     C/D       D
-    de madrugada yo me acercaré a Ti
-Gadd9                         |D - - G/D|
-     mi alma te anhela y tiene sed
-Am7      G/D           C    D
-    para ver tu gloria y tu poder//
-
-CORO:
-G      D/F#          |Em7 - - D/F#|
-  Mi socorro has sido Tú
-        G             D/F#  C/E       D
-y en la sombra de tus alas  yo me gozaré
-G            D/F#       |Em7 - - G/D| 
-  Mi alma está pegada a Ti    porque
-   Cadd9  C/G-Cadd9          |D - - Em7|
-tu diestra         me ha sostenido  Oh
-   Am7                G/D  D7  Gadd9 
-tu diestra me ha sosteni - i - do
-
-||: Gadd9   Cadd9 :||
+            A         C#m7  F#m7
+Mas el Dios   de toda gra - cia 
+    E       D              D/E     
+que nos llamo a su gloria eterna
+E         F#m       |C#m7 - F#m7 E/G#|
+os perfeccione y a - fir -- me
+     A/D   D        E/D  E   
+fortalez - ca y establez-ca
       
-VERSO1:
-Gadd9                    D
-     Temprano yo te buscaré
-Am7                     G/D       D
-    de madrugada yo me acercaré a Ti
-G                            |D - - Em7|
-   mi alma te anhela y tiene sed
-Am7      G/B          |Cadd2 - D7sus4 D|    
-    para ver tu gloria y tu po-der
+CORO1:
+A/C#  D       C#m7  Bm7  A     A/C#
+A     el se - a     la   glo - ria
+    D          |A/C#  - F#m7 F#m7/E|
+a a el sea el impe -  rio
+        E/D  D           D/E  E
+por los si - glos de los si - glos
+ A    A/G     D/F#  D/E  E   D/A
+amen,     a - men, amen  y a-men
+|D/E - E|
 
-CORO:
- G      D/F#          |Em7 - - D/F#|
-// Mi socorro has sido Tú
-        G             D/F#  C/D       D
-y en la sombra de tus alas  yo me gozaré
-G         D/F#         |Em7 - - G/D| 
-  Mi alma está pegada a Ti      porque
-   Cadd9  C/G-Cadd9          |D - - Em7|
-tu diestra         me ha sostenido  Oh
-___________________________________________________
-1.    Am7                G/D   D   
-   tu diestra me ha sosteni - ido//
-___________________________________________________
-2.    Am7                G/D  D   Gadd9 
-   tu diestra me ha sosteni - i - do
+VERSO2:
+            A         E/F#  F#m7
+Mas el Dios   de toda gra - cia 
+    F#m7/E    D               D/E     
+que nos lla - mo a su gloria eterna
+E        E/F#       |C#m7 - F#m7 E|
+os perfeccione y a - fir -- me
+     E/D   D        D/E  E   
+fortalez - ca y establez-ca
+      
+CORO2:
+  A/C#  D       C#m7  Bm7  A     A/C#
+//A     el se - a     la   glo - ria
+C#m7  D          |C#m7 - F#m7 E|
+a  a  el sea el impe  -  rio
+        E/D  D           D/E  E
+por los si - glos de los si - glos//
+ A    A/G     D/F#   D/E  E   F
+amen,     a - men, a-men  y a-men 
+|Eb/F - F|
 
-FINAL:
-||: Gadd9   Cadd9 :||
+VERSO3:
+            Bb         F/G  Gm7
+Mas el Dios   de toda gra - cia 
+         |Eb   -   Cm7|   |Eb/F - F|   
+que nos llamo a su gloria eter -  na
+         Gm         |Dm7 -  Gm7 F|
+os perfeccione y a - fir -- me
+     Bb/Eb  Eb       Eb/F  F   
+fortalez -  ca y establez- ca
+
+CORO3:
+  Bb/D  Eb      Dm7   Cm7  Bb     Bb/D
+//A     el se - a     la   glo - ria
+Dm7   Eb         |Bb/D - Gm7 F|
+a  a  el sea el impe  -  rio
+        Eb               Eb/F  F
+por los si - glos de los si -  glos//
+    Bb   Bb/Ab     Eb/G   Eb/F  F  
+//amen,       a - men, a-men   y//
+  |Eb/Bb - Bb|
+a -men
       </pre>
 <!---------------Este es el limite-----> 
-    </div>
+      </div>   
 
+  <script type="text/javascript" src='/js/template-cancion-piano.js'></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.transposer.js"></script>
+  <script type="text/javascript">
+      $(function() {
+        $("pre").transpose();
+      });
+    </script>
+  <script src="/script.js" defer></script>
+  <!--http://www.lesession.co.uk/abc/abc_notation.htm-->
+  <script src="/js/abcjs_midi_5.12.0-min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var abcmidi = "T: Mas el Dios de toda gracia\n" +
+      "C: Marcos Witt\n" +
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      //"%%stretchlast .7\n" +
+      'Q: 63\n' +
+      "R: Rubato\n" +
+      "%%staves {R L}\n" +
+      "V:R clef=treble\n" +
+      "V:L clef=bass\n" +
+      "K: A\n" +
+      '[V:R] z3 B,[B,C]8-[B,C]2EA | [B,EG]3B, EG[A,CF]2-[A,CF]8 | [A,DE]3A, [A,DEA]12 |\n' +
+      "[V:L] z E,A,2 [E,A,]12 & A,,16 | F,,C,A,2 [F,,C,A,]12 | D,,A,,F,2 [D,,A,,F,]12 |"+
 
-        <!--
-        <script src="https://npmcdn.com/vexflow@1.2.84/releases/vexflow-debug.js"></script>
-        <script>
-            VF = Vex.Flow;
-            
-            // Create an SVG renderer and attach it to the DIV element named "boo".
-            var div = document.getElementById("boo")
-            var renderer = new VF.Renderer(div, VF.Renderer.Backends.SVG);
-            
-            // Configure the rendering context.
-            renderer.resize(500, 500);
-            var context = renderer.getContext();
-            context.setFont("Arial", 10, "").setBackgroundFillStyle("#eed");
-            
-            // Create a stave of width 400 at position 10, 40 on the canvas.
-            var stave = new VF.Stave(10, 40, 400);
-            
-            // Add a clef and time signature.
-            stave.addClef("treble").addTimeSignature("4/4");
-            
-            // Connect it to the rendering context and draw!
-            stave.setContext(context).draw();
-            
-            // Create the notes  w (redonda), h (blanca), q (negra), 8 (corchea), 16 (semicorchea)
-            var notes = [
-              // A quarter-note A.
-              new VF.StaveNote({ keys: ["a/4"], duration: "8d" }).addDotToAll(),
-              //addAccidental(0, new VF.Accidental("##")).addDotToAll(),
-            
-              // A quarter-note D.
-              new VF.StaveNote({ keys: ["a/4"], duration: "16" }),
+      '[V:R] [F,A,DE]8 [G,E]8 | [F,A,E]3A, EA3-A6 [B,EG]2 | [A,DF]4 [A,CE]3B, CE!fermata!A2 [B,CEA]4 |\n' +
+      "[V:L] [E,,E,]16 | D,,A,,F,2 [D,,A,,F,]8-[D,,A,,F,]2C,2 | B,,4 A,,E,A,2 [A,,E,A,2]8|" +
 
-              // A quarter-note C.
-              new VF.StaveNote({ keys: ["a/4"], duration: "8" }),
+      '[V:R] [B,CEA]3E Aedc A2 [EFA]4-[DFA]2| [A,DA]8 [B,EB]8 ||\n' +
+      "[V:L] C,A,C2 [C,A,C]4 D,A,3-A,4 | [F,,D,]8 [G,,E,]8 ||";
 
-              // A quarter-note C.
-              new VF.StaveNote({ keys: ["b/4"], duration: "8" }),
+      var abc2 = 
+      //"T: Mas el Dios de toda gracia\n" +
+      //"C: Marcos Witt\n" +
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      //"%%stretchlast .7\n" +
+      'Q: 63\n' +
+      //"R: Rubato\n" +
+      "%%staves {R L}\n" +
+      "V:R clef=treble\n" +
+      "V:L clef=bass\n" +
+      "K: A\n" +
+      '[V:R] "A" z3 B,[B,C]8-[B,C]2EA  | "E/F#" [B,EG]3B, EG[A,CF]2-"F#m"[A,CF]8 | "Dadd9" [A,DE]3A, [A,DEA]12 |\n' +
+      "[V:L] z E,A,2 [E,A,]12 & A,,16 | F,,C,A,2 [F,,C,A,]12 | D,,A,,F,2 [D,,A,,F,]12 |"+
 
-              // A quarter-note C.
-              new VF.StaveNote({ keys: ["b/4"], duration: "h" }),
-            
-              // A quarter-note rest. Note that the key (b/4) specifies the vertical
-              // position of the rest.
-              //new VF.StaveNote({ keys: ["b/4"], duration: "qr" }),
-            
-              // A C-Major chord.
-              //new VF.StaveNote({ keys: ["c/4", "e/4", "g/4"], duration: "q" })
-            ];
+      '[V:R] "D/E"[F,A,DE]8 "E"[G,E]8 | "Dadd9" [F,A,E]3A, EA3-A6 "C#m7"[B,EG]2 | "Bm7"[A,DF]4 [A,CE]3B, CE!fermata!A2 [B,CEA]4 |\n' +
+      "[V:L] [E,,E,]16 | D,,A,,F,2 [D,,A,,F,]8-[D,,A,,F,]2C,2 | B,,4 A,,E,A,2 [A,,E,A,2]8|" +
 
-            var beams = VF.Beam.generateBeams(notes);
-            Vex.Flow.Formatter.FormatAndDraw(context, stave, notes);
-            beams.forEach(function(b) {b.setContext(context).draw()})
-          
-            var ties = [
-                new VF.StaveTie({
-                    first_note: notes[1],
-                    last_note: notes[2],
-                    first_indices: [0],
-                    last_indices: [0]
-                }),
-                new VF.StaveTie({
-                    first_note: notes[3],
-                    last_note: notes[4],
-                    first_indices: [0],
-                    last_indices: [0]
-                })
-            ];
-            ties.forEach(function(t) {t.setContext(context).draw()})
-          
-            
-            // Create a voice in 4/4 and add above notes
-            //var voice = new VF.Voice({num_beats: 4,  beat_value: 4});
-            //voice.addTickables(notes);
-            
-            // Format and justify the notes to 400 pixels.
-            //var formatter = new VF.Formatter().joinVoices([voice]).format([voice], 400);
-            
-            // Render voice
-            //voice.draw(context, stave);
+      '[V:R] "A/C#"[B,CEA]3E Aedc A2 [EFA]4-[DFA]2| "D/F#"[A,DA]8 "E/G#"[B,EB]8 ||\n' +
+      "[V:L] C,A,C2 [C,A,C]4 D,A,3-A,4 | [F,,D,]8 [G,,E,]8 ||";
 
-            //---------------------------------------------------------------------------
-            // Create an SVG renderer and attach it to the DIV element named "boo".
-            var div = document.getElementById("boo2")
-            var renderer = new VF.Renderer(div, VF.Renderer.Backends.SVG);
+    window.onload = function() {
+    //function load() {
 
-            // Configure the rendering context.
-            renderer.resize(500, 500);
-            var context = renderer.getContext();
-            context.setFont("Arial", 10, "").setBackgroundFillStyle("#eed");
+      let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+      console.log(transposeValue);
 
-            // Create a tab stave of width 400 at position 10, 40 on the canvas.
-            var stave = new VF.TabStave(10, 40, 400);
-            stave.addClef("tab").setContext(context).draw();
+        ABCJS.renderAbc("paper", abc2,{
+          scale:1.1,
+          //staffwidth: 745,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi", abcmidi,{
+          midiTranspose: transposeValue,
+          //animate: { listener: function(abcjsElement, currentEvent, context) {}, target: abc2, qpm: 120 },
+        });
+        document.getElementById("paper").querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
 
-            var notes = [
-            // A single note
-            new VF.TabNote({
-                positions: [{str: 3, fret: 7}],
-                duration: "q"}),
+      /*ABCJS.startAnimation("paper", abc2, {
+        showCursor: true,
+      });*/
 
-            // A chord with the note on the 3rd string bent
-            new VF.TabNote({
-                positions: [{str: 2, fret: 10},
-                            {str: 3, fret: 9}],
-                duration: "q"}).
-            addModifier(new VF.Bend("Full"), 1),
-
-            // A single note with a harsh vibrato
-            new VF.TabNote({
-                positions: [{str: 2, fret: 5}],
-                duration: "h"}).
-            addModifier(new VF.Vibrato().setHarsh(true).setVibratoWidth(70), 0)
-            ];
-
-            VF.Formatter.FormatAndDraw(context, stave, notes);
-
-            
-            </script>-->
       
-      <script src="/script.js" defer></script>
+      /*-----------------------------Transportar partitura-----------------------------*/
+      var botonMas = document.querySelector(".botonTransportarMas");
+      botonMas.addEventListener("click", function() {
+        let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+        ABCJS.renderAbc("paper", abc2, {
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi", abcmidi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper").querySelectorAll(".abcjs-chord").forEach((el) => {
+              el.setAttribute("fill", "#2159D6");
+              el.setAttribute("stroke", "#2159D6");
+        });
+      });
 
-    </body>
+      var botonMas = document.querySelector(".botonTransportarMenos");
+      botonMas.addEventListener("click", function() {
+        let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+        ABCJS.renderAbc("paper", abc2, {
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi", abcmidi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper").querySelectorAll(".abcjs-chord").forEach((el) => {
+              el.setAttribute("fill", "#2159D6");
+              el.setAttribute("stroke", "#2159D6");
+        });
+      });
+    }
+  </script>
+
+  </body>
 </html>
