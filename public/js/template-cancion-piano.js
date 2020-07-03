@@ -18,17 +18,19 @@ if (tono.includes("m")){
 
 /*----------------TAMPLATE-----------------*/
 let HeadTemplate  =
-    "<title>" + `${h2}` + " | Acordes" + "</title>" +
+    "<title>" + `${h2}` + " | Piano" + "</title>" +
     "<meta charset='utf-8'>" +
     "<meta http-equiv='X-UA-Compatible' content='IE=edge'>" +
     "<meta name='viewport' content='width=device-width, initial-scale=1'>" +
+    "<link rel='manifest' href='/manifest.json'>" +
+    "<link rel='icon' href='https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ffavicon.ico?v=1580511400868' type='image/x-icon'/ >" +
+    "<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>" +
 
     "<!-- import the webpage's stylesheet -->" +
     "<link rel='stylesheet' href='/style.css'>" + 
-    "<link rel='manifest' href='/manifest.json'>" +
     "<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>" +
-    "<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>" +
-    "<link rel='icon' href='https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ffavicon.ico?v=1580511400868' type='image/x-icon'/ >";
+    "<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>" +
+    "<link rel='stylesheet' type='text/css' href='/css/abcjs-midi.css'>";
 
 let BodyTemplate =
     "<div class='encabezado-lista'>" +
@@ -47,17 +49,18 @@ let BodyTemplate =
     "<div class='infoCanto'>" +
         "<div class='tempo'>" +
             `<span style='font-size:18px;'>&#9833;</span>= ${tempo}` +
-            //`<span style='font-size:18px;'>&#119051;</span>` +
         '</div>' +
         "<div class='nombre'>" +
-            'ACORDES' +
+            'PIANO' +
         '</div>' +
         "<div class='tono'>" +
             `Tono: <span class = 'AcordeCanto'>${tono}</span>${menor}` +
         '</div>' +
     '</div>' +
 
-"<div class='canto_body'>" + `${pre}` + '</div>' +  
+"<div class='canto_body'>" + 
+    `${pre}` + 
+'</div>' +  
 
     "<div class = 'flechasRegresarAvanzar'>" +
         "<div class ='arrowRegresar2'>" +
@@ -74,9 +77,11 @@ let BodyTemplate =
     '<br>' +
 
     "<nav class = 'navCanto'>" +
-        "<button class='botonTransportar'>" +
-            'C->D' +
-        '</button>' +
+        "<button class='botonTransportarMenos' style='font-weight: bold;'>-1/2</button>" +
+  
+        "<button class='botonTransportarMas' style='font-weight: bold;'>+1/2</button>" +
+
+        "<button class='botonEnsayar' style='font-weight: bold;'>Ensayo</button>" +
 
         "<button class='botonAudio'>" +
             "<i class='fas fa-music'></i>" +
@@ -99,51 +104,26 @@ let BodyTemplate =
 
 head.innerHTML = HeadTemplate;
 body.innerHTML = BodyTemplate;
+    
+function doOnOrientationChange() {
 
-/*---------------Rotacion de la pantalla (pasar de 2 columnas a 1)-----------*/
-    function doOnOrientationChange() {
-        //Para dispositivos moviles (IOS y Android)
-        if (window.orientation != undefined){
-          switch(window.orientation) {  
-            case -90: case 90:
-              cantoBody.style.columnCount= "2";
-              break; 
-            default:
-              cantoBody.style.columnCount= "1";
-              break; 
-          }
-        }
-        //Para laptops
-        else {
-            let nav = document.querySelector(".navCanto");
-            botonRotar = document.createElement('button');
-            botonRotar.className = "botonRotar";
-            let icono = document.createElement('i');
-            icono.className = 'fas fa-sync-alt';
-                //"<i class='fas fa-sync-alt'></i>";
-            botonRotar.appendChild(icono);
-            nav.appendChild(botonRotar);
-        }
+    if (window.orientation != undefined){
+      switch(window.orientation) {  
+        case -90: case 90:
+          cantoBody.style.columnCount= "1";
+          break; 
+        default:
+          cantoBody.style.columnCount= "1";
+          break; 
+      }
     }
-        
-    window.addEventListener('orientationchange', doOnOrientationChange);
-        
-      // Initial execution if needed
-    if (window.orientation == undefined)
-        doOnOrientationChange();
-
-      //Si presionan el boton rotar para PC o laptops
-    if (botonRotar){
-        botonRotar.onclick = function(){
-            if (document.querySelector(".canto_body").style.columnCount==""){
-                document.querySelector(".canto_body").style.columnCount="2";
-                console.log(document.querySelector(".canto_body").style.columnCount);
-            }
-            if (cantoBody.style.columnCount == "2")
-                cantoBody.style.columnCount = "1";
-            else
-                cantoBody.style.columnCount = "2";
-        }
-    }
-
-//}
+    
+  }
+    
+  window.addEventListener('orientationchange', doOnOrientationChange);
+    
+  // Initial execution if needed
+  if (window.orientation == undefined)
+    doOnOrientationChange();
+  else
+    cantoBody.style.columnCount= "1";
