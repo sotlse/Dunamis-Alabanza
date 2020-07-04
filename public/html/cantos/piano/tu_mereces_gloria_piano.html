@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>  
+  <body class="contenido">
+    <h2 class="tituloDelCanto">Tu mereces gloria</h2>
+    <h3 class="autorDelCanto">Juan Carlos Alvarado</h3>
+    <div class="tempo">120</div>
+    <div class="tono">D</div>
+    
+    <div class="canto_body"> 
+<!---------------Este es el limite----->  
+      <pre data-key="D">
+INTRO:
+div id="paper" style="overflow: hidden;">
+/div>
+div id="midi">
+/div>
+  
+VERSO:
+%
+           Dsus2    F#m7
+Tú mereces gloria y honra.
+            G              Em7
+Señor, levantamos nuestras manos
+      Gmaj7/A        A
+Y exaltamos tu santo nombre.
+
+           D       Gmaj7     F#m7
+Tú mereces gloria         y  honra.
+            G              Em7
+Señor, levantamos nuestras manos
+      Gmaj7/A        G7/A  A
+Y exaltamos tu santo nom - bre.
+
+CORO:
+            D         C#m7b5  A7/F#  Bm7    
+//Grande es Dios, hacedor  de mara - villas
+  Bbm7 - Am7  Bm/D  Gmaj7   D/F#-Em7 
+Y no hay otro como  Tú  
+___________________________________________________
+1.        Gmaj7/A   A      Gadd2/A     
+ ¡No hay otro como Tú!//
+___________________________________________________
+2.     | Dadd2/A - A | G/A - A   coda
+ ¡No hay o  -      tro co -  mo ...
+
+PUENTE1:
+div id="paper2" style="overflow: hidden;">
+/div>
+div id="midi2">
+/div>
+d.s. al coda
+
+PUENTE2:
+coda
+
+div id="paper3" style="overflow: hidden;">
+/div>
+div id="midi3">
+/div>
+
+Gmaj7  D/F#-Em7 | Asus4 | C#m7b5 - F#7 |
+
+| Bm7 - - A|E7 | Gmaj7/A | G7/A  A
+
+CORO:
+            D         C#m7b5  A7/F#  Bm7    
+//Grande es Dios, hacedor  de mara - villas
+  Bbm7 - Am7  Bm/D  Gmaj7   D/F#-Em7 
+Y no hay otro como  Tú  
+___________________________________________________
+1.       Gmaj7/A   A      Gadd2/A    
+ ¡No hay otro como Tú!//
+___________________________________________________
+2.     | Dadd2/A - A | G/A - A |
+ ¡No hay o  -      tro co -  mo ...
+
+FINAL:
+ | D   | Bm7   | Gmaj7   | Bm7/A | A | D |
+...Tú!
+      </pre>
+<!---------------Este es el limite-----> 
+    </div>
+
+    
+    <script type="text/javascript" src='/js/template-cancion-piano.js'></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.transposer.js"></script>
+  <script type="text/javascript">
+      $(function() {
+        $("pre").transpose();
+      });
+    </script>
+  <script src="/script.js" defer></script>
+  <!--http://www.lesession.co.uk/abc/abc_notation.htm-->
+  <script src="/js/abcjs_midi_5.12.0-min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var intromidi = 
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      'Q: 120\n' +
+      "R: Rubato\n" +
+      "V:R clef=treble\n" +
+      "K: D\n" +
+      '[V:R] f z a z a z f z| a4 z2 f2 z2 a2 z2 f2 | z16 |'+ "c'4 z2 a2 z2 c'2 z2 a2 | z16 |\n" +
+      '[V:R] z16 | z16 | f9 z g3 z e2 | z16 ||';
+      var intro = 
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      "V:R clef=treble\n" +
+      "K: D\n" +
+      '[V:R]  f z a z a z f z|"D" a4 z2 f2 z2 a2 z2 f2 | z16 |"F#m7"'+ "c'4 z2 a2 z2 c'2 z2 a2 | z16 |\n" +
+      '[V:R] "Gmaj7" z16 | z16 | "Gmaj7/A" f9 z g3 z e2 | "A" z16 ||';
+
+      var puente1=
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      "V:R clef=treble\n" +
+      "K: D\n" +
+      '[V:R]  |"D" d4 c2 A3 z d2 c2 A2 | z16 | "Bm7" d4 c2 A3 z d2 c2 A2 | z16 | "Am7" z2 d z2 d z2 d2 z d | z16 |"Gmaj7" z16| "A/G" z16| \n'+
+      'w: Tú!';
+      var puente1midi=
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      'Q: 120\n' +
+      "R: Rubato\n" +
+      "V:R clef=treble\n" +
+      "K: D\n" +
+      '[V:R]  | d4 c2 A3 z d2 c2 A2 | z16 | d4 c2 A3 z d2 c2 A2 | z16 | z2 d z2 d z2 d2 z d | z16 | z16| z16|';
+
+      var puente2=
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      "V:R clef=treble\n" +
+      "K: D\n" +
+      '[V:R]  AABdz(d|"Bm" d)zBzde"Bbm7"zf2zezde"Dadd2/A"z(d| d) zBzde"Bm/D"zf2zezdez2 | \n'+
+      'w:    |Tú! \n' + 
+      '[V:R]  |"Gmaj7" z12 "D/F#" z2 "Em7" z2 | z16 | "Asus4" z16 | "C#m7b5" z2 E z2 F z2 "F#7"E z2 F z2 E z D| \n'+
+      '[V:R]  |"Bm7" z12 "A" z2 "E7" z2 | z16 | "Gmaj7/A" z8 B,zDzEz "G7/A" Bz |z2 "A" A z13|';
+      var puente2midi=
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      'Q: 120\n' +
+      "R: Rubato\n" +
+      "V:R clef=treble\n" +
+      "K: D\n" +
+      '[V:R]  AABdzd-| dzBzdezf2zezdezd-| d zBzdezf2zezdez2 |\n'+
+      '[V:R]  | z12  z2  z2 | z16 |  z16 |  z2 E z2 F z2 E z2 F z2 E z D| \n'+
+      '[V:R]  | z12  z2  z2 | z16 |  z8 B,zDzEz  Bz |z2  A z13|';
+
+    window.onload = function() {
+
+      let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+      console.log(transposeValue);
+
+      //INTRO
+        ABCJS.renderAbc("paper", intro,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,paddingright: 0,paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi", intromidi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper").querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+
+      //PUENTE1
+        ABCJS.renderAbc("paper2", puente1,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,paddingright: 0,paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi2", puente1midi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper2").querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+
+      //PUENTE2
+        ABCJS.renderAbc("paper3", puente2,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,paddingright: 0,paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi3", puente2midi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper3").querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+
+
+      
+      /*-----------------------------Transportar partitura-----------------------------*/
+      var botonMas = document.querySelector(".botonTransportarMas");
+      botonMas.addEventListener("click", function() {
+        let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+
+        //INTRO
+        ABCJS.renderAbc("paper", intro, {
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,paddingright: 0,paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi", intromidi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper").querySelectorAll(".abcjs-chord").forEach((el) => {
+              el.setAttribute("fill", "#2159D6");
+              el.setAttribute("stroke", "#2159D6");
+        });
+
+        //PUENTE1
+        ABCJS.renderAbc("paper2", puente1,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,paddingright: 0,paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi2", puente1midi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper2").querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+
+      });
+
+      var botonMas = document.querySelector(".botonTransportarMenos");
+      botonMas.addEventListener("click", function() {
+        let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+
+        //INTRO
+        ABCJS.renderAbc("paper", intro, {
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,paddingright: 0,paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi", intromidi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper").querySelectorAll(".abcjs-chord").forEach((el) => {
+              el.setAttribute("fill", "#2159D6");
+              el.setAttribute("stroke", "#2159D6");
+        });
+
+        //PUENTE1
+        ABCJS.renderAbc("paper2", puente1,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,paddingright: 0,paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi("midi2", puente1midi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById("paper2").querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+x
+      });
+    }
+  </script>
+
+  </body>
+</html> 

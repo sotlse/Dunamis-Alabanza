@@ -80,19 +80,19 @@ $(document).ready( function() {
         }, {
             endDate: '2020-03-15', startDate: '2020-03-15',
             title: 'Programa Dominical 11 - 15 de Marzo',
-            cantos: 'Dios de amor,Danilo Montero_Tu nombre es Cristo,Marcos Witt_Este es mi deseo,Danilo Montero_Dios me ama,Danilo Montero_Eres todopoderoso,Danilo Montero'
+            cantos: 'Yo te busco,Marcos Witt_Tu amor oh Dios,Generacion sin Fronteras_En el lugar de tu presencia,Vino nuevo_Quien nos separara,Juan Carlos Alvarado' 
         }, {
             endDate: '2020-03-22', startDate: '2020-03-22',
             title: 'Programa Dominical 12 - 22 de Marzo',
-            cantos: 'Nada es imposible,Marco Barrientos_La nube de tu presencia,Conquistando Fronteras_Inmerecedor,Abel Zavala_Salmo 45,Marcos Witt_Noble sosten,Popular'
+            cantos: 'Nada es imposible,Marco Barrientos_La nube de tu presencia,Conquistando Fronteras_Inmerecedor,Abel Zavala_Dios me ama,Danilo Montero_Eres todopoderoso,Danilo Montero'
         }, {
             endDate: '2020-03-29', startDate: '2020-03-29',
             title: 'Programa Dominical 13 - 29 de Marzo',
-            cantos: 'Tu palabra,Juan Carlos Alvarado_Yo te busco,Marcos Witt_Tu amor oh Dios,Generacion sin Fronteras_En el lugar de tu presencia,Vino nuevo_Quien nos separara,Juan Carlos Alvarado'
+            cantos: 'Bueno es Dios,Don Moen_Dios de amor,Danilo Montero_Cuan grande es Dios,En Espiritu y Verdad_El Senor es mi pastor,Juan Carlos Alvarado_Noble sosten,Popular'
         }, {
             endDate: '2020-04-05', startDate: '2020-04-05',
             title: 'Programa Dominical 14 - 05 de Abril',
-            cantos: 'Gracia sublime,En espiritu y verdad_Soy sano,Ericson Alexander_Conozco que todo lo puedes,Marco Barrientos_El Senor es mi pastor,Juan Carlos Alvarado_Salmo 113,Popular'
+            cantos: 'Gracia sublime es,En espiritu y verdad_Soy sano,Ericson Alexander_Conozco que todo lo puedes,Marco Barrientos_Este es mi deseo,Danilo Montero_Salmo 113,Popular'
         }, {
             endDate: '2020-04-10', startDate: '2020-04-10',
             title: 'Culto 7 palabras - 10 de Abril',
@@ -108,7 +108,7 @@ $(document).ready( function() {
         }, {
             endDate: '2020-04-26', startDate: '2020-04-26',
             title: 'Programa Dominical 17 - 26 de Abril',
-            cantos: ''
+            cantos: 'Tu nombre es Cristo,Marcos Witt_Salmo 45,Marcos Witt'
         },
 
         /*Actividades sin cantos, colocar 'No' en la categoria cantos*/

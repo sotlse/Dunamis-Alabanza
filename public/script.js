@@ -496,7 +496,7 @@ class UI {
       audio:"",
       subpaginas: ["Letra","Acordes"],
     },
-  
+
     {
       pagina: startPath + "a_el_alto_y_sublime.html",
       titulo: "A el Alto y Sublime",
@@ -508,6 +508,16 @@ class UI {
     },
 
     {
+      pagina: startPath + "abre_los_cielos.html",
+      titulo: "Abre los cielos",
+      autor: "Vino Nuevo",
+      tono: "G",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+      
+    {
       pagina: startPath + "al_mundo_paz_ibi.html",
       titulo: "Al mundo paz - Hay libertad",
       autor: "IBI",
@@ -516,13 +526,23 @@ class UI {
       audio:"",
       subpaginas: ["Letra","Acordes"],
     },
-  
+
     {
-      pagina: startPath + "abre_los_cielos.html",
-      titulo: "Abre los cielos",
-      autor: "Vino Nuevo",
-      tono: "G",
+      pagina: startPath + "al_que_es_digno.html",
+      titulo: "Al que es digno",
+      autor: "Coalo Zamorano",
+      tono: "D",
       categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+      
+    {
+      pagina: startPath + "al_que_me_cine.html",
+      titulo: "Al que me cine",
+      autor: "Jesús Adrián Romero",
+      tono: "F",
+      categoria: ["Alabanza","Fortaleza"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
     },
@@ -548,6 +568,26 @@ class UI {
     },  
 
     {
+      pagina: startPath + "bueno_es_dios.html",
+      titulo: "Bueno es Dios",
+      autor: "Don Moen",
+      tono: "D",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },  
+
+    {
+      pagina: startPath + "cantare_de_tu_amor_dm.html",
+      titulo: "Cantare de tu amor",
+      autor: "Danilo Montero",
+      tono: "C",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
       pagina: startPath + "cordero_santo.html",
       titulo: "Cordero Santo",
       autor: "Roberto Torres",
@@ -555,6 +595,26 @@ class UI {
       categoria: ["Adoracion"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
+      pagina: startPath + "cuan_grande_es_dios.html",
+      titulo: "Cuan grande es Dios",
+      autor: "En Espirity y en Verdad",
+      tono: "C",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
+      pagina: startPath + "cuando_veo_tu_amor.html",
+      titulo: "Cuando veo tu amor",
+      autor: "Marco Barrientos",
+      tono: "D",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes","Piano"],
     }, 
 
     {
@@ -578,14 +638,14 @@ class UI {
     }, 
 
     {
-      pagina: startPath + "dios_esta_aqui.html",
-      titulo: "Dios esta aqui",
-      autor: "Darlene Zschech",
+      pagina: startPath + "dios_de_amor.html",
+      titulo: "Dios de amor",
+      autor: "Danilo Montero",
       tono: "D",
-      categoria: ["Navidad","Alabanza"],
+      categoria: ["Fortaleza","Evangelismo","Semana Santa"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
-    }, 
+    },
 
     {
       pagina: startPath + "dios_de_pactos.html",
@@ -598,11 +658,81 @@ class UI {
     }, 
 
     {
+      pagina: startPath + "dios_el_mas_grande.html",
+      titulo: "Dios el mas grande",
+      autor: "Juan Carlos Alvarado",
+      tono: "Bb",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
+      pagina: startPath + "dios_esta_aqui.html",
+      titulo: "Dios esta aqui",
+      autor: "Darlene Zschech",
+      tono: "D",
+      categoria: ["Navidad","Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
+      pagina: startPath + "dios_ha_sido_fiel.html",
+      titulo: "Dios ha sido fiel",
+      autor: "Marcos Witt",
+      tono: "A",
+      categoria: ["Adoracion","Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
       pagina: startPath + "dios_imparable.html",
       titulo: "Dios imparable",
       autor: "Marcos Witt",
       tono: "A",
       categoria: ["Adoracion","Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina: startPath + "dios_me_ama.html",
+      titulo: "Dios me ama",
+      autor: "Danilo Montero",
+      tono: "A",
+      categoria: ["Fortaleza","Evangelismo","Semana Santa"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+      
+    {
+      pagina: startPath + "el_amor_de_cristo.html",
+      titulo: "El amor de Cristo",
+      autor: "Sovereign Grace",
+      tono: "E",
+      categoria: ["Evangelismo"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina: startPath + "el_dios_que_adoramos.html",
+      titulo: "El Dios que adoramos",
+      autor: "Sovereign Grace",
+      tono: "F#",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes","Guitarra Electrica"],
+    },
+
+    {
+      pagina: startPath + "el_senor_es_mi_pastor.html",
+      titulo: "El Senor es mi pastor",
+      autor: "Juan Carlos Alvarado",
+      tono: "A",
+      categoria: ["Fortaleza"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
     },
@@ -646,6 +776,16 @@ class UI {
       audio:"",
       subpaginas: ["Letra","Acordes"],
     }, 
+
+    {
+      pagina: startPath + "eres_mi_amigo_fiel.html",
+      titulo: "Eres mi amigo fiel",
+      autor: "Coalo Zamorano",
+      tono: "E",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
     
     {
       pagina: startPath + "gracia_sublime_es.html",
@@ -663,6 +803,26 @@ class UI {
       autor: "Don Moen",
       tono: "F",
       categoria: ["Accion de Gracias"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
+      pagina: startPath + "hay_libertad.html",
+      titulo: "Hay libertad",
+      autor: "IBI",
+      tono: "D",
+      categoria: ["Alabanza","Evangelismo"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina: startPath + "inmerecedor.html",
+      titulo: "Inmerecedor",
+      autor: "Abel Zavala",
+      tono: "C",
+      categoria: ["Accion de Gracias","Adoracion"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
     }, 
@@ -688,6 +848,16 @@ class UI {
     }, 
 
     {
+      pagina: startPath + "la_nube_de_tu_presencia.html",
+      titulo: "La nube de tu presencia",
+      autor: "Conquistando Fronteras",
+      tono: "B",
+      categoria: ["Adoracion"],
+      audio:"",
+      subpaginas: ["Letra","Acordes","Guitarra Electrica"],
+    },
+
+    {
       pagina: startPath + "mas_el_dios_de_toda_gracia.html",
       titulo:"Mas el Dios de toda gracia",
       autor:"Marcos Witt",
@@ -698,11 +868,31 @@ class UI {
     },
 
     {
+      pagina: startPath + "nada_es_imposible_mb.html",
+      titulo: "Nada es imposible",
+      autor: "Marco Barrientos",
+      tono: "Bb",
+      categoria: ["Fortaleza","Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    }, 
+
+    {
       pagina: startPath + "navidad_ya_va_llegando.html",
       titulo: "Navidad ya va llegando",
       autor: "Epic kids",
       tono: "D",
       categoria: ["Navidad"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina: startPath + "noble_sosten.html",
+      titulo: "Noble sosten",
+      autor: "Popular",
+      tono: "D",
+      categoria: ["Fortaleza"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
     },
@@ -755,6 +945,26 @@ class UI {
       categoria: ["Alabanza"],
       audio:"",
       subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina: startPath + "rey_de_gloria.html",
+      titulo: "Rey de gloria",
+      autor: "Marco Barrientos",
+      tono: "E",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes"],
+    },
+
+    {
+      pagina: startPath + "sana_nuestra_tierra.html",
+      titulo:"Sana nuestra tierra",
+      autor:"Marcos Witt",
+      tono:"G",
+      categoria:["Oracion","Perdon"],
+      audio:"",
+      subpaginas: ["Letra","Acordes","Piano","Guitarra Electrica"],
     },
       
     {
@@ -818,6 +1028,16 @@ class UI {
     },
 
     {
+      pagina: startPath + "te_doy_gloria.html",
+      titulo: "Te doy gloria",
+      autor: "En Espiritu y verdad",
+      tono: "C",
+      categoria: ["Alabanza"],
+      audio:"",
+      subpaginas: ["Letra","Acordes","Guitarra Electrica"],
+    },
+
+    {
       pagina: startPath + "temprano_yo_te_buscare.html",
       titulo: "Temprano yo te buscare",
       autor: "Marcos Witt",
@@ -863,7 +1083,7 @@ class UI {
       tono:"G",
       categoria:["Alabanza"],
       audio:"",
-      subpaginas: ["Letra","Acordes","Guitarra Electrica"],
+      subpaginas: ["Letra","Letra Mujeres","Acordes","Guitarra Electrica"],
     },
 
     {
@@ -875,17 +1095,7 @@ class UI {
       audio:"",
       subpaginas: ["Letra","Acordes"],
     }
-,
-
-    {
-      pagina: startPath + "vamos_a_cantar.html",
-      titulo:"Vamos a cantar",
-      autor:"En espiritu y verdad",
-      tono:"D#",
-      categoria:["Alabanza"],
-      audio:"",
-      subpaginas: ["Letra","Acordes"],
-    }      
+      
     ];
     if(tituloTexto === "Dunamis Adoracion | General"){
       baseCanciones.forEach((canto) => UI.agregarCantosAListaCategoria(canto));

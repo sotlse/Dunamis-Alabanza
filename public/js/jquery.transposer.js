@@ -40,7 +40,9 @@
             if (name.charAt(name.length-1) == "m") {
                 name = name.substring(0, name.length-1);
             }
+            //console.log(name);
             for (var i = 0; i < keys.length; i++) {
+                //console.log(keys[i]);
                 if (name == keys[i].name) {
                     return keys[i];
                 }
@@ -55,6 +57,7 @@
         };
     
         var getNewKey = function (oldKey, delta, targetKey) {
+            
             var keyValue = getKeyByName(oldKey).value + delta;
     
             if (keyValue > 11) {
@@ -64,6 +67,7 @@
             }
             
             var i=0;
+            console.log(keys);
             if (keyValue == 0 || keyValue == 2 || keyValue == 5 || keyValue == 7 || keyValue == 10) {
                 // Return the Flat or Sharp Key
                 switch(targetKey.name) {
@@ -222,11 +226,14 @@
                     tokens[i].startsWith("3") || 
                     tokens[i].includes("%") ||              //SEGNO
                     tokens[i].includes("@") ||              //Simbolo Coda
+                    tokens[i].includes("fine") ||            //Final
                     tokens[i].includes("d.c. al coda") ||    //Da capo al coda
+                    tokens[i].includes("tocoda") ||         //To Coda
                     tokens[i].includes("coda") ||           //Coda
                     tokens[i].includes("d.s.") ||            //Dal Segno
                     tokens[i].includes("d.c.") ||            //Da Capo
-                    tokens[i].includes("d.s. al coda"))      //Dal Segno al coda
+                    tokens[i].includes("d.s. al fine") ||    //Dal Segno al Fine
+                    tokens[i].includes("d.s. al coda"))      //Dal Segno al Coda
                     return true
                 //console.log(!$.trim(tokens[i]).length);
                 //console.log(!tokens[i].match(opts.chordRegex));
@@ -252,11 +259,14 @@
             .replace("1.","<span class='fontNotas'>1.</span>")
             .replace("2.","<span class='fontNotas'>2.</span>")
             .replace("3.","<span class='fontNotas'>3.</span>")
-            .replace(/[%]/g,"<span class='fontNotas'>%</span>")
+            .replace(/[%]/g,"<span class='fontNotas'>&#119051;</span>")
             .replace(/[@]/g,"<span class='fontNotas'>@</span>")
-            .replace("d.s. al coda","<span class='fontNotas'>D.S. al coda</span>")
-            .replace("d.c. al coda","<span class='fontNotas'>D.C. al coda</span>")
-            .replace("coda","<span class='fontNotas'>coda</span>")
+            .replace("d.s. al coda","<span class='fontNotas'>D.S. al Coda</span>")
+            .replace("d.c. al coda","<span class='fontNotas'>D.C. al Coda</span>")
+            .replace("d.s. al fine","<span class='fontNotas'>D.S. al Fine</span>")
+            .replace("tocoda","<span class='fontNotas'>To Coda</span>")
+            .replace("coda","<span class='fontNotas'>Coda</span>")
+            .replace("fine","<span class='fontNotas'>Fine</span>")
             .replace("d.s.","<span class='fontNotas'>D.S.</span>")
             .replace("d.c.","<span class='fontNotas'>D.C.</span>");
         };
@@ -439,10 +449,13 @@
                 
                 //console.log(suma);
                 //console.log(nuevoTono);
-                if (nuevoTono[0].name==="A#")
+                /*if (nuevoTono[0].name==="A#")
                     nuevoTono[0].name = "Bb";
                 else if (nuevoTono[0].name==="D#")
-                    nuevoTono[0].name = "Eb";
+                    nuevoTono[0].name = "Eb";*/
+                if (nuevoTono[1])
+                    transposeSong($this, nuevoTono[1].name);
+                else
                 transposeSong($this, nuevoTono[0].name);
                 //return false;
                 TotalDelta = TotalDelta - 1;
@@ -462,10 +475,11 @@
                 });
                 //console.log(nuevoTono);
                 //console.log(suma);
-                if (nuevoTono[0].name==="A#")
+                /*if (nuevoTono[0].name==="A#")
                     nuevoTono[0].name = "Bb";
                 else if (nuevoTono[0].name==="D#")
-                    nuevoTono[0].name = "Eb";
+                    nuevoTono[0].name = "Eb";*/
+                
                 transposeSong($this, nuevoTono[0].name);
 
                 TotalDelta = TotalDelta + 1;
@@ -574,8 +588,8 @@
   
   
     $.fn.transpose.defaults = {
-        chordRegex: /^[A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*(\/[A-G][b\#]*)*$/,
-        chordReplaceRegex: /([A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*)/g
+        chordRegex: /^[A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|°|°7|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*(\/[A-G][b\#]*)*$/,
+        chordReplaceRegex: /([A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|°|°7|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*)/g
     };
   
   })(jQuery);
