@@ -18,6 +18,20 @@
   padding: -50px;*/
 }
 
+.fontNotas3{
+  font-weight: 1000;
+  letter-spacing: -1px;
+  font-family:  Arial Unicode MS, Lucida Sans Unicode, Lucida Grande, arial, serif;
+  color:rgb(173, 0, 0);
+  line-height: 0.2;
+  text-shadow: 1px 1px 9px red;
+  font-size: 110%;
+  /*font-family: notas;
+  font-size: 150%;
+  border: solid;
+  padding: -50px;*/
+}
+
 .fontNotas2{
   font-weight: 1000;
   letter-spacing: -1px;

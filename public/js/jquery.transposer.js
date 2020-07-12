@@ -259,7 +259,7 @@
             .replace("1.","<span class='fontNotas'>1.</span>")
             .replace("2.","<span class='fontNotas'>2.</span>")
             .replace("3.","<span class='fontNotas'>3.</span>")
-            .replace(/[%]/g,"<span class='fontNotas'>&#119051;</span>")
+            .replace(/[%]/g,"<span class='fontNotas3'>&#119051;</span>")
             .replace(/[@]/g,"<span class='fontNotas'>@</span>")
             .replace("d.s. al coda","<span class='fontNotas'>D.S. al Coda</span>")
             .replace("d.c. al coda","<span class='fontNotas'>D.C. al Coda</span>")
