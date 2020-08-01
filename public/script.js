@@ -28,6 +28,7 @@ let botonAudio = document.querySelector(".botonAudio");
 //ar = document.querySelector(".botonTransportar");
 let botonTextoChico = document.querySelector(".botonTextoChico");
 let botonTextoGrande = document.querySelector(".botonTextoGrande");
+let botonMostrarAcordes = document.querySelector(".botonMostrarAcorde");
 let botonCasa = document.querySelector(".botonCasa");
 //Rotacion de pantalla
 var current_mode = screen.orientation;
@@ -465,6 +466,17 @@ if (letraBody)
   letraBody.style.fontSize = tamano + "%" ;
 }
 
+/*-----------------------BOTON MOSTRAR IMAGEN DE ACORDES-----------------------*/
+if(botonMostrarAcordes){
+  var ListaAcordesNEW = [];
+  botonMostrarAcordes.onclick = function (){
+    var ListaAcordes = JSON.parse(localStorage.getItem("acordesCanto"));
+    $('#mytab').toggle();
+    console.log("-Lista de acordes:" + ListaAcordes);
+    jtab.render($('#mytab'),ListaAcordes);
+  }
+}
+
 /*-----------------------BOTON HOME-----------------------*/
 if(botonCasa){
   botonCasa.addEventListener("click",(e) => {
@@ -575,7 +587,17 @@ class UI {
         categoria: ["Adoracion","Servicio"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
-      },  
+      }, 
+      
+      {
+        pagina: startPath + "bueno_es_alabar.html",
+        titulo: "Bueno es alabar",
+        autor: "Danilo Montero",
+        tono: "G",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
 
       {
         pagina: startPath + "bueno_es_dios.html",
@@ -716,6 +738,16 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       }, 
+
+      {
+        pagina: startPath + "dios_poderoso.html",
+        titulo: "Dios poderoso",
+        autor: "IBI",
+        tono: "Bb",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
         
       {
         pagina: startPath + "el_amor_de_cristo.html",

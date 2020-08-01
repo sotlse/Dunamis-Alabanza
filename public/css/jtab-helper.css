@@ -1,0 +1,16 @@
+.jtab {
+    height:218px;
+}
+.jtab.chordonly {
+  height:118px;
+}
+.jtab.tabonly {
+  height:100px;
+}
+
+#mytab{
+  /*background-color: red;*/
+  margin:0 -40px 0 -50px;
+  overflow: auto;
+  display: none;
+}

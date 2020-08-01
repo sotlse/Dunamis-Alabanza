@@ -1,7 +1,8 @@
 /* CSS files add styling rules to your content */
 @font-face{
-  src:url(https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ftypemymusic.notation.ttf?v=1581114781979);
-  /*src:url(https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FMetdemo-BLMG.ttf?v=1581119000020);*/
+  /*src:url(https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ftypemymusic.notation.ttf?v=1581114781979);
+  src:url(https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FMetdemo-BLMG.ttf?v=1581119000020);*/
+  src:url(https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2FARIALUNI.TTF?v=1594777544823);
   font-family: notas;
 }
 
@@ -9,9 +10,9 @@
   font-weight: 1000;
   letter-spacing: -1px;
   font-family:  arial, serif;
-  color:rgb(173, 0, 0);
+  color:rgb(200, 0, 0);
   line-height: 0.2;
-  text-shadow: 1px 1px 6px red;
+  text-shadow: 0.4px 0.5px 10px red;
   /*font-family: notas;
   font-size: 150%;
   border: solid;
@@ -19,13 +20,14 @@
 }
 
 .fontNotas3{
-  font-weight: 1000;
+  /*font-weight: 610;*/
+  font-weight: bold;
   letter-spacing: -1px;
-  font-family:  Arial Unicode MS, Lucida Sans Unicode, Lucida Grande, arial, serif;
-  color:rgb(173, 0, 0);
-  line-height: 0.2;
-  text-shadow: 1px 1px 9px red;
-  font-size: 110%;
+  font-family:   "FreeSerif", "Symbola",  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:rgb(200, 0, 0);
+  line-height: 1.3;
+  text-shadow: 1px 1px 14px red;
+  font-size: 120%;
   /*font-family: notas;
   font-size: 150%;
   border: solid;
@@ -33,13 +35,13 @@
 }
 
 .fontNotas2{
-  font-weight: 1000;
-  letter-spacing: -1px;
-  /*font-family:  arial, serif;*/
-  color:rgb(173, 0, 0);
-  font-family: notas;
-  /*font-size: 150%;
-  border: solid;
+  font-weight: bold;
+  font-family:  "FreeSerif", arial, serif;
+  color:rgb(200, 0, 0);
+  text-shadow: 1px 1px 14px red;
+  font-size: 105%;
+  vertical-align: sub;
+  /*border: solid;
   padding: -50px;*/
 }
 
@@ -334,7 +336,7 @@ a {
   margin: 0px 5px;
 }
 
-.botonAudio {
+.botonAudio, .botonMostrarAcorde {
   padding: 5px;
   margin: 0px 5px;
 }
@@ -455,7 +457,7 @@ a {
 
 .tituloCoro {
   /*background-color: rgb(226, 43, 43);*/
-  background-color: rgb(160, 91, 224);
+  background-color: rgb(255, 162, 119);
   color: white;
   margin: 0px 0px -13px 0px;
   padding: 2px;

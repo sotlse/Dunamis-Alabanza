@@ -83,37 +83,95 @@ $(document).ready( function() {
             cantos: 'Yo te busco,Marcos Witt_Tu amor oh Dios,Generacion sin Fronteras_En el lugar de tu presencia,Vino nuevo_Quien nos separara,Juan Carlos Alvarado' 
         }, {
             endDate: '2020-03-22', startDate: '2020-03-22',
-            title: 'Programa Dominical 12 - 22 de Marzo',
-            cantos: 'Nada es imposible,Marco Barrientos_La nube de tu presencia,Conquistando Fronteras_Inmerecedor,Abel Zavala_Dios me ama,Danilo Montero_Eres todopoderoso,Danilo Montero'
+            title: 'Programa Dominical 12 y ONLINE - 22 de Marzo',
+            cantos: 'Nada es imposible,Marco Barrientos_La nube de tu presencia,Conquistando Fronteras_Inmerecedor,Abel Zavala_Dios me ama,Danilo Montero'
         }, {
             endDate: '2020-03-29', startDate: '2020-03-29',
-            title: 'Programa Dominical 13 - 29 de Marzo',
-            cantos: 'Bueno es Dios,Don Moen_Dios de amor,Danilo Montero_Cuan grande es Dios,En Espiritu y Verdad_El Senor es mi pastor,Juan Carlos Alvarado_Noble sosten,Popular'
+            title: 'Programa Dominical ONLINE 2 - 29 de Marzo',
+            cantos: ''
         }, {
             endDate: '2020-04-05', startDate: '2020-04-05',
-            title: 'Programa Dominical 14 - 05 de Abril',
-            cantos: 'Gracia sublime es,En espiritu y verdad_Soy sano,Ericson Alexander_Conozco que todo lo puedes,Marco Barrientos_Este es mi deseo,Danilo Montero_Salmo 113,Popular'
+            title: 'Programa Dominical ONLINE 3 - 05 de Abril',
+            cantos: 'Dios poderoso,IBI_Sana nuestra tierra,Marcos Witt_Tu fidelidad,Marcos Witt'
         }, {
             endDate: '2020-04-10', startDate: '2020-04-10',
             title: 'Culto 7 palabras - 10 de Abril',
-            cantos: 'Jesus el mecias,_Dios puede salvar,_Cordero Santo,_Preciosa sangre,Julio Melgar_'
+            cantos: ''
         }, {
             endDate: '2020-04-12', startDate: '2020-04-12',
-            title: 'Domingo de Resurreccion - 12 de Abril',
+            title: 'Domingo de Resurreccion ONLINE 4 - 12 de Abril',
             cantos: ''
         }, {
             endDate: '2020-04-19', startDate: '2020-04-19',
-            title: 'Programa Dominical 16 - 19 de Abril',
+            title: 'Programa Dominical ONLINE 5 - 19 de Abril',
             cantos: ''
         }, {
             endDate: '2020-04-26', startDate: '2020-04-26',
-            title: 'Programa Dominical 17 - 26 de Abril',
-            cantos: 'Tu nombre es Cristo,Marcos Witt_Salmo 45,Marcos Witt'
+            title: 'Programa Dominical ONLINE 6 - 26 de Abril',
+            cantos: ''
+        }, {
+            endDate: '2020-05-10', startDate: '2020-05-10',
+            title: 'Programa Dominical ONLINE 7 Vespertino - 10 de Mayo',
+            cantos: 'Nada es imposible,Marco Barrientos_Jesus mi buen pastor,Marcos Witt'
+        }, {
+            endDate: '2020-05-17', startDate: '2020-05-17',
+            title: 'Programa Dominical ONLINE 8- 27 de Mayo',
+            cantos: 'Dios de amor,Danilo Montero_Tu mereces gloria,Juan Carlos Alvarado'
+        }, {
+            endDate: '2020-05-24', startDate: '2020-05-24',
+            title: 'Programa Dominical ONLINE 9- 24 de Mayo',
+            cantos: 'La nube de tu presencia,Vino nuevo_Tu mereces gloria,Juan Carlos Alvarado'
+        }, {
+            endDate: '2020-05-31', startDate: '2020-05-31',
+            title: 'Programa Dominical ONLINE 10 - 31 de Mayo',
+            cantos: 'Dios imparable,Marcos Witt_Tu eres santo,Michael W. Smith_Aqui estoy adorandote,Conquistando Fronteras'
+        }, {
+            endDate: '2020-06-07', startDate: '2020-06-07',
+            title: 'Programa Dominical ONLINE 11 - 07 de Junio',
+            cantos: 'Vamos a cantar,En espiritu y verdad_Gracia sublime es,En espiritu y verdad_Temprano yo te buscare,Marcos Witt'
+        }, {
+            endDate: '2020-06-14', startDate: '2020-06-14',
+            title: 'Programa Dominical ONLINE 12 - 14 de Junio',
+            cantos: 'El Dios que adoramos,IBI_El es mi amigo fiel,Coalo Zamorano_Dios el mas grande,Juan Carlos Alvarado'
+        }, {
+            endDate: '2020-06-21', startDate: '2020-06-21',
+            title: 'Programa Dominical ONLINE 13 - 21 de Junio',
+            cantos: 'Rey de gloria,Marco Barrientos_Bueno es Dios,Don Moen_Cuan grande es Dios,En espiritu y verdad'
+        }, {
+            endDate: '2020-06-28', startDate: '2020-06-28',
+            title: 'Programa Dominical ONLINE 14 - 28 de Junio',
+            cantos: 'Un siervo para tu gloria,IBI_Al que me cine,Marcos Witt_Dios ha sido fiel,Marcos Witt'
+        }, {
+            endDate: '2020-07-05', startDate: '2020-07-05',
+            title: 'Programa Dominical ONLINE 15 - 05 de Julio',
+            cantos: 'Tu eres santo,Michael W. Smith_Al que es digno,Coalo Zamorano_Dios me ama,Danilo Montero'
+        }, {
+            endDate: '2020-07-12', startDate: '2020-07-12',
+            title: 'Programa Dominical ONLINE 16 - 12 de Julio',
+            cantos: 'Hay libertad,IBI_Cantare de tu amor,Danilo Montero_El amor de Cristo,IBI'
+        }, {
+            endDate: '2020-07-19', startDate: '2020-07-19',
+            title: 'Programa Dominical ONLINE 17 - 19 de Julio',
+            cantos: 'Te alabare mi buen Jesus,Danilo Montero_Vamos a cantar,En espiritu y verdad_El Senor es mi pastor,Danilo Montero'
+        }, {
+            endDate: '2020-07-26', startDate: '2020-07-26',
+            title: 'Programa Dominical ONLINE 18',
+            cantos: 'Bueno es Dios,Don Moen_Dios poderoso,IBI_Aqui estoy adorandote,Conquistando Fronteras'
+        }, {
+            endDate: '2020-08-02', startDate: '2020-08-02',
+            title: 'Programa Dominical ONLINE 19',
+            cantos: 'Tu nombre oh Dios,Marcos Witt_Gracia sublime es,En espiritu y verdad_Cuan grande es Dios,En espiritu y verdad'
+        },
+
+        {
+            endDate: '2020-08-09', startDate: '2020-08-09',
+            title: 'Programa Dominical ONLINE 20',
+            cantos: 'Bueno es alabar,Danilo Montero_Gracia sublime es,En espiritu y verdad_Cuan grande es Dios,En espiritu y verdad'
         },
 
         /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
         {
-            endDate: '2020-07-25', startDate: '2020-07-18',
+            endDate: '2020-07-18', startDate: '2020-07-17',
             title: 'Viaje Misionero',
             cantos: 'No'
         }

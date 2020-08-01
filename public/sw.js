@@ -123,8 +123,8 @@ self.addEventListener('notificationclick', function(event) {
 
 
 
-/*-------------------------Expiracion de usuario-------------------------------*/
-self.addEventListener('pushsubscriptionchange', function(event) {
+/*-------------------------Expiracion de usuario y resuscribir-------------------------------*/
+/*self.addEventListener('pushsubscriptionchange', function(event) {
   console.log('Subscription expired');
   event.waitUntil(
     self.registration.pushManager.subscribe({ userVisibleOnly: true })
@@ -138,7 +138,26 @@ self.addEventListener('pushsubscriptionchange', function(event) {
         body: JSON.stringify(subscription
           /*{
           //endpoint: subscription.endpoint
-        }*/)
+        }*//*)
+      });
+    })
+  );
+});*/
+
+self.addEventListener('pushsubscriptionchange', function(event) {
+  console.log('Subscription expired');
+  event.waitUntil(
+    self.registration.pushManager.subscribe({ userVisibleOnly: true })
+    .then(function(subscription) {
+      console.log('Subscribed after expiration', subscription.endpoint);
+      return fetch('/save-subscription', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          endpoint: subscription.endpoint
+        })
       });
     })
   );

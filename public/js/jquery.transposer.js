@@ -67,7 +67,7 @@
             }
             
             var i=0;
-            console.log(keys);
+            //console.log(keys);
             if (keyValue == 0 || keyValue == 2 || keyValue == 5 || keyValue == 7 || keyValue == 10) {
                 // Return the Flat or Sharp Key
                 switch(targetKey.name) {
@@ -139,7 +139,7 @@
             //localStorage.setItem("DeltaTono",JSON.stringify(delta));
             $("span.c", target).each(function (i, el) {
                 transposeChord(el, delta, newKey);
-                //console.log($("span.c", target));
+                //console.log(el);
             });
             
             currentKey = newKey;
@@ -224,6 +224,7 @@
                     tokens[i].startsWith("1") || 
                     tokens[i].startsWith("2") || 
                     tokens[i].startsWith("3") || 
+                    tokens[i].startsWith("4") || 
                     tokens[i].includes("%") ||              //SEGNO
                     tokens[i].includes("@") ||              //Simbolo Coda
                     tokens[i].includes("fine") ||            //Final
@@ -244,8 +245,20 @@
         };
         
         //Colocar class='c' a todos los acordes y class='o' a los simbolos "|" y "-" que se encuentran en la linea de acordes
+        var lista = [];
+        var listaAcordes = [];
+
         var wrapChords = function (input) {
-            //console.log(input);
+
+            //Anotar en una lista todos los acordes del canto
+            lista = input.split(/[ ]|[-]|[|]/g);
+            for (var i=0;i<lista.length;i++){
+                if (lista[i].startsWith("A")||lista[i].startsWith("B")||lista[i].startsWith("C")||lista[i].startsWith("D")||lista[i].startsWith("E")||lista[i].startsWith("F")||lista[i].startsWith("G")){
+                    listaAcordes.push(lista[i]);  
+                }
+            }
+            //console.log(listaAcordes);
+
             //console.log(input.replace("|","<span class='o'>|</span>"));
             //console.log(input.replace(opts.chordReplaceRegex, "<span class='c'>$1</span>").replace(/[|]/g,"<span class='o'>|</span>").replace(/[-]/g,"<span class='o'>-</span>"));
             return input
@@ -254,21 +267,23 @@
             .replace(":||","<span class='fontNotas'>:||</span>")
             .replace(/[|]/g,"<span class='o'>|</span>")
             .replace(/[-]/g,"<span class='o'>-</span>")
-            .replace("1,2.","<span class='fontNotas'>1,2.</span>")
-            .replace("2,3.","<span class='fontNotas'>2,3.</span>")
-            .replace("1.","<span class='fontNotas'>1.</span>")
-            .replace("2.","<span class='fontNotas'>2.</span>")
-            .replace("3.","<span class='fontNotas'>3.</span>")
+            .replace("1,2.","<span class='fontNotas' style='font-style: italic;'>1,2.</span>")
+            .replace("1,3.","<span class='fontNotas' style='font-style: italic;'>1,3.</span>")
+            .replace("2,3.","<span class='fontNotas' style='font-style: italic;'>2,3.</span>")
+            .replace("1.","<span class='fontNotas' style='font-style: italic;'>1.</span>")
+            .replace("2.","<span class='fontNotas' style='font-style: italic;'>2.</span>")
+            .replace("3.","<span class='fontNotas' style='font-style: italic;'>3.</span>")
+            .replace("4.","<span class='fontNotas' style='font-style: italic;'>4.</span>")
             .replace(/[%]/g,"<span class='fontNotas3'>&#119051;</span>")
             .replace(/[@]/g,"<span class='fontNotas'>@</span>")
-            .replace("d.s. al coda","<span class='fontNotas'>D.S. al Coda</span>")
-            .replace("d.c. al coda","<span class='fontNotas'>D.C. al Coda</span>")
-            .replace("d.s. al fine","<span class='fontNotas'>D.S. al Fine</span>")
-            .replace("tocoda","<span class='fontNotas'>To Coda</span>")
-            .replace("coda","<span class='fontNotas'>Coda</span>")
-            .replace("fine","<span class='fontNotas'>Fine</span>")
-            .replace("d.s.","<span class='fontNotas'>D.S.</span>")
-            .replace("d.c.","<span class='fontNotas'>D.C.</span>");
+            .replace("d.s. al coda","<span class='fontNotas' style='font-style: italic;'>D.S. al Coda</span>")
+            .replace("d.c. al coda","<span class='fontNotas' style='font-style: italic;'>D.C. al Coda</span>")
+            .replace("d.s. al fine","<span class='fontNotas' style='font-style: italic;'>D.S. al Fine</span>")
+            .replace("tocoda","<span class='fontNotas' style='font-style: italic;'>To Coda</span>")
+            .replace("coda","<span class='fontNotas' style='font-style: italic;'>Coda &#119052</span>")
+            .replace("fine","<span class='fontNotas' style='font-style: italic;'>Fine</span>")
+            .replace("d.s.","<span class='fontNotas' style='font-style: italic;'>D.S.</span>")
+            .replace("d.c.","<span class='fontNotas' style='font-style: italic;'>D.C.</span>");
         };
 
         /*-----------------------VEXTAB cambiar tablatura cuando cambia tono------------------------*/
@@ -357,7 +372,7 @@
 
             
             
-            /*---------------Si presionan boton de acorde, ejecutar----------------*/
+/*------------------------------Si presionan boton de acorde, ejecutar-----------------------*/
             var $this = $(this); //<pre> del canto
             //console.log($this);
             var keysHtml = $("<div class='transpose-keys'></div>");
@@ -374,7 +389,7 @@
             //$(this).before(keysHtml);
             
 
-            /*----------------------Mostrar botonera de transportar ----------------------*/
+/*------------------------------------Mostrar botonera de transportar ------------------------*/
             //Mostrar antes de la seccion NavCanto
             $( ".navCanto" ).before(keysHtml);
 
@@ -383,7 +398,7 @@
                 keysHtml.toggle();
             });
 
-            /*----------------------Guardar canto con tono seleccionado----------------------*/
+/*----------------------Guardar canto con tono seleccionado----------------------*/
             var TonoCanciones = JSON.parse(localStorage.getItem("TonosActuales"));
             let Tonos = TonoCanciones.filter(function(canto){
                 return  canto.titulo.toLowerCase() === $(".tituloDelCanto").text().toLowerCase(); 
@@ -401,7 +416,7 @@
             /*---------------------Si es menor, elimiar la m para buscar en botonera-------------------*/
             Tonos[0].tono = Tonos[0].tono.replace("m","");
 
-            /*--------------Mostrar en la botonera que tono esta el canto-----------------*/
+/*--------------Mostrar en la botonera que tono esta el canto-----------------*/
             let valorTono = keys.filter(function(boton){
                 return boton.name === Tonos[0].tono;
             });
@@ -412,8 +427,8 @@
             });
             boton.addClass("selected");
 
-            /*-----------------------VEXTAB diferencia de tonos--------------------------------------*/
-            console.log(startKey + "," + Tonos[0].tono);
+/*-----------------------VEXTAB diferencia de tonos--------------------------------------*/
+            console.log("-Tono Original: " + startKey + ", " + "Tono Nuevo: " + Tonos[0].tono);
             let delta1 = keys.filter(function(boton){
                 return boton.name === Tonos[0].tono;
             });
@@ -422,7 +437,7 @@
                 return boton.name === startKey;
             });
             var delta = delta1[0].value - delta2[0].value;
-            console.log(delta);
+            console.log("-Diferencia de tonos: " + delta);
             localStorage.setItem("DeltaTono",JSON.stringify(delta));
 
             /*----------------------VEXTAB boton transportar-----------------------------------*/
@@ -488,7 +503,7 @@
             });
 
             
-            /*----------------------Agarrar todas las lineas del <pre> y revisar si es acorde o un titulo----------------------*/
+/*----------------Agarrar todas las lineas del <pre> y revisar si es acorde o un titulo----------------*/
             var output = [];
             var lines = $(this).text().split(/\r\n|\n/g);
             var line, tmp = "";
@@ -507,17 +522,17 @@
                     output.push(VextabNotes(line));
                 }
                 //Titulos de partes del canto
-                else if (line=="INTRO:" || line=="//INTRO://" || line=="INTRO1:" || line=="INTRO2:")
+                else if (line.startsWith("INTRO") || line=="//INTRO://")
                     output.push("<p class='tituloCanto'>" + line + "</p>");
-                else if (line=="VERSO:" || line=="VERSO1:" || line=="VERSO2:" || line=="VERSO3:" || line=="VERSO4:")
+                else if (line.startsWith("VERSO"))
                     output.push("<p class='tituloVerso'>" + line + "</p>");
-                else if (line=="CORO:" || line=="//CORO://" || line=="CORO1:" || line=="CORO2:" || line=="CORO3:" || line=="CORO4:")
+                else if (line.startsWith("CORO"))
                     output.push("<p class='tituloCoro'>" + line + "</p>");
-                else if (line=="PUENTE:" || line=="PUENTE1:" || line=="PUENTE2:" || line=="PUENTE3:")
+                else if (line.startsWith("PUENTE"))
                     output.push("<p class='tituloPuente'>" + line + "</p>");
-                else if (line=="PRECORO:" || line=="PRECORO1:" || line=="PRECORO2:" || line=="PRECORO3:")
+                else if (line.startsWith("PRECORO"))
                     output.push("<p class='tituloPreCoro'>" + line + "</p>");
-                else if(line=="FINAL:" || line=="//FINAL://" || line=="FINAL1:" || line=="FINAL2:")
+                else if(line.startsWith("FINAL") || line=="//FINAL://") 
                     output.push("<p class='tituloFinal'>" + line + "</p>");
                 //Simbolos en la linea de la letra
                     //Para poner la linea de repeticion
@@ -531,6 +546,14 @@
                             line = line.replace("//","<span class= 'fontNotas'>  :||</span>");
                         output.push(line);
                     }
+                    else if(line.endsWith("//x3")){
+                        line = line.replace("//x3","<span class= 'fontNotas'>  :|| x3</span>");
+                        output.push(line);
+                    }
+                    else if(line.endsWith("//x4")){
+                        line = line.replace("//x4","<span class= 'fontNotas'>  :|| x4</span>");
+                        output.push(line);
+                    }
                     else if(line.endsWith("//")){
                         line = line.replace("//","<span class= 'fontNotas'>  :||</span>");
                         output.push(line);
@@ -542,7 +565,7 @@
             $(this).html(output.join("\n"));
             //console.log(output);
             
-            /*-----------------Transportar desde el inicio el canto con el tono guardado--------------*/
+/*-----------------Transportar desde el inicio el canto con el tono guardado--------------*/
             transposeSong($this, Tonos[0].tono);
             //var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
             //if (TonoActual !== null){
@@ -550,7 +573,37 @@
                 //console.log(TonoActual);
             //}
 
-            /*---------------------------------VEXTAB Scale---------------------------------------*/
+/*-------------------------Jtab para poner imagenes de acordes de Guitarra--------------------------*/
+            var acorde = $("span.c");
+            var listaDeAcordes = [];
+            $.each(acorde,function(i,acordes){
+                listaDeAcordes.push(acordes.innerHTML);
+            });
+
+            //REVISAR QUE NO SE REPITAN ACORDES 
+            Array.prototype.contains = function(v) {
+                for (var i = 0; i < this.length; i++) {
+                  if (this[i] === v) return true;
+                }
+                return false;
+              };
+              
+              Array.prototype.unique = function() {
+                var arr = [];
+                for (var i = 0; i < this.length; i++) {
+                  if (!arr.contains(this[i])) {
+                    arr.push(this[i]);
+                  }
+                }
+                return arr;
+              }
+              
+            //listaAcordes = listaAcordes.unique().join(" "); //Aun falta como transportarlos 
+            listaDeAcordes = listaDeAcordes.unique().join(" ");
+            console.log(listaAcordes.unique()); 
+            localStorage.setItem("acordesCanto",JSON.stringify(listaDeAcordes));
+
+/*---------------------------------VEXTAB Scale---------------------------------------*/
             /*let editor = $(".vex-tabdiv").attr("editor");
             console.log(editor);*/
             if ($(".vex-tabdiv")){
