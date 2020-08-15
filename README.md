@@ -8,16 +8,17 @@ Click `Show` in the header to see your app live. Updates to your code will insta
 Find out more [about Glitch](https://glitch.com/about).
 
 
-Your Project
+PAGINA WEB
 ------------
 
 ### ← README.md
 
-That's this file, where you can tell people what your cool website does and how you built it.
+Es este archivo, donde dice las insturcciones para construir la pagina web.
 
-### ← Agregar un canto nuevo
+### ← AGREGAR UN CANTO NUEVO
 
 ### ← script.js
+    Ubicación: \public\script.js
     Aqui se agregan los cantos con la siguiente infromacion
     {
       pagina: startPath + "gracias_dios.html",      //se agrega la pagina con minusculas seguido por .html
@@ -29,8 +30,21 @@ That's this file, where you can tell people what your cool website does and how 
       subpaginas: ["Letra","Acordes"],              //Se crean las paginas del canto, ej:Letra, Acordes, Piano, etc.
     },
 
-### ← nuevo .html
-    Se agrega un archivo nuevo con el nombre puesto en script.js  ej: gracias_dios.html , en la seccion /public/html/cantos/info. Se agrega en la pag la sig info:
+### ← nuevo.html
+    Ubicación: en la seccion /public/html/cantos/info
+    Se agrega un archivo nuevo con el nombre puesto en script.js. 
+    Ej: gracias_dios.html. 
+    *Se separan los espacios con "_".
+    *En caso de que existan dos cantos nombrados igual, agregar el nombre del canto + _ + iniciales del autor.
+    *Siempre con minusculas el nombre del archivo.
+    
+    Se agrega en la pag la sig info: 
+    *Agregar la plantilla del ejemplo
+    *Entre <title> y </title>, el Titulo del canto
+    *Entre <h3> y <h3> el Autor
+    
+    EJEMPLO:
+
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -48,14 +62,68 @@ That's this file, where you can tell people what your cool website does and how 
     </body>
     </html>
 
+### ← nuevo_acordes.js
+    Ubicación: en la seccion /public/html/cantos/acordes
+    Se agrega un archivo nuevo con el nombre puesto en nuevo.js + _ + acordes. 
+    Ej: gracias_dios_acordes.html.
+    Se agrega en la pag la sig info:
+    *Agregar la plantilla del ejemplo
+    *Entre <h2 class="tituloDelCanto"> y </h2>, el Titulo del canto
+    *Entre <h3 class="autorDelCanto"> y <h3>, el Autor
+    *Entre <div class="tempo"> y </div>, el Tempo
+    *Entre <div class="tono"> y </div>, el Tono original (sin importar si lo tocamos en otro tono)
+
+    EJEMPLO:
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    </head>  
+    <body class="contenido">
+        <h2 class="tituloDelCanto">Cantare de tu amor</h2>
+        <h3 class="autorDelCanto">Danilo Montero</h3>
+        <div class="tempo">83</div>
+        <div class="tono">C</div>
+        
+        <div class="canto_body"> 
+    <!---------------Este es el limite----->  
+            <pre data-key="C">
+
+    AQUI VA EL CANTO
+
+            </pre>
+    <!---------------Este es el limite-----> 
+         </div>
+
+            <!-- mandatory script includes for jtab -->
+            <script src="/js/jtab chords/jquery.js" type="text/javascript"></script>
+            <script src="/js/jtab chords/raphael.js" type="text/javascript"></script>
+            <script src="/js/jtab chords/jtab.js" type="text/javascript"></script>
+
+            <script src="/js/template-cancion-acordes.js"></script>
+            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+            <script type="text/javascript" src="/js/jquery.transposer.js"></script>
+            <script type="text/javascript">
+            $(function() {
+                $("pre").transpose();
+            });
+            </script>
+            <script src="/script.js" defer></script>
+
+        </body>
+    </html>
+
+
+
 ### ← demo.js
-Aqui se agregan los cantos en las fechas del calendario
-    {
-        endDate: '2020-03-22', startDate: '2020-03-22',             //El dia que seran los cantos
-        title: 'Programa Dominical 12 - 22 de Marzo',               //Titulo del dia
-        cantos: 'Nada es imposible,Marco Barrientos_La nube de tu presencia,Conquistando Fronteras_Inmerecedor,Abel Zavala_Dios me ama,Danilo Montero_Eres todopoderoso,Danilo Montero'    //Los cantos separados por _ y dentro
-                                                                del canto separados por , entre el canto y el autor
-    },
+    Ubicación: en la seccion \public\js\demo.js
+    Aqui se agregan los cantos en las fechas del calendario
+        {
+            endDate: '2020-03-22', startDate: '2020-03-22',             //El dia que seran los cantos
+            title: 'Programa Dominical 12 - 22 de Marzo',               //Titulo del dia
+            cantos: 'Nada es imposible,Marco Barrientos_La nube de tu presencia,Conquistando Fronteras_Inmerecedor,Abel Zavala_Dios me ama,Danilo Montero_Eres todopoderoso,Danilo Montero'    //Los cantos separados por _ y dentro
+                                                                    del canto separados por , entre el canto y el autor
+        },
 
 ### Guitarra Electrica
 <!--keyword	values
@@ -95,7 +163,6 @@ Aqui se agregan los cantos en las fechas del calendario
 ### ← assets
 Drag in `assets`, like images or music, to add them to your project
 
-Made by [Glitch](https://glitch.com/)
 -------------------
 
 \ ゜o゜)ノ

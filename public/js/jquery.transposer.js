@@ -540,10 +540,14 @@
                     output.push("<span class='fontNotas'>" + line + "</span>");
                     //Para poner el ritornelo 
                 else{
-                    if(line.startsWith("//")){
+                    if(line.startsWith("//") || line.startsWith("  //")){
                         line = line.replace("//","<span class= 'fontNotas'>||:  </span>");
                         if(line.endsWith("//"))
                             line = line.replace("//","<span class= 'fontNotas'>  :||</span>");
+                        else if(line.endsWith("//x3"))
+                            line = line.replace("//x3","<span class= 'fontNotas'>  :|| x3</span>");
+                        else if(line.endsWith("//x4"))
+                            line = line.replace("//x4","<span class= 'fontNotas'>  :|| x4</span>");
                         output.push(line);
                     }
                     else if(line.endsWith("//x3")){
@@ -641,8 +645,8 @@
   
   
     $.fn.transpose.defaults = {
-        chordRegex: /^[A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|°|°7|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*(\/[A-G][b\#]*)*$/,
-        chordReplaceRegex: /([A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|°|°7|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*)/g
+        chordRegex: /^[A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|aug7#9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|°|°7|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*(\/[A-G][b\#]*)*$/,
+        chordReplaceRegex: /([A-G][b\#]?(2|4|5|6|7|9|11|13|6\/9|7\-5|7\-9|7\#5|7\#9|7\+5|7\+9|aug7#9|b5|#5|#9|7b5|7b9|7sus2|7sus4|add2|add4|add9|aug|dim|°|°7|dim7|m\/maj7|m6|m7|m7b5|m9|m11|m13|maj7|maj9|maj11|maj13|mb5|m|sus|sus2|sus4)*)/g
     };
   
   })(jQuery);

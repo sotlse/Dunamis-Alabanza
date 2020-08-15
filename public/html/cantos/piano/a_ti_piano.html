@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>  
+  <body class="contenido">
+    <h2 class="tituloDelCanto">A ti</h2>
+    <h3 class="autorDelCanto">Marcos Witt</h3>
+    <div class="tempo">52</div>
+    <div class="tono">F</div>
+    
+    <div class="canto_body"> 
+<!---------------Este es el limite----->  
+      <pre data-key="F">
+INTRO:
+div id="paper" style="overflow: hidden;">
+/div>
+div id="midi">
+/div>
+
+%
+VERSO:
+  F      Bbadd2     F
+A ti, el Alfa y la Omega
+       Asus4  A/C#    Dm7
+el principio  y    el fin
+      Bb             Bb/C  C
+y el gran Yo Soy, me rin - do
+
+  F      Bbadd9  C/F F
+A ti, el Todopodero--so
+       Asus4  Dbaug/Eb  Dm7
+el que es y   que    sera
+sera
+      Bb             Bb/C    C  F/A
+y el gran Yo Soy, me entre - go
+
+coda
+CORO:
+   Bb           C/Bb       Am7  Dm7
+Yo quiero que gobiernes mi vi - da
+   Bb          C/Bb    F   Eb/F   F
+me doy en sacrificio a ti
+   Bb           C/Bb     Am7    Dm7
+yo quiero que ordenes mi cami - nar
+    Gm7     F/A  
+que siempre viva ...
+___________________________________________________
+1. Bb    C  
+   en tu volun... 
+div id="divamen" style="overflow: hidden;">
+/div>
+div id="divmidiamen">
+/div>
+___________________________________________________
+2. Bb    C    F    Eb/F-F  tocoda 
+   en tu voluntad 
+
+FINAL:
+___________________________________________________
+3. Bb    C    Bb   F/A 
+   en tu voluntad 
+    Gm7     F/A  Bb    C    Bb   F/A
+que siempre viva en tu voluntad 
+    Gm7     F/A  Bb    C    
+que siempre viva en tu volun...
+div id="final" style="overflow: hidden;">
+/div>
+div id="midifinal">
+/div>
+
+        </pre>
+<!---------------Este es el limite-----> 
+      </div>   
+
+  <script type="text/javascript" src='/js/template-cancion-piano.js'></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.transposer.js"></script>
+  <script type="text/javascript">
+      $(function() {
+        $("pre").transpose();
+      });
+    </script>
+  <script src="/script.js" defer></script>
+  <!--http://www.lesession.co.uk/abc/abc_notation.htm-->
+  <script src="/js/abcjs_midi_5.12.0-min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+
+    /*--INTRO--*/
+    var intromidi = 
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      'Q: 52\n' +
+      "R: Rubato\n" +
+      "%%staves {R L}\n" +
+      "V:R clef=treble+8\n" +
+      "V:L clef=bass\n" +
+      "K: F\n" +
+      "[V:R] F,CFG- GA2c- c8 | F,CFG- GB2[cf]- [cf]2e2 c4 |\n" +
+      "[V:L] [F,F,,]16 | [F,F,,]16 |";
+
+      var intro = 
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      //'Q: 52\n' +
+      "%%staves {R L}\n" +
+      "V:R clef=treble+8\n" +
+      "V:L clef=bass\n" +
+      "K: F\n" +
+      '[V:R] "Fadd9" F,CFG- GA2c- c8  | "Bb9/F" F,CFG- GB2[cf]- [cf]2e2 c4 |\n' +
+      "[V:L] [F,F,,]16 | [F,F,,]16 |";
+
+      /*--Amen--*/
+      var amen = 
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      //'Q: 52\n' +
+      "%%staves {R L}\n" +
+      "V:R clef=treble\n" +
+      "V:L clef=bass\n" +
+      "K: F\n" +
+      '[V:R] "Bb" z FBf- f2ec- c8 | "Bb" z FBf- f2ec- !D.S.!c8|\n' +
+      "[V:L] [B,B,,]16 | [B,B,,]16 |";
+
+      var midiamen = 
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      'Q: 52\n' +
+      "%%staves {R L}\n" +
+      "V:R clef=treble\n" +
+      "V:L clef=bass\n" +
+      "K: F\n" +
+      '[V:R] z FBf-f2ec-c8 | z FBf-f2ec-c8 |\n' +
+      "[V:L] [B,B,,]16 | [B,B,,]16 |";
+
+      /*--Final--*/
+      var final = 
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      //'Q: 52\n' +
+      "%%staves {R L}\n" +
+      "V:R clef=treble\n" +
+      "V:L clef=bass\n" +
+      "K: F\n" +
+      '[V:R] "Bb" z FBf- f4- f8 | "Bb" z FBf- f2ec- c6 B2 | "F" c16 |\n' +
+      "[V:L] [B,B,,]16 | [B,B,,]16 | [F,F,,]16 |\n";
+      
+
+      var midifinal = 
+      "M: 4/4\n" +
+      "L: 1/16\n" +
+      'Q: 52\n' +
+      "%%staves {R L}\n" +
+      "V:R clef=treble\n" +
+      "V:L clef=bass\n" +
+      "K: F\n" +
+      '[V:R] z z FBf- f4- f8 | z FBf- f2ec- c6 B2 | c16 |\n' +
+      "[V:L] [B,B,,]16 | [B,B,,]16 | [F,F,,]16 |";
+
+    window.onload = function() {
+
+      let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+      console.log(transposeValue);
+
+      /*-------------------RENDER-------------------------*/
+      let div1 = "paper";
+      let div1midi = "midi";
+      let div2 = "divamen";
+      let div2midi = "divmidiamen";
+      let div3 = "final";
+      let div3midi = "midifinal";
+
+        //DIV1
+        ABCJS.renderAbc(div1, intro,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          paddingtop: -7,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div1midi, intromidi,{
+          midiTranspose: transposeValue,
+          //animate: { listener: function(lastRange, currentRange, context) {}, target: intro, qpm: 63 },
+        });
+        document.getElementById(div1).querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+        
+
+        //DIV2
+        ABCJS.renderAbc(div2, amen,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          paddingtop: -7,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div2midi, midiamen,{
+          midiTranspose: transposeValue,
+          //animate: { listener: function(abcjsElement, currentEvent, context) {}, target: intro, qpm: 120 },
+        });
+        document.getElementById(div2).querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+
+        //DIV3
+        ABCJS.renderAbc(div3, final,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          paddingtop: -7,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div3midi, midifinal,{
+          midiTranspose: transposeValue,
+          //animate: { listener: function(abcjsElement, currentEvent, context) {}, target: intro, qpm: 120 },
+        });
+        document.getElementById(div3).querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+      
+      /*-----------------------------Transportar partitura-----------------------------*/
+      
+      var botonMas = document.querySelector(".botonTransportarMas");
+      botonMas.addEventListener("click", function() {
+        let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+        //DIV1
+        ABCJS.renderAbc(div1, intro, {
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div1midi, intromidi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById(div1).querySelectorAll(".abcjs-chord").forEach((el) => {
+              el.setAttribute("fill", "#2159D6");
+              el.setAttribute("stroke", "#2159D6");
+        });
+        //DIV2
+        ABCJS.renderAbc(div2, amen, {
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div2midi, midiamen,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById(div2).querySelectorAll(".abcjs-chord").forEach((el) => {
+              el.setAttribute("fill", "#2159D6");
+              el.setAttribute("stroke", "#2159D6");
+        });
+        //DIV3
+        ABCJS.renderAbc(div3, final,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          paddingtop: -7,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div3midi, midifinal,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById(div3).querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+        
+      });
+
+      var botonMenos = document.querySelector(".botonTransportarMenos");
+      botonMenos.addEventListener("click", function() {
+        let transposeValue = JSON.parse(localStorage.getItem("VEXTABdeltaTono"));
+        //DIV1
+        ABCJS.renderAbc(div1, intro, {
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div1midi, intromidi,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById(div1).querySelectorAll(".abcjs-chord").forEach((el) => {
+              el.setAttribute("fill", "#2159D6");
+              el.setAttribute("stroke", "#2159D6");
+        });
+        //DIV2
+        ABCJS.renderAbc(div2, amen, {
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div2midi, midiamen,{
+          midiTranspose: transposeValue,
+        });
+        document.getElementById(div2).querySelectorAll(".abcjs-chord").forEach((el) => {
+              el.setAttribute("fill", "#2159D6");
+              el.setAttribute("stroke", "#2159D6");
+        });
+        //DIV3
+        ABCJS.renderAbc(div3, final,{
+          scale:1.1,
+          responsive: "resize",
+          paddingleft: 0,
+          paddingright: 0,
+          paddingbottom: 0,
+          paddingtop: -7,
+          add_classes: true,
+          visualTranspose: transposeValue,
+        });
+        ABCJS.renderMidi(div3midi, midifinal,{
+          midiTranspose: transposeValue,   
+        });
+        document.getElementById(div3).querySelectorAll(".abcjs-chord").forEach((el) => {
+          el.setAttribute("fill", "#2159D6");
+          el.setAttribute("stroke", "#2159D6");
+        });
+      });
+      
+    }
+  </script>
+
+  </body>
+</html>

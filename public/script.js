@@ -526,7 +526,7 @@ class UI {
         tono: "F",
         categoria: ["Adoracion"],
         audio:"",
-        subpaginas: ["Letra","Acordes"],
+        subpaginas: ["Letra","Acordes","Piano"],
       }, 
 
       {
@@ -890,6 +890,16 @@ class UI {
       }, 
 
       {
+        pagina: startPath + "jesus_mi_fiel_amigo.html",
+        titulo: "Jesus mi fiel amigo",
+        autor: "Abel Zavala",
+        tono: "G",
+        categoria: ["Fortaleza","Servicio","Oracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes","Piano"],
+      }, 
+
+      {
         pagina: startPath + "la_nube_de_tu_presencia.html",
         titulo: "La nube de tu presencia",
         autor: "Conquistando Fronteras",
@@ -907,6 +917,16 @@ class UI {
         categoria:["Adoracion"],
         audio:"",
         subpaginas: ["Letra","Acordes","Piano"],
+      },
+
+      {
+        pagina: startPath + "muestrame_tus_caminos.html",
+        titulo:"Muestrame tus caminos",
+        autor:"Juan Carlos Alvarado",
+        tono:"G",
+        categoria:["Oracion","Fortaleza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
       },
 
       {
@@ -980,6 +1000,16 @@ class UI {
       },
 
       {
+        pagina: startPath + "quien_nos_separara.html",
+        titulo: "Quien nos separara",
+        autor: "Juan Carlos Alvarado",
+        tono: "G",
+        categoria: ["Alabanza","Fortaleza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes","Piano"],
+      },
+
+      {
         pagina: startPath + "quiero_entender.html",
         titulo: "Quiero entender",
         autor: "Jesus Adrian Romero",
@@ -994,6 +1024,16 @@ class UI {
         titulo: "Rey de gloria",
         autor: "Marco Barrientos",
         tono: "E",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "rey_de_reyes.html",
+        titulo: "Rey de reyes",
+        autor: "Marco Barrientos",
+        tono: "D",
         categoria: ["Alabanza"],
         audio:"",
         subpaginas: ["Letra","Acordes"],

@@ -160,13 +160,23 @@ $(document).ready( function() {
         }, {
             endDate: '2020-08-02', startDate: '2020-08-02',
             title: 'Programa Dominical ONLINE 19',
-            cantos: 'Tu nombre oh Dios,Marcos Witt_Gracia sublime es,En espiritu y verdad_Cuan grande es Dios,En espiritu y verdad'
-        },
-
-        {
+            cantos: 'Tu nombre oh Dios,Marcos Witt_Gracia sublime es,En espiritu y verdad_Dios el mas grande,Juan Carlos Alvarado'
+        }, {
             endDate: '2020-08-09', startDate: '2020-08-09',
             title: 'Programa Dominical ONLINE 20',
-            cantos: 'Bueno es alabar,Danilo Montero_Gracia sublime es,En espiritu y verdad_Cuan grande es Dios,En espiritu y verdad'
+            cantos: 'Eres mi amigo fiel,Coalo Zamorano_El Dios que adoramos,Sovereign Grace_A ti,Marcos Witt'
+        }, {
+            endDate: '2020-08-16', startDate: '2020-08-16',
+            title: 'Programa Dominical ONLINE 21',
+            cantos: 'Eres digno de gloria,Coalo Zamorano_Un siervo para tu gloria,IBI_Cuan grande es Dios,En espiritu y verdad'
+        }, {
+            endDate: '2020-08-23', startDate: '2020-08-23',
+            title: 'Programa Dominical ONLINE 22',
+            cantos: 'Al que es digno,Coalo Zamorano_Dios imparable,Marcos Witt_Jesus mi fiel amigo,Abel Zavala'
+        }, {
+            endDate: '2020-08-30', startDate: '2020-08-30',
+            title: 'Programa Dominical ONLINE 23',
+            cantos: 'Rey de Reyes,Marco Barrientos_Nada es imposible,Marco Barrientos_Temprano yo te buscare,Marcos Witt'
         },
 
         /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
@@ -239,9 +249,9 @@ $(document).ready( function() {
 
 
                         if (LosCantos[0] !== undefined)
-                            crearli.innerHTML = `<a href="${LosCantos[0].pagina}"><span class="nombreLista">${canto}<span> - ${autor}</a> ${notas}`
+                            crearli.innerHTML = `<a href="${LosCantos[0].pagina}"><span class="nombreLista">${canto}<span> - ${autor}</a> ${notas}`;
                         else
-                            crearli.innerHTML = `<a href="">${canto} - ${autor}</a> ${notas}`
+                            crearli.innerHTML = `<a href="">${canto} - ${autor}</a> ${notas}`;
 
                         /*cantoPagina = mayuscula(canto).replace(/ /g,"_");
                         pagina = "Cantos/Info/" + cantoPagina + ".html";

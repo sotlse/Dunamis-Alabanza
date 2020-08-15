@@ -31,6 +31,23 @@ let textoCompas = document.querySelector(".textoCompas");
 let tituloRepeticiones = document.querySelector(".tituloRepeticiones");
 let textoRepeticiones = document.querySelector(".textoRepeticiones");
 
+let tituloBarraDeRepeticion = document.querySelector(".tituloBarraDeRepeticion");
+let textoBarraDeRepeticion = document.querySelector(".textoBarraDeRepeticion");
+let tituloCasillaDeRepeticion = document.querySelector(".tituloCasillaDeRepeticion");
+let textoCasillaDeRepeticion = document.querySelector(".textoCasillaDeRepeticion");
+let tituloSegno = document.querySelector(".tituloSegno");
+let textoSegno = document.querySelector(".textoSegno");
+let tituloCoda = document.querySelector(".tituloCoda");
+let textoCoda = document.querySelector(".textoCoda");
+let tituloDC = document.querySelector(".tituloDC");
+let textoDC = document.querySelector(".textoDC");
+let tituloDCalCoda = document.querySelector(".tituloDCalCoda");
+let textoDCalCoda = document.querySelector(".textoDCalCoda");
+let tituloDS = document.querySelector(".tituloDS");
+let textoDS = document.querySelector(".textoDS");
+let tituloDSalCoda = document.querySelector(".tituloDSalCoda");
+let textoDSalCoda = document.querySelector(".textoDSalCoda");
+
 //Variables en categoria Escalas
 
 //Variable en categoria Acordes
@@ -55,6 +72,42 @@ let tituloSus2 = document.querySelector(".tituloSus2");
 let textoSus2 = document.querySelector(".textoSus2");
 let tituloSus4 = document.querySelector(".tituloSus4");
 let textoSus4 = document.querySelector(".textoSus4");
+
+let tituloMaj7 = document.querySelector(".tituloMaj7");
+let textoMaj7 = document.querySelector(".textoMaj7");
+let titulo7 = document.querySelector(".titulo7");
+let texto7 = document.querySelector(".texto7");
+let titulom7 = document.querySelector(".titulom7");
+let textom7 = document.querySelector(".textom7");
+let titulom7b5 = document.querySelector(".titulom7b5");
+let textom7b5 = document.querySelector(".textom7b5");
+let tituloDim7 = document.querySelector(".tituloDim7");
+let textoDim7 = document.querySelector(".textoDim7");
+let tituloAug7 = document.querySelector(".tituloAug7");
+let textoAug7 = document.querySelector(".textoAug7");
+let titulo6 = document.querySelector(".titulo6");
+let texto6 = document.querySelector(".texto6");
+let titulom6 = document.querySelector(".titulom6");
+let textom6 = document.querySelector(".textom6");
+let tituloAdd9 = document.querySelector(".tituloAdd9");
+let textoAdd9 = document.querySelector(".textoAdd9");
+let titulo7sus4 = document.querySelector(".titulo7sus4");
+let texto7sus4 = document.querySelector(".texto7sus4");
+let titulo7sus2 = document.querySelector(".titulo7sus2");
+let texto7sus2 = document.querySelector(".texto7sus2");
+
+let titulo9 = document.querySelector(".titulo9");
+let texto9 = document.querySelector(".texto9");
+let titulom9 = document.querySelector(".titulom9");
+let textom9 = document.querySelector(".textom9");
+let titulomaj9 = document.querySelector(".titulomaj9");
+let textomaj9 = document.querySelector(".textomaj9");
+let titulo11 = document.querySelector(".titulo11");
+let texto11 = document.querySelector(".texto11");
+let titulom11 = document.querySelector(".titulom11");
+let textom11 = document.querySelector(".textom11");
+let titulo13 = document.querySelector(".titulo13");
+let texto13 = document.querySelector(".texto13");
 
 
 
@@ -82,6 +135,41 @@ tituloCompas.addEventListener("click",(e) => {
 tituloRepeticiones.addEventListener("click",(e) => {
   cambio(textoRepeticiones);
 });
+
+tituloBarraDeRepeticion.addEventListener("click",(e) => {
+  cambio(textoBarraDeRepeticion);
+});
+
+tituloCasillaDeRepeticion.addEventListener("click",(e) => {
+  cambio(textoCasillaDeRepeticion);
+});
+
+tituloSegno.addEventListener("click",(e) => {
+  cambio(textoSegno);
+});
+
+tituloCoda.addEventListener("click",(e) => {
+  cambio(textoCoda);
+});
+
+tituloDC.addEventListener("click",(e) => {
+  cambio(textoDC);
+});
+
+tituloDCalCoda.addEventListener("click",(e) => {
+  cambio(textoDCalCoda);
+});
+
+tituloDS.addEventListener("click",(e) => {
+  cambio(textoDS);
+});
+
+tituloDSalCoda.addEventListener("click",(e) => {
+  cambio(textoDSalCoda);
+});
+
+
+
 //Escalas
 //Acordes
 tituloIntervalo.addEventListener("click",(e) => {
@@ -124,5 +212,70 @@ tituloSus4.addEventListener("click",(e) => {
   cambio(textoSus4);
 });
 
+tituloMaj7.addEventListener("click",(e) => {
+  cambio(textoMaj7);
+});
 
+titulo7.addEventListener("click",(e) => {
+  cambio(texto7);
+});
 
+titulom7.addEventListener("click",(e) => {
+  cambio(textom7);
+});
+
+titulom7b5.addEventListener("click",(e) => {
+  cambio(textom7b5);
+});
+
+tituloDim7.addEventListener("click",(e) => {
+  cambio(textoDim7);
+});
+
+tituloAug7.addEventListener("click",(e) => {
+  cambio(textoAug7);
+});
+
+titulo6.addEventListener("click",(e) => {
+  cambio(texto6);
+});
+
+titulom6.addEventListener("click",(e) => {
+  cambio(textom6);
+});
+
+tituloAdd9.addEventListener("click",(e) => {
+  cambio(textoAdd9);
+});
+
+titulo7sus4.addEventListener("click",(e) => {
+  cambio(texto7sus4);
+});
+
+titulo7sus2.addEventListener("click",(e) => {
+  cambio(texto7sus2);
+});
+
+titulo9.addEventListener("click",(e) => {
+  cambio(texto9);
+});
+
+titulom9.addEventListener("click",(e) => {
+  cambio(textom9);
+});
+
+titulomaj9.addEventListener("click",(e) => {
+  cambio(textomaj9);
+});
+
+titulo11.addEventListener("click",(e) => {
+  cambio(texto11);
+});
+
+titulom11.addEventListener("click",(e) => {
+  cambio(textom11);
+});
+
+titulo13.addEventListener("click",(e) => {
+  cambio(texto13);
+});

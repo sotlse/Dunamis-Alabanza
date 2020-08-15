@@ -50,6 +50,7 @@ h4{
 .ejemplo{
   font-style: italic;
   text-decoration: underline;
+  color: #002f94;
 }
 
 .acorde{
@@ -59,6 +60,11 @@ h4{
 
 /*---------Basico---------*/
 .textoTempo, .textoFM, .textoCompas, .textoRepeticiones {
+  display: none;
+}
+
+/*Repeticiones*/
+.textoBarraDeRepeticion, .textoCasillaDeRepeticion, .textoSegno, .textoCoda, .textoDC, .textoDCalCoda, .textoDS, .textoDSalCoda{
   display: none;
 }
 
@@ -73,11 +79,11 @@ h4{
 }
 
 /*Cuatriadas*/
-.textMaj7, .texto7, .textom7, .textom7b5, .textoDim7, .textAug7, .texto6, .textom6, .textoAdd9, .texto7sus4, .texto7sus2 {
-  display: block;
+.textoMaj7, .texto7, .textom7, .textom7b5, .textoDim7, .textoAug7, .texto6, .textom6, .textoAdd9, .texto7sus4, .texto7sus2 {
+  display: none;
 }
 
 /*Mas*/
 .texto9, .textom9, .textomaj9, .texto11, .textom11, .texto13 {
-  display: block;
+  display: none;
 }

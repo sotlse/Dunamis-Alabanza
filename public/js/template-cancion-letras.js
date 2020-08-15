@@ -1,9 +1,61 @@
-//const title = document.querySelector('title').textContent;
+/*------------VARIABLES ---------------*/
 const h2 = document.querySelector('.tituloDelCanto').textContent;
 const h3 = document.querySelector('.autorDelCanto').textContent;
 const pre = document.querySelector('.letra_body').innerHTML;
 const head = document.querySelector("head");
 const body = document.querySelector("body");
+
+
+/*-------------------AGREGAR ETIQUETAS A TITULOS Y CAMBIAR SIMBOLOS MUSICALES----------------------------*/
+var lines = pre.split(/\r\n|\n/g);
+console.log(lines);
+var line;
+var output = [];
+
+for (var i = 0; i < lines.length; i++) {
+    line = lines[i];
+    if (line.startsWith("INTRO"))
+        output.push("<p class='tituloCanto'>" + line + "</p>");
+    else if (line.startsWith("VERSO"))
+        output.push("<p class='tituloVerso'>" + line + "</p>");
+    else if (line.startsWith("CORO"))
+        output.push("<p class='tituloCoro'>" + line + "</p>");
+    else if (line.startsWith("PUENTE"))
+        output.push("<p class='tituloPuente'>" + line + "</p>");
+    else if (line.startsWith("PRECORO"))
+        output.push("<p class='tituloPreCoro'>" + line + "</p>");
+    else if(line.startsWith("FINAL") || line=="//FINAL://") 
+        output.push("<p class='tituloFinal'>" + line + "</p>");
+    else{
+        if(line.startsWith("//") || line.startsWith("  //")){
+            line = line.replace("//","<span class= 'fontNotas'>||:  </span>");
+            if(line.endsWith("//"))
+                line = line.replace("//","<span class= 'fontNotas'>  :||</span>");
+            else if(line.endsWith("//x3"))
+                line = line.replace("//x3","<span class= 'fontNotas'>  :|| x3</span>");
+            else if(line.endsWith("//x4"))
+                line = line.replace("//x4","<span class= 'fontNotas'>  :|| x4</span>");
+            output.push(line);
+        }
+        else if(line.endsWith("//x3")){
+            line = line.replace("//x3","<span class= 'fontNotas'>  :|| x3</span>");
+            output.push(line);
+        }
+        else if(line.endsWith("//x4")){
+            line = line.replace("//x4","<span class= 'fontNotas'>  :|| x4</span>");
+            output.push(line);
+        }
+        else if(line.endsWith("//")){
+            line = line.replace("//","<span class= 'fontNotas'>  :||</span>");
+            output.push(line);
+        }
+        else
+            output.push("<span>" + line + "</span>");
+        }
+}
+console.log(output.join("\n"));
+rep = output.join("\n");
+
 
 /*----------------TAMPLATE-----------------*/
 let HeadTemplate  =
@@ -32,7 +84,7 @@ let BodyTemplate =
 
     '<hr>'  +
 
-    "<div class='letra_body'>" + `${pre}` + '</div>' +  
+    "<div class='letra_body'>" + `${rep}` + '</div>' +  
 
     "<div class = 'flechasRegresarAvanzar'>" +
         "<div class ='arrowRegresar2'>" +

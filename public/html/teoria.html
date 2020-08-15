@@ -144,14 +144,16 @@ _     figuras entran en un compás.
             <div class="textoRepeticiones">
                 <p>Es cuando la una parte o toda la pieza musical necesita repetirse. Se usan abreviaturas para simplificar la escritura.</p>
 
-                <h4>Barra de repetición (&#119046,&#119047)</h4>
-                Consiste en una doble barra con dos puntos colocados a los dos lados de la línea central del pentagrama. La barra de repetición se usa para repetir 2 veces uno o más compases, o una sección completa. En este caso los puntos se verán enfrentados.<br> <span class="ejemplo">Ejemplo:</span>  <span class="fontNotas">||:</span> Gm | Bb | Dm | F <span class="fontNotas">:||</span>
-                    <!--<span style="color:red; font-weight: normal;">&#119046</span> Gm | Bb | Dm | F <span style="color:red; font-weight: normal; ">&#119047</span>-->
-                
-                <h4>Casillas de repetición </h4>
-                <P>La pieza musical se toca con la primera casilla y la segunda vez que se toca esa parte, se toca la segunda casilla, es decir, no se toca la primera casilla y se salta hasta la segunda casilla.</P>
-                <span class="ejemplo">Ejemplo:</span> <p></p>
-                <pre>
+                <h4 class="tituloBarraDeRepeticion">Barra de repetición (&#119046,&#119047)</h4>
+                <div class="textoBarraDeRepeticion">
+                    <p>Consiste en una doble barra con dos puntos colocados a los dos lados de la línea central del pentagrama. La barra de repetición se usa para repetir 2 veces uno o más compases, o una sección completa. En este caso los puntos se verán enfrentados.</p> <span class="ejemplo">Ejemplo:</span>  <span class="fontNotas">||:</span> Gm | Bb | Dm | F <span class="fontNotas">:||</span>
+                </div>
+
+                <h4 class="tituloCasillaDeRepeticion">Casillas de repetición </h4>
+                <div class="textoCasillaDeRepeticion">
+                    <P>La pieza musical se toca con la primera casilla y la segunda vez que se toca esa parte, se toca la segunda casilla, es decir, no se toca la primera casilla y se salta hasta la segunda casilla.</P>
+                    <span class="ejemplo">Ejemplo:</span> <p></p>
+                    <pre>
     F                     
 por siempre y siempre...
 <span class="fontNotas">________________________________________</span>
@@ -162,26 +164,31 @@ por siempre y siempre...
 <span class="fontNotas">2.</span>      Eb | Gm | Bb | Dm   
 ... oh Dios   
 <span style="font-size: x-small; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">(la segunda vez salta la casilla 1 y toca esta casilla)</span>
-                </pre>
+                    </pre>
+                </div>
             
-                <h4>Segno (&#119051)</h4> 
-                <P>Es un símbolo que marca el lugar a donde debemos saltar al encontrar una indicación (mencionadas mas adelante)</P>
+                <h4 class="tituloSegno">Segno (&#119051)</h4> 
+                <P class="textoSegno">Es un símbolo que marca el lugar a donde debemos saltar al encontrar una indicación (mencionadas mas adelante)</P>
 
-                <h4>Coda (&#119052)</h4> 
-                <P>Es un simbolo musical que se emplea en notación para señalar determinados puntos de referencia cuando se quiere indicar una repetición. Significa ‘cola’</P>
+                <h4 class="tituloCoda">Coda (&#119052)</h4> 
+                <P class="textoCoda">Es un simbolo musical que se emplea en notación para señalar determinados puntos de referencia cuando se quiere indicar una repetición. Significa ‘cola’</P>
 
-                <h4>Da Capo (&#119050)</h4>
-                <p>Es un término musical en italiano que significa literalmente ‘desde la cabeza’, queriendo decir ‘desde el principio’.</p>
-                <span class="ejemplo">Ejemplo:</span>
-                <pre>
+                <h4 class="tituloDC">Da Capo (&#119050)</h4>
+                <div class="textoDC">
+                    <p>Es un término musical en italiano que significa literalmente ‘desde la cabeza’, queriendo decir ‘desde el principio’.</p>
+                    <span class="ejemplo">Ejemplo:</span>
+                    <pre>
 Bb             C            <span class="fontNotas" style="font-style: italic;">D.C</span>  
-vengo ante tus pies para adorar.</pre>
-(Al llegar al D.C, se vuelve a tocar desde el inicio)
+vengo ante tus pies para adorar.
+                    </pre>
+                    (Al llegar al D.C, se vuelve a tocar desde el inicio)
+                </div>
 
-                <h4>Da Capo al coda (&#119050 al coda)</h4>
-                <p>Significa literalmente ‘de la cabeza a la cola’. Indica al intérprete que debe repetir la pieza desde el principio, continuar tocando hasta llegar al primer símbolo de coda. Después debe pasar directamente hasta donde esté el segundo símbolo de coda y continuar tocando desde ahí hasta el final.</p>
-                <span class="ejemplo">Ejemplo:</span>
-                <pre>
+                <h4 class="tituloDCalCoda">Da Capo al coda (&#119050 <span style="font-style: italic;">al coda</span>)</h4>
+                <div class="textoDCalCoda">
+                    <p>Significa literalmente ‘de la cabeza a la cola’. Indica al intérprete que debe repetir la pieza desde el principio, continuar tocando hasta llegar al primer símbolo de coda. Después debe pasar directamente hasta donde esté el segundo símbolo de coda y continuar tocando desde ahí hasta el final.</p>
+                    <span class="ejemplo">Ejemplo:</span>
+                    <pre>
 <span class='tituloCanto'>INTRO:</span>
 ||: F | G :||
 
@@ -208,13 +215,15 @@ todo el honor sea a ti
                    C     G
 //Tu eres digno de gloria,
 ...
-                </pre>
-                (al llegar al D.C. al coda, el interprete tiene que regresar al intro nuevamente para repetir todo, pero al llegar al "To Coda", se salta el Coro para irse a donde se encuentra la "Coda" y seguir tocando desde ahi)
+                    </pre>
+                    (al llegar al D.C. al coda, el interprete tiene que regresar al intro nuevamente para repetir todo, pero al llegar al "To Coda", se salta el Coro para irse a donde se encuentra la "Coda" y seguir tocando desde ahi)
+                </div>
 
-                <h4>Dal Segno (&#119049)</h4> 
-                <p>Es un término musical en italiano que significa literalmente "desde el signo". El intérprete debe repetir un determinado pasaje musical partiendo desde el signo</p>
-                <span class="ejemplo">Ejemplo:</span>
-                <pre>
+                <h4 class="tituloDS">Dal Segno (&#119049)</h4> 
+                <div class="textoDS">
+                    <p>Es un término musical en italiano que significa literalmente "desde el signo". El intérprete debe repetir un determinado pasaje musical partiendo desde el signo</p>
+                    <span class="ejemplo">Ejemplo:</span>
+                    <pre>
 <span class='tituloCanto'>INTRO:</span>
 E
       
@@ -255,13 +264,15 @@ Quien es el Rey de gloria?
      A2
 De poder y majestad
 ...
-                </pre>
-                (Al llegar al D.S., se regresa a donde se encuentra el segno o &#119051, la segunda vez ya se ignora el D.S. y se continua con el VERSO3)
+                    </pre>
+                    (Al llegar al D.S., se regresa a donde se encuentra el segno o &#119051, la segunda vez ya se ignora el D.S. y se continua con el VERSO3)
+                </div>
 
-                <h4>Dal Segno al coda (&#119049 al coda)</h4> 
-                <p>Significa literalmente "del signo a la cola". Indica al intérprete que debe repetir la pieza desde la señal o «segno», continuar tocando hasta llegar al primer símbolo de coda. Después, debe pasar directamente hasta donde esté el segundo símbolo de coda y continuar tocando desde ahí hasta el final.</p>
-                <span class="ejemplo">Ejemplo:</span>
-                <pre>
+                <h4 class="tituloDSalCoda">Dal Segno al coda (&#119049 <span style="font-style: italic;">al coda</span>)</h4> 
+                <div class="textoDSalCoda">
+                    <p>Significa literalmente "del signo a la cola". Indica al intérprete que debe repetir la pieza desde la señal o «segno», continuar tocando hasta llegar al primer símbolo de coda. Después, debe pasar directamente hasta donde esté el segundo símbolo de coda y continuar tocando desde ahí hasta el final.</p>
+                    <span class="ejemplo">Ejemplo:</span>
+                    <pre>
 <span class='tituloCanto'>INTRO:</span>
 | D   | F#m7   | Gmaj7   | Gmaj7/A 
       
@@ -294,8 +305,9 @@ ______________________________________
    Bm - Bbm7 - Dadd2/A - Bm/D  
 ...Tú!
 Gmaj7  D/F#-Em7 | Asus4 | C#m7b5...
-                </pre>
-                (Primero se toca el INTRO, luego el VERSO, luego el CORO y se repite 2 veces, tacando la primera vez la casilla 1 y la seguna vez tocando la casilla 2, se ignora por el momento To Coda y se toca el PUENTE1, se llega al D.S. al coda, que nos dice que toquemos donde se encuentra el segno y luego cuando encontremos el To Coda, nos saltemos a Coda. Entonces el segno o &#119051 se encuentra en el VERSO, se vuelve a tocar y luego el CORO, donde al tocar la segunda vez se va a la casilla 2 y se encuentra el To Coda, nos saltamos el PUENTE1 y el Coda se encuentra en el PUENTE2 y seguimos tocando a partir de ahi)
+                    </pre>
+                    (Primero se toca el INTRO, luego el VERSO, luego el CORO y se repite 2 veces, tacando la primera vez la casilla 1 y la seguna vez tocando la casilla 2, se ignora por el momento To Coda y se toca el PUENTE1, se llega al D.S. al coda, que nos dice que toquemos donde se encuentra el segno y luego cuando encontremos el To Coda, nos saltemos a Coda. Entonces el segno o &#119051 se encuentra en el VERSO, se vuelve a tocar y luego el CORO, donde al tocar la segunda vez se va a la casilla 2 y se encuentra el To Coda, nos saltamos el PUENTE1 y el Coda se encuentra en el PUENTE2 y seguimos tocando a partir de ahi)
+                </div>
 
             </div>
 
@@ -407,55 +419,65 @@ Gmaj7  D/F#-Em7 | Asus4 | C#m7b5...
                     <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cmaj7</span> (C + E + G + B)
                 </div>
 
-                <h4>Séptima Dominante (X7)</h4>
-                Tónica + Tercera mayor + Quinta justa + Séptima menor
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C7</span> (C + E + G + Bb)
+                <h4 class="titulo7">Séptima Dominante (X7)</h4>
+                <div class="texto7">Tónica + Tercera mayor + Quinta justa + Séptima menor
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C7</span> (C + E + G + Bb)
+                </div>
 
-                <h4>Menor Séptima (Xm7)</h4>
-                Tónica + Tercera menor + Quinta justa + Séptima menor
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm7</span> (C + Eb + G + Bb)
+                <h4 class="titulom7">Menor Séptima (Xm7)</h4>
+                <div class="textom7">Tónica + Tercera menor + Quinta justa + Séptima menor
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm7</span> (C + Eb + G + Bb)
+                </div>
 
-                <h4>Séptima Semidisminuido (Xm7b5)</h4>
-                Tónica + Tercera menor + Quinta disminuida + Séptima menor
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm7b5</span> (C + Eb + Gb + B)
+                <h4 class="titulom7b5">Séptima Semidisminuido (Xm7b5)</h4>
+                <div class="textom7b5">Tónica + Tercera menor + Quinta disminuida + Séptima menor
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm7b5</span> (C + Eb + Gb + B)
+                </div>
 
-                <h4>Séptima Disminuido (X°7 o Xdim7)</h4>
-                Tónica + Tercera menor + Quinta disminuida + Séptima disminuida
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cdim7</span> o <span class="acorde">C°7</span> (C + Eb + Gb + A)
+                <h4 class="tituloDim7">Séptima Disminuido (X°7 o Xdim7)</h4>
+                <div class="textoDim7">Tónica + Tercera menor + Quinta disminuida + Séptima disminuida
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cdim7</span> o <span class="acorde">C°7</span> (C + Eb + Gb + A)
+                </div>
 
-                <h4>Séptima con Quinta Aumentada (X7#5 o Xaug7)</h4>
-                Tónica + Tercera mayor + Quinta aumentada + Séptima menor
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C7#5</span> o <span class="acorde">Caug7</span> (C + E + G# + Bb)
+                <h4 class="tituloAug7">Séptima con Quinta Aumentada (X7#5 o Xaug7 o X+7)</h4>
+                <div class="textoAug7">Tónica + Tercera mayor + Quinta aumentada + Séptima menor
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C7#5</span> o <span class="acorde">Caug7</span> o <span class="acorde">C+7</span> (C + E + G# + Bb)
+                </div>
 
-                <h4>Sexta (X6)</h4>
-                Tónica + Tercera mayor + Quinta justa + Sexta mayor
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C6</span> (C + E + G + A)
+                <h4 class="titulo6">Sexta (X6)</h4>
+                <div class="texto6">Tónica + Tercera mayor + Quinta justa + Sexta mayor
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C6</span> (C + E + G + A)
+                </div>
 
-                <h4>Sexta Menor(Xm6)</h4>
-                Tónica + Tercera menor + Quinta justa + Sexta mayor 
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm6</span> (C + Eb + G + A)
+                <h4 class="titulom6">Sexta Menor(Xm6)</h4>
+                <div class="textom6">Tónica + Tercera menor + Quinta justa + Sexta mayor 
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm6</span> (C + Eb + G + A)
+                </div>
 
-                <h4>Novena añadida (Xadd9)</h4>
-                Tónica + Tercera menor + Quinta justa + Novena mayor
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cadd9</span> (C + E + G + D)
+                <h4 class="tituloAdd9">Novena añadida (Xadd9)</h4>
+                <div class="textoAdd9">Tónica + Tercera menor + Quinta justa + Novena mayor
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cadd9</span> (C + E + G + D)
+                </div>
 
-                <h4>Séptima Dominante con cuarta suspendida (X7sus4)</h4>
-                Tónica + Cuarta justa + Quinta justa + Séptima menor
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C7sus4</span> (C + F + G + Bb)
+                <h4 class="titulo7sus4">Séptima Dominante con cuarta suspendida (X7sus4)</h4>
+                <div class="texto7sus4">Tónica + Cuarta justa + Quinta justa + Séptima menor
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C7sus4</span> (C + F + G + Bb)
+                </div>
 
-                <h4>Séptima Dominante con segunda suspendida (X7sus2)</h4>
-                Tónica + Segunda mayor + Quinta justa + Séptima menor
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C7sus2</span> (C + D + G + Bb)
+                <h4 class="titulo7sus2">Séptima Dominante con segunda suspendida (X7sus2)</h4>
+                <div class="texto7sus2">Tónica + Segunda mayor + Quinta justa + Séptima menor
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C7sus2</span> (C + D + G + Bb)
+                </div>
 
             </div> <p></p>
 
@@ -467,41 +489,54 @@ Gmaj7  D/F#-Em7 | Asus4 | C#m7b5...
             <div class="textoMas">
                 <p>Conjunto de 5 o más notas tocadas al mismo tiempo</p>
 
-                <h4>Novena (X9)</h4>
-                {Acorde séptima dominante + novena}<br>
-                Tónica + Tercera mayor + Quinta justa + Séptima menor + Novena 
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C9</span> (C + E + G + Bb + D)
+                <h4 class="titulo9">Novena (X9)</h4>
+                <div class="texto9">
+                    {Acorde séptima dominante + novena}<br>
+                    Tónica + Tercera mayor + Quinta justa + Séptima menor + Novena 
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C9</span> (C + E + G + Bb + D)
+                </div>
 
-                <h4>Menor Novena (Xm9)</h4>
-                {Acorde menor séptima + novena}<br>
-                Tónica + Tercera menor + Quinta justa + Séptima menor + Novena 
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm9</span> (C + Eb + G + Bb + D)
+                <h4 class="titulom9">Menor Novena (Xm9)</h4>
+                <div class="texto9">
+                    {Acorde menor séptima + novena}<br>
+                    Tónica + Tercera menor + Quinta justa + Séptima menor + Novena 
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm9</span> (C + Eb + G + Bb + D)
+                </div>
 
-                <h4>Mayor Novena (Xmaj9)</h4>
-                {Acorde séptima mayor + novena}<br>
-                Tónica + Tercera mayor + Quinta justa + Séptima mayor + Novena 
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cmaj9</span> (C + E + G + B + D)
+                <h4 class="titulomaj9">Mayor Novena (Xmaj9)</h4>
+                <div class="textomaj9">
+                    {Acorde séptima mayor + novena}<br>
+                    Tónica + Tercera mayor + Quinta justa + Séptima mayor + Novena 
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cmaj9</span> (C + E + G + B + D)
+                </div>
 
-                <h4>Undécima (X11)</h4>
-                {Acorde novena + undécima}<br>
-                Tónica + Tercera mayor + Quinta justa + Séptima menor + Novena + Undécima
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C11</span> (C + E + G + Bb + D + F)
+                <h4 class="titulo11">Undécima (X11)</h4>
+                <div class="texto11">
+                    {Acorde novena + undécima}
+                    <br>
+                    Tónica + Tercera mayor + Quinta justa + Séptima menor + Novena + Undécima
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C11</span> (C + E + G + Bb + D + F)
+                </div>
 
-                <h4>Menor Undécima (Xm11)</h4>
-                {Acorde menor novena + undécima}<br>
-                Tónica + Tercera menor + Quinta justa + Séptima menor + Novena + Undécima
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm11</span> (C + Eb + G + Bb + D + F)
+                <h4 class="titulom11">Menor Undécima (Xm11)</h4>
+                <div class="textom11">
+                    {Acorde menor novena + undécima}<br>
+                    Tónica + Tercera menor + Quinta justa + Séptima menor + Novena + Undécima
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">Cm11</span> (C + Eb + G + Bb + D + F)
+                </div>
 
-                <h4>Decimotercera (X13)</h4>
-                {Acorde undécima + decimotercera}<br>
-                Tónica + Tercera mayor + Quinta justa + Séptima menor + Novena + Undécima + Decimotercera
-                <br>
-                <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C13</span> (C + E + G + Bb + D + F + A)
+                <h4 class="titulo13">Decimotercera (X13)</h4>
+                <div class="texto13">
+                    {Acorde undécima + decimotercera}<br>
+                    Tónica + Tercera mayor + Quinta justa + Séptima menor + Novena + Undécima + Decimotercera
+                    <br>
+                    <span class="ejemplo">Ejemplo:</span>  <span class="acorde">C13</span> (C + E + G + Bb + D + F + A)
+                </div>
             </div>
             
         </div>
