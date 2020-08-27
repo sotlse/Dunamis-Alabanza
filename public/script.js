@@ -368,55 +368,10 @@ function displayNotification() {
 /*-------------------------------ROTACION DE PANTALLA---------------------------*/
 if (cantoBody)
 {
-  //alert(current_mode.type);
-  //alert(screen.orientation.type);
-  //alert(window.orientation);
-  //Para dispositivos Android
-  /*if (current_mode.type=="portrait-primary" || current_mode.type=="portrait-secondary"){
-    //console.log(current_mode);
-    cantoBody.style.columnCount= "1";
-  }
-  
-  else if (current_mode.type=="landscape-primary" || current_mode.type=="landscape-secondary"){
-    //console.log(current_mode);
-    cantoBody.style.columnCount="2";
-  }*/
-
-  /*
-  function doOnOrientationChange() {
-    //Para dispositivos moviles (IOS y Android)
-    if (window.orientation != undefined){
-      switch(window.orientation) {  
-        case -90: case 90:
-          cantoBody.style.columnCount= "2";
-          break; 
-        default:
-          cantoBody.style.columnCount= "1";
-          break; 
-      }
-    }
-    //Para laptops
-    else {
-      alert("Es una lap");
-      
-    }
-  }
-    
-  window.addEventListener('orientationchange', doOnOrientationChange);
-    
-  // Initial execution if needed
-  doOnOrientationChange();*/
   if (window.orientation != undefined)
     doOnOrientationChange();
 }
 
-/*
-// type
-console.log(current_mode.type);
-
-// angle
-console.log(current_mode.angle);
-*/
 
 /*-----------------------CAMBIAR TAMANO DE TEXTO-----------------------*/
 
@@ -538,6 +493,26 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
+
+      {
+        pagina: startPath + "abre_mis_ojos.html",
+        titulo: "Abre mis ojos",
+        autor: "Danilo Montero",
+        tono: "E",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "al_estar_ante_ti.html",
+        titulo: "Al estar ante ti",
+        autor: "Jesus Adrian Romero",
+        tono: "D",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
         
       {
         pagina: startPath + "al_mundo_paz_ibi.html",
@@ -577,6 +552,16 @@ class UI {
         categoria: ["Navidad"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
+      }, 
+      
+      {
+        pagina: startPath + "aqui_estoy_adorandote.html",
+        titulo: "Aqui estoy adorandote",
+        autor: "Conquistando Fronteras",
+        tono: "D",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
       },
       
       {
@@ -585,6 +570,16 @@ class UI {
         autor: "Jaime Murrel",
         tono: "A",
         categoria: ["Adoracion","Servicio"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
+
+      {
+        pagina: startPath + "benditos.html",
+        titulo: "Benditos",
+        autor: "En Espiritu y verdad",
+        tono: "G",
+        categoria: ["Alabanza"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
       }, 
@@ -620,10 +615,40 @@ class UI {
       }, 
 
       {
+        pagina: startPath + "cante_al_señor.html",
+        titulo: "Cante al Señor",
+        autor: "Don Moen",
+        tono: "A",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
         pagina: startPath + "cordero_santo.html",
         titulo: "Cordero Santo",
         autor: "Roberto Torres",
         tono: "F",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
+
+      {
+        pagina: startPath + "cordero_y_leon.html",
+        titulo: "Cordero y Leon",
+        autor: "Conquistando Fronteras",
+        tono: "A",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
+
+      {
+        pagina: startPath + "crist_te_amo.html",
+        titulo: "Cristo te amo",
+        autor: "Abel Zavala",
+        tono: "E",
         categoria: ["Adoracion"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
@@ -658,6 +683,16 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       }, 
+
+      {
+        pagina: startPath + "de_tal_manera.html",
+        titulo: "De tal manera",
+        autor: "Jesus Adrian Romero",
+        tono: "C",
+        categoria: ["Evangelismo"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
 
       {
         pagina: startPath + "digno_es_el_senor.html",
@@ -704,10 +739,20 @@ class UI {
         titulo: "Dios esta aqui",
         autor: "Darlene Zschech",
         tono: "D",
-        categoria: ["Navidad","Alabanza"],
+        categoria: ["Alabanza"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
       }, 
+
+      {
+        pagina: startPath + "dios_esta_aqui-angeles_cantando_estan.html",
+        titulo: "Dios esta aqui-Angeles cantando estan",
+        autor: "Lakewood",
+        tono: "D",
+        categoria: ["Navidad","Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
 
       {
         pagina: startPath + "dios_ha_sido_fiel.html",
@@ -745,6 +790,16 @@ class UI {
         autor: "IBI",
         tono: "Bb",
         categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "dios_puede_salvar.html",
+        titulo: "Dios puede salvar",
+        autor: "Hillsong",
+        tono: "A",
+        categoria: ["Evangelismo"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
@@ -1351,7 +1406,13 @@ class UI {
   static agregarCantosAListaCategoria(canto){
     const olLista = document.querySelector("#lista");
     const crearli = document.createElement('li');
-    crearli.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:rgb(21, 4, 130)">${canto.autor}</span> </a>- Tono:${canto.tono}`;
+    let color = "rgb(21, 4, 130)";
+    let color2 = "rgb(37, 9, 217)";
+    if (JSON.parse(localStorage.getItem("modoDiaNoche")) == true){
+      color2 = "rgb(179, 240, 255)";
+      color = "rgb(255, 255, 179)";
+    }
+    crearli.innerHTML = `<a href="${canto.pagina}" style="color:${color2}">${canto.titulo} - <span style="color:${color}">${canto.autor}</span> </a>- Tono:${canto.tono}`;
     olLista.appendChild(crearli);
     
     olLista.addEventListener("click",(e) => {
@@ -1370,11 +1431,14 @@ class UI {
   static agregarSubtemasACanto(cantoSubtemas){
     //localStorage.setItem("cantoSeleccionado",JSON.stringify(cantoSubtemas));
     cantoSubtemas[0].subpaginas.forEach((subtema) => {
-      //subtema = subtema.replace(" ","_");
+      let color = "rgb(37, 9, 217)";
+      if (JSON.parse(localStorage.getItem("modoDiaNoche")) == true){
+        color = "rgb(179, 240, 255)";
+      }
       let pagina = cantoSubtemas[0].pagina.replace("info",subtema.toLowerCase().replace(" ","")).replace(".html","");      
       const lista = document.createElement("li");
       lista.className = "lista";
-      lista.innerHTML = `<a href="/html/${pagina}_${subtema.toLowerCase().replace(" ","_")}.html">${subtema}</a> <button class="boton-add">
+      lista.innerHTML = `<a href="/html/${pagina}_${subtema.toLowerCase().replace(" ","_")}.html" style="color:${color}">${subtema}</a> <button class="boton-add">
         +</button></li>`;
       ulSubtemasInfo.appendChild(lista);
     });
@@ -1483,462 +1547,42 @@ if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
   //});
 }
 
-//Playlist variables
-/*var opcionesItems = document.getElementById("opcionesDeCanto");
-var botonEditar = document.querySelector(".EditarLista");
-var botonBorrarLista = document.querySelector(".borrarLista");
-const lista = document.querySelector(".playlistCantos");
-let titulo = document.querySelector('title').textContent;*/
+/*------------------------MODO NOCTURNO--------------------------------------*/
+const modoDiaNoche = JSON.parse(localStorage.getItem("modoDiaNoche"));
+const body2 = document.querySelector("body");
+const h2inicio = document.querySelector("h2");
 
-/*-----------------------MANIPULACION DE PLAYLISTS-----------------------*//*
-class Playlist{
-  static agregarCantos(canciones,lista){
-    if (canciones != null){
-      canciones.forEach(function (canto){
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
-        lista.appendChild(li);
-      });
-    }
-  }
-  
-  static agregarBotones(canciones,lista){
-    //Agregar boton OK para inicializar
-    let nav = document.querySelector(".nav");  
-    let botonBorrar = document.querySelector(".divBorarLista");
-    let divOk = document.createElement("div");
-    divOk.className = "divOk";
-    let botonOK = document.createElement("button");
-    botonOK.className = "botonOK";
-    botonOK.appendChild(document.createTextNode("OK"));
-    divOk.appendChild(botonOK);
-    nav.insertBefore (divOk,botonBorrar);
-    divOk.style.display = "none";
-    botonBorrar.style.display = "none";
-    
-    //Agregar botones mover arriba y abajo para inicializar
-    const div = document.createElement ("div");
-    div.className = "claseEditar";
-    let body = document.querySelector(".bodyPlaylist");
-    body.insertBefore (div,nav);
-    let botonUp = document.createElement("button");
-    botonUp.className = "botonUp";
-    let br = document.createElement ("br");
-    let botonDown = document.createElement("button");
-    botonDown.className = "botonDown";
-    div.appendChild(botonUp);
-    botonUp.appendChild(document.createTextNode("Mover arriba"));
-    div.appendChild(br);
-    div.appendChild(botonDown);
-    botonDown.appendChild(document.createTextNode("Mover abajo"));
-    div.style.display = "none";
-  }
-  
-  static agregarMensajeNoCantos(lista,mensaje){
-    if (lista.lastElementChild === null){
-      const div = document.createElement ('div');
-      div.className = "NoHayCantos";
-      div.appendChild(document.createTextNode(mensaje));
-      const container = document.querySelector(".cuerpo-lista");
-      container.insertBefore(div,lista);
-      let divEditar = document.querySelector(".divEditar");
-      divEditar.style.display = "none";
-    }
-  }
-  
-  static funcionBotonEditar(lista,canciones,playlist){
-    let noseleccionado, array=[], parent;
-    let index = null;
-    if (lista.lastElementChild != null){
-      botonEditar.addEventListener("click",botoneditar);
-    }
-    function botoneditar(){
-      let divOk = document.querySelector(".divOk");
-      let divEditar = document.querySelector(".divEditar");
-      let div = document.querySelector(".claseEditar");
-      let botonBorrar = document.querySelector(".divBorarLista");
-      botonBorrar.style.display = "block";
-      while (lista.hasChildNodes()) {   
-        lista.removeChild(lista.firstChild);
-      }
-      canciones.forEach(function (canto){
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${canto.pagina}"></a>${canto.titulo} - ${canto.tipo} <button class="boton-delete">
-            X</button>`; 
-        lista.appendChild(li);
-      });
-      
-      //Ocultar y mostrar bloques
-      div.style.display = "block";
-      divEditar.style.display = "none";
-      divOk.style.display = "block";
-      
-      //Seleccionar canto a editar
-      let items = document.querySelectorAll(".playlistCantos li");
-      items.forEach(function (item){
-         array.push(item.innerHTML);
-      });
-      items.forEach(function (item){
-        item.onclick = function(){
-          index = array.indexOf(this.innerHTML);
-          if (noseleccionado){
-            noseleccionado.className = "noselected";
-          } 
-          this.className = "selected";
-          noseleccionado = this;
-          items = document.querySelectorAll(".playlistCantos li");
-          seleccionado = item;         
-        } 
-      });
-      
-      //Mover canto seleccionado hacia arriba o abajo
-      let botonUp = document.querySelector(".botonUp");
-      let botonDown = document.querySelector(".botonDown");
-      
-      botonUp.onclick = function (){
-        if (index != "undefined" || index != null){
-          let items = document.querySelectorAll(".playlistCantos li");
-          parent = items[index].parentElement;
-          if (index > 0){
-            parent.insertBefore(items[index],items[index-1]);
-            index--;
-          }
-          items = document.querySelectorAll(".playlistCantos li");
-          array = [];
-          items.forEach(function (item){
-            array.push(item.innerHTML);
-          });
-          
-          canciones.forEach((canto, index)=>{
-            if(canto.pagina === seleccionado.firstChild.href){
-              if (index>0){
-                canciones.splice(index-1,0,canto);
-                canciones.splice(index+1,1);
-              }
-            }
-          });
-          localStorage.setItem(playlist,JSON.stringify(canciones));
-        }
-      }
-      
-      botonDown.onclick = function (){
-          if (index != "undefined" || index != null){
-          let items = document.querySelectorAll(".playlistCantos li");
-          parent = items[index].parentElement;
-          if (index < (array.length-1)){
-            parent.insertBefore(items[index],items[index+2]);
-            index++;
-          }
-          items = document.querySelectorAll(".playlistCantos li");
-          array = [];
-          items.forEach(function (item){
-            array.push(item.innerHTML);
-          });
-            let i = 0;
-            console.log(canciones.length);
-            canciones.forEach((canto, index)=>{
-            if(canto.pagina === seleccionado.firstChild.href && i===0){
-              if (index < (canciones.length - 1)){
-                canciones.splice(index,1);
-                canciones.splice(index+1,0,canto);
-                i++;
-              }
-            } 
-          });
-          localStorage.setItem(playlist,JSON.stringify(canciones));
-        } 
-      }
-    }
-  }
-  
-  static funcionBotonOk(lista,canciones){
-    let botonOK = document.querySelector(".botonOK");
-    botonOK.addEventListener("click",botonok);
-    function botonok(){
-      let divOk = document.querySelector(".divOk");
-      let divEditar = document.querySelector(".divEditar");
-      let div = document.querySelector(".claseEditar");
-      let botonBorrar = document.querySelector(".divBorarLista");
-      botonBorrar.style.display = "none";
-      div.style.display = "none";
-      divOk.style.display = "none";
-      divEditar.style.display= "block";
-      if (seleccionado){
-        seleccionado.className = "noselected";
-      }
-      while (lista.hasChildNodes()) {   
-        lista.removeChild(lista.firstChild);
-      }
-      Playlist.agregarCantos(canciones,lista);
-    } 
-  }
-  
-  static borrarCanto(lista,mensaje,canciones,playlist){
-    lista.addEventListener("click",(e) =>  {
-      let el = e.target;
-      if (el.classList.contains("boton-delete")){
-        el.parentElement.remove();
-        canciones.forEach((canto, index)=>{
-          if(canto.pagina === el.previousElementSibling.href){
-            canciones.splice(index,1);
-          }
-        });
-        localStorage.setItem(playlist,JSON.stringify(canciones));
-        Playlist.agregarMensajeNoCantos(lista,mensaje);
-      }
-    });
-  }
-  
-  static borrarLista(lista,mensaje,playlist,canciones,borrarLista){
-    if (lista.lastElementChild != null){
-      borrarLista.addEventListener("click",BorrarLista);
-    }
-    function BorrarLista(e){    
-      if(confirm("ESTAS SEGURO DE BORRAR TODA LA LISTA?")){
-        localStorage.removeItem(playlist);
-        let ultimo = lista.lastElementChild;
-        while(ultimo){
-          lista.removeChild(ultimo);
-          ultimo = lista.lastElementChild;
-        }
-      }
-      Playlist.agregarMensajeNoCantos(lista,mensaje);
-      let divOk = document.querySelector(".divOk");
-      let divEditar = document.querySelector(".divEditar");
-      let div = document.querySelector(".claseEditar");
-      let botonBorrar = document.querySelector(".divBorarLista");
-      botonBorrar.style.display = "none";
-      div.style.display = "none";
-      divOk.style.display = "none";
-    }
-  }
-}
-
-//Cuando se cargue la pagina Playlist Domingo, agregar cantos
-if(titulo === "Playlist Domingo"){
-  let canciones = JSON.parse(localStorage.getItem("cancionesDomingo"));
-  let mensaje = "Agrega cantos a la Playlist DOMINGO";
-  let playlist = "cancionesDomingo";
-  Playlist.agregarCantos(canciones,lista);
-  Playlist.agregarBotones(canciones,lista);
-  Playlist.agregarMensajeNoCantos(lista,mensaje);
-  Playlist.funcionBotonEditar(lista,canciones,playlist);
-  Playlist.funcionBotonOk(lista,canciones);
-  Playlist.borrarCanto(lista,mensaje,canciones,playlist);
-  Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
-  localStorage.setItem("playlistFlag",1);
-}  
-
-//Cuando se cargue la pagina Playlist Miercoles, agregar cantos
-if(titulo === "Playlist Miercoles"){
-  let canciones = JSON.parse(localStorage.getItem("cancionesMiercoles"));
-  let mensaje = "Agrega cantos a la Playlist MIERCOLES"; 
-  let playlist = "cancionesMiercoles";
-  Playlist.agregarCantos(canciones,lista);
-  Playlist.agregarBotones(canciones,lista);
-  Playlist.agregarMensajeNoCantos(lista,mensaje);
-  Playlist.funcionBotonEditar(lista,canciones,playlist);
-  Playlist.funcionBotonOk(lista,canciones);
-  Playlist.borrarCanto(lista,mensaje,canciones,playlist);
-  Playlist.borrarLista(lista,mensaje,playlist,canciones,botonBorrarLista);
-  localStorage.setItem("playlistFlag",2);
-}  
-
-//Solo cuando se encuentre en una playlist, se muestra el boton de avanzar a siguiente canto
-let playlistFlag = localStorage.getItem("playlistFlag");
-if(playlistFlag > 0 && (botonAvanzar || botonAvanzar2)){
-  botonAvanzar.style.display = "block";
-  botonAvanzar2.style.display = "block";
-  botonRegresar2.style.display = "block";
-  botonAvanzar.addEventListener("click",avanzar);
-  botonAvanzar2.addEventListener("click",avanzar);
-  function avanzar() {
-  //botonAvanzar.addEventListener("click",(e) => {
-    let cancionesPlaylist;
-    let proxCanto;
-    if(playlistFlag == 1){
-      cancionesPlaylist = JSON.parse(localStorage.getItem("cancionesDomingo"));
-    }
-    else if(playlistFlag == 2){
-      cancionesPlaylist = JSON.parse(localStorage.getItem("cancionesMiercoles"));
-    }
-    const pagActual = location.href;
-    console.log (pagActual);
-    console.log (proxCanto);
-    cancionesPlaylist.forEach(function (canto, index){
-      if (canto.pagina === pagActual){
-        proxCanto = index + 1; 
-      }
-      if (proxCanto == index){ 
-        window.location.assign(canto.pagina);
-      }  
-      if (proxCanto == cancionesPlaylist.length){
-
-          window.location.assign("https://dunamis-alabanza.glitch.me/");
-      }
-    });
-  }
-  //});
-}
-
-
-/*-----------------------BOTON AGREGAR CANTO A UNA PLAYLIST-----------------------*//*
-
-//Boton Add event
-if(opcionesItems){
-  opcionesItems.addEventListener("click", agregarCanto);
-  }
-
-function agregarCanto(e){
-  if(e.target.classList.contains("boton-add")){
-    let botonAdd = document.querySelector(".cuerpo-lista");
-    botonAdd.style.opacity = "0.4";
-    var cancion = e.target.parentElement;
-    var winW = window.innerWidth;
-    var winH = window.innerHeight;
-    var dialogverlay = document.getElementById('dialogverlay');
-    var dialogbox = document.getElementById('dialogbox');
-    dialogverlay.style.display = "block";
-    dialogverlay.style.height = (winH) + "px";
-    dialogbox.style.right = /*(winW/2) - (500*0.5) + */"12%";/*
-    dialogbox.style.top = "100px";
-    dialogbox.style.display = "block";
-    
-    document.getElementById('dialogboxhead').innerHTML = "Agregar a playlist";
-    //document.getElementById('dialogboxbody').innerHTML = "Elige";
-    document.getElementById('dialogboxfoot').innerHTML = '<button id=Domingo>Domingo</button>  <button id=Miercoles>Miercoles</button>  <button id="Cancelar"> X </button>';
-  
-    var CancelarBoton = document.getElementById ('Cancelar');
-    var DomingoBoton = document.getElementById ('Domingo');
-    var MiercolesBoton = document.getElementById ('Miercoles');
-    CancelarBoton.addEventListener ("click",Cancelar);
-    //DomingoBoton.addEventListener ("click",Domingo);
-    DomingoBoton.onclick = function () {Playlist('cancionesDomingo','DOMINGO','rgb(153, 247, 166)');}
-    //MiercolesBoton.addEventListener ("click",Miercoles);
-    MiercolesBoton.onclick = function () {Playlist('cancionesMiercoles','MIERCOLES','rgb(247, 225, 153)');}
-                                   
-    
-    function Cancelar(){
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogverlay').style.display = "none";
-      botonAdd.style.opacity = "1";
-    } 
-    
-    /*
-    function Domingo(e){
-      link = cancion.querySelector('a').href;
-      tipo = cancion.querySelector('a').textContent;
-      const CantoGuardado = new cantoGuardado(link,tipo,titulo);
-
-      //Si no existe ningun canto, entonces agregar canto
-      if(localStorage.getItem("cancionesDomingo") === null){
-        cancionesDomingo = [];
-        cancionesDomingo.push(CantoGuardado);
-        localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo));
-        mostrarMensajeAgregado ('Canto agregado a DOMINGO','rgb(153, 247, 166)');
-      }
-      //Si existe entonces buscar si ya esta agregado, en caso de que si: Mostrar mensaje de ya agregado, en caso de que no: agregar canto a la lista
-      else{
-        cancionesDomingo = JSON.parse(localStorage.getItem("cancionesDomingo"));
-        
-        let LosCantos = cancionesDomingo.filter(function(cancion){
-          return  cancion.pagina === CantoGuardado.pagina; 
-        });
-        
-        switch (LosCantos.length){
-          case 0:
-            console.log("No repetido");
-            cancionesDomingo.push(CantoGuardado);
-            localStorage.setItem("cancionesDomingo",JSON.stringify(cancionesDomingo)); 
-            mostrarMensajeAgregado ('Canto agregado a DOMINGO','rgb(153, 247, 166)');
-            break;
-
-          case 1:
-            console.log("Repetido");
-            mostrarMensajeAgregado ('Canto REPETIDO en Domingo','tomato');
-            break;
-        }
-      }
-    }
-    
-    function Miercoles(e){
-      link = cancion.querySelector('a').href;
-      tipo = cancion.querySelector('a').textContent;
-      const CantoGuardado = new cantoGuardado(link,tipo,titulo);
-      if(localStorage.getItem("cancionesMiercoles") === null){
-        cancionesMiercoles = [];
-        cancionesMiercoles.push(CantoGuardado);
-        localStorage.setItem("cancionesMiercoles",JSON.stringify(cancionesMiercoles));
-      }else{
-        cancionesMiercoles = JSON.parse(localStorage.getItem("cancionesMiercoles"));
-        cancionesMiercoles.push(CantoGuardado);
-        localStorage.setItem("cancionesMiercoles",JSON.stringify(cancionesMiercoles));
-      } 
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogverlay').style.display = "none";
-      
-      //Mostrar mensaje de canto agregado
-      const div = document.createElement ('div');
-      div.className = 'anuncioM';
-      div.appendChild(document.createTextNode("Canto agregado a MIERCOLES"));
-      const container = document.querySelector(".contenidoLista");
-      const ul = document.querySelector(".cuerpo-lista");
-      container.insertBefore(div,ul);
-      setTimeout(()=> document.querySelector(".anuncioM").remove(),2500);
-      botonAdd.style.opacity = "1";
-    }
-    */
-    
-    /*
-    function Playlist(playlist,dia,color){
-      link = cancion.querySelector('a').href;
-      tipo = cancion.querySelector('a').textContent;
-      const CantoGuardado = new cantoGuardado(link,tipo,titulo);
-
-      //Si no existe ningun canto, entonces agregar canto
-      if(localStorage.getItem(playlist) === null){
-        canciones = [];
-        canciones.push(CantoGuardado);
-        localStorage.setItem(playlist,JSON.stringify(canciones));
-        mostrarMensajeAgregado (`Canto agregado a ${dia}`,color);
-      }
-      
-      //Si existe entonces buscar si ya esta agregado, en caso de que si: Mostrar mensaje de ya agregado, en caso de que no: agregar canto a la lista
-      else{
-        canciones = JSON.parse(localStorage.getItem(playlist));
-        
-        let LosCantos = canciones.filter(function(cancion){
-          return  cancion.pagina === CantoGuardado.pagina; 
-        });
-        
-        switch (LosCantos.length){
-          case 0:
-            console.log("No repetido");
-            canciones.push(CantoGuardado);
-            localStorage.setItem(playlist,JSON.stringify(canciones)); 
-            mostrarMensajeAgregado (`Canto agregado a ${dia}`,color);
-            break;
-
-          case 1:
-            console.log("Repetido");
-            mostrarMensajeAgregado (`Canto REPETIDO en ${dia}`,'tomato');
-            break;
-        }
-      }
-    }
-
-    function mostrarMensajeAgregado(mensaje,color){
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogverlay').style.display = "none";
-      const div = document.createElement ('div');
-      div.className = 'anuncio';
-      div.style.backgroundColor = color;
-      div.appendChild(document.createTextNode(`${mensaje}`));
-      const container = document.querySelector(".contenidoLista");
-      const ul = document.querySelector(".cuerpo-lista");
-      container.insertBefore(div,ul);
-      setTimeout(()=> document.querySelector(".anuncio").remove(),2500);
-      botonAdd.style.opacity = "1";
-    }
-  }
+/*if (modoDiaNoche === null)
+{
+    localStorage.setItem("modoDiaNoche",JSON.stringify(false));
+    modoDiaNoche = JSON.parse(localStorage.getItem("modoDiaNoche"));
 }*/
+
+modoND();
+
+function modoND() {
+  if (modoDiaNoche == true){
+      body2.style.backgroundColor = "rgb(51, 51, 51)";
+      body2.style.color = "white";
+      h2inicio.style.color = "rgb(102, 102, 255)";
+      if (document.querySelector(".cuerpo"))
+        document.querySelector(".cuerpo").style.backgroundColor = "rgb(102, 102, 102)";
+      if (document.querySelector(".pie")) 
+        document.querySelector(".pie").style.backgroundColor = "rgb(89, 89, 89)";
+      if (document.querySelectorAll("a")){
+        var elems = document.querySelectorAll("a");
+        var index = 0, length = elems.length;
+        for ( ; index < length; index++) {
+            elems[index].style.color = "rgb(179, 240, 255)";
+        }
+      }
+      if (document.querySelector(".cuerpo-lista"))
+        document.querySelector(".cuerpo-lista").style.backgroundColor = "rgb(102, 102, 102)";
+      if(document.querySelector(".navCanto"))
+        document.querySelector(".navCanto").style.backgroundColor = "rgb(115, 115, 115)";
+  }
+  /*else {
+      body2.style.backgroundColor = "transparent";
+      body2.style.color = "black";
+  }*/
+}

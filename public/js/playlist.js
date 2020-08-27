@@ -11,7 +11,10 @@ class Playlist{
       if (canciones != null){
         canciones.forEach(function (canto){
           const li = document.createElement("li");
-          li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:black">${canto.tipo}</span></a>`; 
+          let color = "black";
+          if (JSON.parse(localStorage.getItem("modoDiaNoche")) == true)
+            color = "white";
+          li.innerHTML = `<a href="${canto.pagina}">${canto.titulo} - <span style="color:${color}">${canto.tipo}</span></a>`; 
           lista.appendChild(li);
         });
       }

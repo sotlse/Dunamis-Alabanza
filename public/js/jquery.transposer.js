@@ -571,11 +571,30 @@
             
 /*-----------------Transportar desde el inicio el canto con el tono guardado--------------*/
             transposeSong($this, Tonos[0].tono);
-            //var TonoActual = JSON.parse(localStorage.getItem("TonoActual"));
-            //if (TonoActual !== null){
-                //transposeSong($this, TonoActual);
-                //console.log(TonoActual);
-            //}
+
+
+/*----------------------MODO NOCTURNO----------------------------*/
+            if (JSON.parse(localStorage.getItem("modoDiaNoche")) == true){
+                var elems = document.querySelectorAll(".c");
+                console.log(elems);
+                var index = 0, length = elems.length;
+                for ( ; index < length; index++) 
+                    elems[index].style.color = "rgb(0, 204, 204)";
+                elems = document.querySelectorAll(".fontNotas");
+                console.log(elems);
+                index = 0, length = elems.length;
+                for ( ; index < length; index++) {
+                    elems[index].style.color = "rgb(255, 0, 0)";
+                    elems[index].style.textShadow  = "0.4px 0.5px 10px rgb(255, 71, 26)";
+                }
+                elems = document.querySelectorAll(".fontNotas3");
+                console.log(elems);
+                index = 0, length = elems.length;
+                for ( ; index < length; index++) {
+                    elems[index].style.color = "rgb(255, 0, 0)";
+                    elems[index].style.textShadow  = "0.4px 0.5px 10px rgb(255, 71, 26)";
+                }
+            }
 
 /*-------------------------Jtab para poner imagenes de acordes de Guitarra--------------------------*/
             var acorde = $("span.c");

@@ -109,7 +109,19 @@ let textom11 = document.querySelector(".textom11");
 let titulo13 = document.querySelector(".titulo13");
 let texto13 = document.querySelector(".texto13");
 
-
+const cambioDiaNoche = JSON.parse(localStorage.getItem("modoDiaNoche"));
+if (cambioDiaNoche == true){
+    var elems = document.querySelectorAll(".acorde");
+    var index = 0, length = elems.length;
+    for ( ; index < length; index++) {
+        elems[index].style.color = "rgb(179, 240, 255)";
+    }
+    elems = document.querySelectorAll(".ejemplo");
+    index = 0, length = elems.length;
+    for ( ; index < length; index++) {
+        elems[index].style.color = "rgb(255, 255, 179)";
+    }
+}
 
 
 /*-------Cambiar display cuando presionan un titulo------*/

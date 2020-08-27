@@ -5,13 +5,33 @@ let ulCantosDelDia = document.querySelector(".CantosDelDia");
 let BaseCantos = JSON.parse(localStorage.getItem("TonosActuales"));
 
 
-//Funcion regresar pagina
+/*--------------------------Funcion regresar pagina---------------------------*/
 let botonRegresar = document.querySelector(".arrowRegresar");
 if(botonRegresar){
     botonRegresar.addEventListener("click",(e) =>  {
       window.history.back();
     });
   }
+
+/*------------------------------------MODO NOCTURNO----------------------------*/
+const modoDiaNoche = JSON.parse(localStorage.getItem("modoDiaNoche"));
+const body2 = document.querySelector("body");
+const h2inicio = document.querySelector("h2");
+//const controles = document.querySelector(".clndr-controls");
+const cal1 = document.querySelector(".cal1");
+const cal3 = document.querySelector(".cal3");
+const TituloLista = document.querySelector(".TituloListaAct");
+if (modoDiaNoche == true){
+    body2.style.backgroundColor = "rgb(51, 51, 51)";
+    body2.style.color = "white";
+    h2inicio.style.color = "rgb(102, 102, 255)";
+    cal1.style.backgroundColor = "rgb(204, 204, 204)";
+    cal1.style.color = "black";
+    cal3.style.backgroundColor = "rgb(204, 204, 204)";
+    cal3.style.color = "black";
+    //controles.style.backgroundColor = "rgb(153, 153, 153)";
+    TituloLista.style.color = "rgb(128, 179, 255)";
+}
 
 // Call this from the developer console and you can control both instances
 var calendars = {};
@@ -168,15 +188,19 @@ $(document).ready( function() {
         }, {
             endDate: '2020-08-16', startDate: '2020-08-16',
             title: 'Programa Dominical ONLINE 21',
-            cantos: 'Eres digno de gloria,Coalo Zamorano_Un siervo para tu gloria,IBI_Cuan grande es Dios,En espiritu y verdad'
+            cantos: 'Eres digno de gloria,Coalo Zamorano_Un siervo para tu gloria,IBI_Dios ha sido fiel,Marcos Witt'
         }, {
             endDate: '2020-08-23', startDate: '2020-08-23',
             title: 'Programa Dominical ONLINE 22',
-            cantos: 'Al que es digno,Coalo Zamorano_Dios imparable,Marcos Witt_Jesus mi fiel amigo,Abel Zavala'
+            cantos: 'Al que es digno,Coalo Zamorano_Dios imparable,Marcos Witt_Cuan grande es Dios,En espiritu y verdad_Jesus mi fiel amigo,Abel Zavala'
         }, {
             endDate: '2020-08-30', startDate: '2020-08-30',
             title: 'Programa Dominical ONLINE 23',
-            cantos: 'Rey de Reyes,Marco Barrientos_Nada es imposible,Marco Barrientos_Temprano yo te buscare,Marcos Witt'
+            cantos: 'Hay libertad,IBI_Nada es imposible,Marco Barrientos_Jesus mi fiel amigo,Abel Zavala'
+        }, {
+            endDate: '2020-09-06', startDate: '2020-09-06',
+            title: 'Programa Dominical ONLINE 24',
+            cantos: 'Rey de Reyes,Marco Barrientos_Nada es imposible,Marco Barrientos_Temprano yo te buscare,Marcos Witt_Jesus mi fiel amigo,Abel Zavala'
         },
 
         /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
