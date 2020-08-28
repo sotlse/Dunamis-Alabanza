@@ -883,6 +883,16 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       }, 
+
+      {
+        pagina: startPath + "eres_mi_fortaleza.html",
+        titulo: "Eres mi fortaleza",
+        autor: "Hillsong",
+        tono: "G",
+        categoria: ["Alabanza","Fortaleza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
       
       {
         pagina: startPath + "gracia_sublime_es.html",
