@@ -192,7 +192,7 @@ $(document).ready( function() {
         }, {
             endDate: '2020-08-23', startDate: '2020-08-23',
             title: 'Programa Dominical ONLINE 22',
-            cantos: 'Al que es digno,Coalo Zamorano_Dios imparable,Marcos Witt_Cuan grande es Dios,En espiritu y verdad_Jesus mi fiel amigo,Abel Zavala'
+            cantos: 'Al que es digno,Coalo Zamorano_Dios imparable,Marcos Witt_Cuan grande es Dios,En espiritu y verdad'
         }, {
             endDate: '2020-08-30', startDate: '2020-08-30',
             title: 'Programa Dominical ONLINE 23',
@@ -200,8 +200,70 @@ $(document).ready( function() {
         }, {
             endDate: '2020-09-06', startDate: '2020-09-06',
             title: 'Programa Dominical ONLINE 24',
-            cantos: 'Rey de Reyes,Marco Barrientos_Nada es imposible,Marco Barrientos_Temprano yo te buscare,Marcos Witt_Jesus mi fiel amigo,Abel Zavala'
+            cantos: 'Rey de Reyes,Marco Barrientos_Dios de amor,Danilo Montero_Temprano yo te buscare,Marcos Witt'
+        }, {
+            endDate: '2020-09-13', startDate: '2020-09-13',
+            title: 'Programa Dominical ONLINE 25',
+            cantos: 'Te alabare mi buen Jesus,Danilo Montero_Dios puede salvar,Hillsong_Tu fidelidad,Marcos Witt'
+        }, {
+            endDate: '2020-09-20', startDate: '2020-09-20',
+            title: 'Programa Dominical Presencial 1',
+            cantos: 'Benditos,En espiritu y verdad_Inmerecedor,Abel Zavala_Cristo te amo,Abel Zavala'
+        }, {
+            endDate: '2020-09-27', startDate: '2020-09-27',
+            title: 'Programa Dominical Presencial 2',
+            cantos: 'Gracias Dios,Don Moen_Infinito Dios,En espiritu y verdad_Por siempre,Vino nuevo_A el alto y sublime,Roberto Torres'
+        }, {
+            endDate: '2020-11-01', startDate: '2020-11-01',
+            title: 'Programa Dominical ONLINE 26',
+            cantos: 'Al que es digno,Coalo Zamorano_Hay libertad,IBI_El Senor es mi pastor,Danilo Montero'
+        }, {
+            endDate: '2020-11-08', startDate: '2020-11-08',
+            title: 'Programa Dominical ONLINE 27',
+            cantos: 'Vamos a cantar,En espiritu y verdad_Cantare de tu amor,Danilo Montero_Temprano yo te buscare,Marcos Witt'
+        }, {
+            endDate: '2020-11-15', startDate: '2020-11-15',
+            title: 'Programa Dominical ONLINE 28',
+            cantos: 'Tu mereces gloria,Juan Carlos Alvarado_Gracia sublime es,En espiritu y verdad_A ti,Marcos Witt'
+        }, {
+            endDate: '2020-11-22', startDate: '2020-11-22',
+            title: 'Programa Dominical ONLINE 29',
+            cantos: 'Un siervo para tu gloria,IBI_Tu nombre oh Dios,Marcos Witt_Jesus mi fiel amigo,Abel Zavala'
+        },{
+            endDate: '2020-11-29', startDate: '2020-11-29',
+            title: 'Programa Dominical ONLINE 30',
+            cantos: 'Rey de Reyes,Marco Barrientos_Dios de amor,Danilo Montero_Aqui estoy adorandote,Conquistando Fronteras'
+        }, {
+            endDate: '2020-12-06', startDate: '2020-12-06',
+            title: 'Programa Dominical ONLINE 31',
+            cantos: 'Eres mi amigo fiel,Coalo Zamorano_Eres digno de gloria,Coalo Zamorano_Dios el mas grande,Juan Carlos Alvarado'
+        },  {
+            endDate: '2020-12-13', startDate: '2020-12-13',
+            title: 'Programa Dominical ONLINE 32',
+            cantos: 'Espiritu y verdad,Marco Barrientos_Te dare lo mejor,Jesus Adrian Romero_El amor de Cristo,IBI'
+        }, {
+            endDate: '2020-12-20', startDate: '2020-12-20',
+            title: 'Programa Dominical ONLINE 33',
+            cantos: 'Eres fiel,Coalo Zamorano_El Dios que adoramos,Sovereign Grace_Dios imparable,Marcos Witt'
+        }, {
+            endDate: '2020-12-24', startDate: '2020-12-24',
+            title: 'Culto Navideño',
+            cantos: 'Al mundo paz - Hay libertad,IBI_Jesus nacio,Marcos Witt_Es navidad,Tercer Cielo_Angeles cantando estan,Ingrid Rosario_Es navidad,Banda Horizonte_Noche de paz,Himno 58'
+        }, {
+            endDate: '2020-12-27', startDate: '2020-12-27',
+            title: 'Programa Dominical ONLINE 34',
+            cantos: 'Al que me cine,Marcos Witt_Dios me ama,Danilo Montero_Temprano yo te buscare,Marcos Witt'
+        }, {
+            endDate: '2020-12-31', startDate: '2020-12-31',
+            title: 'Culto Fin de año',
+            cantos: 'Dios poderoso,IBI_Dios ha sido fiel,Marcos Witt_Sananos,Marcos Witt'
+        }, {
+            endDate: '2021-01-03', startDate: '2021-01-03',
+            title: 'Programa Dominical ONLINE 34',
+            cantos: 'Al que me cine,Marcos Witt_Dios me ama,Danilo Montero_Eres rey de los cielos,Emmanuel y Linda_Eres Todopoderoso,Danilo Montero_Al estar aqui,Danilo Montero'
         },
+      
+      
 
         /*Actividades sin cantos, colocar 'No' en la categoria cantos*/
         {

@@ -99,8 +99,8 @@ function saveSubscriptionToDatabase(subscription) {
 /*----------------------Agarrar las subscripciones de la base de datos----------------------------*/
 //(segundos[0-59] opcional, minutos[0-59], horas[0-23], dia del mes[1-31], mes[1-12], dia de la semana[0-6] donde 0 es domingo)
 //Enviar notificacion los lunes y jueves a las 8:00 am ('00 08 * * 1,4')
-const NotificacionCantosDomingo = '03,15,25,27,35,30,42,56 7,8,9,11,15,18,19,20,21,23 * * 0,1,2,3,4,5,6';
-//const NotificacionCantosDomingo = new CronTime('10,25,30,52 8,9,11,15 * * 5,6');
+//const NotificacionCantosDomingo = '03,15,25,27,35,30,42,56 7,8,9,11,15,18,19,20,21,23 * * 0,1,2,3,4,5,6';
+const NotificacionCantosDomingo = '00 08 * * 1,4';
 var job = new CronJob(NotificacionCantosDomingo, enviarTrigger, null, true, 'America/Monterrey');
 job.start();
 function enviarTrigger(){

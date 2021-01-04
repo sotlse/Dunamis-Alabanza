@@ -513,6 +513,26 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
+
+      {
+        pagina: startPath + "al_estar_aqui.html",
+        titulo: "Al estar aqui",
+        autor: "Danilo Montero",
+        tono: "A",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "al_estar_frente_a_ti.html",
+        titulo: "Al estar frente a ti",
+        autor: "Vino Nuevo",
+        tono: "D",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
         
       {
         pagina: startPath + "al_mundo_paz_ibi.html",
@@ -545,10 +565,30 @@ class UI {
       },
 
       {
+        pagina: startPath + "al_verte_en_la_cruz.html",
+        titulo: "Al verte en la cruz",
+        autor: "Vino Nuevo",
+        tono: "G",
+        categoria: ["Semana santa"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
         pagina: startPath + "alabanzas_al_rey.html",
         titulo: "Alabanzas al Rey",
         autor: "Marcela Gandara",
         tono: "Cm",
+        categoria: ["Navidad"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
+
+      {
+        pagina: startPath + "angeles_cantando_estan_ir.html",
+        titulo: "Angeles cantando estan",
+        autor: "Ingrid Rosario",
+        tono: "D",
         categoria: ["Navidad"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
@@ -625,6 +665,16 @@ class UI {
       },
 
       {
+        pagina: startPath + "cerca_de_mi.html",
+        titulo: "Cerca de mi",
+        autor: "Su Presencia",
+        tono: "A",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
         pagina: startPath + "cordero_santo.html",
         titulo: "Cordero Santo",
         autor: "Roberto Torres",
@@ -673,6 +723,16 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes","Piano"],
       }, 
+      
+      {
+        pagina: startPath + "cuando_yo_senti.html",
+        titulo: "Cuando yo senti",
+        autor: "Popular",
+        tono: "D",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
 
       {
         pagina: startPath + "cubiertos_por_tu_sangre.html",
@@ -803,6 +863,16 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
+
+      {
+        pagina: startPath + "dulce_refugio.html",
+        titulo: "Dulce refugio",
+        autor: "Danilo Montero",
+        tono: "C",
+        categoria: ["Fortaleza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
         
       {
         pagina: startPath + "el_amor_de_cristo.html",
@@ -830,6 +900,16 @@ class UI {
         autor: "Juan Carlos Alvarado",
         tono: "A",
         categoria: ["Fortaleza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "en_la_casa_de_dios.html",
+        titulo: "En la casa de Dios",
+        autor: "Danilo Montero",
+        tono: "D",
+        categoria: ["Unidad"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
@@ -893,6 +973,46 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       }, 
+
+      {
+        pagina: startPath + "eres_rey_de_los_cielos_eyl.html",
+        titulo: "Eres Rey de los cielos",
+        autor: "Emmanuel y Linda",
+        tono: "A",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
+
+      {
+        pagina: startPath + "eres_todopoderoso_dm.html",
+        titulo: "Eres Todopoderoso",
+        autor: "Danilo Montero",
+        tono: "Bm",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "es_navidad_tc.html",
+        titulo: "Es navidad",
+        autor: "Tercer cielo",
+        tono: "E",
+        categoria: ["Navidad"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "espiritu_y_verdad.html",
+        titulo: "Espiritu y Verdad",
+        autor: "Marco Barrientos",
+        tono: "D",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
       
       {
         pagina: startPath + "gracia_sublime_es.html",
@@ -923,6 +1043,16 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
+      
+      {
+        pagina: startPath + "infinito_dios.html",
+        titulo: "Infinito Dios",
+        autor: "En espiritu y verdad",
+        tono: "C",
+        categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
 
       {
         pagina: startPath + "inmerecedor.html",
@@ -965,6 +1095,16 @@ class UI {
       }, 
 
       {
+        pagina: startPath + "jesus_nacio.html",
+        titulo: "Jesus nacio",
+        autor: "Marcos Witt",
+        tono: "F",
+        categoria: ["Navidad"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
+
+      {
         pagina: startPath + "la_nube_de_tu_presencia.html",
         titulo: "La nube de tu presencia",
         autor: "Conquistando Fronteras",
@@ -982,6 +1122,16 @@ class UI {
         categoria:["Adoracion"],
         audio:"",
         subpaginas: ["Letra","Acordes","Piano"],
+      },
+
+      {
+        pagina: startPath + "mi_roca.html",
+        titulo:"Mi roca",
+        autor:"Hillsong",
+        tono:"C",
+        categoria:["Fortaleza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
       },
 
       {
@@ -1113,6 +1263,16 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes","Piano","Guitarra Electrica"],
       },
+
+      {
+        pagina: startPath + "sananos.html",
+        titulo:"Sananos",
+        autor:"Marcos Witt",
+        tono:"E",
+        categoria:["Oracion","Perdon"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
         
       {
         pagina: startPath + "santo.html",
@@ -1180,6 +1340,16 @@ class UI {
         autor: "Danilo Montero",
         tono: "E",
         categoria: ["Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "te_dare_lo_mejor.html",
+        titulo: "Te dare lo mejor",
+        autor: "Jesus Adrian Romero",
+        tono: "E",
+        categoria: ["Servicio"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
