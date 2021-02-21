@@ -43,7 +43,9 @@ self.addEventListener('activate', e => {
       .catch(err => caches.match(e.request).then(res => res))
   );
 });*/
-self.addEventListener('fetch', event => {
+
+/*---------------Este es el bueno
+/*self.addEventListener('fetch', event => {
   //if (event.request.mode === 'navigate') {
   if (event.request.method === 'GET'){
     // See /web/fundamentals/getting-started/primers/async-functions
@@ -78,7 +80,7 @@ self.addEventListener('fetch', event => {
       return (await caches.match(normalizedUrl)) || fetchResponseP;
     }());
   }
-});
+});*/
 
 
 /*------------------------- Push notifications -------------------------*/

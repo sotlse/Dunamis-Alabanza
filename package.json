@@ -15,10 +15,13 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cron": "^1.8.2",
-    "moment": "^2.27.0",
+    "moment": "^2.29.1",
     "nedb": "^1.8.0",
     "path": "^0.12.7",
     "web-push": "^3.4.4",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "firebase-tools": "^9.0.1",
+    "firebase": "^8.2.1",
+    "firebase-admin": "^9.4.2"
   }
 }

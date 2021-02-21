@@ -336,22 +336,35 @@ class Playlist{
               console.log("Repetido");
               mostrarMensajeAgregado (`Canto REPETIDO en ${dia}`,'tomato');
               break;
+            }
           }
         }
-      }
   
-      function mostrarMensajeAgregado(mensaje,color){
-        document.getElementById('dialogbox').style.display = "none";
-        document.getElementById('dialogverlay').style.display = "none";
-        const div = document.createElement ('div');
-        div.className = 'anuncio';
-        div.style.backgroundColor = color;
-        div.appendChild(document.createTextNode(`${mensaje}`));
-        const container = document.querySelector(".contenidoLista");
-        const ul = document.querySelector(".cuerpo-lista");
-        container.insertBefore(div,ul);
-        setTimeout(()=> document.querySelector(".anuncio").remove(),2500);
-        botonAdd.style.opacity = "1";
+        function mostrarMensajeAgregado(mensaje,color){
+          document.getElementById('dialogbox').style.display = "none";
+          document.getElementById('dialogverlay').style.display = "none";
+          const div = document.createElement ('div');
+          div.className = 'anuncio';
+          div.style.backgroundColor = color;
+          div.appendChild(document.createTextNode(`${mensaje}`));
+          const container = document.querySelector(".contenidoLista");
+          const ul = document.querySelector(".cuerpo-lista");
+          container.insertBefore(div,ul);
+          setTimeout(()=> document.querySelector(".anuncio").remove(),2500);
+          botonAdd.style.opacity = "1";
+        }
       }
     }
+
+
+
+/*------------------------MODO NOCTURNO--------------------------------------*/
+const cabeceraAnuncio = document.getElementById('dialogboxhead');
+
+modoND();
+
+function modoND() {
+  if (JSON.parse(localStorage.getItem("modoDiaNoche")) == true){
+      cabeceraAnuncio.style.backgroundColor = "rgb(2, 137, 227)";
   }
+}

@@ -376,6 +376,7 @@
             var $this = $(this); //<pre> del canto
             //console.log($this);
             var keysHtml = $("<div class='transpose-keys'></div>");
+            //console.log(keysHtml);
             keysHtml.html(keyLinks.join(""));
             $("a", keysHtml).click(function(e) {
                 e.preventDefault();
@@ -562,8 +563,10 @@
                         line = line.replace("//","<span class= 'fontNotas'>  :||</span>");
                         output.push(line);
                     }
-                    else
-                        output.push("<span>" + line + "</span>");
+                    else {
+                        //output.push("<span>" + line + "</span>");
+                        output.push(line);
+                    }
                 }
             };
             $(this).html(output.join("\n"));
@@ -571,12 +574,31 @@
             
 /*-----------------Transportar desde el inicio el canto con el tono guardado--------------*/
             transposeSong($this, Tonos[0].tono);
-
+          
+          
+/*-----------------Mostrar solamente letra--------------*/
+            $(".botonLetra").click(function(e) {
+                e.preventDefault();
+                console.log($("pre"));
+                let letra = $("pre")[0].childNodes;
+                console.log(letra);
+                letra.forEach(linea => {
+                  if (linea.hasChildNodes()){
+                    console.log(linea," => ",linea.hasChildNodes());
+                    console.log(linea.childElementCount);
+                    if (linea.childElementCount>0)
+                      linea.remove();
+                  }
+                });
+                //document.querySelector("span").remove();
+                //TotalDelta = TotalDelta + 1;
+                //localStorage.setItem("Letra",JSON.stringify(TotalDelta));
+            });
 
 /*----------------------MODO NOCTURNO----------------------------*/
             if (JSON.parse(localStorage.getItem("modoDiaNoche")) == true){
                 var elems = document.querySelectorAll(".c");
-                console.log(elems);
+                //console.log(elems);
                 var index = 0, length = elems.length;
                 for ( ; index < length; index++) 
                     elems[index].style.color = "rgb(0, 204, 204)";

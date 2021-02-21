@@ -1,7 +1,9 @@
 /*--VARIABLES--*/
+
 //const home = "https://dunamis-alabanza.glitch.me/";
 const home = "https://" + location.hostname;
 const applicationServerPublicKey = 'BCDkfgdZcsNUNSxXOBX8ttMcS9rpvV8WEoCmCrLV3cc4C9fFiyP3xsSzcjL3ngDLKMBH8B7vOmPl3QLxm2h1DME';
+//const applicationServerPublicKey = process.env.VAPID_KEY;
 var busquedaItem = document.getElementById("busqueda");
 var listaItems = document.getElementById("lista");
 //Botones avanzar y regresar
@@ -330,40 +332,44 @@ function updateSubscriptionOnServer(subscription) {
 }
 */
 
-/*-------------------------------NOTIFICACIONES----------------------------------*/
-//Preguntar si pueden mostrar notificaciones (no compatible con IOS)
-/*Notification.requestPermission(function(status) {
-  console.log('Notification permission status:', status);
-});*/
+/*------------------------------------------FIREBASE---------------------------------------*/
+// Firebase App (the core Firebase SDK) is always required and
+// must be listed before other Firebase SDKs
+/*var firebase = require("firebase/app");
+
+// Add the Firebase products that you want to use
+//require("firebase/auth");
+//require("firebase/firestore");
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyAwILbPRKHcMyf_bxJKm1BDpFutlhU-P10",
+  authDomain: "dunamis-6affc.firebaseapp.com",
+  projectId: "dunamis-6affc",
+  storageBucket: "dunamis-6affc.appspot.com",
+  messagingSenderId: "545249031636",
+  appId: "1:545249031636:web:a0e35ca1bdc6aaad4f9241",
+  measurementId: "G-0WXQ8DMC8H"
+};
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+//firebase.analytics();
+
+// Cloud Messaging
+const messaging = firebase.messaging();
+// Add the public key
+messaging.getToken({vapidKey: "BCDkfgdZcsNUNSxXOBX8ttMcS9rpvV8WEoCmCrLV3cc4C9fFiyP3xsSzcjL3ngDLKMBH8B7vOmPl3QLxm2h1DME"});*/
 
 /*
-displayNotification();
-
-//Mostrar notificacion
-function displayNotification() {
-  if (Notification.permission == 'granted') {
-    navigator.serviceWorker.getRegistration().then(function(reg) {
-      var options = {
-        body: 'Here is a notification body!',
-        icon: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Ficon-384x384.png?v=1578025595291',
-        badge: 'https://cdn.glitch.com/4c1a86ab-31d9-449a-9f16-4378baabdc2c%2Fdove-solid.png?v=1580572378350',
-        vibrate: [100, 50, 100],
-        data: {
-          dateOfArrival: Date.now(),
-          primaryKey: 1
-        },
-        actions: [
-          {action: 'explore', title: 'Explore this new world',
-            icon: 'images/checkmark.png'},
-          {action: 'close', title: 'Close notification',
-            icon: 'images/xmark.png'},
-        ]
-      };
-      reg.showNotification('Hello world!', options);
-    });
-  }
-}
+messaging.requestPermission()
+.then(function() {
+  console.log('Have Permission');
+})
+.catch(function(err) {
+ console.log('Error Ocurred');
+})
 */
+
 
 /*-------------------------------ROTACION DE PANTALLA---------------------------*/
 if (cantoBody)
@@ -673,6 +679,16 @@ class UI {
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
+      
+      {
+        pagina: startPath + "con_mis_manos_levantadas.html",
+        titulo: "Con mis manos levantadas",
+        autor: "Danilo Montero",
+        tono: "G",
+        categoria: ["Adoracion"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      }, 
 
       {
         pagina: startPath + "cordero_santo.html",
@@ -1015,6 +1031,16 @@ class UI {
       },
       
       {
+        pagina: startPath + "glorioso_intercambio.html",
+        titulo: "Glorioso intercambio",
+        autor: "Sovereign Grace",
+        tono: "C",
+        categoria: ["semana_santa"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+      
+      {
         pagina: startPath + "gracia_sublime_es.html",
         titulo: "Gracia sublime es",
         autor: "En espiritu y verdad",
@@ -1330,6 +1356,16 @@ class UI {
         autor: "Marcos Witt",
         tono: "G",
         categoria: ["Evangelismo","Alabanza"],
+        audio:"",
+        subpaginas: ["Letra","Acordes"],
+      },
+
+      {
+        pagina: startPath + "tal_como_soy.html",
+        titulo: "Tal como soy",
+        autor: "Jesus Adrian Romero",
+        tono: "E",
+        categoria: ["Servicio","Oracion"],
         audio:"",
         subpaginas: ["Letra","Acordes"],
       },
@@ -1664,6 +1700,7 @@ function filterItems(e){
   let ol = document.getElementById("lista");
   console.log(ol);
   let li = ol.querySelectorAll("li");
+  console.log(li);
   for (let i=0;i<li.length;i++){
     let a = li[i].getElementsByTagName("a")[0];
     if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
@@ -1744,7 +1781,8 @@ function modoND() {
   if (modoDiaNoche == true){
       body2.style.backgroundColor = "rgb(51, 51, 51)";
       body2.style.color = "white";
-      h2inicio.style.color = "rgb(102, 102, 255)";
+      //h2inicio.style.color = "rgb(102, 102, 255)";
+      h2inicio.style.color = "rgb(2, 137, 227)";
       if (document.querySelector(".cuerpo"))
         document.querySelector(".cuerpo").style.backgroundColor = "rgb(102, 102, 102)";
       if (document.querySelector(".pie")) 

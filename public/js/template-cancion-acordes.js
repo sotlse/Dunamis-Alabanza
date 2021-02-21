@@ -110,6 +110,11 @@ let BodyTemplate =
             //"<i class='fas fa-guitar'></i>" +
             "&#119068" +
         '</button>' +
+    
+        "<button class='botonLetra'>" +
+            //"<i class='fas fa-guitar'></i>" +
+            "Letra" +
+        '</button>' +
 
         "<button class='botonCasa'>" +
             "<i class='fa fa-home'></i>" +

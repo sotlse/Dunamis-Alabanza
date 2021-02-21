@@ -3,7 +3,10 @@ let TituloListaAct = document.querySelector(".TituloListaAct");
 let divDesplegarCantos = document.querySelector(".DesplegarCantos");
 let ulCantosDelDia = document.querySelector(".CantosDelDia");
 let BaseCantos = JSON.parse(localStorage.getItem("TonosActuales"));
-
+const ulListaCalendarioPie = document.querySelector(".lista-calendario-pie");
+const divCalendarioPie = document.querySelector(".calendario-pie");
+const botonHistorial = document.querySelector(".botonHistorial");
+var busquedaItem = document.getElementById("busqueda2");
 
 /*--------------------------Funcion regresar pagina---------------------------*/
 let botonRegresar = document.querySelector(".arrowRegresar");
@@ -92,7 +95,7 @@ $(document).ready( function() {
         }, {
             endDate: '2020-03-01', startDate: '2020-03-01',
             title: 'Programa Dominical 9 - 01 de Marzo',
-            cantos: 'Dios Imparable,Marcos Witt_Enciende una luz,Marcos Witt_La nina de tus ojos,Popular'
+            cantos: 'Dios imparable,Marcos Witt_Enciende una luz,Marcos Witt_La nina de tus ojos,Popular'
         }, {
             endDate: '2020-03-08', startDate: '2020-03-08',
             title: 'Programa Dominical 10 - 08 de Marzo',
@@ -152,7 +155,7 @@ $(document).ready( function() {
         }, {
             endDate: '2020-06-14', startDate: '2020-06-14',
             title: 'Programa Dominical ONLINE 12 - 14 de Junio',
-            cantos: 'El Dios que adoramos,IBI_El es mi amigo fiel,Coalo Zamorano_Dios el mas grande,Juan Carlos Alvarado'
+            cantos: 'El Dios que adoramos,Sovereign Grace_El es mi amigo fiel,Coalo Zamorano_Dios el mas grande,Juan Carlos Alvarado'
         }, {
             endDate: '2020-06-21', startDate: '2020-06-21',
             title: 'Programa Dominical ONLINE 13 - 21 de Junio',
@@ -256,12 +259,46 @@ $(document).ready( function() {
         }, {
             endDate: '2020-12-31', startDate: '2020-12-31',
             title: 'Culto Fin de año',
-            cantos: 'Dios poderoso,IBI_Dios ha sido fiel,Marcos Witt_Sananos,Marcos Witt'
+            cantos: 'Dios poderoso,IBI_Dios ha sido fiel,Marcos Witt_Buenos es Dios,Don Moen'
         }, {
             endDate: '2021-01-03', startDate: '2021-01-03',
-            title: 'Programa Dominical ONLINE 34',
-            cantos: 'Al que me cine,Marcos Witt_Dios me ama,Danilo Montero_Eres rey de los cielos,Emmanuel y Linda_Eres Todopoderoso,Danilo Montero_Al estar aqui,Danilo Montero'
-        },
+            title: 'Programa Dominical ONLINE 35',
+            cantos: 'El Dios que adoramos,Sovereign Grace_El es mi amigo fiel,Coalo Zamorano_Dios el mas grande,Juan Carlos Alvarado'
+        }, {
+            endDate: '2021-01-10', startDate: '2021-01-10',
+            title: 'Programa Dominical ONLINE 36',
+            cantos: 'Gracia sublime es,En espiritu y verdad_Vamos a cantar,En espiritu y verdad_Tu eres santo,Michael W. Smith_Dios me ama,Danilo Montero_Aqui estoy adorandote,Conquistando Fronteras_Dios de amor,Danilo Montero'
+        }, {
+            endDate: '2021-01-17', startDate: '2021-01-17',
+            title: 'Programa Dominical ONLINE 37',
+            cantos: 'Hay libertad,IBI_Nada es imposible,Marco Barrientos_Jesus mi fiel amigo,Abel Zavala'
+        }, {
+            endDate: '2021-01-24', startDate: '2021-01-24',
+            title: 'Programa Dominical ONLINE 38',
+            cantos: 'Un siervo para tu gloria,IBI_Tu nombre oh Dios,Marcos Witt_Rey de gloria,Marco Barrientos'
+        }, {
+            endDate: '2021-01-31', startDate: '2021-01-31',
+            title: 'Programa Dominical ONLINE 39',
+            cantos: 'Bueno es Dios,Don Moen_Dios poderoso,IBI_Dios me ama,Danilo Montero'
+        }, {
+            endDate: '2021-02-07', startDate: '2021-02-07',
+            title: 'Programa Dominical ONLINE 40',
+            cantos: 'Te alabare mi buen Jesus,Danilo Montero_Al que es digno,Coalo Zamorano_Tu mereces gloria,Juan Carlos Alvarado_Temprano yo te buscare,Marcos Witt'
+        }, {
+            endDate: '2021-02-14', startDate: '2021-02-14',
+            title: 'Programa Dominical ONLINE 41',
+            cantos: 'Eres digno de gloria,Coalo Zamorano_Espiritu y verdad,Marco Barrientos_Aqui estoy adorandote,Conquistando Fronteras'
+        }, {
+            endDate: '2021-02-21', startDate: '2021-02-21',
+            title: 'Programa Dominical ONLINE 38',
+            cantos: 'Al que me cine,Marcos Witt_Cantare de tu amor,Danilo Montero_Jesus eres mi buen pastor,Marcos Witt'
+        }, {
+            endDate: '2021-02-28', startDate: '2021-02-28',
+            title: 'Programa Dominical ONLINE 38',
+            cantos: 'Eres rey de los cielos,Emmanuel y Linda_Eres Todopoderoso,Danilo Montero_Al estar aqui,Danilo Montero'
+        }, 
+      
+      
       
       
 
@@ -273,8 +310,56 @@ $(document).ready( function() {
         }
 
     ];
+  
+    //--------Mostrar lista de cantos con fecha
+    const TodosLosCantos = [];
+    //var att = document.createAttribute("class");
+    //att.value = "listaCantos";
+    
+    eventArray.forEach(function(cantos){
+      const LosCantos = cantos.cantos.split('_');
+      //console.log(LosCantos);
+      LosCantos.forEach(function(canto){
+        //console.log(canto.concat(":",cantos.endDate));
+        TodosLosCantos.push(canto.concat(" => ",cantos.endDate));
+      })
+    });
+  
+    let TodosLosCantosOrdenados = TodosLosCantos.sort();
+    console.log(TodosLosCantosOrdenados);
+    TodosLosCantosOrdenados.forEach(lista => {
+      const crearlista = document.createElement('li');
+      crearlista.className = "listaCantos";
+      crearlista.innerHTML = `${lista}`;
+      ulListaCalendarioPie.appendChild(crearlista);
+    });
+    
+    botonHistorial.onclick = function (){
+      if (divCalendarioPie.style.display === "none" || divCalendarioPie.style.display === "") 
+        divCalendarioPie.style.display = "block";
+      else 
+        divCalendarioPie.style.display = "none";
+    }
+  
+    /*-----------------------BUSQUEDA FILTRO-----------------------*/
+    if (busquedaItem){
+    busquedaItem.addEventListener("keyup",filterItems);
+    }
+    function filterItems(e){
+      let filterValue = busquedaItem.value.toUpperCase();
+      console.log(ulListaCalendarioPie);
+      let li = ulListaCalendarioPie.querySelectorAll("li");
+      for (let i=0;i<li.length;i++){
+        if (li[i].innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
 
-    // The order of the click handlers is predictable. Direct click action
+    
+    //-------The order of the click handlers is predictable. Direct click action
     //callbacks come first: click, nextMonth, previousMonth, nextYear,previousYear, nextInterval, previousInterval, or today. Then
     //onMonthChange (if the month changed), inIntervalChange if the interval has changed, and finally onYearChange (if the year changed).
     calendars.clndr1 = $('.cal1').clndr({
@@ -335,7 +420,7 @@ $(document).ready( function() {
 
 
                         if (LosCantos[0] !== undefined)
-                            crearli.innerHTML = `<a href="${LosCantos[0].pagina}"><span class="nombreLista">${canto}<span> - ${autor}</a> ${notas}`;
+                            crearli.innerHTML = `<a href="${LosCantos[0].pagina}"><span class="nombreLista">${canto}</span> - ${autor}</a> ${notas}`;
                         else
                             crearli.innerHTML = `<a href="">${canto} - ${autor}</a> ${notas}`;
 

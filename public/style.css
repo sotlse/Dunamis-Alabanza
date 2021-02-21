@@ -356,6 +356,31 @@ a {
   margin: 0px 5px;
 }
 
+.botonLetra {
+  padding: 5px;
+  margin: 0px 5px;
+}
+
+/*Calendario*/
+.navCalendario {
+  background-color: lightgray;
+  padding: 10px;
+  margin: 0px -30px 0px -30px;
+  text-align: center;
+}
+
+.botonHistorial
+{
+  font-size: 200%;
+  padding: 5px;
+  margin: 0px 5px;
+}
+
+.calendario-pie
+{
+  display: none;
+}
+
 /*Canto*/
 .infoCanto {
   /*
